@@ -18,6 +18,31 @@ build/
 .cache/
 .cache-*/
 .git/
+.env
+.env.*
+*.env
+.env.local
+.env.development
+.env.production
+.env.test
+.archive/
+*back*
+*backup*
+*bak*
+node_modules/
+dist/
+build/
+.cache/
+.cache-*/
+.git/
+.github/
+*.DS_Store*
+.archive/
+.DS_Store
+/.DS_Store
+*DS_*
+*env*
+*DS_Store*
 
 
 # Credential files
