@@ -18,6 +18,10 @@ build/
 .cache/
 .cache-*/
 .git/
+.github/
+*.DS_Store*
+.archive/
+.DS_Store
 
 
 # Credential files

@@ -1,0 +1,6 @@
+# Make root go to landing (remove later if you get a dedicated homepage)
+/  /landing  302
+
+# Old domain → new landing (you can also do this via Cloudflare Bulk Redirects)
+https://thoughtmarksapp.com/*  https://thoughtmarks.app/landing  301
+http://thoughtmarksapp.com/*   https://thoughtmarks.app/landing  301
