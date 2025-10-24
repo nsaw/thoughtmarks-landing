@@ -1,0 +1,120 @@
+{
+  "permissions": {
+    "title": "Benachrichtigungsberechtigung",
+    "rationale": "Thoughtmarks benötigt Benachrichtigungsberechtigungen, um Ihnen Erinnerungen, tägliche Zusammenfassungen und KI-gestützte Einblicke zu senden, die Ihnen helfen, organisiert zu bleiben.",
+    "required": {
+      "title": "Berechtigung Erforderlich",
+      "message": "Bitte aktivieren Sie Benachrichtigungen in den Einstellungen, um Push-Benachrichtigungen zu erhalten.",
+      "cancel": "Abbrechen",
+      "openSettings": "Einstellungen Öffnen"
+    },
+    "provisional": {
+      "title": "Leise Benachrichtigungen",
+      "message": "Wir werden Benachrichtigungen leise zustellen. Sie können dies jederzeit in den Einstellungen ändern."
+    },
+    "denied": {
+      "title": "Benachrichtigungen Deaktiviert",
+      "message": "Um Erinnerungen und Updates zu erhalten, aktivieren Sie bitte Benachrichtigungen in Ihren Geräteeinstellungen.",
+      "dismiss": "Schließen",
+      "openSettings": "Einstellungen Öffnen"
+    },
+    "granted": {
+      "title": "Benachrichtigungen Aktiviert",
+      "message": "Sie erhalten jetzt Erinnerungen und Updates von Thoughtmarks."
+    }
+  },
+  "categories": {
+    "reminder": {
+      "preview": "Thoughtmark-Erinnerung",
+      "actions": {
+        "complete": "Als Erledigt Markieren",
+        "snooze": "Schlummern"
+      }
+    },
+    "message": {
+      "preview": "Neue Nachricht",
+      "actions": {
+        "reply": "Antworten",
+        "replyPlaceholder": "Ihre Antwort eingeben...",
+        "send": "Senden"
+      }
+    },
+    "digest": {
+      "preview": "Tägliche Zusammenfassung",
+      "actions": {
+        "view": "Ansehen"
+      }
+    },
+    "aiInsight": {
+      "preview": "KI-Einblick",
+      "actions": {
+        "viewInsight": "Einblick Ansehen"
+      }
+    }
+  },
+  "content": {
+    "reminder": {
+      "title": "Thoughtmark-Erinnerung",
+      "snoozedTitle": "Erinnerung (Verschoben)"
+    },
+    "digest": {
+      "title": "Ihre Tägliche Zusammenfassung",
+      "body": "Sehen Sie, was Sie heute erreicht haben"
+    },
+    "aiInsight": {
+      "title": "KI-Einblick",
+      "body": "Wir haben Einblicke aus Ihren Thoughtmarks entdeckt"
+    }
+  },
+  "settings": {
+    "title": "Benachrichtigungen",
+    "subtitle": "Verwalten Sie Ihre Benachrichtigungseinstellungen",
+    "sections": {
+      "types": {
+        "title": "Benachrichtigungsarten",
+        "push": {
+          "title": "Push-Benachrichtigungen",
+          "description": "Erhalten Sie Benachrichtigungen auf Ihrem Gerät"
+        },
+        "email": {
+          "title": "E-Mail-Benachrichtigungen",
+          "description": "Erhalten Sie Benachrichtigungen per E-Mail",
+          "emailRequired": {
+            "title": "E-Mail Erforderlich",
+            "message": "Bitte konfigurieren Sie Ihre E-Mail-Adresse in den Kontoeinstellungen, um E-Mail-Benachrichtigungen zu erhalten.",
+            "ok": "OK"
+          }
+        },
+        "reminders": {
+          "title": "Erinnerungen",
+          "description": "Erhalten Sie Erinnerungen über Ihre Thoughtmarks"
+        },
+        "marketing": {
+          "title": "Marketing-E-Mails",
+          "description": "Erhalten Sie Updates und Werbe-E-Mails"
+        },
+        "aiNotifications": {
+          "title": "KI-Benachrichtigungen",
+          "description": "Erhalten Sie KI-gestützte Vorschläge und Einblicke"
+        },
+        "smartReminders": {
+          "title": "Intelligente Erinnerungen",
+          "description": "Intelligentes Timing für Ihre Erinnerungen"
+        }
+      }
+    }
+  },
+  "errors": {
+    "permissionFailed": "Push-Benachrichtigungen konnten nicht aktiviert werden. Bitte versuchen Sie es erneut.",
+    "registrationFailed": "Registrierung für Benachrichtigungen fehlgeschlagen. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+    "scheduleFailed": "Benachrichtigung konnte nicht geplant werden. Bitte versuchen Sie es erneut.",
+    "cancelFailed": "Benachrichtigung konnte nicht abgebrochen werden.",
+    "updateFailed": "Benachrichtigungseinstellungen konnten nicht aktualisiert werden."
+  },
+  "actions": {
+    "completed": "Thoughtmark als erledigt markiert",
+    "snoozed": "Erinnerung für 1 Stunde verschoben",
+    "replied": "Antwort gesendet"
+  }
+}
+

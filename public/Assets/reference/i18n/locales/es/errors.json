@@ -1,0 +1,9 @@
+{
+  "generic": "Ocurrió un error",
+  "network": "Error de conexión de red",
+  "auth": "Error de autenticación",
+  "notFound": "No encontrado",
+  "serverError": "Error del servidor",
+  "tryAgain": "Por favor, inténtalo de nuevo"
+}
+

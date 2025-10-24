@@ -1,0 +1,247 @@
+{
+  "title": "Settings",
+  "account": "Account",
+  "profile": "Profile",
+  "preferences": "Preferences",
+  "appearance": {
+    "title": "Appearance",
+    "theme": {
+      "title": "Theme",
+      "description": "Customize the app's visual appearance"
+    },
+    "darkMode": {
+      "description": "Use dark colors for the app interface"
+    },
+    "systemTheme": {
+      "description": "Follow your device's appearance settings"
+    },
+    "use": "Use",
+    "useSystemTheme": "Use system appearance settings",
+    "enableDarkMode": "Enable dark mode",
+    "disableDarkMode": "Disable dark mode",
+    "themeInfo": "Theme changes apply immediately across the entire app"
+  },
+  "theme": "Theme",
+  "light": "Light",
+  "dark": "Dark",
+  "system": "System",
+  "fontSize": "Font Size",
+  "small": "Small",
+  "medium": "Medium",
+  "large": "Large",
+  "accessibility": "Accessibility",
+  "reduceMotion": "Reduce Motion",
+  "highContrast": "High Contrast",
+  "voiceOver": "VoiceOver",
+  "privacy": "Privacy",
+  "dataUsage": "Data Usage",
+  "exportData": "Export Data",
+  "deleteAccount": "Delete Account",
+  "about": "About",
+  "version": "Version",
+  "terms": "Terms of Service",
+  "support": "Support",
+  "changed": "Setting {{setting}} changed to {{value}}",
+  "refreshed": "Settings refreshed",
+  "screen": {
+    "announced": "Settings screen"
+  },
+  "error": {
+    "refreshFailed": {
+      "title": "Refresh Failed",
+      "message": "Failed to refresh settings. Please try again."
+    },
+    "updateFailed": {
+      "title": "Update Failed",
+      "message": "Failed to update setting. Please try again."
+    },
+    "loadFailed": {
+      "title": "Load Failed",
+      "message": "Failed to load settings. Please try again."
+    }
+  },
+  "search": {
+    "placeholder": "Search settings...",
+    "accessibilityLabel": "Search settings",
+    "accessibilityHint": "Enter text to search settings"
+  },
+  "sync": {
+    "synced": "Settings synced",
+    "offline": "Offline"
+  },
+  "quickActions": {
+    "title": "Quick Actions",
+    "accessibilityHint": "Double tap to navigate to this settings category"
+  },
+  "badges": {
+    "new": "New"
+  },
+  "category": {
+    "expandable": {
+      "accessibilityHint": "Double tap to expand or collapse this category"
+    },
+    "navigation": {
+      "accessibilityHint": "Double tap to navigate to this category"
+    }
+  },
+  "allCategories": {
+    "title": "All Categories"
+  },
+  "searchResults": {
+    "title": "Search Results for \"{{query}}\""
+  },
+  "noResults": {
+    "title": "No Results Found",
+    "message": "No settings found matching \"{{query}}\". Try a different search term."
+  },
+  "loading": {
+    "message": "Loading settings..."
+  },
+  "scrollView": {
+    "accessibilityLabel": "Settings scroll view"
+  },
+  "picker": {
+    "accessibilityHint": "Double tap to select an option"
+  },
+  "navigation": {
+    "open": "Open",
+    "accessibilityHint": "Double tap to navigate to this screen"
+  },
+  "categories": {
+    "capture": {
+      "title": "Capture",
+      "description": "Configure how you capture thoughts"
+    },
+    "ai": {
+      "title": "AI Features",
+      "description": "Configure AI features and behavior"
+    },
+    "privacy": {
+      "title": "Privacy & Security",
+      "description": "Manage your privacy and security settings"
+    },
+    "security": {
+      "title": "Security",
+      "description": "Configure security features"
+    },
+    "organization": {
+      "title": "Organization",
+      "description": "Configure how your content is organized"
+    },
+    "appearance": {
+      "title": "Appearance",
+      "description": "Customize how the app looks"
+    },
+    "accessibility": {
+      "title": "Accessibility",
+      "description": "Configure accessibility features"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "description": "Manage notification preferences"
+    },
+    "data": {
+      "title": "Data & Storage",
+      "description": "Manage your data and storage"
+    },
+    "advanced": {
+      "title": "Advanced",
+      "description": "Advanced settings and developer options"
+    }
+  },
+  "capture": {
+    "title": "Capture Settings",
+    "defaultMode": {
+      "title": "Default Capture Mode",
+      "description": "Choose your preferred capture method",
+      "options": {
+        "text": "Text",
+        "voice": "Voice",
+        "camera": "Camera"
+      }
+    },
+    "autoSave": {
+      "title": "Auto-Save",
+      "description": "Automatically save drafts while typing"
+    },
+    "location": {
+      "title": "Location Tagging",
+      "description": "Automatically tag thoughtmarks with location"
+    },
+    "defaultBin": {
+      "title": "Default Bin",
+      "description": "Choose where new thoughtmarks are saved by default"
+    }
+  },
+  "privacyControls": {
+    "analytics": {
+      "title": "Share Anonymous Analytics",
+      "description": "Help improve the app by sharing anonymized usage data with differential privacy protections (ε=0.1, k≥5)",
+      "enabled": "Analytics enabled",
+      "disabled": "Analytics disabled",
+      "error": {
+        "updateFailed": "Failed to update analytics setting"
+      }
+    },
+    "export": {
+      "title": "Export My Data",
+      "description": "Request a copy of all your data with hashed identifiers only",
+      "button": "Request Export",
+      "requesting": "Requesting Export...",
+      "status": {
+        "pending": "Export request pending",
+        "processing": "Generating export ({{progress}}%)",
+        "ready": "Export ready for download",
+        "failed": "Export request failed",
+        "downloading": "Downloading export..."
+      },
+      "success": {
+        "title": "Export Requested",
+        "message": "Your data export has been requested. You'll be notified when it's ready to download (usually within a few minutes)."
+      },
+      "download": {
+        "button": "Download Export",
+        "success": "Export downloaded successfully",
+        "failed": "Failed to download export"
+      },
+      "error": {
+        "requestFailed": "Failed to request data export. Please try again.",
+        "downloadFailed": "Failed to download export file. Please try again."
+      }
+    },
+    "deletion": {
+      "title": "Delete My Data",
+      "description": "Request permanent deletion of all your analytics and usage data",
+      "button": "Request Deletion",
+      "requesting": "Requesting Deletion...",
+      "sla": "Data will be deleted within 30 days",
+      "confirmation": {
+        "title": "Confirm Data Deletion",
+        "message": "This will permanently delete all your analytics data, experiment assignments, and usage metrics. This action cannot be undone.\n\nYour thoughtmarks and account will NOT be affected - only analytics data will be deleted.\n\nDeletion will be completed within 30 days per GDPR/CCPA requirements."
+      },
+      "success": {
+        "title": "Deletion Requested",
+        "message": "Your data deletion request has been submitted. All analytics and usage data will be permanently deleted within 30 days.\n\nYou will receive a confirmation email when the deletion is complete."
+      },
+      "status": {
+        "pending": "Deletion request pending",
+        "processing": "Deleting data...",
+        "completed": "Deletion completed",
+        "failed": "Deletion request failed"
+      },
+      "error": {
+        "requestFailed": "Failed to request data deletion. Please try again."
+      }
+    },
+    "policies": {
+      "privacyPolicy": {
+        "title": "Privacy Policy",
+        "description": "How we protect and handle your data"
+      },
+      "dataProcessing": {
+        "title": "Data Processing Notice",
+        "description": "Detailed information about how we process your data"
+      }
+    }
+  }
+}

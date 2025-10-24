@@ -22,6 +22,60 @@
 |   |   |-- MAIN-mockup-page-Thoughtmark.png
 |   |   |-- MAIN-mockup-page-VTT.png
 |   |   |-- mockup-page-pashboard.png
+|   |   |-- reference
+|   |   |   |-- HelpScreen.tsx
+|   |   |   |-- i18n
+|   |   |   |   `-- locales
+|   |   |   |       |-- de
+|   |   |   |       |   |-- common.json
+|   |   |   |       |   |-- errors.json
+|   |   |   |       |   |-- notifications.json
+|   |   |   |       |   |-- onboarding.json
+|   |   |   |       |   |-- settings.json
+|   |   |   |       |   |-- voice.json
+|   |   |   |       |   `-- widgets.json
+|   |   |   |       |-- en
+|   |   |   |       |   |-- ai.json
+|   |   |   |       |   |-- coachmark.json
+|   |   |   |       |   |-- common.json
+|   |   |   |       |   |-- dashboard.json
+|   |   |   |       |   |-- errors.json
+|   |   |   |       |   |-- notifications.json
+|   |   |   |       |   |-- onboarding.json
+|   |   |   |       |   |-- purchases.json
+|   |   |   |       |   |-- settings.json
+|   |   |   |       |   |-- userGuide.json
+|   |   |   |       |   |-- voice.json
+|   |   |   |       |   `-- widgets.json
+|   |   |   |       `-- es
+|   |   |   |           |-- common.json
+|   |   |   |           |-- errors.json
+|   |   |   |           |-- notifications.json
+|   |   |   |           |-- onboarding.json
+|   |   |   |           |-- settings.json
+|   |   |   |           |-- voice.json
+|   |   |   |           `-- widgets.json
+|   |   |   |-- README.md
+|   |   |   |-- runbooks
+|   |   |   |   |-- ENTITLEMENTS_RUNBOOK.md
+|   |   |   |   |-- iap-incidents.md
+|   |   |   |   |-- INTEGRATION_GUIDE.md
+|   |   |   |   |-- OPERATOR_RUNBOOK.md
+|   |   |   |   |-- RUNBOOKS.md
+|   |   |   |   |-- SLO_POLICY.md
+|   |   |   |   |-- WATCH_BUILD_RUNBOOK_detailed.md
+|   |   |   |   `-- WATCH_BUILD_RUNBOOK.md
+|   |   |   |-- SettingsAboutScreen.tsx
+|   |   |   |-- SettingsUserGuideScreen.tsx
+|   |   |   |-- USER_GUIDE_INDEX.md
+|   |   |   |-- userGuide.json
+|   |   |   |-- UserGuideScreen.tsx
+|   |   |   `-- watch
+|   |   |       |-- APPLE-WATCH-COMPANION-PLAN.md
+|   |   |       |-- support-url.txt
+|   |   |       |-- WATCH_TELEMETRY_USAGE.md
+|   |   |       |-- watch-companion.md
+|   |   |       `-- watch-datasync.md
 |   |   |-- splashscreen.png
 |   |   |-- syles
 |   |   |   `-- main.css
@@ -84,4 +138,4 @@
 |-- README.md
 `-- static.txt
 
-13 directories, 72 files
+21 directories, 118 files

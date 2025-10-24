@@ -1,0 +1,9 @@
+{
+  "generic": "Ein Fehler ist aufgetreten",
+  "network": "Netzwerkverbindungsfehler",
+  "auth": "Authentifizierungsfehler",
+  "notFound": "Nicht gefunden",
+  "serverError": "Serverfehler",
+  "tryAgain": "Bitte versuche es erneut"
+}
+

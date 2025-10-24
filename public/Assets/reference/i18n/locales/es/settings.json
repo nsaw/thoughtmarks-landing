@@ -1,0 +1,51 @@
+{
+  "title": "Ajustes",
+  "account": "Cuenta",
+  "profile": "Perfil",
+  "preferences": "Preferencias",
+  "appearance": {
+    "title": "Apariencia",
+    "theme": {
+      "title": "Tema",
+      "description": "Personaliza la apariencia visual de la aplicación"
+    },
+    "darkMode": {
+      "description": "Usar colores oscuros para la interfaz de la aplicación"
+    },
+    "systemTheme": {
+      "description": "Seguir la configuración de apariencia de tu dispositivo"
+    }
+  },
+  "theme": "Tema",
+  "light": "Claro",
+  "dark": "Oscuro",
+  "system": "Sistema",
+  "fontSize": "Tamaño de Fuente",
+  "small": "Pequeño",
+  "medium": "Mediano",
+  "large": "Grande",
+  "accessibility": "Accesibilidad",
+  "reduceMotion": "Reducir Movimiento",
+  "highContrast": "Alto Contraste",
+  "voiceOver": "VoiceOver",
+  "privacy": "Privacidad",
+  "dataUsage": "Uso de Datos",
+  "exportData": "Exportar Datos",
+  "deleteAccount": "Eliminar Cuenta",
+  "about": "Acerca de",
+  "version": "Versión",
+  "terms": "Términos de Servicio",
+  "support": "Soporte",
+  "notifications": {
+    "title": "Notificaciones",
+    "enableAll": "Habilitar Todas las Notificaciones",
+    "reminders": "Recordatorios",
+    "updates": "Actualizaciones",
+    "emailNotifications": "Notificaciones por Correo",
+    "pushNotifications": "Notificaciones Push",
+    "permissionRequired": "Permiso de Notificaciones Requerido",
+    "permissionMessage": "Por favor, habilita las notificaciones en Ajustes para recibir actualizaciones.",
+    "openSettings": "Abrir Ajustes"
+  }
+}
+

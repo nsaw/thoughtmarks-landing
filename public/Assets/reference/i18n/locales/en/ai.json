@@ -1,0 +1,41 @@
+{
+  "source": {
+    "live": "Live",
+    "curated": "Curated", 
+    "offline": "Offline",
+    "unknown": "Unknown"
+  },
+  "sourceTooltips": {
+    "live": "This insight was generated in real-time using live AI services. It reflects the most current information and analysis.",
+    "curated": "This insight comes from curated content. It provides reliable information from pre-verified sources when live services are unavailable.",
+    "offline": "This insight is from offline content. It provides helpful information when you're not connected to the internet.",
+    "unknown": "This insight source is unknown."
+  },
+  "sourceTooltipsWithCache": {
+    "curated": "This insight comes from curated content (cached {{cacheAge}}). It provides reliable information from pre-verified sources when live services are unavailable.",
+    "offline": "This insight is from offline content (cached {{cacheAge}}). It provides helpful information when you're not connected to the internet."
+  },
+  "actions": {
+    "use": "Use",
+    "showMore": "Show More",
+    "showLess": "Show Less",
+    "nextStep": "Next Step:",
+    "dismiss": "Dismiss"
+  },
+  "cacheAge": {
+    "seconds": "{{count}}s ago",
+    "minutes": "{{count}}m ago", 
+    "hours": "{{count}}h ago",
+    "days": "{{count}}d ago"
+  },
+  "integrationBanner": {
+    "title": "Integrations Required",
+    "description": "AI features require API keys. Configure integrations to enable live AI services.",
+    "missingProviders": "Missing: {{providers}}",
+    "openSettings": "Open Settings",
+    "openSettingsHint": "Opens settings to configure AI integrations",
+    "dismiss": "Dismiss",
+    "dismissHint": "Dismisses this integration banner",
+    "settings": "Settings"
+  }
+}

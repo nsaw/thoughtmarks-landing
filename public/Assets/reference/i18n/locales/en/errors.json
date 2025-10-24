@@ -1,0 +1,17 @@
+{
+  "networkError": "Network error occurred",
+  "serverError": "Server error occurred",
+  "unknownError": "An unknown error occurred",
+  "validationError": "Validation error",
+  "permissionError": "Permission denied",
+  "notFoundError": "Not found",
+  "timeoutError": "Request timed out",
+  "offlineError": "You are offline",
+  "syncError": "Sync error occurred",
+  "saveError": "Failed to save",
+  "loadError": "Failed to load",
+  "deleteError": "Failed to delete",
+  "shareError": "Failed to share"
+}
+
+

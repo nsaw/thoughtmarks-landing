@@ -1,0 +1,51 @@
+{
+  "title": "Einstellungen",
+  "account": "Konto",
+  "profile": "Profil",
+  "preferences": "Einstellungen",
+  "appearance": {
+    "title": "Erscheinungsbild",
+    "theme": {
+      "title": "Design",
+      "description": "Passe das visuelle Erscheinungsbild der App an"
+    },
+    "darkMode": {
+      "description": "Dunkle Farben für die App-Oberfläche verwenden"
+    },
+    "systemTheme": {
+      "description": "Folge den Erscheinungseinstellungen deines Geräts"
+    }
+  },
+  "theme": "Design",
+  "light": "Hell",
+  "dark": "Dunkel",
+  "system": "System",
+  "fontSize": "Schriftgröße",
+  "small": "Klein",
+  "medium": "Mittel",
+  "large": "Groß",
+  "accessibility": "Barrierefreiheit",
+  "reduceMotion": "Bewegung Reduzieren",
+  "highContrast": "Hoher Kontrast",
+  "voiceOver": "VoiceOver",
+  "privacy": "Datenschutz",
+  "dataUsage": "Datennutzung",
+  "exportData": "Daten Exportieren",
+  "deleteAccount": "Konto Löschen",
+  "about": "Über",
+  "version": "Version",
+  "terms": "Nutzungsbedingungen",
+  "support": "Support",
+  "notifications": {
+    "title": "Benachrichtigungen",
+    "enableAll": "Alle Benachrichtigungen Aktivieren",
+    "reminders": "Erinnerungen",
+    "updates": "Aktualisierungen",
+    "emailNotifications": "E-Mail-Benachrichtigungen",
+    "pushNotifications": "Push-Benachrichtigungen",
+    "permissionRequired": "Benachrichtigungsberechtigung Erforderlich",
+    "permissionMessage": "Bitte aktiviere Benachrichtigungen in den Einstellungen, um Updates zu erhalten.",
+    "openSettings": "Einstellungen Öffnen"
+  }
+}
+

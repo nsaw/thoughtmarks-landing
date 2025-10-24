@@ -1,0 +1,120 @@
+{
+  "permissions": {
+    "title": "Permiso de Notificaciones",
+    "rationale": "Thoughtmarks necesita permisos de notificación para enviarte recordatorios, resúmenes diarios e información basada en IA para ayudarte a mantenerte organizado.",
+    "required": {
+      "title": "Permiso Requerido",
+      "message": "Por favor, habilita las notificaciones en Configuración para recibir notificaciones push.",
+      "cancel": "Cancelar",
+      "openSettings": "Abrir Configuración"
+    },
+    "provisional": {
+      "title": "Notificaciones Silenciosas",
+      "message": "Entregaremos notificaciones de forma silenciosa. Puedes cambiar esto en cualquier momento en Configuración."
+    },
+    "denied": {
+      "title": "Notificaciones Deshabilitadas",
+      "message": "Para recibir recordatorios y actualizaciones, por favor habilita las notificaciones en la Configuración de tu dispositivo.",
+      "dismiss": "Descartar",
+      "openSettings": "Abrir Configuración"
+    },
+    "granted": {
+      "title": "Notificaciones Habilitadas",
+      "message": "Ahora recibirás recordatorios y actualizaciones de Thoughtmarks."
+    }
+  },
+  "categories": {
+    "reminder": {
+      "preview": "Recordatorio de Thoughtmark",
+      "actions": {
+        "complete": "Marcar Completado",
+        "snooze": "Posponer"
+      }
+    },
+    "message": {
+      "preview": "Nuevo Mensaje",
+      "actions": {
+        "reply": "Responder",
+        "replyPlaceholder": "Escribe tu respuesta...",
+        "send": "Enviar"
+      }
+    },
+    "digest": {
+      "preview": "Resumen Diario",
+      "actions": {
+        "view": "Ver"
+      }
+    },
+    "aiInsight": {
+      "preview": "Información de IA",
+      "actions": {
+        "viewInsight": "Ver Información"
+      }
+    }
+  },
+  "content": {
+    "reminder": {
+      "title": "Recordatorio de Thoughtmark",
+      "snoozedTitle": "Recordatorio (Pospuesto)"
+    },
+    "digest": {
+      "title": "Tu Resumen Diario",
+      "body": "Mira lo que lograste hoy"
+    },
+    "aiInsight": {
+      "title": "Información de IA",
+      "body": "Hemos descubierto información de tus thoughtmarks"
+    }
+  },
+  "settings": {
+    "title": "Notificaciones",
+    "subtitle": "Administra tus preferencias de notificación",
+    "sections": {
+      "types": {
+        "title": "Tipos de Notificación",
+        "push": {
+          "title": "Notificaciones Push",
+          "description": "Recibe notificaciones en tu dispositivo"
+        },
+        "email": {
+          "title": "Notificaciones por Correo",
+          "description": "Recibe notificaciones por correo electrónico",
+          "emailRequired": {
+            "title": "Correo Requerido",
+            "message": "Por favor, configura tu dirección de correo en Configuración de Cuenta para recibir notificaciones por correo.",
+            "ok": "OK"
+          }
+        },
+        "reminders": {
+          "title": "Recordatorios",
+          "description": "Recibe recordatorios sobre tus thoughtmarks"
+        },
+        "marketing": {
+          "title": "Correos de Marketing",
+          "description": "Recibe actualizaciones y correos promocionales"
+        },
+        "aiNotifications": {
+          "title": "Notificaciones de IA",
+          "description": "Obtén sugerencias e información basada en IA"
+        },
+        "smartReminders": {
+          "title": "Recordatorios Inteligentes",
+          "description": "Temporización inteligente para tus recordatorios"
+        }
+      }
+    }
+  },
+  "errors": {
+    "permissionFailed": "Error al habilitar notificaciones push. Por favor, inténtalo de nuevo.",
+    "registrationFailed": "Error al registrarse para notificaciones. Por favor, verifica tu conexión e inténtalo de nuevo.",
+    "scheduleFailed": "Error al programar la notificación. Por favor, inténtalo de nuevo.",
+    "cancelFailed": "Error al cancelar la notificación.",
+    "updateFailed": "Error al actualizar la configuración de notificaciones."
+  },
+  "actions": {
+    "completed": "Thoughtmark marcado como completado",
+    "snoozed": "Recordatorio pospuesto por 1 hora",
+    "replied": "Respuesta enviada"
+  }
+}
+

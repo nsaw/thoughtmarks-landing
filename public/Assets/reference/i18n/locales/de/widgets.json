@@ -1,0 +1,29 @@
+{
+  "liveActivity": {
+    "recording": {
+      "untitled": "Unbenannte Aufnahme",
+      "actions": {
+        "stop": "Stoppen",
+        "cancel": "Abbrechen"
+      },
+      "a11y": {
+        "stopButton": {
+          "label": "Aufnahme stoppen",
+          "hint": "Doppeltippen, um Aufnahme zu stoppen und zu speichern"
+        },
+        "cancelButton": {
+          "label": "Aufnahme abbrechen",
+          "hint": "Doppeltippen, um Aufnahme abzubrechen und zu verwerfen"
+        }
+      }
+    },
+    "processing": "Verarbeite...",
+    "cancelled": "Abgebrochen",
+    "error": "Fehler",
+    "fallback": {
+      "title": "Aufnahme Läuft",
+      "body": "Nehme \"{{title}}\" auf"
+    }
+  }
+}
+
