@@ -1,0 +1,87 @@
+.
+|-- public
+|   |-- _headers
+|   |-- _redirects
+|   |-- about
+|   |   `-- index.html
+|   |-- assets
+|   |   |-- AppIcon-round.png
+|   |   |-- AppIcon.png
+|   |   |-- apple-logo.png
+|   |   |-- generated-icon.png
+|   |   |-- Logo-iOS-Default-1024x1024@1x.png
+|   |   |-- Logo-iOS-Default-40x40@2x.png
+|   |   |-- Logo-iOS-Default-60x60@2x.png
+|   |   |-- Logo-iOS-Default-76x76@2x.png
+|   |   |-- Logo-iOS-Default-83.5x83.5@2x.png
+|   |   |-- LogoRound-watchOS-Default-1024x1024@1x 1.png
+|   |   |-- LogoRound-watchOS-Default-50x50@2x.png
+|   |   |-- MAIN-mockup-page-Bins.png
+|   |   |-- MAIN-mockup-page-dashboard.PNG
+|   |   |-- MAIN-mockup-page-settings.png
+|   |   |-- MAIN-mockup-page-Thoughtmark.png
+|   |   |-- MAIN-mockup-page-VTT.png
+|   |   |-- mockup-page-pashboard.png
+|   |   |-- splashscreen.png
+|   |   |-- syles
+|   |   |   `-- main.css
+|   |   |-- testimonial-memojis
+|   |   |   |-- ALEX.png
+|   |   |   |-- DAVID.png
+|   |   |   |-- DAVID2.png
+|   |   |   |-- EMILY.png
+|   |   |   |-- MARCUS.png
+|   |   |   `-- SARAH.png
+|   |   |-- Watch-companion-home.png
+|   |   `-- watch-companion-record.png
+|   |-- docs
+|   |   |-- index.html
+|   |   `-- runbooks
+|   |       |-- ai-replay-success.html
+|   |       |-- circuit-breaker-open.html
+|   |       |-- cold-start-performance.html
+|   |       |-- crash-free-percentage.html
+|   |       |-- elemetry-exporter.html
+|   |       |-- exporter-queue-full.html
+|   |       |-- pii-redaction-violation.html
+|   |       |-- queue-drain-latency.html
+|   |       `-- stale-operations.html
+|   |-- landing
+|   |   `-- index.html
+|   |-- legal
+|   |   |-- account-deletion.html
+|   |   |-- eula.html
+|   |   |-- index.html
+|   |   |-- Legal-reference-docs
+|   |   |   |-- ai-ml-usage.md
+|   |   |   |-- android-datasafety-coverage.md
+|   |   |   |-- APP_STORE_PRIVACY_LABELS.md
+|   |   |   |-- APP-STORE-PRIVACY-ANSWERS.md
+|   |   |   |-- data-collection-usage.md
+|   |   |   |-- ios-privacy-coverage.md
+|   |   |   |-- legal-content-source.ts
+|   |   |   |-- logging-policy.md
+|   |   |   |-- PLAY-DATA-SAFETY-ANSWERS.md
+|   |   |   |-- play-data-safety.md
+|   |   |   |-- PRIVACY_MANIFEST_EVIDENCE.md
+|   |   |   |-- PRIVACY_MANIFEST_FINAL.md
+|   |   |   |-- PRIVACY_POLICY_COMPLIANCE.md
+|   |   |   |-- privacy-policy.md
+|   |   |   |-- README.md
+|   |   |   |-- REDACTION_ENFORCEMENT.md
+|   |   |   |-- REDACTION_EVIDENCE.md
+|   |   |   |-- terms-of-service.md
+|   |   |   `-- USER_RIGHTS_OPERATIONS.md
+|   |   |-- privacy.html
+|   |   `-- terms.html
+|   |-- partials
+|   |   |-- footer.html
+|   |   |-- head.html
+|   |   `-- nav.html
+|   `-- support
+|       |-- index.html
+|       `-- watch.html
+|-- README.md
+`-- static.txt
+
+13 directories, 72 files
