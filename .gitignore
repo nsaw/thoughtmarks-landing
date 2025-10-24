@@ -26,6 +26,16 @@ build/
 *DS_*
 *env*
 *DS_Store*
+*.md
+*.bak
+*.backup
+*.old
+*.tmp
+*.temp
+*.log
+*.log.*
+*.log.*.*
+*.log.*.*.*
 
 # Credential files
 google-services.json
