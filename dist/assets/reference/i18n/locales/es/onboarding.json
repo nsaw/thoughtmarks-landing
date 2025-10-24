@@ -1,0 +1,51 @@
+{
+  "welcome": {
+    "title": "Bienvenido a Thoughtmarks",
+    "subtitle": "Captura, organiza y descubre tus ideas con información potenciada por IA",
+    "continue": "Comenzar",
+    "skip": "Omitir Configuración"
+  },
+  "permissions": {
+    "title": "Habilitar Permisos",
+    "subtitle": "Otorga permisos para desbloquear todo el potencial de Thoughtmarks",
+    "microphone": {
+      "title": "Acceso al Micrófono",
+      "description": "Grabar notas de voz y usar comandos de voz",
+      "denied": {
+        "title": "Permiso de Micrófono Denegado",
+        "message": "La grabación de voz requiere acceso al micrófono. Puedes habilitarlo más tarde en Ajustes."
+      }
+    },
+    "notifications": {
+      "title": "Notificaciones",
+      "description": "Recibe recordatorios y actualizaciones sobre tus pensamientos"
+    },
+    "grant": "Conceder Permiso",
+    "openSettings": "Abrir Ajustes",
+    "continue": "Continuar",
+    "skip": "Omitir"
+  },
+  "siri": {
+    "title": "Atajos de Siri",
+    "subtitle": "Acceso rápido a tus pensamientos con Siri",
+    "capture": {
+      "title": "Capturar Pensamiento",
+      "description": "Comenzar a grabar un nuevo thoughtmark",
+      "phrase": "Oye Siri, captura un pensamiento"
+    },
+    "search": {
+      "title": "Buscar Pensamientos",
+      "description": "Buscar entre tus thoughtmarks",
+      "phrase": "Oye Siri, busca mis pensamientos"
+    },
+    "setup": "Configurar",
+    "skip": "Omitir",
+    "done": "Hecho"
+  },
+  "complete": {
+    "title": "¡Todo Listo!",
+    "subtitle": "Tu Thoughtmarks está configurado y listo para usar",
+    "start": "Comenzar a Usar Thoughtmarks"
+  }
+}
+

@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" href="/assets/LogoRound-watchOS-Default-50x50@2x.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/AppIcon.png" />
+<link rel="mask-icon" href="/assets/AppIcon.png" color="#b1d400" />
+
+<!-- Primary Meta Tags -->
+<meta name="application-name" content="Thoughtmarks"/>
+<meta name="apple-mobile-web-app-title" content="Thoughtmarks"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="theme-color" content="#B7A363"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"/>
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/assets/syles/main.css" />
+
+
+  
+  <!-- SEO Optimization -->
+  <title>Thoughtmarks - Voice-First AI Note Taking | Bookmarks for Your Brain</title>
+  <meta name="description" content="New AI-powered note app launching now. Voice recording, smart organization, and seamless capture. Download Now to FIND FOCUS with the future of thought management."/>
+  <meta name="keywords" content="new note app, voice notes, AI notes, thought organization, digital brain, knowledge management, productivity app, idea capture, voice to text, smart notes, debut launch"/>
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Thoughtmarks - Debut Launch | Voice-First AI Note Taking"/>
+  <meta property="og:description" content="Join the debut of next-generation note taking. Voice recording, AI organization, and smart connections. Early access available now."/>
+  <meta property="og:image" content="https://thoughtmarks.app/assets/Logo-iOS-Default-1024x1024@1x.png"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://thoughtmarks.app"/>
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Thoughtmarks - New AI Note App Excitement"/>
+  <meta name="twitter:description" content="Experience the future of thought capture. Voice-first design meets AI intelligence. Early access launching now."/>
+  <meta name="twitter:image" content="https://thoughtmarks.app/assets/MAIN-mockup-page-Thoughtmark.png"/>
+  
+  <!-- App-specific meta -->
+  <meta name="apple-mobile-web-app-title" content="Thoughtmarks"/>
+  <meta name="application-name" content="Thoughtmarks"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+  <meta name="theme-color" content="#B7A363"/>
+  
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Thoughtmarks",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "iOS, Web",
+    "description": "AI-powered note taking app with voice recording and smart organization",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "ratingCount": "127"
+    }
+  }
+  </script>
+  
+  <style>
+    :root {
+      --blue-yonder: rgba(133, 144, 190, 0.838);
+
+      --Perano: #c99a009e;
+      --brand-husk: #b1d400ae;
+      --panel-dark: #141414;
+      --panel-border: #232323;
+      --bg: #0e0e0e;
+      --feature-icon: #A4B5F7FF;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Ubuntu', sans-serif;
+      background: var(--bg);
+      color: #f2f2f2;
+      scroll-behavior: smooth;
+    }
+    a {
+      color: var(--blue-yonder);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover { color: var(--brand-husk);}
+    
+    /* Accessibility improvements */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    /* Hamburger Nav Styles */
+    .navbar {
+      width: 100%;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background: rgba(14,14,14,0.97);
+      border-bottom: 2px solid #222;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.7rem 1.3rem;
+      box-sizing: border-box;
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .nav-logo {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      border: 2px solid #fff;
+    }
+    .nav-title {
+      color: var(--brand-husk);
+      font-weight: 700;
+      font-size: 1.18rem;
+      letter-spacing: -1px;
+    }
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #191919;
+      position: absolute;
+      top: 60px;
+      right: 1rem;
+      min-width: 170px;
+      border-radius: 11px;
+      border: 1.5px solid #232323;
+      box-shadow: 0 4px 18px #0006;
+      z-index: 1999;
+      overflow: hidden;
+    }
+    .nav-links a {
+      color: #ddd;
+      font-weight: 500;
+      font-size: 1.1rem;
+      padding: 1rem 1.3rem;
+      border-bottom: 1px solid #232323;
+      text-align: right;
+      background: none;
+      display: block;
+      border: none;
+    }
+    .nav-links a:last-child { border-bottom: none; }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--blue-yonder);
+      background: #141414;
+    }
+    .hamburger {
+      width: 38px;
+      height: 38px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      margin-left: auto;
+    }
+    .hamburger span {
+      width: 26px;
+      height: 4px;
+      background: var(--blue-yonder);
+      border-radius: 2px;
+      margin: 3.5px 0;
+      display: block;
+      transition: all 0.3s cubic-bezier(.87,-.41,.19,1.44);
+    }
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px,6px);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px,-6px);
+    }
+
+    .container {
+      max-width: 650px;
+      margin: auto;
+      padding: 2rem 1.2rem 7rem 1.2rem;
+    }
+    .hero {
+      text-align: center;
+      padding: 2.5rem 1rem 2rem 1rem;
+      margin-bottom: 0.3rem;
+    }
+    .hero-headline {
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -2px;
+      text-shadow: 0 2px 22px #000b, 0 0 7px var(--blue-yonder);
+    }
+    .hero-tagline {
+      font-size: 1.2rem;
+      color: var(--blue-yonder);
+      margin-bottom: 1.6rem;
+      font-style: italic;
+      font-weight: 400;
+      text-shadow: 0 0 4px var(--blue-yonder);
+    }
+    .hero-desc {
+      color: #ccc;
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin: 0 auto 2rem;
+      line-height: 1.5;
+    }
+    .social-proof-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(0, 195, 255, 0.1);
+      border: 1px solid rgba(0, 195, 255, 0.3);
+      border-radius: 20px;
+      padding: 0.5rem 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--blue-yonder);
+    }
+    .rating-stars {
+      color: #ffd900bf;
+      font-size: 0.8rem;
+    }
+    .email-capture {
+      margin: 1.3rem auto 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      align-items: stretch;
+      max-width: 400px;
+    }
+    .email-capture input[type="email"] {
+      border-radius: 12px;
+      border: none;
+      padding: 0.8rem 1rem;
+      font-size: 1.05rem;
+      outline: none;
+      min-width: 0;
+      flex: 1 1 170px;
+      background: #232323;
+      color: #fff;
+      margin-bottom: 0.5rem;
+      border: 1.5px solid var(--blue-yonder);
+      transition: border 0.2s;
+    }
+    .email-capture input[type="email"]:focus {
+      border: 2px solid var(--brand-husk);
+    }
+    .email-capture button {
+      border-radius: 12px;
+      border: none;
+      padding: 0 1.2rem;
+      font-size: 1.09rem;
+      background: var(--brand-husk);
+      color: #222;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 7px var(--blue-yonder);
+      transition: background 0.2s;
+      margin-bottom: 0.5rem;
+    }
+    .email-capture button:hover {
+      background: var(--blue-yonder);
+      color: #fff;
+    }
+    .promo-note {
+      font-size: 0.99rem;
+      color: var(--Perano);
+      margin-bottom: 1.1rem;
+      font-weight: 500;
+    }
+    .mockup-hero {
+      display: flex;
+      justify-content: center;
+      margin: 2rem 0 2.7rem 0;
+    }
+    .mockup-hero img {
+      width: 92%;
+      max-width: 390px;
+      border-radius: 18px;
+      box-shadow: 0 12px 48px -14px var(--blue-yonder), 0 2px 28px #0008;
+      border: 1.5px solid #444;
+      background: #232323;
+      transform: rotateY(-13deg) rotateX(7deg) scale(1.04);
+      transition: transform 0.23s, box-shadow 0.23s;
+    }
+    .mockup-hero img:hover {
+      transform: rotateY(-5deg) rotateX(5deg) scale(1.09);
+      box-shadow: 0 26px 88px -7px var(--blue-yonder), 0 4px 20px #000c;
+    }
+    
+    /* Problem/Solution Section */
+    .problem-solution {
+      background: linear-gradient(135deg, #141414 0%, #1a1a1a 100%);
+      border-radius: 16px;
+      padding: 2rem;
+      margin: 3rem 0;
+      border: 1px solid #333;
+    }
+    .problem {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .problem-title {
+      color: #ff6b6bee;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .problem-text {
+      color: #ccc;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .solution {
+      text-align: center;
+    }
+    .solution-title {
+      color: var(--brand-husk);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .solution-text {
+      color: #ccc;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    /* Features */
+    .features-section {
+      margin: 3rem 0;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+    .features-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1.4rem;
+      margin: 2.4rem 0 2.2rem 0;
+    }
+    .feature-card {
+      flex: 1 1 190px;
+      background: var(--panel-dark);
+      border-radius: 12px;
+      border-left: 4px solid var(--feature-icon);
+      padding: 1.2rem 1rem 1rem 1.2rem;
+      min-width: 170px;
+      box-sizing: border-box;
+    }
+    .feature-icon {
+      font-size: 1.8em;
+      margin-bottom: 0.4em;
+      display: block;
+      color: var(--feature-icon);
+      text-shadow: 0 0 9px var(--blue-yonder);
+    }
+    .feature-title {
+      font-weight: 700;
+      font-size: 1.07rem;
+      color: #fff;
+      margin-bottom: 0.16em;
+    }
+    .feature-desc {
+      color: #ccc;
+      font-size: 0.99rem;
+    }
+    
+    /* How it works */
+    .how-works-section {
+      margin: 3rem 0;
+    }
+    .how-works-row {
+      display: flex;
+      gap: 1.2rem;
+      margin: 2.4rem 0 2.3rem 0;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .how-card {
+      flex: 1 1 120px;
+      background: #181818;
+      border-radius: 10px;
+      padding: 1.1rem 0.6rem 0.8rem 0.6rem;
+      text-align: center;
+      border-top: 2.5px solid var(--blue-yonder);
+      color: #fff;
+      font-size: 0.99rem;
+      min-width: 100px;
+    }
+    .how-card .emoji {
+      font-size: 1.45em;
+      margin-bottom: 0.2em;
+      display: block;
+      text-shadow: 0 0 7px var(--blue-yonder);
+    }
+    .how-card strong {
+      color: var(--blue-yonder);
+      display: block;
+      margin-bottom: 0.25em;
+      font-weight: 700;
+    }
+    
+    /* testimonials */
+    .testimonials-section {
+      margin: 3rem 0;
+    }
+    .testimonials-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+    .testimonials-row {
+      display: flex;
+      gap: 1.5rem;
+      padding: 1rem 0;
+      animation: scroll-testimonials 20s linear infinite;
+      width: calc(100% * 2);
+    }
+    .testimonials-row:hover {
+      animation-play-state: paused;
+    }
+    .testimonial-card {
+      flex: 0 0 300px;
+      background: var(--panel-dark);
+      border-radius: 11px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      border: 1px solid var(--panel-border);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0, 195, 255, 0.2);
+    }
+    @keyframes scroll-testimonials {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .testimonial-quote {
+      font-style: italic;
+      font-size: 1rem;
+      margin-bottom: 0.7em;
+      color: #6d69e1;
+    }
+    .testimonial-person {
+      display: flex;
+      align-items: center;
+      gap: 0.6em;
+      margin-top: 0.2em;
+      color: #fff;
+      font-size: 0.97em;
+    }
+    .testimonial-avatar {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: #232323;
+      object-fit: cover;
+      border: 1.5px solid #444;
+    }
+    .person-info {
+      display: flex; flex-direction: column;
+      align-items: flex-start;
+      font-size: 0.98em;
+    }
+    .person-name { font-weight: 700;}
+    .person-role { font-size: 0.93em; color: #999;}
+    
+    /* Trust signals */
+    .trust-signals {
+      text-align: center;
+      margin: 3rem 0;
+      padding: 2rem;
+      background: rgba(0, 195, 255, 0.05);
+      border-radius: 16px;
+      border: 1px solid rgba(0, 195, 255, 0.2);
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .trust-item {
+      color: var(--blue-yonder);
+      font-weight: 600;
+    }
+    .trust-number {
+      display: block;
+      font-size: 1.5rem;
+      color: var(--brand-husk);
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Floating CTA */
+    .floating-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: transparent;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      z-index: 999;
+      pointer-events: none;
+    }
+    .floating-cta .btn {
+      pointer-events: all;
+      font-size: 1.1rem;
+      padding: 0.85rem 2.4rem;
+      letter-spacing: 0.01em;
+      margin: 0;
+      border: none;
+      border-radius: 14px;
+      font-weight: 700;
+      background: linear-gradient(90deg, var(--Perano) 0%, var(--blue-yonder) 80%);
+      color: #0e0e0e;
+      box-shadow:
+        0 0 8px var(--Perano),
+        0 0 32px var(--blue-yonder),
+        0 2px 12px #000d;
+      text-shadow:
+        0 0 4px #fff,
+        0 0 6px var(--blue-yonder);
+      transition: background 0.2s, color 0.2s, box-shadow 0.25s;
+      outline: 3px solid #00c3ff33;
+      outline-offset: 2px;
+    }
+    .floating-cta .btn:hover {
+      background: linear-gradient(90deg, var(--blue-yonder) 10%, var(--Perano) 100%);
+      color: #141414;
+      box-shadow:
+        0 0 16px var(--blue-yonder),
+        0 0 44px var(--Perano),
+        0 2px 32px #000d;
+    }
+    
+    footer {
+      text-align: center;
+      font-size: 0.88rem;
+      margin-top: 3.2rem;
+      color: #666;
+    }
+    
+    /* Download buttons */
+    .download-btn:hover {
+      background: rgba(0, 195, 255, 0.1) !important;
+      border-color: var(--blue-yonder) !important;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 195, 255, 0.2);
+    }
+    
+    @media (max-width: 800px) {
+      .features-row, .how-works-row {
+        flex-direction: column;
+        gap: 0.7rem;
+      }
+      .testimonials-row {
+        animation-duration: 15s;
+      }
+      .testimonial-card {
+        flex: 0 0 280px;
+      }
+      .navbar {padding: 0.7rem 0.5rem;}
+      .nav-links {right: 0.5rem;}
+      .hero-headline {font-size: 2rem;}
+      .trust-grid {grid-template-columns: 1fr;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to content for accessibility -->
+  <a href="#main-content" class="sr-only">Skip to main content</a>
+  
+  <nav class="tm-navbar" role="navigation" aria-label="Main navigation">
+  <div class="tm-nav-left">
+    <img src="/assets/Logo-iOS-Default-40x40@2x.png" class="tm-nav-logo" alt="Thoughtmarks Logo"/>
+    <span class="tm-nav-title">Thoughtmarks</span>
+  </div>
+  <button class="tm-hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="tm-nav-links" id="navLinks" role="menu">
+    <a href="/landing/" role="menuitem">Home</a>
+    <a href="/about/" role="menuitem">About</a>
+    <a href="/docs/" role="menuitem">Docs</a>
+    <a href="/support/" role="menuitem">Support</a>
+    <a href="/legal/" role="menuitem">Legal</a>
+  </div>
+</nav>
+
+<script>
+// Hamburger menu functionality
+(function() {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+      this.classList.toggle('active');
+      const isExpanded = navLinks.style.display === 'flex';
+      navLinks.style.display = isExpanded ? 'none' : 'flex';
+      this.setAttribute('aria-expanded', !isExpanded);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+        hamburger.classList.remove('active');
+        navLinks.style.display = 'none';
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && navLinks.style.display === 'flex') {
+        hamburger.classList.remove('active');
+        navLinks.style.display = 'none';
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+})();
+</script>
+
+
+
+  <main id="main-content">
+    <div class="container">
+      <!-- Hero -->
+      <section class="hero" id="signup">
+        <div class="social-proof-badge">
+          <span class="rating-stars">★★★★★</span>
+          <span>Loved by busy, motivated people looking to stay on track and stay curious</span>
+        </div>
+        
+        <h1 class="hero-headline">Find <span style="color:#8590BEFF">FOCUS</span> in the <span style="color:#36465DFF">CHAOS</span></h1>
+        <p class="hero-tagline">The AI supercharged organizational focus tool for people who can't slow down</p>
+        <p class="hero-desc">Never lose brilliant ideas, interesting quotes, funny jokes, or creative inspiration that come anytime - whether your hands are free or not, whether you know where your notebook is or not, whether you're organized or not. Focus on capturing more brilliant ideas, not managing them.</p>
+        
+        <div class="promo-note">Limited Time: Premium Features Free - Start Building Your Digital Brain Today</div>
+        <form id="waitlist-form" class="email-capture" aria-label="Email signup form">
+          <input type="email" name="entry.1343891253" required placeholder="Your email address" aria-label="Email address"/>
+          <button type="submit" style="padding:0.9rem 2rem;">Try Premium Free</button>
+        </form>
+        <div id="form-status" style="margin-top: 1rem; text-align: center; font-weight: 600;"></div>
+      </section>
+      
+      <!-- App mockup demo -->
+      <div class="mockup-hero">
+        <img src="/assets/MAIN-mockup-page-dashboard.PNG" alt="Thoughtmarks app interface showing voice recording and AI organization features"/>
+      </div>
+
+      <!-- Problem/Solution -->
+      <section class="problem-solution">
+        <div class="problem">
+          <h2 class="problem-title">The Problem</h2>
+          <p class="problem-text">Brilliant ideas strike at the worst times - in the shower, while driving, during meetings. By the time you can write them down, they're gone forever.</p>
+        </div>
+        <div class="solution">
+          <h2 class="solution-title">The Solution</h2>
+          <p class="solution-text">Thoughtmarks captures thoughts in seconds with voice recording, then AI organizes everything automatically. Never lose another breakthrough moment.</p>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="features-section" id="features">
+        <h2 class="section-title">Your AI-Powered Second Brain</h2>
+        <div class="features-row">
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">🧠</span>
+            <h3 class="feature-title">AI Integration</h3>
+            <p class="feature-desc">Your ideas auto-organize and connect. Recall anything, anytime, even by voice.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">🎤</span>
+            <h3 class="feature-title">Voice-First Design</h3>
+            <p class="feature-desc">Record thoughts while walking, driving, or in the shower. Perfect transcription, zero friction.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">🔍</span>
+            <h3 class="feature-title">Intelligent Discovery</h3>
+            <p class="feature-desc">Discover patterns in your thinking. AI reveals connections you never noticed.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section class="how-works-section" id="how">
+        <h2 class="section-title">How It Works</h2>
+        <div class="how-works-row">
+          <article class="how-card">
+            <span class="emoji" aria-hidden="true">🎙️</span>
+            <strong>Capture</strong>
+            Record thoughts in seconds with voice or text
+          </article>
+          <article class="how-card">
+            <span class="emoji" aria-hidden="true">🤖</span>
+            <strong>Organize</strong>
+            AI automatically categorizes and connects ideas
+          </article>
+          <article class="how-card">
+            <span class="emoji" aria-hidden="true">🔍</span>
+            <strong>Discover</strong>
+            Find and build on your best thinking
+          </article>
+        </div>
+      </section>
+
+      <!-- Trust Signals -->
+      <section class="trust-signals">
+        <h2 class="section-title">Perfect for Creative Minds</h2>
+        <div class="trust-grid">
+          <div class="trust-item">
+            <span class="trust-number">Writers</span>
+            Capture fleeting inspiration
+          </div>
+          <div class="trust-item">
+            <span class="trust-number">Researchers</span>
+            Connect scattered insights
+          </div>
+          <div class="trust-item">
+            <span class="trust-number">Entrepreneurs</span>
+            Never lose breakthrough ideas
+          </div>
+          <div class="trust-item">
+            <span class="trust-number">Privacy-First</span>
+            Your thoughts stay yours
+          </div>
+        </div>
+      </section>
+
+      <!-- testimonials -->
+      <section class="testimonials-section" id="testimonials">
+        <h2 class="section-title">What Users Say</h2>
+        <div class="testimonials-container">
+          <div class="testimonials-row">
+            <!-- First set of testimonials -->
+            <article class="testimonial-card">
+              <blockquote class="testimonial-quote">"Finally found something that captures my thoughts as fast as I think them"</blockquote>
+              <div class="testimonial-person">
+                <img class="testimonial-avatar" src="/assets/testimonial-memojis/SARAH.png" alt="Sarah avatar" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'36\' height=\'36\' viewBox=\'0 0 36 36\'%3E%3Crect width=\'36\' height=\'36\' fill=\'%23232323\'/%3E%3Ctext x=\'18\' y=\'22\' text-anchor=\'middle\' fill=\'%23fff\' font-size=\'14\'%3ESC%3C/text%3E%3C/svg%3E'"/>
+                <div class="person-info">
+                  <div class="person-name">Sarah Chen, 32</div>
+                  <div class="person-role">Content Creator w/ ADHD</div>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <blockquote class="testimonial-quote">"The best ideas come anytime - this captures them all without breaking my flow"</blockquote>
+              <div class="testimonial-person">
+                <img class="testimonial-avatar" src="/assets/testimonial-memojis/MARCUS.png" alt="Marcus avatar" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'36\' height=\'36\' viewBox=\'0 0 36 36\'%3E%3Crect width=\'36\' height=\'36\' fill=\'%23232323\'/%3E%3Ctext x=\'18\' y=\'22\' text-anchor=\'middle\' fill=\'%23fff\' font-size=\'14\'%3EMR%3C/text%3E%3C/svg%3E'"/>
+                <div class="person-info">
+                  <div class="person-name">Marcus Rodriguez, 28</div>
+                  <div class="person-role">Entrepreneur & Startup Founder</div>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <blockquote class="testimonial-quote">"Perfect for my 12-hour shifts - voice notes when I can't stop to write"</blockquote>
+              <div class="testimonial-person">
+                <img class="testimonial-avatar" src="/assets/testimonial-memojis/EMILY.png" alt="Emily avatar" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'36\' height=\'36\' viewBox=\'0 0 36 36\'%3E%3Crect width=\'36\' height=\'36\' fill=\'%23232323\'/%3E%3Ctext x=\'18\' y=\'22\' text-anchor=\'middle\' fill=\'%23fff\' font-size=\'12\'%3EEW%3C/text%3E%3C/svg%3E'"/>
+                <div class="person-info">
+                  <div class="person-name">Dr. Emily Watson, 35</div>
+                  <div class="person-role">Emergency Medicine & Avid Runner</div>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <blockquote class="testimonial-quote">"Captures podcast insights while I work - no more losing great ideas to sawdust"</blockquote>
+              <div class="testimonial-person">
+                <img class="testimonial-avatar" src="/assets/testimonial-memojis/DAVID.png" alt="David avatar" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'36\' height=\'36\' viewBox=\'0 0 36 36\'%3E%3Crect width=\'36\' height=\'36\' fill=\'%23232323\'/%3E%3Ctext x=\'18\' y=\'22\' text-anchor=\'middle\' fill=\'%23fff\' font-size=\'14\'%3EDK%3C/text%3E%3C/svg%3E'"/>
+                <div class="person-info">
+                  <div class="person-name">David Kim, 47</div>
+                  <div class="person-role">Woodworker & Podcast Enthusiast</div>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <blockquote class="testimonial-quote">"Philosophy audiobooks spark ideas - this catches them mid-brushstroke"</blockquote>
+              <div class="testimonial-person">
+                <img class="testimonial-avatar" src="/assets/testimonial-memojis/ALEX.png" alt="Alex avatar" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'36\' height=\'36\' viewBox=\'0 0 36 36\'%3E%3Crect width=\'36\' height=\'36\' fill=\'%23232323\'/%3E%3Ctext x=\'18\' y=\'22\' text-anchor=\'middle\' fill=\'%23fff\' font-size=\'14\'%3EAT%3C/text%3E%3C/svg%3E'"/>
+                <div class="person-info">
+                  <div class="person-name">Alex Torres, 26</div>
+                  <div class="person-role">Artist & Philosophy Student</div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Duplicate set for seamless scrolling -->
+            <article class="testimonial-card">
+              <blockquote class="testimonial-quote">"Finally found something that captures my thoughts as fast as I think them"</blockquote>
+              <div class="testimonial-person">
+                <img class="testimonial-avatar" src="/assets/testimonial-memojis/SARAH.png" alt="Sarah avatar" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'36\' height=\'36\' viewBox=\'0 0 36 36\'%3E%3Crect width=\'36\' height=\'36\' fill=\'%23232323\'/%3E%3Ctext x=\'18\' y=\'22\' text-anchor=\'middle\' fill=\'%23fff\' font-size=\'14\'%3ESC%3C/text%3E%3C/svg%3E'"/>
+                <div class="person-info">
+                  <div class="person-name">Sarah Chen, 32</div>
+                  <div class="person-role">Content Creator w/ ADHD</div>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <blockquote class="testimonial-quote">"The best ideas come anytime - this captures them all without breaking my flow"</blockquote>
+              <div class="testimonial-person">
+                <img class="testimonial-avatar" src="/assets/testimonial-memojis/MARCUS.png" alt="Marcus avatar" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'36\' height=\'36\' viewBox=\'0 0 36 36\'%3E%3Crect width=\'36\' height=\'36\' fill=\'%23232323\'/%3E%3Ctext x=\'18\' y=\'22\' text-anchor=\'middle\' fill=\'%23fff\' font-size=\'14\'%3EMR%3C/text%3E%3C/svg%3E'"/>
+                <div class="person-info">
+                  <div class="person-name">Marcus Rodriguez, 28</div>
+                  <div class="person-role">Entrepreneur & Startup Founder</div>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <blockquote class="testimonial-quote">"Perfect for my 12-hour shifts - voice notes when I can't stop to write"</blockquote>
+              <div class="testimonial-person">
+                <img class="testimonial-avatar" src="/assets/testimonial-memojis/EMILY.png" alt="Emily avatar" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'36\' height=\'36\' viewBox=\'0 0 36 36\'%3E%3Crect width=\'36\' height=\'36\' fill=\'%23232323\'/%3E%3Ctext x=\'18\' y=\'22\' text-anchor=\'middle\' fill=\'%23fff\' font-size=\'12\'%3EEW%3C/text%3E%3C/svg%3E'"/>
+                <div class="person-info">
+                  <div class="person-name">Dr. Emily Watson, 35</div>
+                  <div class="person-role">Emergency Medicine & Avid Runner</div>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <blockquote class="testimonial-quote">"Captures podcast insights while I work - no more losing great ideas to sawdust"</blockquote>
+              <div class="testimonial-person">
+                <img class="testimonial-avatar" src="/assets/testimonial-memojis/DAVID.png" alt="David avatar" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'36\' height=\'36\' viewBox=\'0 0 36 36\'%3E%3Crect width=\'36\' height=\'36\' fill=\'%23232323\'/%3E%3Ctext x=\'18\' y=\'22\' text-anchor=\'middle\' fill=\'%23fff\' font-size=\'14\'%3EDK%3C/text%3E%3C/svg%3E'"/>
+                <div class="person-info">
+                  <div class="person-name">David Kim, 47</div>
+                  <div class="person-role">Woodworker & Podcast Enthusiast</div>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial-card">
+              <blockquote class="testimonial-quote">"Philosophy audiobooks spark ideas - this catches them mid-brushstroke"</blockquote>
+              <div class="testimonial-person">
+                <img class="testimonial-avatar" src="/assets/testimonial-memojis/ALEX.png" alt="Alex avatar" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'36\' height=\'36\' viewBox=\'0 0 36 36\'%3E%3Crect width=\'36\' height=\'36\' fill=\'%23232323\'/%3E%3Ctext x=\'18\' y=\'22\' text-anchor=\'middle\' fill=\'%23fff\' font-size=\'14\'%3EAT%3C/text%3E%3C/svg%3E'"/>
+                <div class="person-info">
+                  <div class="person-name">Alex Torres, 26</div>
+                  <div class="person-role">Artist & Philosophy Student</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- App Showcase -->
+      <section class="mockup-showcase" style="margin: 4rem 0; text-align: center; background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); padding: 4rem 2rem; border-radius: 20px;">
+        <h2 class="section-title" style="color: white; margin-bottom: 1rem;">See It In Action</h2>
+        <p style="color: #ccc; font-size: 1.1rem; margin-bottom: 3rem;">Experience the intuitive interface designed for capturing thoughts at the speed of life</p>
+        
+        <div style="display: flex; gap: 2rem; justify-content: center; align-items: center; flex-wrap: wrap;">
+          <!-- Dashboard Mockup -->
+          <div style="position: relative; transform: perspective(1000px) rotateY(-15deg); transition: transform 0.3s ease;">
+            <img src="/assets/MAIN-mockup-page-dashboard.PNG" 
+                 alt="Thoughtmarks Dashboard" 
+                 style="width: 280px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0, 195, 255, 0.3);"
+                 onmouseover="this.parentElement.style.transform='perspective(1000px) rotateY(0deg) scale(1.05)'"
+                 onmouseout="this.parentElement.style.transform='perspective(1000px) rotateY(-15deg)'"/>
+            <div style="position: absolute; top: -10px; left: -10px; background: #A4B5F7FF; color: #000; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">Dashboard</div>
+          </div>
+          
+          <!-- AI Tools Mockup -->
+          <div style="position: relative; transform: perspective(1000px) rotateY(15deg); transition: transform 0.3s ease;">
+            <img src="/assets/mockup-page-pashboard.png" 
+                 alt="AI Tools Interface" 
+                 style="width: 280px; border-radius: 20px; box-shadow: 0 20px 40px #B7A363FF;"
+                 onmouseover="this.parentElement.style.transform='perspective(1000px) rotateY(0deg) scale(1.05)'"
+                 onmouseout="this.parentElement.style.transform='perspective(1000px) rotateY(15deg)'"/>
+            <div style="position: absolute; top: -10px; right: -10px; background: #00c3ff; color: #000; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">AI Tools</div>
+          </div>
+          
+          <!-- Organization View -->
+          <div style="position: relative; transform: perspective(1000px) rotateY(-10deg); transition: transform 0.3s ease;">
+            <img src="/assets/MAIN-mockup-page-Bins.png" 
+                 alt="All Thoughtmarks View" 
+                 style="width: 280px; border-radius: 20px; box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);"
+                 onmouseover="this.parentElement.style.transform='perspective(1000px) rotateY(0deg) scale(1.05)'"
+                 onmouseout="this.parentElement.style.transform='perspective(1000px) rotateY(-10deg)'"/>
+            <div style="position: absolute; top: -10px; left: -10px; background: #ff6b6b; color: #fff; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.8rem; font-weight: bold;">Organize</div>
+          </div>
+        </div>
+        
+        <p style="color: #999; font-size: 0.9rem; margin-top: 2rem;">Swipe, voice record, organize - all optimized for mobile-first thinking</p>
+      </section>
+
+      <!-- Desktop Downloads  # TODO: REMOVE DESKTOP DOWNLOADS FOR NOW -- REPLACE WITH APP STORE DOWNLOAD (APPLE) https://thoughtmarks.app/AppStore
+      <section class="download-section" style="margin: 3rem 0; text-align: center;">
+        <h2 class="section-title">Download for Desktop</h2>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+          <a href="https://thoughtmarks.app/downloads/thoughtmarks-windows.exe" class="download-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #131927; color: white; padding: 1rem 2rem; border-radius: 10px; text-decoration: none; border: 2px solid white; transition: all 0.2s;">
+            <span style="font-size: 1.5rem;">🪟</span>
+            <div style="text-align: left;">
+              <div style="font-weight: 600;">Windows</div>
+              <div style="font-size: 0.9rem; color: #999;">Download .exe</div>
+            </div>
+          </a>
+          <a href="https://thoughtmarks.app/downloads/thoughtmarks-mac.dmg" class="download-btn" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #131927; color: white; padding: 1rem 2rem; border-radius: 10px; text-decoration: none; border: 2px solid white; transition: all 0.2s;">
+            <span style="font-size: 1.5rem;">🍎</span>
+            <div style="text-align: left;">
+              <div style="font-weight: 600;">macOS</div>
+              <div style="font-size: 0.9rem; color: #999;">Download .dmg</div>
+            </div>
+          </a>
+        </div>
+      </section> -->
+    </div>
+  </main>
+
+  <!-- Floating CTA -->
+  <div class="floating-cta">
+    <a href="https://apps.apple.com/app/thoughtmarks" class="btn" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+      Download Now Free
+      <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on App Store" style="height: 24px; filter: invert(1);">
+    </a>
+  </div>
+
+  <footer class="tm-footer">
+  <p>
+    &copy; 2024-2025 Thoughtmarks. All rights reserved.
+    <br/>
+    <a href="/legal/privacy.html">Privacy Policy</a>
+    <a href="/legal/terms.html">Terms of Service</a>
+    <a href="/legal/account-deletion.html">Delete Account</a>
+    <a href="/support/">Support</a>
+  </p>
+  <p style="margin-top: 1rem; font-size: 0.8rem;">
+    Transform how you think. Capture brilliant ideas at the speed of life.
+  </p>
+</footer>
+
+
+
+  <script>
+    // Hamburger menu functionality
+    document.getElementById('hamburger').addEventListener('click', function() {
+      this.classList.toggle('active');
+      const navLinks = document.getElementById('navLinks');
+      navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+      if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+        hamburger.classList.remove('active');
+        navLinks.style.display = 'none';
+      }
+    });
+
+    // Google Forms integration
+    document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(this);
+      const statusDiv = document.getElementById('form-status');
+      const submitBtn = this.querySelector('button[type="submit"]');
+      
+      // Show loading state
+      submitBtn.textContent = 'Joining...';
+      submitBtn.disabled = true;
+      statusDiv.innerHTML = '';
+      
+      // Submit to Google Forms
+      fetch('https://docs.google.com/forms/d/e/1FAIpQLSffxWBmFUjlbD04Qn-JV4EIswgMeWddvrEDEtOINYjxZXx71Q/formResponse', {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      }).then(() => {
+        // Success (no-cors mode always resolves)
+        statusDiv.innerHTML = '<div style="color: var(--brand-husk);">✓ Thanks! You\'re on the waitlist.</div>';
+        this.reset();
+        submitBtn.textContent = 'Try Premium Free';
+        submitBtn.disabled = false;
+      }).catch(() => {
+        // Fallback success message (no-cors mode rarely fails)
+        statusDiv.innerHTML = '<div style="color: var(--brand-husk);">✓ Thanks! You\'re on the waitlist.</div>';
+        this.reset();
+        submitBtn.textContent = 'Try Premium Free';
+        submitBtn.disabled = false;
+      });
+    });
+
+    // Analytics tracking
+    function trackEvent(action, category) {
+      console.log(`Event: ${action} in ${category}`);
+    }
+
+    // Track CTA clicks
+    document.querySelectorAll('button[type="submit"], .btn').forEach(button => {
+      button.addEventListener('click', () => trackEvent('cta_click', 'conversion'));
+    });
+  </script>
+</body>
+</html>

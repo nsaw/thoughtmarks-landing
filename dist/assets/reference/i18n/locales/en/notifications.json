@@ -1,0 +1,120 @@
+{
+  "permissions": {
+    "title": "Notifications Permission",
+    "rationale": "Thoughtmarks needs notification permissions to send you reminders, daily digests, and AI-powered insights to help you stay organized.",
+    "required": {
+      "title": "Permission Required",
+      "message": "Please enable notifications in Settings to receive push notifications.",
+      "cancel": "Cancel",
+      "openSettings": "Open Settings"
+    },
+    "provisional": {
+      "title": "Quiet Notifications",
+      "message": "We'll deliver notifications quietly. You can change this anytime in Settings."
+    },
+    "denied": {
+      "title": "Notifications Disabled",
+      "message": "To receive reminders and updates, please enable notifications in your device Settings.",
+      "dismiss": "Dismiss",
+      "openSettings": "Open Settings"
+    },
+    "granted": {
+      "title": "Notifications Enabled",
+      "message": "You'll now receive reminders and updates from Thoughtmarks."
+    }
+  },
+  "categories": {
+    "reminder": {
+      "preview": "Thoughtmark Reminder",
+      "actions": {
+        "complete": "Mark Complete",
+        "snooze": "Snooze"
+      }
+    },
+    "message": {
+      "preview": "New Message",
+      "actions": {
+        "reply": "Reply",
+        "replyPlaceholder": "Type your reply...",
+        "send": "Send"
+      }
+    },
+    "digest": {
+      "preview": "Daily Digest",
+      "actions": {
+        "view": "View"
+      }
+    },
+    "aiInsight": {
+      "preview": "AI Insight",
+      "actions": {
+        "viewInsight": "View Insight"
+      }
+    }
+  },
+  "content": {
+    "reminder": {
+      "title": "Thoughtmark Reminder",
+      "snoozedTitle": "Reminder (Snoozed)"
+    },
+    "digest": {
+      "title": "Your Daily Digest",
+      "body": "See what you accomplished today"
+    },
+    "aiInsight": {
+      "title": "AI Insight",
+      "body": "We've discovered insights from your thoughtmarks"
+    }
+  },
+  "settings": {
+    "title": "Notifications",
+    "subtitle": "Manage your notification preferences",
+    "sections": {
+      "types": {
+        "title": "Notification Types",
+        "push": {
+          "title": "Push Notifications",
+          "description": "Receive notifications on your device"
+        },
+        "email": {
+          "title": "Email Notifications",
+          "description": "Receive notifications via email",
+          "emailRequired": {
+            "title": "Email Required",
+            "message": "Please configure your email address in Account Settings to receive email notifications.",
+            "ok": "OK"
+          }
+        },
+        "reminders": {
+          "title": "Reminder Notifications",
+          "description": "Get reminded about your thoughtmarks"
+        },
+        "marketing": {
+          "title": "Marketing Emails",
+          "description": "Receive updates and promotional emails"
+        },
+        "aiNotifications": {
+          "title": "AI Notifications",
+          "description": "Get AI-powered suggestions and insights"
+        },
+        "smartReminders": {
+          "title": "Smart Reminders",
+          "description": "Intelligent timing for your reminders"
+        }
+      }
+    }
+  },
+  "errors": {
+    "permissionFailed": "Failed to enable push notifications. Please try again.",
+    "registrationFailed": "Failed to register for notifications. Please check your connection and try again.",
+    "scheduleFailed": "Failed to schedule notification. Please try again.",
+    "cancelFailed": "Failed to cancel notification.",
+    "updateFailed": "Failed to update notification settings."
+  },
+  "actions": {
+    "completed": "Thoughtmark marked as complete",
+    "snoozed": "Reminder snoozed for 1 hour",
+    "replied": "Reply sent"
+  }
+}
+

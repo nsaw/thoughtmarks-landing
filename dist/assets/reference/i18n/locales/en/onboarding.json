@@ -1,0 +1,234 @@
+{
+  "welcome": {
+    "title": "Welcome to Thoughtmarks",
+    "subtitle": "Capture, organize, and discover your ideas with AI-powered insights",
+    "screen": {
+      "label": "Welcome screen for Thoughtmarks onboarding"
+    },
+    "features": {
+      "voice": {
+        "title": "Voice Capture",
+        "description": "Record your thoughts instantly with voice-to-text"
+      },
+      "ai": {
+        "title": "AI Insights",
+        "description": "Get smart suggestions and connections between ideas"
+      },
+      "search": {
+        "title": "Smart Search",
+        "description": "Find anything with semantic search and AI assistance"
+      }
+    },
+    "continue": "Get Started",
+    "skip": "Skip Setup",
+    "continueButton": {
+      "label": "Continue to next step",
+      "hint": "Tap to proceed to permission setup"
+    },
+    "skipButton": {
+      "label": "Skip onboarding",
+      "hint": "Tap to skip setup and go to main app"
+    }
+  },
+  "permissions": {
+    "title": "Enable Permissions",
+    "subtitle": "Grant permissions to unlock Thoughtmarks' full potential",
+    "screen": {
+      "label": "Permission setup screen"
+    },
+    "microphone": {
+      "title": "Microphone Access",
+      "description": "Record voice notes and use voice commands",
+      "denied": {
+        "title": "Microphone Permission Denied",
+        "message": "Voice recording requires microphone access. You can enable this later in Settings."
+      },
+      "required": {
+        "title": "Microphone Required",
+        "message": "Microphone access is required for voice features. Please grant permission to continue."
+      }
+    },
+    "notifications": {
+      "title": "Notifications",
+      "description": "Get reminders and updates about your thoughts"
+    },
+    "required": "Required",
+    "grant": "Grant Permission",
+    "grantButton": {
+      "label": "Grant {{permission}} permission",
+      "hint": "Tap to request {{permission}} permission"
+    },
+    "requesting": "Requesting...",
+    "openSettings": "Open Settings",
+    "continue": "Continue",
+    "skip": "Skip",
+    "continueButton": {
+      "label": "Continue to next step",
+      "hint": "Tap to proceed after granting required permissions"
+    },
+    "skipButton": {
+      "label": "Skip permissions",
+      "hint": "Tap to skip permission setup"
+    }
+  },
+  "siri": {
+    "title": "Siri Shortcuts",
+    "subtitle": "Quick access to your thoughts with Siri",
+    "screen": {
+      "label": "Siri shortcuts setup screen"
+    },
+    "capture": {
+      "title": "Capture Thought",
+      "description": "Start recording a new thoughtmark",
+      "phrase": "Hey Siri, capture a thought"
+    },
+    "search": {
+      "title": "Search Thoughts",
+      "description": "Search through your thoughtmarks",
+      "phrase": "Hey Siri, search my thoughts"
+    },
+    "voice": {
+      "title": "Voice Commands",
+      "description": "Control Thoughtmarks with voice",
+      "phrase": "Hey Siri, open Thoughtmarks"
+    },
+    "shortcut": {
+      "donate": {
+        "label": "Add {{shortcut}} to Siri",
+        "hint": "Tap to add {{shortcut}} shortcut to Siri"
+      },
+      "donated": {
+        "label": "Added to Siri",
+        "hint": "This shortcut has been added to Siri"
+      },
+      "donating": "Adding..."
+    },
+    "progress": "{{count}} of {{total}} shortcuts added",
+    "error": {
+      "title": "Shortcut Error",
+      "message": "Failed to add shortcut to Siri. Please try again."
+    },
+    "continue": {
+      "label": "Continue to next step",
+      "hint": "Tap to proceed to biometric setup"
+    },
+    "skip": {
+      "label": "Skip Siri setup",
+      "hint": "Tap to skip Siri shortcuts setup"
+    },
+    "settings": {
+      "label": "Open Siri settings",
+      "hint": "Tap to open Siri settings in the Settings app"
+    }
+  },
+  "biometrics": {
+    "title": "Biometric Security",
+    "subtitle": "Secure access with Face ID or Touch ID",
+    "screen": {
+      "label": "Biometric authentication setup screen"
+    },
+    "faceId": "Face ID",
+    "touchId": "Touch ID",
+    "biometric": "Biometric Authentication",
+    "card": {
+      "label": "Biometric authentication information"
+    },
+    "benefits": {
+      "title": "Why enable biometrics?",
+      "quick": "Quick access to your secure notes",
+      "secure": "Enhanced security for sensitive content",
+      "convenient": "No need to remember passwords"
+    },
+    "status": {
+      "enrolled": {
+        "label": "Biometric authentication is enabled",
+        "description": "You can use Face ID or Touch ID to access Thoughtmarks"
+      },
+      "notEnrolled": {
+        "label": "Biometric authentication is not enabled",
+        "description": "Enable Face ID or Touch ID for secure access"
+      }
+    },
+    "notAvailable": {
+      "title": "Biometrics Not Available",
+      "message": "Biometric authentication is not available on this device",
+      "label": "Biometric authentication is not available"
+    },
+    "enrollment": {
+      "success": {
+        "title": "Biometrics Enabled",
+        "message": "{{type}} has been successfully enabled for Thoughtmarks"
+      },
+      "notAvailable": {
+        "title": "Cannot Enable Biometrics",
+        "message": "Please enable {{type}} in Settings first"
+      },
+      "failed": {
+        "title": "Setup Failed",
+        "message": "Could not enable biometric authentication. Please try again."
+      },
+      "error": {
+        "title": "Setup Error",
+        "message": "An error occurred while setting up biometric authentication"
+      }
+    },
+    "success": {
+      "title": "Biometrics Enabled",
+      "message": "Your device is now secured with biometric authentication"
+    },
+    "error": {
+      "title": "Setup Error",
+      "message": "Failed to set up biometric authentication: {{error}}",
+      "openSettings": "Open Settings"
+    },
+    "enroll": {
+      "label": "Enable biometric authentication",
+      "hint": "Tap to enable Face ID or Touch ID"
+    },
+    "enrolling": "Setting up...",
+    "continue": {
+      "label": "Continue to next step",
+      "hint": "Tap to proceed to first action tutorial"
+    },
+    "skip": {
+      "label": "Skip biometric setup",
+      "hint": "Tap to skip biometric authentication setup"
+    },
+    "settings": {
+      "label": "Open security settings",
+      "hint": "Tap to open Face ID & Passcode settings"
+    }
+  },
+  "firstAction": {
+    "title": "Your First Thoughtmark",
+    "subtitle": "Ready to capture your first idea?",
+    "screen": {
+      "label": "First action tutorial screen"
+    },
+    "voice": {
+      "title": "Record Voice Note",
+      "description": "Tap the microphone to start recording",
+      "button": "Start Recording"
+    },
+    "text": {
+      "title": "Type a Thoughtmark",
+      "description": "Tap the plus button to create a text note",
+      "button": "Type Note"
+    },
+    "continue": {
+      "label": "Continue to main app",
+      "hint": "Tap to complete onboarding and start using Thoughtmarks"
+    }
+  },
+  "finish": {
+    "title": "You're All Set!",
+    "subtitle": "Thoughtmarks is ready to help you capture and organize your ideas",
+    "screen": {
+      "label": "Onboarding completion screen"
+    },
+    "continue": {
+      "label": "Start using Thoughtmarks",
+      "hint": "Tap to complete setup and access the main app"
+    }
+  }
+}

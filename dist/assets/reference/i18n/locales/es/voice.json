@@ -1,0 +1,328 @@
+{
+  "shortcuts": {
+    "create": {
+      "title": "Crear Thoughtmark",
+      "subtitle": "Crear un nuevo thoughtmark con voz o texto",
+      "phrase": "Crear un thoughtmark",
+      "utterances": [
+        "Crear un thoughtmark",
+        "Crear nuevo thoughtmark",
+        "Añadir un thoughtmark",
+        "Nuevo thoughtmark",
+        "Capturar un pensamiento"
+      ],
+      "confirmation": {
+        "withTitle": "Creando thoughtmark \"{{title}}\"",
+        "withTitleAndBin": "Creando thoughtmark \"{{title}}\" en {{bin}}",
+        "withTitleAndTags": "Creando thoughtmark \"{{title}}\" con etiquetas: {{tags}}",
+        "withAllParams": "Creando thoughtmark \"{{title}}\" en {{bin}} con etiquetas: {{tags}}",
+        "withNote": "Creando thoughtmark con nota",
+        "default": "Creando nuevo thoughtmark"
+      },
+      "parameterSummary": {
+        "title": "Título: {{title}}",
+        "bin": "Carpeta: {{bin}}",
+        "tags": "Etiquetas: {{tags}}",
+        "note": "Nota: {{note}}"
+      }
+    },
+    "search": {
+      "title": "Buscar Thoughtmarks",
+      "subtitle": "Encuentra tus thoughtmarks rápidamente",
+      "phrase": "Buscar thoughtmarks",
+      "utterances": [
+        "Buscar thoughtmarks",
+        "Buscar mis pensamientos",
+        "Encontrar thoughtmarks",
+        "Buscar pensamientos",
+        "Buscar {{query}}"
+      ],
+      "confirmation": {
+        "withQuery": "Buscando \"{{query}}\"",
+        "withQueryAndBin": "Buscando \"{{query}}\" en {{bin}}",
+        "withQueryAndTag": "Buscando \"{{query}}\" con etiqueta {{tag}}",
+        "withAllParams": "Buscando \"{{query}}\" en {{bin}} con etiqueta {{tag}}",
+        "default": "Abriendo búsqueda"
+      },
+      "parameterSummary": {
+        "query": "Consulta: {{query}}",
+        "bin": "Carpeta: {{bin}}",
+        "tag": "Etiqueta: {{tag}}"
+      }
+    },
+    "record": {
+      "title": "Grabación de Voz",
+      "subtitle": "Grabar un thoughtmark de voz",
+      "phrase": "Grabar una nota de voz",
+      "utterances": [
+        "Grabar una nota de voz",
+        "Empezar grabación",
+        "Capturar nota de voz",
+        "Grabación de voz",
+        "Grabar pensamiento"
+      ],
+      "confirmation": {
+        "withTitle": "Grabando nota de voz \"{{title}}\"",
+        "withTitleAndBin": "Grabando nota de voz \"{{title}}\" en {{bin}}",
+        "withBin": "Grabando nota de voz en {{bin}}",
+        "default": "Iniciando grabación de voz"
+      },
+      "parameterSummary": {
+        "title": "Título: {{title}}",
+        "bin": "Carpeta: {{bin}}"
+      }
+    }
+  },
+  "intent": {
+    "received": "Intención recibida",
+    "processing": "Procesando...",
+    "resolved": "Intención procesada exitosamente",
+    "failed": "Falló el procesamiento de intención"
+  },
+  "errors": {
+    "permissionDenied": {
+      "microphone": {
+        "title": "Permiso de Micrófono Requerido",
+        "message": "Thoughtmarks necesita acceso al micrófono para grabar notas de voz. Por favor, actívalo en Ajustes.",
+        "action": "Abrir Ajustes",
+        "cancel": "Cancelar"
+      },
+      "notifications": {
+        "title": "Permiso de Notificaciones Requerido",
+        "message": "Activa las notificaciones para recibir actualizaciones cuando se completen las tareas en segundo plano.",
+        "action": "Abrir Ajustes",
+        "cancel": "Ahora no"
+      }
+    },
+    "ambiguous": {
+      "bin": {
+        "title": "¿Qué Carpeta?",
+        "message": "Tienes múltiples carpetas. ¿Cuál quieres usar?",
+        "action": "Elegir Carpeta",
+        "cancel": "Cancelar"
+      },
+      "tag": {
+        "title": "¿Qué Etiqueta?",
+        "message": "Por favor, especifica qué etiqueta quieres usar.",
+        "action": "Elegir Etiqueta",
+        "cancel": "Cancelar"
+      }
+    },
+    "emptyResult": {
+      "search": {
+        "title": "No Se Encontraron Resultados",
+        "message": "Ningún thoughtmark coincide con tu búsqueda de \"{{query}}\". Prueba con otras palabras clave o explora todos los thoughtmarks.",
+        "voice": "No se encontraron resultados para \"{{query}}\". Abriendo búsqueda para intentar de nuevo.",
+        "action": "Intentar de Nuevo",
+        "browse": "Explorar Todos"
+      }
+    },
+    "navigationFailed": {
+      "title": "Error de Navegación",
+      "message": "No se puede abrir la pantalla solicitada. Abriendo panel de control en su lugar.",
+      "action": "Reintentar",
+      "cancel": "Descartar"
+    },
+    "intentFailed": {
+      "title": "Acción Fallida",
+      "message": "No se puede completar la acción solicitada. Por favor, inténtalo de nuevo.",
+      "voice": "Lo siento, no pude completar esa acción. Por favor, inténtalo de nuevo en la aplicación.",
+      "action": "Abrir Aplicación",
+      "cancel": "Cancelar"
+    },
+    "timeout": {
+      "title": "Tiempo de Espera Agotado",
+      "message": "La operación tardó demasiado en completarse. Por favor, inténtalo de nuevo.",
+      "voice": "La operación se agotó el tiempo. Por favor, inténtalo de nuevo.",
+      "action": "Reintentar",
+      "cancel": "Cancelar"
+    },
+    "offline": {
+      "title": "Sin Conexión",
+      "message": "Esta acción requiere conexión a internet. Tu solicitud se ha puesto en cola y se sincronizará cuando vuelvas a estar en línea.",
+      "voice": "Estás sin conexión. Tu solicitud se ha puesto en cola para más tarde.",
+      "action": "OK"
+    }
+  },
+  "notifications": {
+    "continueInApp": {
+      "title": "Continuar en la Aplicación",
+      "body": {
+        "create": "Toca para terminar de crear tu thoughtmark",
+        "search": "Toca para ver los resultados de búsqueda",
+        "record": "Toca para completar tu grabación de voz"
+      },
+      "action": "Abrir Aplicación"
+    },
+    "completed": {
+      "create": {
+        "title": "Thoughtmark Creado",
+        "body": "\"{{title}}\" se ha guardado en tus thoughtmarks"
+      },
+      "search": {
+        "title": "Resultados de Búsqueda",
+        "body": "Se encontraron {{count}} thoughtmark(s) para \"{{query}}\""
+      },
+      "record": {
+        "title": "Grabación Guardada",
+        "body": "Tu nota de voz ha sido transcrita y guardada"
+      }
+    },
+    "failed": {
+      "create": {
+        "title": "Creación Fallida",
+        "body": "No se pudo crear thoughtmark. Toca para reintentar."
+      },
+      "search": {
+        "title": "Búsqueda Fallida",
+        "body": "No se pudo completar la búsqueda. Toca para reintentar."
+      },
+      "record": {
+        "title": "Grabación Fallida",
+        "body": "No se pudo guardar la grabación de voz. Toca para reintentar."
+      }
+    }
+  },
+  "handoff": {
+    "opening": "Abriendo Thoughtmarks...",
+    "navigating": "Navegando a {{screen}}...",
+    "preparing": "Preparando {{action}}...",
+    "ready": "Listo"
+  },
+  "background": {
+    "processing": "Procesando en segundo plano...",
+    "queued": "Tu solicitud se ha puesto en cola",
+    "syncing": "Sincronizando con el servidor...",
+    "completed": "Tarea en segundo plano completada",
+    "failed": "Tarea en segundo plano fallida"
+  },
+  "help": {
+    "utterances": {
+      "title": "Comandos de Voz",
+      "examples": {
+        "create": [
+          "Oye Siri, crear un thoughtmark",
+          "Oye Siri, crear un thoughtmark llamado \"Notas de Reunión\"",
+          "Oye Siri, crear un thoughtmark en carpeta Trabajo",
+          "Oye Siri, crear un thoughtmark con etiquetas proyecto y urgente"
+        ],
+        "search": [
+          "Oye Siri, buscar thoughtmarks",
+          "Oye Siri, buscar thoughtmarks para reunión",
+          "Oye Siri, buscar thoughtmarks en carpeta Trabajo",
+          "Oye Siri, buscar thoughtmarks con etiqueta proyecto"
+        ],
+        "record": [
+          "Oye Siri, grabar una nota de voz",
+          "Oye Siri, empezar grabación de voz",
+          "Oye Siri, grabar una nota de voz en carpeta Personal"
+        ]
+      }
+    },
+    "parameters": {
+      "optional": "Opcional",
+      "required": "Requerido",
+      "title": {
+        "label": "Título",
+        "description": "El título para tu thoughtmark",
+        "example": "Notas de Reunión"
+      },
+      "note": {
+        "label": "Nota",
+        "description": "Contenido adicional para tu thoughtmark",
+        "example": "Discutir objetivos del tercer trimestre"
+      },
+      "bin": {
+        "label": "Carpeta",
+        "description": "La carpeta para organizar tu thoughtmark",
+        "example": "Trabajo"
+      },
+      "tags": {
+        "label": "Etiquetas",
+        "description": "Etiquetas para categorizar tu thoughtmark",
+        "example": "proyecto, urgente"
+      },
+      "query": {
+        "label": "Consulta de Búsqueda",
+        "description": "Qué buscar",
+        "example": "notas de reunión"
+      }
+    }
+  },
+  "permissions": {
+    "microphone": {
+      "title": "Acceso al Micrófono",
+      "message": "Thoughtmarks necesita acceso al micrófono para grabar notas de voz y usar comandos de voz.",
+      "rationale": "Necesitamos acceso al micrófono para capturar tus notas de voz y procesar comandos de Siri.",
+      "grant": "Conceder Acceso",
+      "deny": "Ahora no",
+      "openSettings": "Abrir Ajustes"
+    },
+    "siri": {
+      "title": "Siri y Atajos",
+      "message": "Activa los Atajos de Siri para usar comandos de voz con Thoughtmarks.",
+      "rationale": "Los Atajos de Siri te permiten capturar y buscar thoughtmarks rápidamente sin usar las manos.",
+      "grant": "Activar Atajos",
+      "deny": "Ahora no",
+      "openSettings": "Abrir Ajustes de Siri"
+    },
+    "notifications": {
+      "title": "Notificaciones",
+      "message": "Activa las notificaciones para saber cuándo se completan las tareas de voz en segundo plano.",
+      "rationale": "Las notificaciones nos permiten informarte cuando las grabaciones de voz se transcriben y los thoughtmarks se crean.",
+      "grant": "Activar Notificaciones",
+      "deny": "Ahora no",
+      "openSettings": "Abrir Ajustes de Notificaciones"
+    }
+  },
+  "fallbacks": {
+    "defaultResponse": "Abriendo aplicación Thoughtmarks...",
+    "retryPrompt": "¿Quieres intentarlo de nuevo?",
+    "openApp": "Abrir Aplicación",
+    "cancel": "Cancelar"
+  },
+  "latency": {
+    "measuring": "Midiendo rendimiento...",
+    "fast": "Tiempo de respuesta: {{ms}}ms",
+    "slow": "La respuesta está tardando más de lo esperado...",
+    "target": "Objetivo: <700ms"
+  },
+  "a11y": {
+    "shortcuts": {
+      "create": {
+        "label": "Atajo para crear thoughtmark",
+        "hint": "Doble toque para configurar la frase de Siri para crear thoughtmarks"
+      },
+      "search": {
+        "label": "Atajo para buscar thoughtmarks",
+        "hint": "Doble toque para configurar la frase de Siri para buscar thoughtmarks"
+      },
+      "record": {
+        "label": "Atajo para grabación de voz",
+        "hint": "Doble toque para configurar la frase de Siri para grabación de voz"
+      }
+    },
+    "intent": {
+      "processing": "Procesando tu comando de voz",
+      "completed": "Comando de voz completado exitosamente",
+      "failed": "Comando de voz falló, por favor intenta de nuevo"
+    }
+  },
+  "queue": {
+    "status": {
+      "failed": "{{count}} transcripción(es) de voz fallaron",
+      "processing": "{{count}} trabajo(s) de voz procesando",
+      "total": "{{count}} trabajo(s) total en cola"
+    },
+    "description": {
+      "failed": "Algunas transcripciones de voz fallaron. Toca reintentar para intentar de nuevo o ver detalles.",
+      "processing": "Las grabaciones de voz se están transcribiendo y convirtiendo en thoughtmarks."
+    },
+    "actions": {
+      "retry": "Reintentar Fallidos",
+      "viewDetails": "Ver Detalles",
+      "dismiss": "Descartar"
+    }
+  }
+}
+

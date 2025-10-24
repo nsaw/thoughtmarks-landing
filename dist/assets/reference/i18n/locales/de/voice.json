@@ -1,0 +1,328 @@
+{
+  "shortcuts": {
+    "create": {
+      "title": "Thoughtmark Erstellen",
+      "subtitle": "Einen neuen Thoughtmark mit Sprache oder Text erstellen",
+      "phrase": "Einen Thoughtmark erstellen",
+      "utterances": [
+        "Einen Thoughtmark erstellen",
+        "Neuen Thoughtmark erstellen",
+        "Thoughtmark hinzufügen",
+        "Neuer Thoughtmark",
+        "Gedanken erfassen"
+      ],
+      "confirmation": {
+        "withTitle": "Erstelle Thoughtmark \"{{title}}\"",
+        "withTitleAndBin": "Erstelle Thoughtmark \"{{title}}\" in {{bin}}",
+        "withTitleAndTags": "Erstelle Thoughtmark \"{{title}}\" mit Tags: {{tags}}",
+        "withAllParams": "Erstelle Thoughtmark \"{{title}}\" in {{bin}} mit Tags: {{tags}}",
+        "withNote": "Erstelle Thoughtmark mit Notiz",
+        "default": "Erstelle neuen Thoughtmark"
+      },
+      "parameterSummary": {
+        "title": "Titel: {{title}}",
+        "bin": "Ordner: {{bin}}",
+        "tags": "Tags: {{tags}}",
+        "note": "Notiz: {{note}}"
+      }
+    },
+    "search": {
+      "title": "Thoughtmarks Suchen",
+      "subtitle": "Finde deine Thoughtmarks schnell",
+      "phrase": "Thoughtmarks suchen",
+      "utterances": [
+        "Thoughtmarks suchen",
+        "Meine Gedanken suchen",
+        "Thoughtmarks finden",
+        "Nach Thoughtmarks suchen",
+        "Suche nach {{query}}"
+      ],
+      "confirmation": {
+        "withQuery": "Suche nach \"{{query}}\"",
+        "withQueryAndBin": "Suche nach \"{{query}}\" in {{bin}}",
+        "withQueryAndTag": "Suche nach \"{{query}}\" mit Tag {{tag}}",
+        "withAllParams": "Suche nach \"{{query}}\" in {{bin}} mit Tag {{tag}}",
+        "default": "Öffne Suche"
+      },
+      "parameterSummary": {
+        "query": "Suchanfrage: {{query}}",
+        "bin": "Ordner: {{bin}}",
+        "tag": "Tag: {{tag}}"
+      }
+    },
+    "record": {
+      "title": "Sprachaufnahme",
+      "subtitle": "Einen Thoughtmark per Sprache aufnehmen",
+      "phrase": "Eine Sprachnotiz aufnehmen",
+      "utterances": [
+        "Eine Sprachnotiz aufnehmen",
+        "Aufnahme starten",
+        "Sprachnotiz erfassen",
+        "Sprachaufnahme",
+        "Gedanken aufnehmen"
+      ],
+      "confirmation": {
+        "withTitle": "Nehme Sprachnotiz \"{{title}}\" auf",
+        "withTitleAndBin": "Nehme Sprachnotiz \"{{title}}\" in {{bin}} auf",
+        "withBin": "Nehme Sprachnotiz in {{bin}} auf",
+        "default": "Starte Sprachaufnahme"
+      },
+      "parameterSummary": {
+        "title": "Titel: {{title}}",
+        "bin": "Ordner: {{bin}}"
+      }
+    }
+  },
+  "intent": {
+    "received": "Absicht empfangen",
+    "processing": "Verarbeite...",
+    "resolved": "Absicht erfolgreich verarbeitet",
+    "failed": "Absichtsverarbeitung fehlgeschlagen"
+  },
+  "errors": {
+    "permissionDenied": {
+      "microphone": {
+        "title": "Mikrofonberechtigung Erforderlich",
+        "message": "Thoughtmarks benötigt Mikrofonzugriff, um Sprachnotizen aufzunehmen. Bitte aktiviere dies in den Einstellungen.",
+        "action": "Einstellungen Öffnen",
+        "cancel": "Abbrechen"
+      },
+      "notifications": {
+        "title": "Benachrichtigungsberechtigung Erforderlich",
+        "message": "Aktiviere Benachrichtigungen, um Updates zu erhalten, wenn Hintergrundaufgaben abgeschlossen sind.",
+        "action": "Einstellungen Öffnen",
+        "cancel": "Nicht Jetzt"
+      }
+    },
+    "ambiguous": {
+      "bin": {
+        "title": "Welcher Ordner?",
+        "message": "Du hast mehrere Ordner. Welchen möchtest du verwenden?",
+        "action": "Ordner Wählen",
+        "cancel": "Abbrechen"
+      },
+      "tag": {
+        "title": "Welches Tag?",
+        "message": "Bitte gib an, welches Tag du verwenden möchtest.",
+        "action": "Tag Wählen",
+        "cancel": "Abbrechen"
+      }
+    },
+    "emptyResult": {
+      "search": {
+        "title": "Keine Ergebnisse Gefunden",
+        "message": "Keine Thoughtmarks stimmen mit deiner Suche nach \"{{query}}\" überein. Versuche andere Stichwörter oder durchsuche alle Thoughtmarks.",
+        "voice": "Keine Ergebnisse für \"{{query}}\" gefunden. Öffne Suche, um es erneut zu versuchen.",
+        "action": "Erneut Versuchen",
+        "browse": "Alle Durchsuchen"
+      }
+    },
+    "navigationFailed": {
+      "title": "Navigationsfehler",
+      "message": "Kann den angeforderten Bildschirm nicht öffnen. Öffne stattdessen das Dashboard.",
+      "action": "Wiederholen",
+      "cancel": "Verwerfen"
+    },
+    "intentFailed": {
+      "title": "Aktion Fehlgeschlagen",
+      "message": "Kann die angeforderte Aktion nicht abschließen. Bitte versuche es erneut.",
+      "voice": "Entschuldigung, ich konnte diese Aktion nicht abschließen. Bitte versuche es erneut in der App.",
+      "action": "App Öffnen",
+      "cancel": "Abbrechen"
+    },
+    "timeout": {
+      "title": "Zeitüberschreitung",
+      "message": "Der Vorgang dauerte zu lange. Bitte versuche es erneut.",
+      "voice": "Der Vorgang ist abgelaufen. Bitte versuche es erneut.",
+      "action": "Wiederholen",
+      "cancel": "Abbrechen"
+    },
+    "offline": {
+      "title": "Offline",
+      "message": "Diese Aktion erfordert eine Internetverbindung. Deine Anfrage wurde in die Warteschlange gestellt und wird synchronisiert, wenn du wieder online bist.",
+      "voice": "Du bist offline. Deine Anfrage wurde für später in die Warteschlange gestellt.",
+      "action": "OK"
+    }
+  },
+  "notifications": {
+    "continueInApp": {
+      "title": "In der App Fortfahren",
+      "body": {
+        "create": "Tippe, um das Erstellen deines Thoughtmarks abzuschließen",
+        "search": "Tippe, um die Suchergebnisse anzuzeigen",
+        "record": "Tippe, um deine Sprachaufnahme abzuschließen"
+      },
+      "action": "App Öffnen"
+    },
+    "completed": {
+      "create": {
+        "title": "Thoughtmark Erstellt",
+        "body": "\"{{title}}\" wurde in deinen Thoughtmarks gespeichert"
+      },
+      "search": {
+        "title": "Suchergebnisse",
+        "body": "{{count}} Thoughtmark(s) für \"{{query}}\" gefunden"
+      },
+      "record": {
+        "title": "Aufnahme Gespeichert",
+        "body": "Deine Sprachnotiz wurde transkribiert und gespeichert"
+      }
+    },
+    "failed": {
+      "create": {
+        "title": "Erstellung Fehlgeschlagen",
+        "body": "Thoughtmark konnte nicht erstellt werden. Tippe zum Wiederholen."
+      },
+      "search": {
+        "title": "Suche Fehlgeschlagen",
+        "body": "Suche konnte nicht abgeschlossen werden. Tippe zum Wiederholen."
+      },
+      "record": {
+        "title": "Aufnahme Fehlgeschlagen",
+        "body": "Sprachaufnahme konnte nicht gespeichert werden. Tippe zum Wiederholen."
+      }
+    }
+  },
+  "handoff": {
+    "opening": "Öffne Thoughtmarks...",
+    "navigating": "Navigiere zu {{screen}}...",
+    "preparing": "Bereite {{action}} vor...",
+    "ready": "Bereit"
+  },
+  "background": {
+    "processing": "Verarbeite im Hintergrund...",
+    "queued": "Deine Anfrage wurde in die Warteschlange gestellt",
+    "syncing": "Synchronisiere mit Server...",
+    "completed": "Hintergrundaufgabe abgeschlossen",
+    "failed": "Hintergrundaufgabe fehlgeschlagen"
+  },
+  "help": {
+    "utterances": {
+      "title": "Sprachbefehle",
+      "examples": {
+        "create": [
+          "Hey Siri, erstelle einen Thoughtmark",
+          "Hey Siri, erstelle einen Thoughtmark namens \"Besprechungsnotizen\"",
+          "Hey Siri, erstelle einen Thoughtmark im Ordner Arbeit",
+          "Hey Siri, erstelle einen Thoughtmark mit Tags Projekt und dringend"
+        ],
+        "search": [
+          "Hey Siri, suche Thoughtmarks",
+          "Hey Siri, suche Thoughtmarks nach Besprechung",
+          "Hey Siri, suche Thoughtmarks im Ordner Arbeit",
+          "Hey Siri, suche Thoughtmarks mit Tag Projekt"
+        ],
+        "record": [
+          "Hey Siri, nimm eine Sprachnotiz auf",
+          "Hey Siri, starte Sprachaufnahme",
+          "Hey Siri, nimm eine Sprachnotiz im Ordner Persönlich auf"
+        ]
+      }
+    },
+    "parameters": {
+      "optional": "Optional",
+      "required": "Erforderlich",
+      "title": {
+        "label": "Titel",
+        "description": "Der Titel für deinen Thoughtmark",
+        "example": "Besprechungsnotizen"
+      },
+      "note": {
+        "label": "Notiz",
+        "description": "Zusätzlicher Inhalt für deinen Thoughtmark",
+        "example": "Q3-Ziele besprechen"
+      },
+      "bin": {
+        "label": "Ordner",
+        "description": "Der Ordner zum Organisieren deines Thoughtmarks",
+        "example": "Arbeit"
+      },
+      "tags": {
+        "label": "Tags",
+        "description": "Tags zum Kategorisieren deines Thoughtmarks",
+        "example": "Projekt, dringend"
+      },
+      "query": {
+        "label": "Suchanfrage",
+        "description": "Wonach gesucht werden soll",
+        "example": "Besprechungsnotizen"
+      }
+    }
+  },
+  "permissions": {
+    "microphone": {
+      "title": "Mikrofonzugriff",
+      "message": "Thoughtmarks benötigt Mikrofonzugriff, um Sprachnotizen aufzunehmen und Sprachbefehle zu verwenden.",
+      "rationale": "Wir benötigen Mikrofonzugriff, um deine Sprachnotizen zu erfassen und Siri-Befehle zu verarbeiten.",
+      "grant": "Zugriff Gewähren",
+      "deny": "Nicht Jetzt",
+      "openSettings": "Einstellungen Öffnen"
+    },
+    "siri": {
+      "title": "Siri & Kurzbefehle",
+      "message": "Aktiviere Siri-Kurzbefehle, um Sprachbefehle mit Thoughtmarks zu verwenden.",
+      "rationale": "Siri-Kurzbefehle ermöglichen es dir, Thoughtmarks schnell freihändig zu erfassen und zu suchen.",
+      "grant": "Kurzbefehle Aktivieren",
+      "deny": "Nicht Jetzt",
+      "openSettings": "Siri-Einstellungen Öffnen"
+    },
+    "notifications": {
+      "title": "Benachrichtigungen",
+      "message": "Aktiviere Benachrichtigungen, um zu erfahren, wann Sprachaufgaben im Hintergrund abgeschlossen sind.",
+      "rationale": "Benachrichtigungen informieren dich, wenn Sprachaufnahmen transkribiert und Thoughtmarks erstellt wurden.",
+      "grant": "Benachrichtigungen Aktivieren",
+      "deny": "Nicht Jetzt",
+      "openSettings": "Benachrichtigungseinstellungen Öffnen"
+    }
+  },
+  "fallbacks": {
+    "defaultResponse": "Öffne Thoughtmarks-App...",
+    "retryPrompt": "Möchtest du es erneut versuchen?",
+    "openApp": "App Öffnen",
+    "cancel": "Abbrechen"
+  },
+  "latency": {
+    "measuring": "Messe Leistung...",
+    "fast": "Antwortzeit: {{ms}}ms",
+    "slow": "Antwort dauert länger als erwartet...",
+    "target": "Ziel: <700ms"
+  },
+  "a11y": {
+    "shortcuts": {
+      "create": {
+        "label": "Kurzbefehl zum Erstellen von Thoughtmark",
+        "hint": "Doppeltippen, um Siri-Phrase zum Erstellen von Thoughtmarks zu konfigurieren"
+      },
+      "search": {
+        "label": "Kurzbefehl zum Suchen von Thoughtmarks",
+        "hint": "Doppeltippen, um Siri-Phrase zum Suchen von Thoughtmarks zu konfigurieren"
+      },
+      "record": {
+        "label": "Kurzbefehl für Sprachaufnahme",
+        "hint": "Doppeltippen, um Siri-Phrase für Sprachaufnahme zu konfigurieren"
+      }
+    },
+    "intent": {
+      "processing": "Verarbeite deinen Sprachbefehl",
+      "completed": "Sprachbefehl erfolgreich abgeschlossen",
+      "failed": "Sprachbefehl fehlgeschlagen, bitte versuche es erneut"
+    }
+  },
+  "queue": {
+    "status": {
+      "failed": "{{count}} Sprachtranskription(en) fehlgeschlagen",
+      "processing": "{{count}} Sprachaufgabe(n) werden verarbeitet",
+      "total": "{{count}} Aufgabe(n) gesamt in Warteschlange"
+    },
+    "description": {
+      "failed": "Einige Sprachtranskriptionen sind fehlgeschlagen. Tippe auf Wiederholen, um es erneut zu versuchen, oder Details anzeigen.",
+      "processing": "Sprachaufnahmen werden transkribiert und in Thoughtmarks umgewandelt."
+    },
+    "actions": {
+      "retry": "Fehlgeschlagene Wiederholen",
+      "viewDetails": "Details Anzeigen",
+      "dismiss": "Verwerfen"
+    }
+  }
+}
+

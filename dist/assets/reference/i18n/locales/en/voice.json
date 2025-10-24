@@ -1,0 +1,333 @@
+{
+  "shortcuts": {
+    "create": {
+      "title": "Create Thoughtmark",
+      "subtitle": "Create a new thoughtmark with voice or text",
+      "phrase": "Create a thoughtmark",
+      "utterances": [
+        "Create a thoughtmark",
+        "Create new thoughtmark",
+        "Add a thoughtmark",
+        "New thoughtmark",
+        "Capture a thought"
+      ],
+      "confirmation": {
+        "withTitle": "Creating thoughtmark \"{{title}}\"",
+        "withTitleAndBin": "Creating thoughtmark \"{{title}}\" in {{bin}}",
+        "withTitleAndTags": "Creating thoughtmark \"{{title}}\" with tags: {{tags}}",
+        "withAllParams": "Creating thoughtmark \"{{title}}\" in {{bin}} with tags: {{tags}}",
+        "withNote": "Creating thoughtmark with note",
+        "default": "Creating new thoughtmark"
+      },
+      "parameterSummary": {
+        "title": "Title: {{title}}",
+        "bin": "Bin: {{bin}}",
+        "tags": "Tags: {{tags}}",
+        "note": "Note: {{note}}"
+      }
+    },
+    "search": {
+      "title": "Search Thoughtmarks",
+      "subtitle": "Find your thoughtmarks quickly",
+      "phrase": "Search thoughtmarks",
+      "utterances": [
+        "Search thoughtmarks",
+        "Search my thoughts",
+        "Find thoughtmarks",
+        "Look for thoughtmarks",
+        "Search for {{query}}"
+      ],
+      "confirmation": {
+        "withQuery": "Searching for \"{{query}}\"",
+        "withQueryAndBin": "Searching for \"{{query}}\" in {{bin}}",
+        "withQueryAndTag": "Searching for \"{{query}}\" with tag {{tag}}",
+        "withAllParams": "Searching for \"{{query}}\" in {{bin}} with tag {{tag}}",
+        "default": "Opening search"
+      },
+      "parameterSummary": {
+        "query": "Query: {{query}}",
+        "bin": "Bin: {{bin}}",
+        "tag": "Tag: {{tag}}"
+      }
+    },
+    "record": {
+      "title": "Voice Record",
+      "subtitle": "Record a voice thoughtmark",
+      "phrase": "Record a voice note",
+      "utterances": [
+        "Record a voice note",
+        "Start recording",
+        "Capture voice note",
+        "Voice record",
+        "Record thought"
+      ],
+      "confirmation": {
+        "withTitle": "Recording voice note \"{{title}}\"",
+        "withTitleAndBin": "Recording voice note \"{{title}}\" in {{bin}}",
+        "withBin": "Recording voice note in {{bin}}",
+        "default": "Starting voice recording"
+      },
+      "parameterSummary": {
+        "title": "Title: {{title}}",
+        "bin": "Bin: {{bin}}"
+      }
+    }
+  },
+  "intent": {
+    "received": "Intent received",
+    "processing": "Processing...",
+    "resolved": "Intent processed successfully",
+    "failed": "Intent processing failed"
+  },
+  "errors": {
+    "permissionDenied": {
+      "microphone": {
+        "title": "Microphone Permission Required",
+        "message": "Thoughtmarks needs microphone access to record voice notes. Please enable it in Settings.",
+        "action": "Open Settings",
+        "cancel": "Cancel"
+      },
+      "notifications": {
+        "title": "Notification Permission Required",
+        "message": "Enable notifications to receive updates when background tasks complete.",
+        "action": "Open Settings",
+        "cancel": "Not Now"
+      }
+    },
+    "ambiguous": {
+      "bin": {
+        "title": "Which Bin?",
+        "message": "You have multiple bins. Which one would you like to use?",
+        "action": "Choose Bin",
+        "cancel": "Cancel"
+      },
+      "tag": {
+        "title": "Which Tag?",
+        "message": "Please specify which tag you'd like to use.",
+        "action": "Choose Tag",
+        "cancel": "Cancel"
+      }
+    },
+    "emptyResult": {
+      "search": {
+        "title": "No Results Found",
+        "message": "No thoughtmarks match your search for \"{{query}}\". Try different keywords or browse all thoughtmarks.",
+        "voice": "No results found for \"{{query}}\". Opening search to try again.",
+        "action": "Try Again",
+        "browse": "Browse All"
+      }
+    },
+    "navigationFailed": {
+      "title": "Navigation Error",
+      "message": "Unable to open the requested screen. Opening dashboard instead.",
+      "action": "Retry",
+      "cancel": "Dismiss"
+    },
+    "intentFailed": {
+      "title": "Action Failed",
+      "message": "Unable to complete the requested action. Please try again.",
+      "voice": "Sorry, I couldn't complete that action. Please try again in the app.",
+      "action": "Open App",
+      "cancel": "Cancel"
+    },
+    "timeout": {
+      "title": "Request Timed Out",
+      "message": "The operation took too long to complete. Please try again.",
+      "voice": "The operation timed out. Please try again.",
+      "action": "Retry",
+      "cancel": "Cancel"
+    },
+    "offline": {
+      "title": "Offline",
+      "message": "This action requires an internet connection. Your request has been queued and will sync when you're back online.",
+      "voice": "You're offline. Your request has been queued for later.",
+      "action": "OK"
+    }
+  },
+  "notifications": {
+    "continueInApp": {
+      "title": "Continue in App",
+      "body": {
+        "create": "Tap to finish creating your thoughtmark",
+        "search": "Tap to view search results",
+        "record": "Tap to complete your voice recording"
+      },
+      "action": "Open App"
+    },
+    "completed": {
+      "create": {
+        "title": "Thoughtmark Created",
+        "body": "\"{{title}}\" has been saved to your thoughtmarks"
+      },
+      "search": {
+        "title": "Search Results",
+        "body": "Found {{count}} thoughtmark(s) for \"{{query}}\""
+      },
+      "record": {
+        "title": "Recording Saved",
+        "body": "Your voice note has been transcribed and saved"
+      }
+    },
+    "failed": {
+      "create": {
+        "title": "Creation Failed",
+        "body": "Unable to create thoughtmark. Tap to retry."
+      },
+      "search": {
+        "title": "Search Failed",
+        "body": "Unable to complete search. Tap to retry."
+      },
+      "record": {
+        "title": "Recording Failed",
+        "body": "Unable to save voice recording. Tap to retry."
+      }
+    }
+  },
+  "handoff": {
+    "opening": "Opening Thoughtmarks...",
+    "navigating": "Navigating to {{screen}}...",
+    "preparing": "Preparing {{action}}...",
+    "ready": "Ready"
+  },
+  "background": {
+    "processing": "Processing in background...",
+    "queued": "Your request has been queued",
+    "syncing": "Syncing with server...",
+    "completed": "Background task completed",
+    "failed": "Background task failed"
+  },
+  "help": {
+    "utterances": {
+      "title": "Voice Commands",
+      "examples": {
+        "create": [
+          "Hey Siri, create a thoughtmark",
+          "Hey Siri, create a thoughtmark called \"Meeting Notes\"",
+          "Hey Siri, create a thoughtmark in Work bin",
+          "Hey Siri, create a thoughtmark with tags project and urgent"
+        ],
+        "search": [
+          "Hey Siri, search thoughtmarks",
+          "Hey Siri, search thoughtmarks for meeting",
+          "Hey Siri, search thoughtmarks in Work bin",
+          "Hey Siri, search thoughtmarks with tag project"
+        ],
+        "record": [
+          "Hey Siri, record a voice note",
+          "Hey Siri, start voice recording",
+          "Hey Siri, record a voice note in Personal bin"
+        ]
+      }
+    },
+    "parameters": {
+      "optional": "Optional",
+      "required": "Required",
+      "title": {
+        "label": "Title",
+        "description": "The title for your thoughtmark",
+        "example": "Meeting Notes"
+      },
+      "note": {
+        "label": "Note",
+        "description": "Additional content for your thoughtmark",
+        "example": "Discuss Q3 goals"
+      },
+      "bin": {
+        "label": "Bin",
+        "description": "The bin to organize your thoughtmark",
+        "example": "Work"
+      },
+      "tags": {
+        "label": "Tags",
+        "description": "Tags to categorize your thoughtmark",
+        "example": "project, urgent"
+      },
+      "query": {
+        "label": "Search Query",
+        "description": "What to search for",
+        "example": "meeting notes"
+      }
+    }
+  },
+  "permissions": {
+    "microphone": {
+      "title": "Microphone Access",
+      "message": "Thoughtmarks needs microphone access to record voice notes and use voice commands.",
+      "rationale": "We need microphone access to capture your voice notes and process Siri commands.",
+      "grant": "Grant Access",
+      "deny": "Not Now",
+      "openSettings": "Open Settings"
+    },
+    "siri": {
+      "title": "Siri & Shortcuts",
+      "message": "Enable Siri Shortcuts to use voice commands with Thoughtmarks.",
+      "rationale": "Siri Shortcuts allow you to quickly capture and search thoughtmarks hands-free.",
+      "grant": "Enable Shortcuts",
+      "deny": "Not Now",
+      "openSettings": "Open Siri Settings"
+    },
+    "notifications": {
+      "title": "Notifications",
+      "message": "Enable notifications to know when background voice tasks complete.",
+      "rationale": "Notifications let us inform you when voice recordings are transcribed and thoughtmarks are created.",
+      "grant": "Enable Notifications",
+      "deny": "Not Now",
+      "openSettings": "Open Notification Settings"
+    }
+  },
+  "fallbacks": {
+    "defaultResponse": "Opening Thoughtmarks app...",
+    "retryPrompt": "Would you like to try again?",
+    "openApp": "Open App",
+    "cancel": "Cancel"
+  },
+  "latency": {
+    "measuring": "Measuring performance...",
+    "fast": "Response time: {{ms}}ms",
+    "slow": "Response taking longer than expected...",
+    "target": "Target: <700ms"
+  },
+  "a11y": {
+    "shortcuts": {
+      "create": {
+        "label": "Create thoughtmark shortcut",
+        "hint": "Double tap to configure Siri phrase for creating thoughtmarks"
+      },
+      "search": {
+        "label": "Search thoughtmarks shortcut",
+        "hint": "Double tap to configure Siri phrase for searching thoughtmarks"
+      },
+      "record": {
+        "label": "Voice record shortcut",
+        "hint": "Double tap to configure Siri phrase for voice recording"
+      }
+    },
+    "intent": {
+      "processing": "Processing your voice command",
+      "completed": "Voice command completed successfully",
+      "failed": "Voice command failed, please try again"
+    }
+  },
+  "queue": {
+    "status": {
+      "failed": "{{count}} voice transcription(s) failed",
+      "failed_one": "1 voice transcription failed",
+      "failed_other": "{{count}} voice transcriptions failed",
+      "processing": "{{count}} voice job(s) processing",
+      "processing_one": "1 voice job processing",
+      "processing_other": "{{count}} voice jobs processing",
+      "total": "{{count}} total job(s) in queue",
+      "total_one": "1 job in queue",
+      "total_other": "{{count}} jobs in queue"
+    },
+    "description": {
+      "failed": "Some voice transcriptions failed. Tap retry to attempt again or view details.",
+      "processing": "Voice recordings are being transcribed and converted to thoughtmarks."
+    },
+    "actions": {
+      "retry": "Retry Failed",
+      "viewDetails": "View Details",
+      "dismiss": "Dismiss"
+    }
+  }
+}

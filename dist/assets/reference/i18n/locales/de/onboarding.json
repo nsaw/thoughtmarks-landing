@@ -1,0 +1,51 @@
+{
+  "welcome": {
+    "title": "Willkommen bei Thoughtmarks",
+    "subtitle": "Erfasse, organisiere und entdecke deine Ideen mit KI-gestützten Erkenntnissen",
+    "continue": "Loslegen",
+    "skip": "Setup Überspringen"
+  },
+  "permissions": {
+    "title": "Berechtigungen Aktivieren",
+    "subtitle": "Erteile Berechtigungen, um das volle Potenzial von Thoughtmarks freizuschalten",
+    "microphone": {
+      "title": "Mikrofonzugriff",
+      "description": "Sprachnotizen aufnehmen und Sprachbefehle verwenden",
+      "denied": {
+        "title": "Mikrofonberechtigung Verweigert",
+        "message": "Sprachaufnahme erfordert Mikrofonzugriff. Du kannst dies später in den Einstellungen aktivieren."
+      }
+    },
+    "notifications": {
+      "title": "Benachrichtigungen",
+      "description": "Erhalte Erinnerungen und Updates über deine Gedanken"
+    },
+    "grant": "Berechtigung Erteilen",
+    "openSettings": "Einstellungen Öffnen",
+    "continue": "Fortfahren",
+    "skip": "Überspringen"
+  },
+  "siri": {
+    "title": "Siri-Kurzbefehle",
+    "subtitle": "Schneller Zugriff auf deine Gedanken mit Siri",
+    "capture": {
+      "title": "Gedanken Erfassen",
+      "description": "Einen neuen Thoughtmark aufnehmen",
+      "phrase": "Hey Siri, erfasse einen Gedanken"
+    },
+    "search": {
+      "title": "Gedanken Suchen",
+      "description": "Durch deine Thoughtmarks suchen",
+      "phrase": "Hey Siri, suche meine Gedanken"
+    },
+    "setup": "Einrichten",
+    "skip": "Überspringen",
+    "done": "Fertig"
+  },
+  "complete": {
+    "title": "Alles Bereit!",
+    "subtitle": "Dein Thoughtmarks ist eingerichtet und einsatzbereit",
+    "start": "Thoughtmarks Verwenden"
+  }
+}
+

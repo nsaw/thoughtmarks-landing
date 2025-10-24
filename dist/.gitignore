@@ -1,0 +1,178 @@
+
+# ===== SECRET PREVENTION MEASURES =====
+# Environment files
+.env
+.env.*
+*.env
+.env.local
+.env.development
+.env.production
+.env.test
+.archive/
+*back*
+*backup*
+*bak*
+node_modules/
+dist/
+build/
+.cache/
+.cache-*/
+.git/
+.github/
+*.DS_Store*
+.archive/
+.DS_Store
+/.DS_Store
+*DS_*
+*env*
+*DS_Store*
+reference/
+*reference*
+
+# Credential files
+google-services.json
+GoogleService-Info.plist
+*.pem
+*.key
+id_*
+*.p12
+*.pfx
+*.keystore
+*.jks
+
+# Secret files
+*secret*
+*credential*
+*password*
+*token*
+*api_key*
+*apikey*
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.tmp
+
+# Log files
+*.log
+logs/
+log/
+
+# Cache directories
+.cache/
+cache/
+node_modules/
+dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+.temp/
+
+# ===== COMPREHENSIVE SECRET PREVENTION =====
+# Archive files
+*.tar.gz
+*.tar
+*.zip
+*.rar
+*.7z
+
+# Intake directories
+_gpt5intake/
+*intake*/
+
+# Environment files
+.env
+.env.*
+*.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Credential files
+google-services.json
+GoogleService-Info.plist
+*.pem
+*.key
+id_*
+*.p12
+*.pfx
+*.keystore
+*.jks
+
+# Secret files
+*secret*
+*credential*
+*password*
+*token*
+*api_key*
+*apikey*
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.tmp
+template.env.backup.*
+
+# Log files
+*.log
+logs/
+log/
+
+# Cache directories
+.cache/
+cache/
+node_modules/
+dist/
+build/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+.temp/
+
+# Security reports (contain sensitive data)
+*verification-report.json
+*cleanup-report.json
+*secret*.json
+# Environment files (comprehensive)
+.env.*
+.xcode.env
+.xcode.env.*
+*.env
+*.env.*
+# 1Password backup files
+*.1password-backup.*
+.backup/
+# Expo-specific files (excluded from 1Password sync)
+.env.expo

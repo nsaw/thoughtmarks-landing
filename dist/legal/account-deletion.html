@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" href="/assets/LogoRound-watchOS-Default-50x50@2x.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/AppIcon.png" />
+<link rel="mask-icon" href="/assets/AppIcon.png" color="#b1d400" />
+
+<!-- Primary Meta Tags -->
+<meta name="application-name" content="Thoughtmarks"/>
+<meta name="apple-mobile-web-app-title" content="Thoughtmarks"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="theme-color" content="#B7A363"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"/>
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/assets/syles/main.css" />
+
+
+  <title>Account Deletion - Thoughtmarks</title>
+  <meta name="description" content="How to delete your Thoughtmarks account and permanently remove all your data - GDPR & CCPA compliant"/>
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+  <nav class="tm-navbar" role="navigation" aria-label="Main navigation">
+  <div class="tm-nav-left">
+    <img src="/assets/Logo-iOS-Default-40x40@2x.png" class="tm-nav-logo" alt="Thoughtmarks Logo"/>
+    <span class="tm-nav-title">Thoughtmarks</span>
+  </div>
+  <button class="tm-hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="tm-nav-links" id="navLinks" role="menu">
+    <a href="/landing/" role="menuitem">Home</a>
+    <a href="/about/" role="menuitem">About</a>
+    <a href="/docs/" role="menuitem">Docs</a>
+    <a href="/support/" role="menuitem">Support</a>
+    <a href="/legal/" role="menuitem">Legal</a>
+  </div>
+</nav>
+
+<script>
+// Hamburger menu functionality
+(function() {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+      this.classList.toggle('active');
+      const isExpanded = navLinks.style.display === 'flex';
+      navLinks.style.display = isExpanded ? 'none' : 'flex';
+      this.setAttribute('aria-expanded', !isExpanded);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+        hamburger.classList.remove('active');
+        navLinks.style.display = 'none';
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && navLinks.style.display === 'flex') {
+        hamburger.classList.remove('active');
+        navLinks.style.display = 'none';
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+})();
+</script>
+
+
+  
+  <main id="main-content" class="tm-content">
+    <h1>Account Deletion</h1>
+    
+    <div class="tm-doc-meta">
+      <strong>Last Updated:</strong> October 1, 2025<br/>
+      <strong>Compliance:</strong> GDPR Article 17 (Right to Erasure), CCPA Section 1798.105
+    </div>
+    
+    <div class="tm-warning">
+      <strong>Warning:</strong> Account deletion is permanent and cannot be undone. All your data will be permanently deleted.
+    </div>
+    
+    <section id="overview">
+      <h2>1. Overview</h2>
+      <p>Thoughtmarks respects your right to delete your account and all associated data at any time. This page explains:</p>
+      <ul>
+        <li>How to delete your account</li>
+        <li>What data will be deleted</li>
+        <li>Data retention timelines</li>
+        <li>Your rights under GDPR and CCPA</li>
+      </ul>
+    </section>
+    
+    <section id="how-to-delete">
+      <h2>2. How to Delete Your Account</h2>
+      
+      <h3>2.1 In-App Deletion (Recommended)</h3>
+      <div class="tm-card">
+        <ol>
+          <li>Open the Thoughtmarks app</li>
+          <li>Navigate to <strong>Settings</strong> (gear icon)</li>
+          <li>Tap <strong>Account</strong></li>
+          <li>Scroll to bottom and tap <strong>Delete Account</strong></li>
+          <li>Type "DELETE" to confirm</li>
+          <li>Tap <strong>Delete Account Forever</strong></li>
+        </ol>
+      </div>
+      
+      <h3>2.2 Email Deletion Request</h3>
+      <p>If you cannot access the app, you can request deletion via email:</p>
+      <div class="tm-contact-info">
+        <p><strong>Email:</strong> <a href="mailto:privacy@thoughtmarks.app?subject=Account Deletion Request">privacy@thoughtmarks.app</a></p>
+        <p><strong>Subject Line:</strong> Account Deletion Request</p>
+        <p><strong>Include:</strong></p>
+        <ul>
+          <li>Your registered email address</li>
+          <li>Reason for deletion (optional)</li>
+          <li>Confirmation statement: "I request deletion of my Thoughtmarks account and all associated data"</li>
+        </ul>
+        <p><strong>Response Time:</strong> Within 30 days (GDPR/CCPA requirement)</p>
+      </div>
+    </section>
+    
+    <section id="what-is-deleted">
+      <h2>3. What Will Be Deleted</h2>
+      
+      <h3>3.1 Immediately Deleted</h3>
+      <p>Upon account deletion request, the following are immediately marked for deletion:</p>
+      <ul>
+        <li>✓ All your Thoughtmarks (notes, voice recordings)</li>
+        <li>✓ All bins and organizational structures</li>
+        <li>✓ All tags and labels</li>
+        <li>✓ Your profile information</li>
+        <li>✓ App settings and preferences</li>
+        <li>✓ Device authorizations</li>
+      </ul>
+      
+      <h3>3.2 Deleted Within 30 Days</h3>
+      <p>The following data is permanently deleted within 30 days:</p>
+      <ul>
+        <li>✓ Account credentials</li>
+        <li>✓ Personal information</li>
+        <li>✓ Content backups</li>
+        <li>✓ Cloud-synced data</li>
+        <li>✓ Encryption keys</li>
+      </ul>
+      
+      <h3>3.3 Deleted Within 90 Days</h3>
+      <p>System backups are permanently deleted within 90 days:</p>
+      <ul>
+        <li>✓ Backup archives</li>
+        <li>✓ Disaster recovery copies</li>
+      </ul>
+      
+      <h3>3.4 Retained Data (Anonymized)</h3>
+      <p>Only anonymized, aggregated analytics data may be retained:</p>
+      <ul>
+        <li>Feature usage statistics (cannot be linked to you)</li>
+        <li>Performance metrics (anonymized)</li>
+        <li>Crash reports (anonymized)</li>
+      </ul>
+      <div class="tm-note">
+        <strong>Important:</strong> Retained analytics data is fully anonymized using differential privacy (ε=0.1) and k-anonymity (k≥5) and cannot be used to identify you.
+      </div>
+    </section>
+    
+    <section id="before-deletion">
+      <h2>4. Before You Delete</h2>
+      
+      <h3>4.1 Export Your Data</h3>
+      <div class="tm-success">
+        <strong>Recommended:</strong> Export your data before deletion to preserve a copy.
+      </div>
+      <p>To export your data:</p>
+      <ol>
+        <li>Open Settings → Privacy & Data</li>
+        <li>Tap <strong>Export My Data</strong></li>
+        <li>Choose format (JSON, Markdown, or CSV)</li>
+        <li>Save the export file to your device</li>
+      </ol>
+      
+      <h3>4.2 Cancel Active Subscriptions</h3>
+      <p>Deleting your account does NOT automatically cancel subscriptions managed through the App Store:</p>
+      <ul>
+        <li>Open iOS Settings → Your Name → Subscriptions</li>
+        <li>Find "Thoughtmarks" subscription</li>
+        <li>Tap "Cancel Subscription"</li>
+      </ul>
+      <div class="tm-warning">
+        <strong>Important:</strong> Cancel your subscription BEFORE deleting your account to avoid being charged for the next billing cycle.
+      </div>
+    </section>
+    
+    <section id="alternative-options">
+      <h2>5. Alternative Options</h2>
+      
+      <h3>5.1 Temporarily Deactivate</h3>
+      <p>If you want a break but might return:</p>
+      <ul>
+        <li>Simply stop using the app</li>
+        <li>Your data remains available</li>
+        <li>Cancel your subscription to avoid charges</li>
+        <li>Reactivate anytime by signing in</li>
+      </ul>
+      
+      <h3>5.2 Delete Specific Data</h3>
+      <p>Instead of deleting your entire account, you can:</p>
+      <ul>
+        <li>Delete individual Thoughtmarks</li>
+        <li>Clear analytics data (Settings → Privacy → Delete My Data)</li>
+        <li>Revoke device authorizations</li>
+        <li>Clear cache and temporary files</li>
+      </ul>
+    </section>
+    
+    <section id="your-rights">
+      <h2>6. Your Legal Rights</h2>
+      
+      <h3>6.1 GDPR Rights (EU Users)</h3>
+      <p>Under GDPR Article 17, you have the right to erasure ("right to be forgotten"). We comply fully with this requirement.</p>
+      <ul>
+        <li><strong>Request Processing:</strong> Within 30 days</li>
+        <li><strong>Data Deletion:</strong> Within 30 days</li>
+        <li><strong>Backup Deletion:</strong> Within 90 days</li>
+        <li><strong>Confirmation:</strong> Email confirmation when deletion is complete</li>
+      </ul>
+      
+      <h3>6.2 CCPA Rights (California Users)</h3>
+      <p>Under CCPA Section 1798.105, you have the right to request deletion of personal information. We comply fully with this requirement.</p>
+      <ul>
+        <li><strong>Verification:</strong> We may verify your identity before deletion</li>
+        <li><strong>Processing:</strong> Within 45 days (may extend to 90 days)</li>
+        <li><strong>Confirmation:</strong> Written confirmation when complete</li>
+      </ul>
+    </section>
+    
+    <section id="after-deletion">
+      <h2>7. After Deletion</h2>
+      
+      <h3>7.1 Immediate Effects</h3>
+      <ul>
+        <li>You cannot sign in to the app</li>
+        <li>Your data is no longer accessible</li>
+        <li>Cloud sync stops immediately</li>
+        <li>You cannot recover your account</li>
+      </ul>
+      
+      <h3>7.2 Creating a New Account</h3>
+      <p>You can create a new account using the same email address after your previous account is deleted. However:</p>
+      <ul>
+        <li>Your previous data will NOT be restored</li>
+        <li>You start with a completely fresh account</li>
+        <li>Previous subscription benefits do not carry over</li>
+      </ul>
+      
+      <h3>7.3 Confirmation</h3>
+      <p>You will receive email confirmation when:</p>
+      <ul>
+        <li>Your deletion request is received</li>
+        <li>Your account deletion is complete</li>
+        <li>All backups are permanently deleted (90 days)</li>
+      </ul>
+    </section>
+    
+    <section id="questions">
+      <h2>8. Questions or Concerns</h2>
+      <div class="tm-contact-info">
+        <p>If you have questions about account deletion:</p>
+        <ul class="tm-list-unstyled tm-list-spaced">
+          <li><strong>Privacy Team:</strong> <a href="mailto:privacy@thoughtmarks.app">privacy@thoughtmarks.app</a></li>
+          <li><strong>Data Protection Officer:</strong> <a href="mailto:dpo@thoughtmarks.app">dpo@thoughtmarks.app</a></li>
+          <li><strong>GDPR Inquiries:</strong> <a href="mailto:eu-privacy@thoughtmarks.app">eu-privacy@thoughtmarks.app</a></li>
+          <li><strong>CCPA Inquiries:</strong> <a href="mailto:california-privacy@thoughtmarks.app">california-privacy@thoughtmarks.app</a></li>
+        </ul>
+        <p style="margin-top:1rem;"><a href="/support/" class="tm-btn-secondary" style="display:inline-block;padding:0.5rem 1rem;">Visit Support Center</a></p>
+      </div>
+    </section>
+    
+    <section class="tm-legal-section">
+      <h3>Related Documents</h3>
+      <ul>
+        <li><a href="/legal/privacy.html">Privacy Policy</a> - How we protect your data</li>
+        <li><a href="/legal/terms.html">Terms of Service</a> - Usage terms</li>
+        <li><a href="/assets/legal-reference-docs/USER_RIGHTS_OPERATIONS.md">User Rights Operations</a> - Technical details on GDPR/CCPA compliance</li>
+        <li><a href="/legal/">Legal Hub</a> - All legal documentation</li>
+      </ul>
+    </section>
+    
+    <div class="tm-doc-meta tm-mt-4">
+      <strong>Last Updated:</strong> October 1, 2025<br/>
+      <strong>Compliance:</strong> GDPR Article 17, CCPA Section 1798.105
+    </div>
+  </main>
+  
+  <footer class="tm-footer">
+  <p>
+    &copy; 2024-2025 Thoughtmarks. All rights reserved.
+    <br/>
+    <a href="/legal/privacy.html">Privacy Policy</a>
+    <a href="/legal/terms.html">Terms of Service</a>
+    <a href="/legal/account-deletion.html">Delete Account</a>
+    <a href="/support/">Support</a>
+  </p>
+  <p style="margin-top: 1rem; font-size: 0.8rem;">
+    Transform how you think. Capture brilliant ideas at the speed of life.
+  </p>
+</footer>
+
+
+</body>
+</html>
+

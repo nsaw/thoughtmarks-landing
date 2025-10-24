@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" href="/assets/LogoRound-watchOS-Default-50x50@2x.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/AppIcon.png" />
+<link rel="mask-icon" href="/assets/AppIcon.png" color="#b1d400" />
+
+<!-- Primary Meta Tags -->
+<meta name="application-name" content="Thoughtmarks"/>
+<meta name="apple-mobile-web-app-title" content="Thoughtmarks"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="theme-color" content="#B7A363"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"/>
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/assets/syles/main.css" />
+
+
+  <title>Apple Watch Support - Thoughtmarks</title>
+  <meta name="description" content="Complete guide to using Thoughtmarks on Apple Watch - quick capture, sync, complications, and troubleshooting"/>
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Skip to main content</a>
+  <nav class="tm-navbar" role="navigation" aria-label="Main navigation">
+  <div class="tm-nav-left">
+    <img src="/assets/Logo-iOS-Default-40x40@2x.png" class="tm-nav-logo" alt="Thoughtmarks Logo"/>
+    <span class="tm-nav-title">Thoughtmarks</span>
+  </div>
+  <button class="tm-hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="tm-nav-links" id="navLinks" role="menu">
+    <a href="/landing/" role="menuitem">Home</a>
+    <a href="/about/" role="menuitem">About</a>
+    <a href="/docs/" role="menuitem">Docs</a>
+    <a href="/support/" role="menuitem">Support</a>
+    <a href="/legal/" role="menuitem">Legal</a>
+  </div>
+</nav>
+
+<script>
+// Hamburger menu functionality
+(function() {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+      this.classList.toggle('active');
+      const isExpanded = navLinks.style.display === 'flex';
+      navLinks.style.display = isExpanded ? 'none' : 'flex';
+      this.setAttribute('aria-expanded', !isExpanded);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+        hamburger.classList.remove('active');
+        navLinks.style.display = 'none';
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && navLinks.style.display === 'flex') {
+        hamburger.classList.remove('active');
+        navLinks.style.display = 'none';
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+})();
+</script>
+
+
+  
+  <main id="main-content" class="tm-content">
+    <div class="tm-hero">
+      <h1 class="tm-hero-headline">⌚ Apple Watch Guide</h1>
+      <p class="tm-hero-tagline">Capture thoughts from your wrist</p>
+    </div>
+    
+    <div class="tm-mockup-hero">
+      <img src="/assets/Watch-companion-home.png" alt="Thoughtmarks Apple Watch interface" style="max-width:300px;"/>
+    </div>
+    
+    <section>
+      <h2>Overview</h2>
+      <p class="tm-text-secondary" style="font-size:1.15rem;line-height:1.7;">
+        The Thoughtmarks Apple Watch app brings instant voice capture to your wrist. Record thoughts while running, cooking, or driving - hands-free capture that seamlessly syncs with your iPhone.
+      </p>
+      
+      <div class="tm-success tm-mt-2">
+        <strong>Key Benefits:</strong> Raise your wrist, record a thought, done. Seamless sync. Offline-first. Complications for quick access.
+      </div>
+    </section>
+    
+    <section class="tm-section">
+      <h2>Getting Started</h2>
+      
+      <div class="tm-card tm-mb-2">
+        <h3>1. Setup</h3>
+        <ol>
+          <li>Install Thoughtmarks on your iPhone</li>
+          <li>Open the Watch app on iPhone</li>
+          <li>Find "Thoughtmarks" in the app list</li>
+          <li>Tap "Install" to add to Apple Watch</li>
+          <li>Wait for installation to complete (1-2 minutes)</li>
+        </ol>
+        <div class="tm-note">
+          <strong>Requirement:</strong> Requires watchOS 10.0 or later
+        </div>
+      </div>
+      
+      <div class="tm-card tm-mb-2">
+        <h3>2. First Voice Capture</h3>
+        <ol>
+          <li>Open Thoughtmarks on your Apple Watch</li>
+          <li>Tap the large <strong>Record</strong> button</li>
+          <li>Speak your thought clearly</li>
+          <li>Tap <strong>Stop</strong> when finished</li>
+          <li>Recording automatically syncs to iPhone</li>
+        </ol>
+        <div class="tm-success">
+          <strong>Tip:</strong> You can also use Siri: "Hey Siri, capture a Thoughtmark"
+        </div>
+      </div>
+      
+      <div class="tm-card tm-mb-2">
+        <h3>3. View Recent Thoughts</h3>
+        <p>Scroll down on the main watch screen to see your recent Thoughtmarks. Tap any thought to:</p>
+        <ul>
+          <li>View transcription</li>
+          <li>Play back recording</li>
+          <li>Add tags (voice input)</li>
+          <li>Delete recording</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="tm-section">
+      <h2>Features</h2>
+      
+      <div class="tm-features-row">
+        <article class="tm-feature-card">
+          <span class="tm-feature-icon">🎙️</span>
+          <h3 class="tm-feature-title">Quick Voice Capture</h3>
+          <p class="tm-feature-desc">
+            Raise your wrist, tap record, speak. Done in seconds. Perfect for capturing fleeting ideas while moving.
+          </p>
+        </article>
+        
+        <article class="tm-feature-card">
+          <span class="tm-feature-icon">🔄</span>
+          <h3 class="tm-feature-title">Seamless Sync</h3>
+          <p class="tm-feature-desc">
+            Recordings automatically sync to iPhone via Bluetooth or WiFi. View, edit, and organize on the big screen.
+          </p>
+        </article>
+        
+        <article class="tm-feature-card">
+          <span class="tm-feature-icon">📴</span>
+          <h3 class="tm-feature-title">Offline First</h3>
+          <p class="tm-feature-desc">
+            Record thoughts without iPhone nearby. Everything queues and syncs when devices reconnect. Never lose an idea.
+          </p>
+        </article>
+        
+        <article class="tm-feature-card">
+          <span class="tm-feature-icon">⚡</span>
+          <h3 class="tm-feature-title">Complications</h3>
+          <p class="tm-feature-desc">
+            Add Thoughtmarks complication to your watch face for one-tap access to voice recording.
+          </p>
+        </article>
+      </div>
+    </section>
+    
+    <section class="tm-section">
+      <h2>Complications Setup</h2>
+      
+      <div class="tm-card">
+        <h3>Adding Thoughtmarks Complication</h3>
+        <ol>
+          <li>Press and hold your watch face</li>
+          <li>Tap "Edit"</li>
+          <li>Swipe to complications screen</li>
+          <li>Tap the complication slot you want to use</li>
+          <li>Scroll to find "Thoughtmarks"</li>
+          <li>Select the complication style you prefer</li>
+          <li>Press Digital Crown to save</li>
+        </ol>
+        
+        <h4 style="margin-top:1.5rem;">Available Complications</h4>
+        <ul>
+          <li><strong>Circular:</strong> Quick tap to start recording</li>
+          <li><strong>Corner:</strong> Shows recent thought count</li>
+          <li><strong>Graphic:</strong> Large button for easy access</li>
+        </ul>
+        
+        <div class="tm-success tm-mt-2">
+          <strong>Recommended:</strong> Use Graphic complication for easiest one-tap recording
+        </div>
+      </div>
+    </section>
+    
+    <section class="tm-section">
+      <h2>Data Synchronization</h2>
+      
+      <div class="tm-card tm-mb-2">
+        <h3>How Sync Works</h3>
+        <ul>
+          <li><strong>Automatic:</strong> Watch syncs with iPhone automatically via Bluetooth/WiFi</li>
+          <li><strong>Bidirectional:</strong> Changes on either device sync to both</li>
+          <li><strong>Incremental:</strong> Only changed data syncs (battery efficient)</li>
+          <li><strong>Offline Queue:</strong> Recordings queue when iPhone is out of range</li>
+          <li><strong>Background:</strong> Sync happens in background when possible</li>
+        </ul>
+      </div>
+      
+      <div class="tm-card tm-mb-2">
+        <h3>What Syncs</h3>
+        <ul>
+          <li>✓ Voice recordings and transcriptions</li>
+          <li>✓ Thoughtmarks created on watch</li>
+          <li>✓ Recent thoughts (last 50)</li>
+          <li>✓ Bins and tags</li>
+          <li>✓ Settings and preferences</li>
+        </ul>
+      </div>
+      
+      <div class="tm-card tm-mb-2">
+        <h3>Sync Troubleshooting</h3>
+        <p><strong>Sync not working?</strong> Try these steps:</p>
+        <ol>
+          <li>Ensure watch and iPhone are paired</li>
+          <li>Check Bluetooth is enabled on both devices</li>
+          <li>Ensure both devices have Thoughtmarks installed</li>
+          <li>Force quit and reopen app on both devices</li>
+          <li>Check iPhone is connected to internet (for cloud sync)</li>
+        </ol>
+        <p style="margin-top:1rem;"><strong>Still not working?</strong> <a href="mailto:support@thoughtmarks.app?subject=Watch Sync Issue">Contact Support</a></p>
+      </div>
+    </section>
+    
+    <section class="tm-section">
+      <h2>Battery & Performance</h2>
+      
+      <div class="tm-grid tm-grid-2">
+        <div class="tm-card">
+          <h3>Battery Life</h3>
+          <ul>
+            <li><strong>Voice Recording:</strong> ~20-30 recordings per charge</li>
+            <li><strong>Typical Usage:</strong> Minimal battery impact</li>
+            <li><strong>Background Sync:</strong> Battery efficient (incremental only)</li>
+            <li><strong>Optimization:</strong> Automatic power-saving modes</li>
+          </ul>
+          <div class="tm-success tm-mt-2">
+            <strong>Tip:</strong> Recording quality doesn't drain battery - speak as long as needed
+          </div>
+        </div>
+        
+        <div class="tm-card">
+          <h3>Performance Tips</h3>
+          <ul>
+            <li>Keep watch app updated to latest version</li>
+            <li>Restart watch app weekly for optimal performance</li>
+            <li>Clear old recordings from watch periodically</li>
+            <li>Ensure sufficient watch storage (500MB recommended)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <section class="tm-section">
+      <h2>Siri Integration</h2>
+      
+      <div class="tm-card">
+        <h3>Voice Commands</h3>
+        <p class="tm-text-secondary">Use these Siri shortcuts:</p>
+        <ul>
+          <li><strong>"Hey Siri, capture a Thoughtmark"</strong> - Start recording</li>
+          <li><strong>"Hey Siri, record a thought"</strong> - Start recording</li>
+          <li><strong>"Hey Siri, save this idea"</strong> - Start recording</li>
+        </ul>
+        
+        <h4 style="margin-top:1.5rem;">Custom Shortcuts</h4>
+        <p>Create personalized voice commands:</p>
+        <ol>
+          <li>Open Shortcuts app on iPhone</li>
+          <li>Create new shortcut</li>
+          <li>Add "Record Thoughtmark" action</li>
+          <li>Add to Siri with custom phrase</li>
+        </ol>
+      </div>
+    </section>
+    
+    <section class="tm-section">
+      <h2>Troubleshooting</h2>
+      
+      <div class="tm-card tm-mb-2">
+        <h3>Watch App Not Installing</h3>
+        <ul>
+          <li>Ensure watch is on WiFi or near iPhone</li>
+          <li>Check available watch storage (need ~50MB)</li>
+          <li>Restart both watch and iPhone</li>
+          <li>Update to latest watchOS version</li>
+        </ul>
+      </div>
+      
+      <div class="tm-card tm-mb-2">
+        <h3>Voice Recording Issues</h3>
+        <ul>
+          <li>Ensure microphone permission is enabled</li>
+          <li>Check watch is not in silent mode</li>
+          <li>Speak clearly 6-12 inches from watch</li>
+          <li>Ensure sufficient watch storage</li>
+        </ul>
+      </div>
+      
+      <div class="tm-card tm-mb-2">
+        <h3>Sync Delays</h3>
+        <ul>
+          <li>Normal sync: 5-30 seconds</li>
+          <li>Large recordings: Up to 2 minutes</li>
+          <li>Offline queue: Syncs when reconnected</li>
+          <li>Force sync: Open iPhone app to trigger immediate sync</li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="tm-section">
+      <h2>Privacy & Security</h2>
+      
+      <div class="tm-success">
+        <p><strong>Your watch recordings are fully encrypted:</strong></p>
+        <ul style="margin-top:0.5rem;">
+          <li>✓ Encrypted on watch before sync</li>
+          <li>✓ Encrypted in transit to iPhone</li>
+          <li>✓ Encrypted at rest on iPhone</li>
+          <li>✓ Hardware-backed encryption (Secure Enclave)</li>
+        </ul>
+      </div>
+      
+      <p class="tm-mt-2">For complete privacy details, see our <a href="/legal/privacy.html">Privacy Policy</a>.</p>
+    </section>
+    
+    <section class="tm-contact-info">
+      <h2>Need Help?</h2>
+      <p>Apple Watch specific support:</p>
+      <ul class="tm-list-unstyled tm-list-spaced">
+        <li><strong>Email:</strong> <a href="mailto:support@thoughtmarks.app?subject=Apple Watch Support">support@thoughtmarks.app</a></li>
+        <li><strong>Subject:</strong> "Apple Watch Support"</li>
+        <li><strong>Include:</strong> Watch model, watchOS version, and description of issue</li>
+      </ul>
+      <p style="margin-top:1rem;"><a href="/support/" class="tm-btn-secondary" style="display:inline-block;padding:0.6rem 1.2rem;">← Back to Support Center</a></p>
+    </section>
+  </main>
+  
+  <footer class="tm-footer">
+  <p>
+    &copy; 2024-2025 Thoughtmarks. All rights reserved.
+    <br/>
+    <a href="/legal/privacy.html">Privacy Policy</a>
+    <a href="/legal/terms.html">Terms of Service</a>
+    <a href="/legal/account-deletion.html">Delete Account</a>
+    <a href="/support/">Support</a>
+  </p>
+  <p style="margin-top: 1rem; font-size: 0.8rem;">
+    Transform how you think. Capture brilliant ideas at the speed of life.
+  </p>
+</footer>
+
+
+</body>
+</html>
+

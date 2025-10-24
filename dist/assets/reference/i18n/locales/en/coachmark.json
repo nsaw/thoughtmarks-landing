@@ -1,0 +1,36 @@
+{
+  "dismiss": {
+    "label": "Dismiss coachmark",
+    "hint": "Tap to close this tip"
+  },
+  "next": "Got it",
+  "skip": "Skip",
+  "nextButton": {
+    "label": "Next tip",
+    "hint": "Tap to see the next tip"
+  },
+  "skipButton": {
+    "label": "Skip all tips",
+    "hint": "Tap to skip all remaining tips"
+  },
+  "capture": {
+    "title": "Quick Capture",
+    "description": "Tap the microphone to record voice notes or the plus button to create text notes"
+  },
+  "search": {
+    "title": "Smart Search",
+    "description": "Use the search bar to find your thoughtmarks by keywords or meaning"
+  },
+  "bins": {
+    "title": "Organize with Bins",
+    "description": "Create bins to organize your thoughtmarks by topic or project"
+  },
+  "ai": {
+    "title": "AI Insights",
+    "description": "Get smart suggestions and connections between your ideas"
+  },
+  "voice": {
+    "title": "Voice Commands",
+    "description": "Use Siri shortcuts to capture thoughts hands-free"
+  }
+}

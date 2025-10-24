@@ -1,0 +1,16 @@
+{
+  "buildTime": "2025-10-24T05:47:58.597Z",
+  "fileCount": 120,
+  "criticalFiles": [
+    "_headers",
+    "_redirects",
+    "assets/syles/main.css",
+    "landing/index.html",
+    "legal/index.html",
+    "about/index.html",
+    "support/index.html",
+    "docs/index.html"
+  ],
+  "sourceDir": "/Users/sawyer/gitSync/Thoughtmarks-landing/public",
+  "outputDir": "/Users/sawyer/gitSync/Thoughtmarks-landing/dist"
+}

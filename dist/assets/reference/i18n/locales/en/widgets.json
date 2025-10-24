@@ -1,0 +1,194 @@
+{
+  "quickCapture": {
+    "title": "Quick Capture",
+    "subtitle": "Create a new thoughtmark",
+    "actionLabel": "Capture",
+    "emptyState": "Tap to create a new thoughtmark",
+    "a11y": {
+      "label": "Quick Capture widget",
+      "hint": "Double tap to open compose screen and create a new thoughtmark"
+    }
+  },
+  "recentThoughtmarks": {
+    "title": "Recent Thoughtmarks",
+    "subtitle": "Your latest thoughts",
+    "emptyState": {
+      "message": "No recent thoughtmarks",
+      "actionLabel": "Create your first thoughtmark",
+      "a11y": {
+        "label": "Empty state for recent thoughtmarks",
+        "hint": "Double tap to open compose screen"
+      }
+    },
+    "item": {
+      "a11y": {
+        "label": "Thoughtmark: {{title}}",
+        "hint": "Double tap to view details",
+        "withBin": "Thoughtmark: {{title}} in {{bin}}",
+        "withTags": "Thoughtmark: {{title}}, tags: {{tags}}"
+      }
+    },
+    "intent": {
+      "title": "Recent Thoughtmarks",
+      "description": "Show your recent thoughtmarks",
+      "parameterSummary": {
+        "default": "Show {{itemCount}} recent thoughtmarks",
+        "withBin": "Show {{itemCount}} recent thoughtmarks from {{bin}}",
+        "withTag": "Show {{itemCount}} recent thoughtmarks tagged {{tag}}",
+        "withBinAndTag": "Show {{itemCount}} recent thoughtmarks from {{bin}} tagged {{tag}}"
+      },
+      "parameters": {
+        "bin": {
+          "title": "Bin",
+          "description": "Filter by bin",
+          "placeholder": "Select a bin"
+        },
+        "tag": {
+          "title": "Tag",
+          "description": "Filter by tag",
+          "placeholder": "Select a tag"
+        },
+        "itemCount": {
+          "title": "Number of items",
+          "description": "How many items to show",
+          "options": {
+            "one": "1 item",
+            "four": "4 items",
+            "eight": "8 items"
+          }
+        }
+      }
+    }
+  },
+  "todaySuggestions": {
+    "title": "Today's Suggestions",
+    "subtitle": "AI-recommended thoughts",
+    "emptyState": {
+      "title": "No suggestions yet",
+      "subtitle": "Open app to generate",
+      "message": "No suggestions available",
+      "actionLabel": "Open Thoughtmarks",
+      "a11y": {
+        "label": "No suggestions available",
+        "hint": "Open app to generate AI suggestions"
+      }
+    },
+    "placeholder": {
+      "title1": "Today's priorities",
+      "snippet1": "Review and update",
+      "title2": "Follow up on yesterday",
+      "snippet2": "Check completed items"
+    },
+    "item": {
+      "a11y": {
+        "label": "Suggestion: {{title}}",
+        "hint": "Double tap to open"
+      }
+    }
+  },
+  "liveActivity": {
+    "recording": {
+      "title": "Recording Voice Note",
+      "subtitle": "{{elapsedTime}}",
+      "untitled": "Untitled Recording",
+      "withTitle": "{{title}}",
+      "withBin": "{{title}} • {{bin}}",
+      "actions": {
+        "stop": "Stop",
+        "cancel": "Cancel"
+      },
+      "a11y": {
+        "title": {
+          "label": "Recording title: {{title}}",
+          "hint": "Recording in progress"
+        },
+        "elapsedTime": {
+          "label": "Elapsed time: {{time}}",
+          "hint": "Time since recording started"
+        },
+        "stopButton": {
+          "label": "Stop recording",
+          "hint": "Double tap to stop and save recording"
+        },
+        "cancelButton": {
+          "label": "Cancel recording",
+          "hint": "Double tap to cancel and discard recording"
+        }
+      }
+    },
+    "processing": "Processing...",
+    "completed": "Recording saved",
+    "cancelled": "Recording cancelled",
+    "error": "Recording failed",
+    "fallback": {
+      "title": "Recording in Progress",
+      "body": "Recording: {{title}}",
+      "continueInApp": "Tap to open Thoughtmarks and manage your recording"
+    }
+  },
+  "errors": {
+    "integrityCheckFailed": "Widget data integrity check failed. Please open the app to refresh.",
+    "dataUnavailable": "Widget data unavailable. Please open the app.",
+    "appGroupUnavailable": "Unable to sync widget data. Please check app permissions.",
+    "invalidConfiguration": "Widget configuration error. Please reinstall the widget.",
+    "refreshBudgetExceeded": "Widget refresh limit reached. Data will update soon.",
+    "networkAttemptDetected": "Network access not allowed from widgets.",
+    "unsupportedDevice": "This feature requires iOS 16.1 or later.",
+    "permissionDenied": "Permission required to show live activity.",
+    "activityLimitReached": "Too many active activities. Please try again.",
+    "invalidStateTransition": "Unable to update activity state.",
+    "backgroundActionFailed": "Action failed. Please open the app."
+  },
+  "deepLinks": {
+    "compose": {
+      "title": "Create Thoughtmark",
+      "a11y": {
+        "label": "Create new thoughtmark",
+        "hint": "Double tap to open compose screen"
+      }
+    },
+    "detail": {
+      "title": "View Thoughtmark",
+      "a11y": {
+        "label": "View thoughtmark details",
+        "hint": "Double tap to open details"
+      }
+    },
+    "search": {
+      "title": "Search Thoughtmarks",
+      "a11y": {
+        "label": "Search thoughtmarks",
+        "hint": "Double tap to open search"
+      }
+    },
+    "voiceRecord": {
+      "title": "Voice Record",
+      "a11y": {
+        "label": "Record voice note",
+        "hint": "Double tap to start recording"
+      }
+    },
+    "aiPanel": {
+      "title": "AI Suggestions",
+      "a11y": {
+        "label": "View AI suggestions",
+        "hint": "Double tap to open AI panel"
+      }
+    },
+    "fallback": {
+      "title": "Open Thoughtmarks",
+      "message": "Unable to open the requested screen. Opening dashboard instead.",
+      "retry": "Try Again"
+    }
+  },
+  "a11y": {
+    "widget": {
+      "label": "{{kind}} widget",
+      "hint": "Shows {{description}}"
+    },
+    "refreshing": "Refreshing widget data",
+    "dataExpired": "Widget data expired. Tap to refresh.",
+    "loading": "Loading widget data",
+    "retry": "Retry loading widget data"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "loading": "Loading...",
+  "error": "Error",
+  "success": "Success",
+  "retry": "Retry",
+  "ok": "OK",
+  "yes": "Yes",
+  "no": "No",
+  "confirm": "Confirm",
+  "cancel": "Cancel",
+  "close": "Close",
+  "done": "Done",
+  "next": "Next",
+  "previous": "Previous",
+  "skip": "Skip",
+  "continue": "Continue",
+  "finish": "Finish",
+  "search": "Search",
+  "filter": "Filter",
+  "sort": "Sort",
+  "refresh": "Refresh",
+  "pullToRefresh": "Pull to refresh",
+  "noInternet": "No internet connection",
+  "tryAgain": "Try Again",
+  "networkError": "Network error",
+  "serverError": "Server error",
+  "unknownError": "Unknown error"
+}
+
+

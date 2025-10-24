@@ -1,0 +1,86 @@
+{
+  "header": {
+    "title": "USER GUIDE",
+    "description": "Learn how to get the most out of Thoughtmarks. Tap any section below to expand and view detailed instructions."
+  },
+  "section": {
+    "expand": {
+      "hint": "Tap to expand this section"
+    },
+    "collapse": {
+      "hint": "Tap to collapse this section"
+    }
+  },
+  "gettingStarted": {
+    "title": "Getting Started",
+    "description": "Welcome to Thoughtmarks - your second brain",
+    "content": {
+      "whatAreThoughtmarks": "**What Are Thoughtmarks**\nThoughtmarks are your saved ideas — quick notes, quotes, or snippets of insight.\nEach one captures a single thought so you can connect them later into bigger patterns.",
+      "quickCapture": "**Quick Capture**\nTap the + button to create a new Thoughtmark instantly.\nOr say \"Siri, add a Thoughtmark\" on your Apple iPhone or with a paired Apple Watch for a hands-free note.",
+      "types": "**Types of Thoughtmarks**\nText, voice, or link — anything that sparks a thought. Voice-to-Thoughtmark notes transcribe automatically to make capture a breeze!",
+      "organization": "**Organization**\nUse Bins to group Thoughtmarks by theme, project, or mood.\nSearch or filter by tags to surface what matters fast."
+    }
+  },
+  "thoughtmarks": {
+    "title": "Thoughtmarks",
+    "description": "Your personal library of insights",
+    "content": {
+      "create": "• Tap any Thoughtmark to edit or expand.\n• Long-press to pin, share, or move between bins.\n• Use filters (All, pinned, ideas, etc.) to focus on one category at a time."
+    }
+  },
+  "bins": {
+    "title": "Bins",
+    "description": "Bins act like smart folders",
+    "content": {
+      "whatAreBins": "• Create bins for \"Projects,\" \"Reading,\" or \"Podcast Ideas.\"\n• Add Thoughtmarks by tag or drag-and-drop.\n• Tap ••• to rename, reorder, or delete a bin."
+    }
+  },
+  "voice": {
+    "title": "Voice",
+    "description": "Record ideas anytime",
+    "content": {
+      "voiceRecording": "• Tap the mic tab to start recording.\n• Watch app recordings sync automatically and convert to text.\n• Review, edit, or tag the transcription just like a normal Thoughtmark."
+    }
+  },
+  "aiTools": {
+    "title": "AI Tools",
+    "description": "AI helps connect your dots",
+    "content": {
+      "smartSuggestions": "• Use Insights to reveal themes across your notes.\n• Tap Related to see how different Thoughtmarks link together.\n• Ask questions in natural language: \"What were my ideas about creativity last week?\""
+    }
+  },
+  "search": {
+    "title": "Search",
+    "description": "Search is global and fast",
+    "content": {
+      "quickSearch": "• Type keywords, phrases, or tags.\n• Use filters like text only or voice notes.\n• Recent searches appear automatically for quick recall."
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "description": "Customize your workspace",
+    "content": {
+      "appearance": "• Choose light or dark mode, or follow system.\n• Manage account and premium plan.\n• Configure privacy, backup, and data export options."
+    }
+  },
+  "tips": {
+    "title": "Tips",
+    "description": "Power user features",
+    "content": {
+      "quickCapture": "• Try tagging your Thoughtmarks with verbs — read, watch, build — for better filtering.\n• Add a quick Thoughtmark from the widget or watch app to never lose an idea.\n• Review pinned notes at the start of your day."
+    }
+  },
+  "help": {
+    "header": "NEED MORE HELP?",
+    "contactSupport": {
+      "title": "Contact Support",
+      "description": "Need help? Tap Contact Support to send a message — we reply within 24 hours.",
+      "label": "Contact Support guide section"
+    },
+    "whatsNew": {
+      "title": "What's New",
+      "description": "See what's changed in the latest release: new features, performance updates, and sneak peeks of upcoming tools.",
+      "label": "What's New guide section"
+    }
+  }
+}

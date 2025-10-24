@@ -1,0 +1,29 @@
+{
+  "liveActivity": {
+    "recording": {
+      "untitled": "Grabación sin título",
+      "actions": {
+        "stop": "Detener",
+        "cancel": "Cancelar"
+      },
+      "a11y": {
+        "stopButton": {
+          "label": "Detener grabación",
+          "hint": "Doble toque para detener y guardar la grabación"
+        },
+        "cancelButton": {
+          "label": "Cancelar grabación",
+          "hint": "Doble toque para cancelar y descartar la grabación"
+        }
+      }
+    },
+    "processing": "Procesando...",
+    "cancelled": "Cancelado",
+    "error": "Error",
+    "fallback": {
+      "title": "Grabación en Progreso",
+      "body": "Grabando \"{{title}}\""
+    }
+  }
+}
+
