@@ -1,0 +1,54 @@
+<nav class="tm-navbar" role="navigation" aria-label="Main navigation">
+  <div class="tm-nav-left">
+    <img src="/assets/Logo-iOS-Default-40x40@2x.png" class="tm-nav-logo" alt="Thoughtmarks Logo"/>
+    <span class="tm-nav-title">Thoughtmarks</span>
+  </div>
+  <button class="tm-hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <div class="tm-nav-links" id="navLinks" role="menu">
+    <a href="/landing/" role="menuitem">Home</a>
+    <a href="/about/" role="menuitem">About</a>
+    <a href="/docs/" role="menuitem">Docs</a>
+    <a href="/support/" role="menuitem">Support</a>
+    <a href="/legal/" role="menuitem">Legal</a>
+  </div>
+</nav>
+
+<script>
+// Hamburger menu functionality
+(function() {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+      this.classList.toggle('active');
+      const isExpanded = navLinks.style.display === 'flex';
+      navLinks.style.display = isExpanded ? 'none' : 'flex';
+      this.setAttribute('aria-expanded', !isExpanded);
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+        hamburger.classList.remove('active');
+        navLinks.style.display = 'none';
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && navLinks.style.display === 'flex') {
+        hamburger.classList.remove('active');
+        navLinks.style.display = 'none';
+        hamburger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+})();
+</script>
+

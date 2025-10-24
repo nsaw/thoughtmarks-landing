@@ -1,0 +1,20 @@
+{
+  "name": "thoughtmarks-landing",
+  "version": "1.0.0",
+  "description": "Thoughtmarks static landing site with legal documentation and support pages",
+  "type": "module",
+  "scripts": {
+    "build:site": "node scripts/build/assemble.mjs",
+    "preview:tree": "find dist -type f -maxdepth 4 | sort",
+    "validate:html": "npx html-validate 'dist/**/*.html'",
+    "serve": "npx serve dist",
+    "deploy": "npx wrangler pages deploy dist --project-name thoughtmarks-landing --branch production"
+  },
+  "keywords": ["thoughtmarks", "landing", "static-site"],
+  "author": "Thoughtmarks Team",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "html-validate": "^8.0.0"
+  }
+}
+

@@ -1,0 +1,19 @@
+
+ ⛅️ wrangler 4.19.1 (update available 4.45.0)
+─────────────────────────────────────────────
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mWarning: Your working directory is a git repo and has uncommitted changes[0m
+
+  To silence this warning, pass in --commit-dirty=true
+
+
+Uploading... (0/231)
+Uploading... (77/231)
+Uploading... (154/231)
+Uploading... (231/231)
+✨ Success! Uploaded 231 files (7.45 sec)
+
+✨ Uploading _headers
+✨ Uploading _redirects
+🌎 Deploying...
+✨ Deployment complete! Take a peek over at https://afbd5929.thoughtmarks-landing.pages.dev
+✨ Deployment alias URL: https://production.thoughtmarks-landing.pages.dev
