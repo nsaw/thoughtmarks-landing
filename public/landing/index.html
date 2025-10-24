@@ -1,18 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<!-- Standard favicon -->
-	<link rel="icon" type="image/png" href="/assets/LogoRound-watchOS-Default-50x50@2x.png" />
-
-	<!-- Apple Touch Icon for iOS devices -->
-	<link rel="apple-touch-icon" sizes="180x180" href="/assets/AppIcon.png" />
-
-	<!-- Safari Pinned Tab (uses SVG mask, but fallback to PNG here for simplicity) -->
-	<link rel="mask-icon" href="/assets/AppIcon.png" color="#b1d400" />
-
-
+  <!--#include file="/partials/head.html" -->
+  
   <!-- SEO Optimization -->
   <title>Thoughtmarks - Voice-First AI Note Taking | Bookmarks for Your Brain</title>
   <meta name="description" content="New AI-powered note app launching now. Voice recording, smart organization, and seamless capture. Download Now to FIND FOCUS with the future of thought management."/>
@@ -37,9 +27,6 @@
   <meta name="mobile-web-app-capable" content="yes"/>
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
   <meta name="theme-color" content="#B7A363"/>
-  
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"/>
   
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -606,24 +593,7 @@
   <!-- Skip to content for accessibility -->
   <a href="#main-content" class="sr-only">Skip to main content</a>
   
-  <!-- Hamburger Navbar -->
-  <nav class="navbar" role="navigation" aria-label="Main navigation">
-    <div class="nav-left">
-      <img src="/assets/Logo-iOS-Default-40x40@2x.png" class="nav-logo" alt="Thoughtmarks Logo"/>
-      <span class="nav-title">Thoughtmarks</span>
-    </div>
-    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div class="nav-links" id="navLinks">
-      <a href="#features">Features</a>
-      <a href="#how">How it Works</a>
-      <a href="#testimonials">testimonials</a>
-      <a href="#signup">Sign Up</a>
-    </div>
-  </nav>
+  <!--#include file="/partials/nav.html" -->
 
   <main id="main-content">
     <div class="container">
@@ -913,9 +883,7 @@
     </a>
   </div>
 
-  <footer>
-    <p>&copy; 2024 Thoughtmarks. Transform how you think.</p>
-  </footer>
+  <!--#include file="/partials/footer.html" -->
 
   <script>
     // Hamburger menu functionality
