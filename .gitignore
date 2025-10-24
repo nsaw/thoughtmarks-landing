@@ -36,6 +36,8 @@ build/
 *.log.*
 *.log.*.*
 *.log.*.*.*
+.artifacts/
+
 
 # Credential files
 google-services.json
