@@ -1,0 +1,17 @@
+# Cloudflare Pages Configuration for Thoughtmarks Landing
+# Static site deployment configuration
+# Build locally with: npm run build:site
+# Then deploy with: npm run deploy
+
+name = "thoughtmarks-landing"
+pages_build_output_dir = "dist"
+compatibility_date = "2025-10-24"
+
+# Production deployment settings
+[env.production]
+vars = { ENVIRONMENT = "production" }
+
+# Preview deployment settings  
+[env.preview]
+vars = { ENVIRONMENT = "preview" }
+

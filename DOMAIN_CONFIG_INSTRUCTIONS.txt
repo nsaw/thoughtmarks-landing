@@ -1,0 +1,52 @@
+========================================
+CUSTOM DOMAIN CONFIGURATION
+========================================
+
+QUICK SETUP (1-2 minutes):
+
+1. Open this URL in your browser:
+   https://dash.cloudflare.com/ff4a53e6bc626ee548c280edfbb6aa16/pages/view/thoughtmarks-landing
+
+2. Click "Custom domains" tab
+
+3. Click "Set up a custom domain"
+
+4. Enter: thoughtmarks.app
+
+5. Click "Continue" - Cloudflare will automatically:
+   - Create DNS records
+   - Provision SSL certificate
+   - Enable proxy
+
+6. Wait 1-5 minutes for SSL provisioning
+
+7. Test: https://thoughtmarks.app
+
+========================================
+VERIFICATION COMMANDS
+========================================
+
+# Check DNS
+dig thoughtmarks.app +short
+
+# Test HTTPS
+curl -I https://thoughtmarks.app
+
+# Verify content loads
+curl -s https://thoughtmarks.app | grep -i "Find FOCUS"
+
+========================================
+DEPLOYED URLS
+========================================
+
+Current: https://production.thoughtmarks-landing.pages.dev
+After Config: https://thoughtmarks.app
+
+All pages will be accessible at:
+- https://thoughtmarks.app/landing/
+- https://thoughtmarks.app/legal/
+- https://thoughtmarks.app/about/
+- https://thoughtmarks.app/support/
+- https://thoughtmarks.app/docs/
+
+========================================

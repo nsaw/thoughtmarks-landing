@@ -26,6 +26,8 @@ build/
 *DS_*
 *env*
 *DS_Store*
+reference/
+*reference*
 
 # Credential files
 google-services.json
