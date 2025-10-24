@@ -69,7 +69,7 @@ curl -I https://www.thoughtmarks.app
 #### Prerequisites
 - Cloudflare API Token with Zone:Edit and Pages:Edit permissions
 - Zone ID for thoughtmarks.app domain
-- Account ID: ff4a53e6bc626ee548c280edfbb6aa16
+- Account ID: 
 
 #### Step 1: Get Zone ID
 
