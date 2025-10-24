@@ -37,7 +37,7 @@ build/
 *.log.*.*
 *.log.*.*.*
 .artifacts/
-
+*.pem
 
 # Credential files
 google-services.json
