@@ -73,7 +73,10 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
     setErrorMessage('');
 
     try {
-      const response = await fetch('/api/waitlist', {
+      // API URL - use environment variable or default to Fly.io deployment
+      const apiUrl = import.meta.env.PUBLIC_API_URL || 'https://thoughtmarks-api.fly.dev';
+      
+      const response = await fetch(`${apiUrl}/api/waitlist`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
