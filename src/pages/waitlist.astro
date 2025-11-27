@@ -1,0 +1,89 @@
+---
+// src/pages/waitlist.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Nav from '../components/astro/Nav.astro';
+import Footer from '../components/astro/Footer.astro';
+import WaitlistForm from '../components/react/WaitlistForm';
+---
+
+<BaseLayout 
+  title="Join the Waitlist | Thoughtmarks" 
+  description="Be the first to know when Thoughtmarks launches. Sign up for early access to the notes app for people too busy being interesting."
+>
+  <Nav />
+  
+  <main class="min-h-screen flex items-center justify-center py-20 px-4">
+    <!-- Background elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-20 -left-40 w-[500px] h-[500px] rounded-full 
+                  bg-gradient-to-br from-accent/10 to-transparent blur-3xl"></div>
+      <div class="absolute bottom-20 -right-40 w-[600px] h-[600px] rounded-full 
+                  bg-gradient-to-tl from-amber-500/5 to-transparent blur-3xl"></div>
+    </div>
+
+    <div class="relative z-10 w-full max-w-2xl">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <p class="tagline-script text-2xl sm:text-3xl mb-4">
+          bookmarks for your brain
+        </p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+          Get early access to<br />
+          <span class="text-accent">Thoughtmarks</span>
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-lg mx-auto">
+          The notes app for people too busy being interesting. Be the first to know when we launch.
+        </p>
+      </div>
+
+      <!-- Waitlist Form Card -->
+      <div class="bg-zinc-900/80 backdrop-blur-sm rounded-2xl border border-zinc-800 p-8 sm:p-12">
+        <WaitlistForm client:load />
+      </div>
+
+      <!-- Value props -->
+      <div class="mt-12 grid sm:grid-cols-3 gap-6 text-center">
+        <div class="space-y-2">
+          <div class="w-12 h-12 mx-auto rounded-xl bg-accent/10 flex items-center justify-center">
+            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-white">Voice Capture</h3>
+          <p class="text-sm text-zinc-500">Hands-free note capture with Siri</p>
+        </div>
+        <div class="space-y-2">
+          <div class="w-12 h-12 mx-auto rounded-xl bg-amber-500/10 flex items-center justify-center">
+            <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-white">AI Organization</h3>
+          <p class="text-sm text-zinc-500">Auto-tags and connects ideas</p>
+        </div>
+        <div class="space-y-2">
+          <div class="w-12 h-12 mx-auto rounded-xl bg-violet-500/10 flex items-center justify-center">
+            <svg class="w-6 h-6 text-violet-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-white">Smart Search</h3>
+          <p class="text-sm text-zinc-500">Find by meaning, not just keywords</p>
+        </div>
+      </div>
+
+      <!-- Social proof placeholder -->
+      <div class="mt-12 text-center">
+        <p class="text-zinc-500 text-sm">
+          Join creators, entrepreneurs, and curious minds on the waitlist.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
