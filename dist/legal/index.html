@@ -1,293 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<!-- Favicons -->
-<link rel="icon" type="image/png" href="/assets/LogoRound-watchOS-Default-50x50@2x.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/AppIcon.png" />
-<link rel="mask-icon" href="/assets/AppIcon.png" color="#b1d400" />
-
-<!-- Primary Meta Tags -->
-<meta name="application-name" content="Thoughtmarks"/>
-<meta name="apple-mobile-web-app-title" content="Thoughtmarks"/>
-<meta name="apple-mobile-web-app-capable" content="yes"/>
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-<meta name="theme-color" content="#B7A363"/>
-<meta name="mobile-web-app-capable" content="yes"/>
-
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"/>
-
-<!-- Stylesheet -->
-<link rel="stylesheet" href="/assets/syles/main.css" />
-
-
-  <title>Legal Hub - Thoughtmarks</title>
-  <meta name="description" content="Thoughtmarks Legal Documentation - Privacy Policy, Terms of Service, GDPR/CCPA compliance, and user rights"/>
-</head>
-<body>
-  <a href="#main-content" class="skip-to-content">Skip to main content</a>
-  <nav class="tm-navbar" role="navigation" aria-label="Main navigation">
-  <div class="tm-nav-left">
-    <img src="/assets/Logo-iOS-Default-40x40@2x.png" class="tm-nav-logo" alt="Thoughtmarks Logo"/>
-    <span class="tm-nav-title">Thoughtmarks</span>
-  </div>
-  <button class="tm-hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <div class="tm-nav-links" id="navLinks" role="menu">
-    <a href="/landing/" role="menuitem">Home</a>
-    <a href="/about/" role="menuitem">About</a>
-    <a href="/docs/" role="menuitem">Docs</a>
-    <a href="/support/" role="menuitem">Support</a>
-    <a href="/legal/" role="menuitem">Legal</a>
-  </div>
-</nav>
-
-<script>
-// Hamburger menu functionality
-(function() {
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
-  
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', function() {
-      this.classList.toggle('active');
-      const isExpanded = navLinks.style.display === 'flex';
-      navLinks.style.display = isExpanded ? 'none' : 'flex';
-      this.setAttribute('aria-expanded', !isExpanded);
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
-      if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
-        hamburger.classList.remove('active');
-        navLinks.style.display = 'none';
-        hamburger.setAttribute('aria-expanded', 'false');
+<!DOCTYPE html><html lang="en" class="dark"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v5.16.1"><!-- Primary Meta Tags --><title>Legal | Thoughtmarks</title><meta name="title" content="Legal | Thoughtmarks"><meta name="description" content="Thoughtmarks legal documents including Privacy Policy, Terms of Service, and End User License Agreement."><link rel="canonical" href="https://thoughtmarks.app/legal/"><!-- Favicon --><link rel="icon" type="image/png" href="/assets/AppIcon.png"><link rel="apple-touch-icon" href="/assets/AppIcon.png"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://thoughtmarks.app/legal/"><meta property="og:title" content="Legal | Thoughtmarks"><meta property="og:description" content="Thoughtmarks legal documents including Privacy Policy, Terms of Service, and End User License Agreement."><meta property="og:image" content="/assets/Logo-iOS-Default-1024x1024@1x.png"><meta property="og:site_name" content="Thoughtmarks"><!-- Twitter --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://thoughtmarks.app/legal/"><meta name="twitter:title" content="Legal | Thoughtmarks"><meta name="twitter:description" content="Thoughtmarks legal documents including Privacy Policy, Terms of Service, and End User License Agreement."><meta name="twitter:image" content="/assets/Logo-iOS-Default-1024x1024@1x.png"><!-- App-specific meta --><meta name="apple-mobile-web-app-title" content="Thoughtmarks"><meta name="application-name" content="Thoughtmarks"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="theme-color" content="#09090B"><!-- Preconnect to external resources --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><!-- JSON-LD Structured Data --><script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Thoughtmarks",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "iOS",
+        "description": "Voice-first note capture with AI organization. Capture ideas at the speed of life.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
       }
-    });
-    
-    // Close menu on escape key
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape' && navLinks.style.display === 'flex') {
-        hamburger.classList.remove('active');
-        navLinks.style.display = 'none';
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-})();
-</script>
-
-
-  
-  <main id="main-content" class="tm-content">
-    <h1>Legal Documentation Hub</h1>
-    
-    <p class="tm-text-secondary tm-text-center">
-      Complete legal documentation for Thoughtmarks including privacy policy, terms of service, compliance information, and user rights.
-    </p>
-    
-    <div class="tm-doc-meta tm-text-center">
-      <strong>Last Updated:</strong> October 1, 2025<br/>
-      <strong>Compliance:</strong> GDPR, CCPA, COPPA, App Store Requirements
-    </div>
-    
-    <section class="tm-section">
-      <h2>Core Legal Documents</h2>
-      
-      <div class="tm-grid tm-grid-2">
-        <div class="tm-card">
-          <h3>📜 Privacy Policy</h3>
-          <p class="tm-text-secondary">How we protect and handle your data with GDPR and CCPA compliance.</p>
-          <ul class="tm-list-unstyled tm-mt-2">
-            <li>✓ Data collection practices</li>
-            <li>✓ AI processing and privacy</li>
-            <li>✓ Your rights (GDPR/CCPA)</li>
-            <li>✓ Security measures</li>
-          </ul>
-          <a href="/legal/privacy.html" class="tm-btn-primary" style="display:inline-block;margin-top:1rem;padding:0.6rem 1.2rem;">Read Privacy Policy</a>
-        </div>
-        
-        <div class="tm-card">
-          <h3>📋 Terms of Service</h3>
-          <p class="tm-text-secondary">Terms and conditions for using Thoughtmarks mobile application.</p>
-          <ul class="tm-list-unstyled tm-mt-2">
-            <li>✓ User agreements</li>
-            <li>✓ Acceptable use policy</li>
-            <li>✓ Subscriptions and billing</li>
-            <li>✓ Account responsibilities</li>
-          </ul>
-          <a href="/legal/terms.html" class="tm-btn-primary" style="display:inline-block;margin-top:1rem;padding:0.6rem 1.2rem;">Read Terms</a>
-        </div>
-        
-        <div class="tm-card">
-          <h3>📄 End User License Agreement</h3>
-          <p class="tm-text-secondary">License terms for using the Thoughtmarks mobile application.</p>
-          <ul class="tm-list-unstyled tm-mt-2">
-            <li>✓ License grant and restrictions</li>
-            <li>✓ Intellectual property</li>
-            <li>✓ Warranties and disclaimers</li>
-            <li>✓ Termination terms</li>
-          </ul>
-          <a href="/legal/eula.html" class="tm-btn-primary" style="display:inline-block;margin-top:1rem;padding:0.6rem 1.2rem;">Read EULA</a>
-        </div>
-        
-        <div class="tm-card">
-          <h3>🗑️ Account Deletion</h3>
-          <p class="tm-text-secondary">How to delete your account and permanently remove all your data.</p>
-          <ul class="tm-list-unstyled tm-mt-2">
-            <li>✓ Deletion procedures</li>
-            <li>✓ Data retention timelines</li>
-            <li>✓ GDPR/CCPA rights</li>
-            <li>✓ Before you delete</li>
-          </ul>
-          <a href="/legal/account-deletion.html" class="tm-btn-secondary" style="display:inline-block;margin-top:1rem;padding:0.6rem 1.2rem;">Learn About Deletion</a>
-        </div>
-      </div>
-    </section>
-    
-    <section class="tm-section">
-      <h2>Compliance & Technical Documentation</h2>
-      
-      <div class="tm-grid tm-grid-3">
-        <div class="tm-card">
-          <h4>📊 Privacy Policy Compliance</h4>
-          <p class="tm-text-secondary" style="font-size:0.9rem;">Technical details on differential privacy, k-anonymity, and PII protection.</p>
-          <a href="/assets/legal-reference-docs/PRIVACY_POLICY_COMPLIANCE.md">View Details →</a>
-        </div>
-        
-        <div class="tm-card">
-          <h4>📱 Data Collection & Usage</h4>
-          <p class="tm-text-secondary" style="font-size:0.9rem;">Detailed breakdown of all data types collected and how they're used.</p>
-          <a href="/assets/legal-reference-docs/data-collection-usage.md">View Details →</a>
-        </div>
-        
-        <div class="tm-card">
-          <h4>🤖 AI & ML Usage Policy</h4>
-          <p class="tm-text-secondary" style="font-size:0.9rem;">How AI features work and how your data is processed.</p>
-          <a href="/assets/legal-reference-docs/ai-ml-usage.md">View Details →</a>
-        </div>
-        
-        <div class="tm-card">
-          <h4>🔒 User Rights Operations</h4>
-          <p class="tm-text-secondary" style="font-size:0.9rem;">GDPR/CCPA implementation and user rights procedures.</p>
-          <a href="/assets/legal-reference-docs/USER_RIGHTS_OPERATIONS.md">View Details →</a>
-        </div>
-        
-        <div class="tm-card">
-          <h4>🍎 iOS Privacy Manifest</h4>
-          <p class="tm-text-secondary" style="font-size:0.9rem;">Apple App Store privacy requirements and compliance.</p>
-          <a href="/assets/legal-reference-docs/PRIVACY_MANIFEST_FINAL.md">View Details →</a>
-        </div>
-        
-        <div class="tm-card">
-          <h4>🤖 Android Data Safety</h4>
-          <p class="tm-text-secondary" style="font-size:0.9rem;">Google Play Store data safety practices and compliance.</p>
-          <a href="/assets/legal-reference-docs/android-datasafety-coverage.md">View Details →</a>
-        </div>
-      </div>
-    </section>
-    
-    <section class="tm-section">
-      <h2>Privacy Guarantees</h2>
-      
-      <div class="tm-trust-signals">
-        <div class="tm-trust-grid">
-          <div class="tm-trust-item">
-            <span class="tm-trust-number">Zero PII Transmission</span>
-            All user IDs hashed with SHA-256
-          </div>
-          <div class="tm-trust-item">
-            <span class="tm-trust-number">Differential Privacy</span>
-            ε=0.1 Laplace noise protection
-          </div>
-          <div class="tm-trust-item">
-            <span class="tm-trust-number">K-Anonymity</span>
-            Minimum k≥5 cohort grouping
-          </div>
-          <div class="tm-trust-item">
-            <span class="tm-trust-number">90-Day Retention</span>
-            Automatic data deletion
-          </div>
-          <div class="tm-trust-item">
-            <span class="tm-trust-number">No Content Collection</span>
-            Thoughtmark content never sent
-          </div>
-          <div class="tm-trust-item">
-            <span class="tm-trust-number">Full User Control</span>
-            Export, delete, opt-out anytime
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <section class="tm-section">
-      <h2>Quick Links</h2>
-      
-      <div class="tm-grid tm-grid-2">
-        <div>
-          <h3>User Rights</h3>
-          <ul>
-            <li><a href="/legal/privacy.html#your-rights">Access & Portability</a></li>
-            <li><a href="/legal/privacy.html#your-rights">Correction & Deletion</a></li>
-            <li><a href="/legal/privacy.html#your-rights">GDPR Rights</a></li>
-            <li><a href="/legal/privacy.html#your-rights">CCPA Rights</a></li>
-            <li><a href="/legal/account-deletion.html">Delete Account</a></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3>Contact Information</h3>
-          <ul class="tm-list-unstyled">
-            <li><a href="mailto:privacy@thoughtmarks.app">Privacy Inquiries</a></li>
-            <li><a href="mailto:legal@thoughtmarks.app">Legal Questions</a></li>
-            <li><a href="mailto:dpo@thoughtmarks.app">Data Protection Officer</a></li>
-            <li><a href="mailto:support@thoughtmarks.app">General Support</a></li>
-            <li><a href="/support/">Support Center</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    
-    <section class="tm-legal-section">
-      <h3>All Reference Documentation</h3>
-      <p>For complete technical documentation, see our <a href="/assets/legal-reference-docs/">Legal Reference Documentation Library</a> which includes:</p>
-      <ul>
-        <li>App Store privacy labels and submissions</li>
-        <li>Play Store data safety documentation</li>
-        <li>Privacy manifest evidence</li>
-        <li>Redaction enforcement procedures</li>
-        <li>Logging policies</li>
-        <li>Platform-specific privacy coverage (iOS/Android)</li>
-    </ul>
-    </section>
-    
-    <div class="tm-doc-meta tm-mt-4 tm-text-center">
-      <strong>Document Library Updated:</strong> October 1, 2025<br/>
-      <strong>Total Documents:</strong> 19 legal references + 4 user-facing pages<br/>
-      <strong>Compliance Frameworks:</strong> GDPR, CCPA, COPPA (13+), App Store, Play Store
-    </div>
-  </main>
-  
-  <footer class="tm-footer">
-  <p>
-    &copy; 2024-2025 Thoughtmarks. All rights reserved.
-    <br/>
-    <a href="/legal/privacy.html">Privacy Policy</a>
-    <a href="/legal/terms.html">Terms of Service</a>
-    <a href="/legal/account-deletion.html">Delete Account</a>
-    <a href="/support/">Support</a>
-  </p>
-  <p style="margin-top: 1rem; font-size: 0.8rem;">
-    Transform how you think. Capture brilliant ideas at the speed of life.
-  </p>
-</footer>
-
-
-</body>
-</html>
+    </script><!-- PostHog Analytics --><script>
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      posthog.init('phc_rocBY6ZPOYPNoOevHFD2BkFmQBvoULcmFk2CRi3pcqg', {
+        api_host: 'https://us.i.posthog.com',
+        person_profiles: 'identified_only',
+        capture_pageview: true,
+        capture_pageleave: true,
+        autocapture: true,
+      });
+    </script><link rel="stylesheet" href="/assets/eula.B-JwQbXx.css"></head> <body class="min-h-screen bg-bg-base text-text-secondary antialiased">  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-bg-base/80 backdrop-blur-xl border-b border-border/50" id="main-nav"> <nav class="container-wide"> <div class="flex h-16 items-center justify-between lg:h-20"> <!-- Logo --> <a href="/" class="flex items-center gap-3 group"> <img src="/assets/AppIcon.png" alt="Thoughtmarks" class="h-10 w-10 rounded-xl transition-transform duration-300 group-hover:scale-105" width="40" height="40"> <span class="text-lg font-bold text-text-primary tracking-tight hidden sm:block">
+THOUGHTMARKS
+</span> </a> <!-- Desktop Navigation --> <div class="hidden lg:flex lg:items-center lg:gap-8"> <ul class="flex items-center gap-6"> <li> <a href="#features" class="text-text-secondary hover:text-text-primary transition-colors 
+                       font-medium text-sm tracking-wide"> Features </a> </li><li> <a href="#how-it-works" class="text-text-secondary hover:text-text-primary transition-colors 
+                       font-medium text-sm tracking-wide"> How It Works </a> </li><li> <a href="/support" class="text-text-secondary hover:text-text-primary transition-colors 
+                       font-medium text-sm tracking-wide"> Support </a> </li> </ul> <a href="#download" class="btn-primary text-sm">
+Get the App
+</a> </div> <!-- Mobile Navigation --> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="1eagNe" prefix="r1" component-url="/assets/MobileNav.DdXi0NWJ.js" component-export="default" renderer-url="/assets/client.BLUn-lwI.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;MobileNav&quot;,&quot;value&quot;:true}" await-children><div class="lg:hidden"><button class="relative z-50 flex h-10 w-10 items-center justify-center rounded-lg 
+                   text-text-secondary hover:bg-bg-surface hover:text-text-primary 
+                   transition-colors focus-visible:outline-none focus-visible:ring-2 
+                   focus-visible:ring-accent" aria-label="Open menu" aria-expanded="false"><svg class="h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button></div><!--astro:end--></astro-island> </div> </nav> </header> <script type="module">const r=document.getElementById("main-nav"),e=()=>{r&&(window.scrollY>50?(r.classList.remove("bg-transparent"),r.classList.add("bg-bg-base/80","backdrop-blur-xl","border-b","border-border/50")):(r.classList.add("bg-transparent"),r.classList.remove("bg-bg-base/80","backdrop-blur-xl","border-b","border-border/50")))};e();window.addEventListener("scroll",e,{passive:!0});</script> <main class="pt-24 pb-16"> <div class="container-narrow"> <header class="text-center mb-16"> <h1 class="text-h1 font-bold text-text-primary mb-4">Legal</h1> <p class="text-xl text-text-secondary">
+Transparency and trust are core to how we operate.
+</p> </header> <div class="grid gap-6"> <a href="/legal/privacy" class="block group"> <div class="bg-bg-elevated rounded-2xl border border-border p-6 transition-all duration-300 hover:border-accent/30 hover:shadow-card-hover hover:-translate-y-1 flex items-start gap-6 group-hover:border-accent/50">  <div class="text-accent flex-shrink-0"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg></div> <div> <h2 class="text-xl font-semibold text-text-primary mb-2 
+                           group-hover:text-accent transition-colors"> Privacy Policy </h2> <p class="text-text-secondary"> How we protect and handle your data with GDPR and CCPA compliance. </p> </div> <svg class="w-5 h-5 text-text-muted group-hover:text-accent 
+                          group-hover:translate-x-1 transition-all flex-shrink-0 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path> </svg>  </div> </a><a href="/legal/terms" class="block group"> <div class="bg-bg-elevated rounded-2xl border border-border p-6 transition-all duration-300 hover:border-accent/30 hover:shadow-card-hover hover:-translate-y-1 flex items-start gap-6 group-hover:border-accent/50">  <div class="text-accent flex-shrink-0"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+          </svg></div> <div> <h2 class="text-xl font-semibold text-text-primary mb-2 
+                           group-hover:text-accent transition-colors"> Terms of Service </h2> <p class="text-text-secondary"> Usage terms, acceptable use policy, and user agreements. </p> </div> <svg class="w-5 h-5 text-text-muted group-hover:text-accent 
+                          group-hover:translate-x-1 transition-all flex-shrink-0 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path> </svg>  </div> </a><a href="/legal/eula" class="block group"> <div class="bg-bg-elevated rounded-2xl border border-border p-6 transition-all duration-300 hover:border-accent/30 hover:shadow-card-hover hover:-translate-y-1 flex items-start gap-6 group-hover:border-accent/50">  <div class="text-accent flex-shrink-0"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                  d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"/>
+          </svg></div> <div> <h2 class="text-xl font-semibold text-text-primary mb-2 
+                           group-hover:text-accent transition-colors"> End User License Agreement </h2> <p class="text-text-secondary"> License terms for using the Thoughtmarks mobile application. </p> </div> <svg class="w-5 h-5 text-text-muted group-hover:text-accent 
+                          group-hover:translate-x-1 transition-all flex-shrink-0 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path> </svg>  </div> </a> </div> <div class="mt-12 text-center"> <p class="text-text-muted text-sm">
+Questions about our legal policies?  <a href="mailto:legal@thoughtmarks.app" class="text-accent hover:text-accent-hover">
+Contact our legal team
+</a> </p> </div> </div> </main> <footer class="bg-bg-base border-t border-border"> <div class="container-wide py-16"> <div class="grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-16"> <!-- Brand --> <div class="col-span-2 md:col-span-1"> <a href="/" class="flex items-center gap-3 mb-4"> <img src="/assets/AppIcon.png" alt="Thoughtmarks" class="h-10 w-10 rounded-xl" width="40" height="40"> <span class="text-lg font-bold text-text-primary tracking-tight">
+THOUGHTMARKS
+</span> </a> <p class="text-text-muted text-sm leading-relaxed">
+Bookmarks for your brain. Capture ideas at the speed of life.
+</p> </div> <!-- Product Links --> <div> <h4 class="text-sm font-semibold text-text-primary uppercase tracking-wider mb-4">
+Product
+</h4> <ul class="space-y-3"> <li> <a href="#features" class="text-text-muted hover:text-text-secondary transition-colors text-sm"> Features </a> </li><li> <a href="#how-it-works" class="text-text-muted hover:text-text-secondary transition-colors text-sm"> How It Works </a> </li><li> <a href="#download" class="text-text-muted hover:text-text-secondary transition-colors text-sm"> Download </a> </li> </ul> </div> <!-- Support Links --> <div> <h4 class="text-sm font-semibold text-text-primary uppercase tracking-wider mb-4">
+Support
+</h4> <ul class="space-y-3"> <li> <a href="/support" class="text-text-muted hover:text-text-secondary transition-colors text-sm"> Help Center </a> </li><li> <a href="/support/watch" class="text-text-muted hover:text-text-secondary transition-colors text-sm"> Apple Watch </a> </li><li> <a href="mailto:support@thoughtmarks.app" class="text-text-muted hover:text-text-secondary transition-colors text-sm"> Contact </a> </li> </ul> </div> <!-- Legal Links --> <div> <h4 class="text-sm font-semibold text-text-primary uppercase tracking-wider mb-4">
+Legal
+</h4> <ul class="space-y-3"> <li> <a href="/legal/privacy" class="text-text-muted hover:text-text-secondary transition-colors text-sm"> Privacy Policy </a> </li><li> <a href="/legal/terms" class="text-text-muted hover:text-text-secondary transition-colors text-sm"> Terms of Service </a> </li><li> <a href="/legal/eula" class="text-text-muted hover:text-text-secondary transition-colors text-sm"> EULA </a> </li> </ul> </div> </div> <!-- Bottom Bar --> <div class="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row justify-between items-center gap-4"> <p class="text-text-muted text-sm">
+&copy; 2025 Thoughtmarks. All rights reserved.
+</p> <div class="flex items-center gap-6"> <a href="https://twitter.com/thoughtmarks" class="text-text-muted hover:text-text-secondary transition-colors" aria-label="Twitter"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path> </svg> </a> <a href="https://instagram.com/thoughtmarks" class="text-text-muted hover:text-text-secondary transition-colors" aria-label="Instagram"> <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"> <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path> </svg> </a> </div> </div> </div> </footer>  </body></html>

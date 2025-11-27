@@ -1,89 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-<!-- Favicons -->
-<link rel="icon" type="image/png" href="/assets/LogoRound-watchOS-Default-50x50@2x.png" />
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/AppIcon.png" />
-<link rel="mask-icon" href="/assets/AppIcon.png" color="#b1d400" />
-
-<!-- Primary Meta Tags -->
-<meta name="application-name" content="Thoughtmarks"/>
-<meta name="apple-mobile-web-app-title" content="Thoughtmarks"/>
-<meta name="apple-mobile-web-app-capable" content="yes"/>
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-<meta name="theme-color" content="#B7A363"/>
-<meta name="mobile-web-app-capable" content="yes"/>
-
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet"/>
-
-<!-- Stylesheet -->
-<link rel="stylesheet" href="/assets/syles/main.css" />
-
-
+  <!--#include file="/partials/head.html" -->
   <title>Terms of Service - Thoughtmarks</title>
   <meta name="description" content="Thoughtmarks Terms of Service - Usage terms, acceptable use policy, and user agreements"/>
 </head>
 <body>
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
-  <nav class="tm-navbar" role="navigation" aria-label="Main navigation">
-  <div class="tm-nav-left">
-    <img src="/assets/Logo-iOS-Default-40x40@2x.png" class="tm-nav-logo" alt="Thoughtmarks Logo"/>
-    <span class="tm-nav-title">Thoughtmarks</span>
-  </div>
-  <button class="tm-hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-  <div class="tm-nav-links" id="navLinks" role="menu">
-    <a href="/landing/" role="menuitem">Home</a>
-    <a href="/about/" role="menuitem">About</a>
-    <a href="/docs/" role="menuitem">Docs</a>
-    <a href="/support/" role="menuitem">Support</a>
-    <a href="/legal/" role="menuitem">Legal</a>
-  </div>
-</nav>
-
-<script>
-// Hamburger menu functionality
-(function() {
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('navLinks');
-  
-  if (hamburger && navLinks) {
-    hamburger.addEventListener('click', function() {
-      this.classList.toggle('active');
-      const isExpanded = navLinks.style.display === 'flex';
-      navLinks.style.display = isExpanded ? 'none' : 'flex';
-      this.setAttribute('aria-expanded', !isExpanded);
-    });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function(event) {
-      if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
-        hamburger.classList.remove('active');
-        navLinks.style.display = 'none';
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
-    });
-    
-    // Close menu on escape key
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape' && navLinks.style.display === 'flex') {
-        hamburger.classList.remove('active');
-        navLinks.style.display = 'none';
-        hamburger.setAttribute('aria-expanded', 'false');
-      }
-    });
-  }
-})();
-</script>
-
-
+  <!--#include file="/partials/nav.html" -->
   
   <main id="main-content" class="tm-content">
     <h1>Terms of Service</h1>
@@ -314,21 +238,7 @@
     </div>
   </main>
   
-  <footer class="tm-footer">
-  <p>
-    &copy; 2024-2025 Thoughtmarks. All rights reserved.
-    <br/>
-    <a href="/legal/privacy.html">Privacy Policy</a>
-    <a href="/legal/terms.html">Terms of Service</a>
-    <a href="/legal/account-deletion.html">Delete Account</a>
-    <a href="/support/">Support</a>
-  </p>
-  <p style="margin-top: 1rem; font-size: 0.8rem;">
-    Transform how you think. Capture brilliant ideas at the speed of life.
-  </p>
-</footer>
-
-
+  <!--#include file="/partials/footer.html" -->
 </body>
 </html>
 

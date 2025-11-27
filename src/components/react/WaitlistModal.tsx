@@ -94,6 +94,15 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
       }
 
       setFormState('success');
+      
+      // Track conversion in PostHog
+      if (typeof window !== 'undefined' && (window as unknown as { posthog?: { capture: (event: string, props: Record<string, string>) => void } }).posthog) {
+        (window as unknown as { posthog: { capture: (event: string, props: Record<string, string>) => void } }).posthog.capture('waitlist_signup', {
+          source: 'landing-modal',
+          email_domain: email.split('@')[1] || 'unknown',
+        });
+      }
+      
       setEmail('');
       setName('');
     } catch (err) {
