@@ -69,17 +69,21 @@ const features = [
 
     <!-- Features Grid -->
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {features.map((feature, index) => (
-        <Card class={`opacity-0 animate-fade-up animation-delay-${(index % 3) * 100}`}>
-          <div class="text-accent mb-4" set:html={feature.icon} />
-          <h3 class="text-xl font-semibold text-text-primary mb-3">
-            {feature.title}
-          </h3>
-          <p class="text-text-secondary leading-relaxed">
-            {feature.description}
-          </p>
-        </Card>
-      ))}
+      {features.map((feature, index) => {
+        const delayClasses = ['', 'animation-delay-100', 'animation-delay-200'];
+        const delayClass = delayClasses[index % 3];
+        return (
+          <Card class={`opacity-0 animate-fade-up ${delayClass}`}>
+            <div class="text-accent mb-4" set:html={feature.icon} />
+            <h3 class="text-xl font-semibold text-text-primary mb-3">
+              {feature.title}
+            </h3>
+            <p class="text-text-secondary leading-relaxed">
+              {feature.description}
+            </p>
+          </Card>
+        );
+      })}
     </div>
   </div>
 </section>
