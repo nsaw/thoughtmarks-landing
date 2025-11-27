@@ -176,3 +176,5 @@ temp/
 .backup/
 # Expo-specific files (excluded from 1Password sync)
 .env.expo
+
+#EOF

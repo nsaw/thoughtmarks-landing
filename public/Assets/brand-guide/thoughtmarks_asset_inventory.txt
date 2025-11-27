@@ -1,0 +1,305 @@
+THOUGHTMARKS BRAND ASSET INVENTORY
+Complete file reference for brand implementation
+
+═══════════════════════════════════════════════════════════════════
+
+ICON & LOGO ASSETS
+
+Thoughtmarks_icon.png
+  Type: iOS app icon (final rendered version)
+  Format: PNG
+  Usage: App store, device home screen
+  Color Space: Display P3
+  Contains: Complete icon with all layers rendered
+  
+icon2.png
+  Type: Alternative icon variant
+  Format: PNG
+  Note: Check usage context in icon.json
+  
+COMPONENT FILES (for icon construction)
+
+brain.png
+  Element: Circuit brain outline
+  Color: Gray (#B3B9C0 range)
+  Style: Line art, bilateral symmetry, circuit traces
+  Usage: Base layer in icon composition
+  
+bookmark_.png
+  Element: Yellow bookmark flag
+  Color: #FEFF00
+  Style: Solid fill with flag notch
+  Usage: Primary accent element, top-right position
+  
+gradient_overlay.png
+  Element: Gradient lighting effect
+  Blend Mode: Plus-lighter
+  Usage: Adds dimensional depth to icon
+  Scale: 1.6x with positioning offset
+  
+bg.png
+  Element: Background texture
+  Usage: Base layer for icon
+  Scale: 2.11x
+  
+icon.json (x2)
+  Type: iOS icon configuration
+  Contains: Layer composition, blend modes, positioning
+  Platform Support: iOS (squares), watchOS (circles)
+  Color Space: Display P3
+  Fill: System-dark
+
+═══════════════════════════════════════════════════════════════════
+
+SOCIAL MEDIA TEMPLATES
+
+SOCIAL-SHARE-CARD-IG-VERTICAL-9x16.png
+  Format: 1080x1920px (Instagram Stories/Reels)
+  Background: Dark with blurred brain pattern
+  Card Style: Glass morphism, semi-transparent
+  Layout: 
+    - Top: User avatar circle + title text
+    - Middle: Content area (white text on dark card)
+    - Bottom: Yellow tagline + THOUGHTMARKS wordmark
+  Effects: Gaussian blur, drop shadow, frosted glass
+  Usage: User-generated content shares, quotes, features
+  
+SOCIAL-SHARE-PLACEHOLDERS.png
+  Type: Template layout guide
+  Shows: Placeholder positions for:
+    - USER PROFILE AVATAR (circular, top-left)
+    - THOUGHTMARK TITLE (top section)
+    - Content text area (middle)
+    - Tagline + branding (bottom)
+  Usage: Reference for creating new social cards
+  
+SOCIAL-SHARE-EXAMPLE.png
+  Type: Populated template example
+  Shows: Real content implementation
+  Profile: "FIRE, MEET ASS #369"
+  Quote: "The magic you were looking for is in the work you were avoiding."
+  Demonstrates: Proper text hierarchy, spacing, branding placement
+
+═══════════════════════════════════════════════════════════════════
+
+COLOR REFERENCE
+
+Screenshot_2025-11-13_at_10_11_24_AM.jpg
+  Type: Color palette specification
+  Contains: Exact hex codes for all brand colors
+  
+  PRIMARY
+    Yellow: #FEFF00
+  
+  NEUTRALS (light to dark)
+    White: #FFFFFF
+    Mercury: #E0E0E0
+    Bombay: #B3B9C0
+    Perano: #A4B5F7
+    Wild Blue Yonder: #8590BE
+    Oslo Gray: #83868B
+    Abbey: #52585C
+    Pickled Bluewood (2 variants): #36465D, #253346
+    Ebony Clay: #222D35
+    Shark: #1A1A1E
+    Bunker: #12181D
+    Cod Gray: #181818
+    Black: #000000
+  
+  EXTENDED (use sparingly)
+    Husk: #B7A363
+    Buddha Gold: #C99900
+    Buttered Rum: #B07F12
+    Tabasco: #AF2813
+  
+  Note: This is the authoritative color reference
+  Source File: Screenshot from design system
+
+═══════════════════════════════════════════════════════════════════
+
+DOCUMENTATION
+
+MASTER_ARCHITECTURE_FLOW_GUIDE.md
+  Type: Technical architecture documentation
+  Contains: System flow, data architecture
+  Relevance: Backend integration, data flow understanding
+  Not brand-specific but useful for context
+  
+project-overview.md
+  Type: Project configuration & messaging
+  Contains:
+    - Value propositions
+    - How it works (3 steps)
+    - Technical stack details
+    - Build scripts
+    - Backend deployment info
+  Brand Relevance:
+    - Official value prop language
+    - Tagline variations
+    - Target audience pain points
+    - Feature descriptions
+  
+  Key Messaging Extracted:
+    Taglines:
+      - "bookmarks for your brain!"
+      - "Capture ideas at the speed of life"
+      - "Voice in. Organized out."
+      - "Stop managing notes. Start catching them."
+      - "Find the thing you half remember"
+      - "The notes app for people who are busy being interesting"
+    
+    How It Works:
+      1. Capture - voice or text in seconds
+      2. Organize - auto tags, categories, connections
+      3. Discover - search by words or meaning
+    
+    Value Props:
+      - Effortless Capture (Siri integrated VTT)
+      - Automatic structure (AI tags, no folders)
+      - Search that remembers (semantic + keyword)
+      - Privacy, plainly (lock on device, encrypted sync optional)
+
+═══════════════════════════════════════════════════════════════════
+
+FILE USAGE MATRIX
+
+FOR APP DEVELOPMENT
+  Primary Assets:
+    - Thoughtmarks_icon.png (app icon)
+    - brain.png (component)
+    - bookmark_.png (component)
+    - icon.json (build configuration)
+    - Color palette screenshot (hex codes)
+  
+FOR MARKETING/SOCIAL
+  Primary Assets:
+    - SOCIAL-SHARE-CARD-IG-VERTICAL-9x16.png (template)
+    - SOCIAL-SHARE-PLACEHOLDERS.png (layout guide)
+    - SOCIAL-SHARE-EXAMPLE.png (reference)
+    - Thoughtmarks_icon.png (profile images)
+  
+FOR WEB DEVELOPMENT
+  Primary Assets:
+    - brain.png (SVG conversion recommended)
+    - bookmark_.png (SVG conversion recommended)
+    - Color palette screenshot (CSS variables)
+    - Messaging from project-overview.md
+  
+FOR PRINT MATERIALS
+  Required:
+    - High-res versions of icon components
+    - CMYK color conversions (not in current assets)
+    - Pantone specifications (yellow = approx 012 C)
+    - Vector versions of all logos (not in current assets)
+
+═══════════════════════════════════════════════════════════════════
+
+MISSING ASSETS (NEEDED FOR COMPLETE BRAND SYSTEM)
+
+Vector Files
+  - brain.svg (scalable version of brain outline)
+  - bookmark.svg (scalable version of bookmark)
+  - logo_lockup.svg (brain + wordmark horizontal)
+  - logo_lockup_vertical.svg (brain + wordmark stacked)
+  - logo_icon_only.svg (just brain + bookmark)
+  
+Typography Files
+  - Font license for sans-serif UI font
+  - Font files for handwritten tagline font
+  - Font specimen sheet showing all weights/styles
+  
+Print-Ready Files
+  - Logo in CMYK (all variations)
+  - Logo in Pantone (spot color versions)
+  - Black & white logo versions
+  - One-color logo versions (white, black)
+  - Minimum size reproduction tests
+  
+Brand Templates
+  - Presentation template (Keynote/PowerPoint)
+  - Email signature template
+  - Business card design
+  - Letterhead design
+  - Social media profile covers (all platforms)
+  - Social media post templates (square 1:1)
+  - Video intro/outro templates
+  
+Documentation
+  - Comprehensive brand guidelines PDF
+  - Icon construction guide (layer-by-layer breakdown)
+  - Typography specimen with usage examples
+  - Color accessibility testing results
+  - Animation/motion guidelines
+  - Sound design specifications
+
+═══════════════════════════════════════════════════════════════════
+
+ASSET CREATION PRIORITIES
+
+IMMEDIATE (Needed Now)
+  1. SVG versions of brain and bookmark
+  2. Typography license documentation
+  3. Square social media templates (1:1)
+  4. Email signature template
+  
+SHORT TERM (Next Month)
+  1. Presentation templates
+  2. Print-ready CMYK versions
+  3. Additional social formats (Twitter, LinkedIn)
+  4. Video intro/outro animations
+  
+LONG TERM (As Needed)
+  1. Comprehensive brand guidelines PDF
+  2. Merchandise templates
+  3. Partner/press kit
+  4. Animation style guide
+
+═══════════════════════════════════════════════════════════════════
+
+TECHNICAL NOTES
+
+Color Space Considerations
+  - iOS icon uses Display P3 (wider gamut)
+  - Web assets should use sRGB
+  - Print requires CMYK conversion
+  - #FEFF00 will appear slightly different across color spaces
+  - Document that Display P3 is canonical for iOS
+  
+File Format Recommendations
+  Web: SVG for logos, PNG for photos/complex images
+  iOS: PNG for raster assets, PDF for vectors
+  Print: PDF or EPS with embedded fonts
+  Social: PNG or JPG (RGB, sRGB color space)
+  
+Resolution Standards
+  Web: 2x and 3x for Retina displays
+  iOS: @2x and @3x asset catalogs
+  Print: 300 DPI minimum
+  Social: Platform-specific (usually 72 DPI acceptable)
+
+═══════════════════════════════════════════════════════════════════
+
+VERSION CONTROL
+
+Current Asset Version: 2.0
+Last Updated: January 13, 2025
+Next Review: As needed when new assets are created
+
+Changes from v1.0:
+  - Added exact color specifications (#FEFF00)
+  - Documented iOS icon construction (icon.json)
+  - Added social media template specifications
+  - Included messaging from project documentation
+  - Created asset inventory
+  - Identified missing assets for future creation
+
+═══════════════════════════════════════════════════════════════════
+
+CONTACT FOR ASSET REQUESTS
+
+Nick Sawyer
+Creator in Chief, Sawyer Design
+Nick@sawyerdesign.io
+sawyerdesign.io
+
+For new asset creation or modifications to existing assets

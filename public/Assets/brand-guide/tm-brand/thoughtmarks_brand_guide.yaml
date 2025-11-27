@@ -1,0 +1,648 @@
+thoughtmarks_brand_guide:
+  version: "2.0"
+  last_updated: "2025-01-13"
+  
+  quick_reference:
+    brand_yellow: "#FEFF00"
+    brand_black: "#000000"
+    card_background: "#1A1A1E"
+    circuit_gray: "#B3B9C0"
+    tagline: "bookmarks for your brain!"
+    positioning: "Cognitive capture tool for people who think faster than they can organize"
+    icon_color_space: "Display P3"
+    typography_ui: "Sans-serif (likely SF Pro for iOS)"
+    typography_tagline: "Over the Rainbow Regular (SIL OFL 1.1 license)"
+    social_card_format: "1080x1920px (9:16) with glass morphism"
+    never_use:
+      - "Gradients or color fades"
+      - "Multiple accent colors (yellow is the only accent)"
+      - "Light mode as default"
+      - "Productivity jargon in copy"
+      - "Large areas of yellow background"
+  
+  brand_essence:
+    core_idea: "Cognitive offloading made frictionless"
+    positioning: "The capture tool for people who think faster than they can organize"
+    tagline_primary: "bookmarks for your brain!"
+    tagline_secondary: "Find FOCUS in the CHAOS"
+    
+  brand_personality:
+    traits:
+      - Smart but not pretentious
+      - Fast and efficient
+      - Supportive of chaos (not fighting it)
+      - Tech-forward without being intimidating
+      - Honest about the problem (busy minds need help)
+    
+    voice_attributes:
+      tone: Direct, energetic, slightly irreverent
+      vocabulary: Active verbs, neurological metaphors, productivity language without corporate speak
+      sentence_structure: Short, punchy, scannable
+      what_we_say: "Capture brilliant ideas", "Stay in flow", "Your digital brain"
+      what_we_dont_say: "Maximize productivity", "Synergize", "Streamline workflows"
+
+  visual_identity:
+    logo:
+      primary_mark: "Brain with circuit board pattern + yellow bookmark flag"
+      construction:
+        brain: "Stylized outline, bilateral symmetry, circuit traces as neural pathways"
+        bookmark: "Bright yellow flag, positioned top-right, overlapping brain"
+        style: "Line art, geometric precision, tech aesthetic meets organic form"
+      
+      variations:
+        icon_only: "Square format with rounded corners, brain + bookmark centered"
+        wordmark: "THOUGHTMARKS in bold sans-serif below icon"
+        lockup: "Icon left, wordmark right, aligned center"
+      
+      clear_space: "Minimum padding equal to height of bookmark flag on all sides"
+      minimum_size: "32px x 32px for icon (legibility threshold)"
+    
+    ios_icon_construction:
+      color_space: "display-p3"
+      fill: "system-dark"
+      supported_platforms:
+        squares: "iOS"
+        circles: "watchOS"
+      
+      layer_composition:
+        note: "Icon uses multi-layer composition with blend modes and effects"
+        
+        layer_1_gradient:
+          element: "gradient overlay.png"
+          blend_mode: "plus-lighter"
+          glass: true
+          scale: 1.6
+          position: [-189.98, -14.59]
+          shadow: "layer-color at 50% opacity"
+          specular: true
+          translucency: 0.5
+          purpose: "Adds depth and dimensional lighting"
+        
+        layer_2_bookmark:
+          element: "bookmark].png"
+          glass: true
+          opacity: 1.0
+          scale: 1.0
+          position: [223.41, -163.47]
+          blur_material: 0.39
+          shadow: "layer-color at 50% opacity"
+          translucency: 0.36
+          purpose: "Primary yellow bookmark element"
+        
+        layer_3_brain:
+          element: "brain.png"
+          blend_mode: "screen"
+          blur_material: 0.5
+          lighting: "individual"
+          shadow: "layer-color at 50% opacity"
+          translucency: 1.0
+          dual_render: "Rendered twice with screen blend then normal blend for depth"
+          purpose: "Circuit brain structure"
+        
+        layer_4_background:
+          element: "bg.png"
+          scale: 2.11
+          shadow: "neutral at 50% opacity"
+          translucency: 0.5
+          purpose: "Base background texture"
+      
+      production_notes:
+        - "Icon uses glass morphism effects for modern iOS aesthetic"
+        - "Multiple blend modes create depth without adding visual complexity"
+        - "Display P3 color space ensures vibrancy on modern iOS devices"
+        - "Translucency values enable system integration (dark mode adaptation)"
+    
+    color_palette:
+      primary:
+        thoughtmarks_yellow:
+          hex: "#FEFF00"
+          rgb: "254, 255, 0"
+          cmyk: "0, 0, 100, 0 (approximate - test for best results)"
+          display_p3: "Used in iOS icon for wider color gamut"
+          usage: "Bookmark flag, CTAs, highlights, accent elements, icon background"
+          accessibility_note: "AAA contrast against black (#000000), verify against grays"
+          note: "This is an extremely saturated yellow - nearly pure yellow at max brightness"
+        
+      neutral:
+        circuit_gray:
+          hex: "#B3B9C0"
+          name: "Bombay"
+          rgb: "179, 185, 192"
+          usage: "Brain outline, circuit traces, secondary UI elements"
+        
+        deep_black:
+          hex: "#000000"
+          rgb: "0, 0, 0"
+          usage: "Primary backgrounds, app UI, high contrast base"
+        
+        charcoal:
+          hex: "#1A1A1E"
+          name: "Shark"
+          rgb: "26, 26, 30"
+          usage: "Card backgrounds, elevated surfaces, subtle depth"
+        
+        oslo_gray:
+          hex: "#83868B"
+          rgb: "131, 134, 139"
+          usage: "Tertiary text, inactive elements"
+        
+        cod_gray:
+          hex: "#181818"
+          rgb: "24, 24, 24"
+          usage: "Deep background alternative, shadows"
+      
+      supporting:
+        white:
+          hex: "#FFFFFF"
+          usage: "Text on dark backgrounds, inverse treatments"
+        
+        mercury:
+          hex: "#E0E0E0"
+          rgb: "224, 224, 224"
+          usage: "Light gray for subtle borders, dividers"
+        
+        perano:
+          hex: "#A4B5F7"
+          rgb: "164, 181, 247"
+          usage: "Optional accent for interactive states (use sparingly)"
+        
+        wild_blue_yonder:
+          hex: "#8590BE"
+          rgb: "133, 144, 190"
+          usage: "Muted blue accent (use sparingly if needed)"
+      
+      extended_palette:
+        note: "These colors exist in the design system but should be used extremely sparingly if at all"
+        husk:
+          hex: "#B7A363"
+          rgb: "183, 163, 99"
+        buddha_gold:
+          hex: "#C99900"
+          rgb: "201, 153, 0"
+        buttered_rum:
+          hex: "#B07F12"
+          rgb: "176, 127, 18"
+        tabasco:
+          hex: "#AF2813"
+          rgb: "175, 40, 19"
+      
+      color_rules:
+        - "Yellow is THE brand color - use it confidently but sparingly"
+        - "Dark backgrounds are default - light mode is secondary"
+        - "Circuit gray for structure, yellow for action/attention"
+        - "Avoid color gradients - flat, high contrast is the aesthetic"
+    
+    typography:
+      primary_typeface:
+        family: "Sans-serif, geometric"
+        weight_range: "400 (regular) to 700 (bold)"
+        usage: "App UI, headers, body text, everything except tagline"
+        characteristics: "Clean, modern, high legibility, slightly technical feel"
+        examples: "SF Pro, Inter, Helvetica Neue"
+      
+      accent_typeface:
+        family: "Over the Rainbow Regular"
+        usage: "Tagline only - 'bookmarks for your brain!'"
+        color: "Always yellow (#FEFF00)"
+        characteristics: "Playful, human, handwritten casual script"
+        note: "This creates personality without sacrificing professionalism. Acceptable alternative to Marydale."
+        license: "SIL Open Font License 1.1"
+      
+      hierarchy:
+        h1: "Bold, all caps, tracking +5%, large"
+        h2: "Bold, sentence case"
+        h3: "Medium weight, sentence case"
+        body: "Regular weight, comfortable line height (1.5-1.6)"
+        ui_labels: "Medium weight, slightly compressed"
+        tagline: "Over the Rainbow Regular, yellow (#FEFF00)"
+      
+      typographic_rules:
+        - "All caps for THOUGHTMARKS wordmark"
+        - "Sentence case for most headlines (more approachable)"
+        - "Generous white space - let the copy breathe"
+        - "Never center-align body text"
+    
+    iconography:
+      style: "Line-based, geometric, circuit/tech inspired"
+      weight: "2px stroke, consistent with brain outline"
+      corners: "Rounded, friendly but still technical"
+      examples:
+        - "Voice mic with circuit nodes"
+        - "Search with neural pathways"
+        - "Folder with bookmark flag"
+        - "Plus sign with connection points"
+    
+    photography_illustration:
+      approach: "Minimal use - let the icon and UI do the work"
+      when_used:
+        - "Marketing site hero sections"
+        - "User testimonials (real people, candid shots)"
+        - "Context shots showing app in use"
+      style:
+        - "Dark, moody, high contrast"
+        - "Shallow depth of field"
+        - "Not overly staged"
+        - "Tech in natural environments (coffee shops, workshops, commutes)"
+    
+  ui_design_system:
+    layout_principles:
+      - "Mobile-first (it's a phone app)"
+      - "Generous tap targets (44px minimum)"
+      - "Clear hierarchy through size and weight, not color"
+      - "Floating action button for quick capture"
+      - "Bottom navigation for primary functions"
+    
+    component_patterns:
+      cards:
+        background: "Charcoal on deep black"
+        radius: "12px"
+        shadow: "Subtle, suggests elevation without being heavy"
+        padding: "16px"
+      
+      buttons:
+        primary:
+          background: "Thoughtmarks yellow"
+          text: "Deep black"
+          style: "Bold, high contrast, impossible to miss"
+        secondary:
+          background: "Transparent"
+          border: "Circuit gray"
+          text: "White"
+        
+      input_fields:
+        background: "Charcoal"
+        border: "Circuit gray on focus, invisible at rest"
+        text: "White"
+        placeholder: "Circuit gray"
+      
+      tags:
+        background: "Circuit gray @ 20% opacity"
+        text: "White"
+        style: "Pill-shaped, lowercase, compact"
+    
+    spacing_system:
+      base_unit: "4px"
+      scale: "4, 8, 12, 16, 24, 32, 48, 64"
+      rationale: "Consistent rhythm, predictable relationships"
+    
+  brand_voice_messaging:
+    target_audiences:
+      busy_professionals:
+        pain_points:
+          - "Lose ideas between meetings"
+          - "Can't find where they wrote something down"
+          - "Switching between too many apps"
+        messaging: "Your brain shouldn't have to remember everything. Let us do that."
+      
+      creators:
+        pain_points:
+          - "Inspiration strikes at inconvenient times"
+          - "Ideas scattered across notebooks, phones, napkins"
+          - "Hard to see patterns in their thinking"
+        messaging: "Stop losing your best ideas to forgotten voice memos and random notes."
+      
+      eternally_curious:
+        pain_points:
+          - "Collecting interesting things but never revisiting"
+          - "Want to connect dots between ideas"
+          - "Need better recall for conversations"
+        messaging: "Build a searchable archive of everything interesting you encounter."
+      
+      busy_parents:
+        pain_points:
+          - "Remembering things while hands are full"
+          - "Mental load is overwhelming"
+          - "No time for complex systems"
+        messaging: "Voice-first capture when your hands are literally full. Because parenting doesn't pause for note-taking."
+    
+    key_messages:
+      taglines_in_use:
+        primary: "bookmarks for your brain!"
+        secondary: "Find focus in the chaos"
+        alternatives:
+          - "Capture ideas at the speed of life"
+          - "Voice in. Organized out."
+          - "Stop managing notes. Start catching them."
+          - "Find the thing you half remember"
+          - "The notes app for people who are busy being interesting"
+          - "Write or Record. Auto-organized. Transcribed. Instant recall. Keep moving."
+      
+      how_it_works:
+        step_1: "Capture - voice or text in seconds"
+        step_2: "Organize - auto tags, categories, connections"
+        step_3: "Discover - search by words or meaning"
+      
+      value_props:
+        effortless_capture: "Background Siri integrated Voice-to-Thoughtmark for capturing brilliance on the go"
+        automatic_structure: "AI tags, links, and files your thoughtmarks. No folders. No chores."
+        smart_search: "Words, meaning, that quote from that podcast - found fast"
+        privacy_first: "Your thoughts stay yours. Lock on device; encrypted sync optional"
+      
+      differentiators:
+        - "Built for capture speed, not endless organization"
+        - "Respects that your brain is chaotic (and that's okay)"
+        - "Works with how you actually think, not how productivity gurus think you should"
+        - "No notebooks to manage, no elaborate tagging systems to maintain"
+      
+      emotional_resonance:
+        - "That panic when you forget a brilliant idea? Gone."
+        - "Focus on the work, not managing the tools"
+        - "Your future self will thank you"
+        - "Stop fighting your brain, start trusting your system"
+    
+    writing_guidelines:
+      dos:
+        - "Use active verbs: capture, build, remember, trust"
+        - "Acknowledge the chaos: 'Find focus in the chaos'"
+        - "Be specific about benefits: 'Capture while driving' not 'Be more productive'"
+        - "Use brain/neural metaphors sparingly but effectively"
+        - "Short sentences. Punchy. Scannable."
+      
+      donts:
+        - "Don't promise 'life-changing transformation' or other bullshit"
+        - "Don't use productivity jargon: synergy, bandwidth, rockstar, ninja"
+        - "Don't talk down to users about their organizational failures"
+        - "Don't overcomplicate the value prop"
+        - "Don't use emojis in brand materials (per founder preference)"
+      
+      tone_examples:
+        good:
+          - "Brilliant ideas don't wait for you to find a pen"
+          - "Your brain is for thinking, not storing"
+          - "Capture now, organize never (AI does it for you)"
+          - "Voice notes that actually become useful later"
+        
+        bad:
+          - "Revolutionize your thought leadership pipeline!"
+          - "Synergize your ideation workflow with AI"
+          - "Be the best version of yourself through seamless capture"
+          - "Hack your brain for maximum optimization"
+  
+  marketing_applications:
+    app_store_presence:
+      icon: "Brain + bookmark, optimized for 1024x1024px"
+      screenshots:
+        - "Show actual capture speed (video or sequential screens)"
+        - "Demonstrate voice-to-text quality"
+        - "Display organized view showing AI categorization"
+        - "Feature dark UI prominently"
+      copy_style: "Benefits-forward, specific use cases, no fluff"
+    
+    website_landing_page:
+      hero:
+        headline: "Direct, benefit-focused (current: 'Find FOCUS in the CHAOS' is solid)"
+        subhead: "Expand on the specific problem solved"
+        cta: "Yellow button, can't miss it"
+        background: "Dark, clean, maybe subtle circuit pattern"
+      
+      sections:
+        problem: "Acknowledge the universal experience of losing ideas"
+        solution: "Show the app in context, actual screenshots"
+        features: "Voice-first, AI organization, tagging, search"
+        social_proof: "Real user quotes (keep it authentic)"
+        cta_footer: "Simple, yellow, impossible to ignore"
+    
+    social_media:
+      visual_style:
+        - "Dark backgrounds always"
+        - "High contrast yellow accents"
+        - "Short video clips showing real usage"
+        - "Screenshots with highlighted features"
+      
+      instagram_9x16_share_card:
+        dimensions: "1080x1920px (9:16 ratio)"
+        background: "Gradient overlay with brain pattern visible through dark card"
+        card_treatment: "Semi-transparent dark card with blur/glass effect"
+        layout_structure:
+          top_section: "User avatar (circular) + Title/Header text"
+          middle_section: "Content text (white on dark, clean hierarchy)"
+          bottom_section: "Tagline (yellow handwritten) + THOUGHTMARKS wordmark"
+        typography:
+          title: "Bold, white, sentence case"
+          body: "Regular, white, comfortable line height"
+          tagline: "Handwritten style, yellow (#FEFF00)"
+          wordmark: "All caps, white, bold"
+        effects:
+          background_blur: "Gaussian blur on brain pattern behind card"
+          card_shadow: "Soft drop shadow for depth"
+          glass_morphism: "Frosted glass effect on card surface"
+        
+        content_types:
+          thoughtmark_share: "User avatar, thoughtmark title, content preview, attribution"
+          quote_share: "Profile image, quote text, source/context, branding"
+          feature_announcement: "Feature icon/screenshot, benefit text, CTA"
+        
+        usage_notes:
+          - "Always maintain readability - text must have sufficient contrast"
+          - "Brain pattern should be subtle, not competing with content"
+          - "Yellow tagline is non-negotiable branding element"
+          - "Card should never cover more than 70% of canvas height"
+      
+      square_social_assets:
+        dimensions: "1080x1080px"
+        usage: "Instagram feed, Facebook, LinkedIn"
+        layout: "Similar to 9x16 but with more balanced composition"
+        
+      story_highlights:
+        style: "Circular icons with brain + bookmark on dark background"
+        text_treatment: "Category labels in clean sans-serif"
+      
+      content_themes:
+        - "Lost idea horror stories (relatable)"
+        - "Quick tips for cognitive offloading"
+        - "Behind-the-scenes of app development"
+        - "User success stories"
+        - "Brain science nuggets (light, not academic)"
+      
+      platform_specific:
+        twitter: "Punchy observations about creativity and memory"
+        instagram: "Visual process shots, app UI highlights"
+        linkedin: "Professional angle, productivity insights"
+        tiktok: "Quick demos, humorous takes on forgetting things"
+    
+    email_marketing:
+      welcome_series:
+        tone: "Friendly guide, not corporate onboarding"
+        focus: "Get first capture win quickly"
+        length: "Short, 3-4 emails max"
+      
+      ongoing:
+        frequency: "Weekly max, respect inbox"
+        content: "Tips, user stories, feature updates"
+        style: "Conversational, no hard sells"
+  
+  brand_dont_list:
+    visual_donts:
+      - "No gradients or color fades (flat is the aesthetic)"
+      - "Don't add multiple colors - yellow is THE accent"
+      - "Don't use rounded, bubbly fonts (keep it clean and modern)"
+      - "Don't clutter the icon - brain + bookmark is sufficient"
+      - "Don't use light mode as default (dark is brand)"
+    
+    messaging_donts:
+      - "Don't claim to 'fix' people or their brains"
+      - "Don't use medical/clinical language about memory"
+      - "Don't promise unrealistic outcomes"
+      - "Don't use corporate productivity speak"
+      - "Don't make users feel bad about being disorganized"
+    
+    positioning_donts:
+      - "Don't position as 'another note-taking app'"
+      - "Don't compare directly to Notion/Evernote (different category)"
+      - "Don't emphasize organization over capture"
+      - "Don't target 'everyone' - own the niche"
+  
+  competitive_differentiation:
+    not_a_notebook:
+      apps: "Notion, Evernote, OneNote"
+      difference: "Those require structure upfront. We capture first, organize automatically."
+    
+    not_a_voice_memo:
+      apps: "Apple Voice Memos, Otter"
+      difference: "Voice memos become black holes. We transcribe, tag, and make searchable."
+    
+    not_a_task_manager:
+      apps: "Todoist, Things, OmniFocus"
+      difference: "Task managers are for known obligations. We're for fleeting inspirations."
+    
+    our_category: "Cognitive capture tool"
+    our_unique_value: "Speed of capture meets AI organization. No other tool optimizes for the moment of inspiration."
+  
+  implementation_priorities:
+    phase_1_essentials:
+      - "Lock down yellow hex code across all platforms"
+      - "Create app store assets with consistent branding"
+      - "Establish voice tone guide for all customer-facing copy"
+      - "Design email templates with brand colors/fonts"
+    
+    phase_2_expansion:
+      - "Create marketing video templates"
+      - "Develop icon library for features"
+      - "Build out social media templates"
+      - "Design merch/swag concepts (stickers, shirts)"
+    
+    phase_3_scale:
+      - "Create partner/press kit"
+      - "Develop presentation templates"
+      - "Establish brand guidelines for any contractors/agencies"
+      - "Consider sub-brands if expanding product line"
+  
+  notes_for_founder:
+    confirmed_specifications:
+      yellow_hex: "#FEFF00 (exact from color palette)"
+      color_space: "Display P3 for iOS icon (wider gamut than sRGB)"
+      icon_construction: "Multi-layer with blend modes - gradient overlay, glass effects, translucency"
+      social_templates: "9:16 Instagram format with glass morphism cards"
+      messaging: "Value props and how-it-works flow documented"
+      typography: "Sans-serif for UI, Over the Rainbow Regular for tagline only"
+    
+    remaining_questions:
+      - "What's the specific sans-serif font family? (SF Pro for iOS is likely but confirm for web)"
+      - "Are there specific error state colors defined beyond the main palette?"
+      - "Any animation/motion guidelines for the app?"
+      - "Sound design specifications for UI interactions?"
+    
+    answered_questions:
+      tagline_font: "Over the Rainbow Regular (SIL OFL 1.1) - acceptable alternative to Marydale"
+    
+    recommendations:
+      - "That yellow (#FEFF00) is basically pure saturated yellow - it's bold as hell. Own it completely."
+      - "The glass morphism in the icon is current but will age - consider a flatter fallback for longevity"
+      - "Display P3 is smart for iOS but remember web needs sRGB fallback (#FEFF00 will be slightly less vibrant)"
+      - "Social share cards are well-designed - the glass effect keeps them modern without being gimmicky"
+      - "Consider registering #FEFF00 as a trademark color - it's distinctive enough"
+      - "The multi-layer icon composition is production-grade - document layer order for any redesigns"
+    
+    brand_risks_to_watch:
+      - "Being lumped in with generic note apps - your messaging must be crystal clear"
+      - "That yellow is INTENSE - on some displays it might feel harsh. Test across devices."
+      - "Tech aesthetic might alienate less tech-savvy users - balance with warmth in copy"
+      - "Voice-first might make people think it's ONLY voice - clarify hybrid approach"
+      - "Glass morphism is trendy now but could date the design - have a refresh plan"
+    
+    brand_opportunities:
+      - "Brain/cognitive science angle - lots of interesting educational content possible"
+      - "The ADHD/neurodivergent market could love this (capture without organization burden)"
+      - "Partnership opportunities with productivity podcasts, YouTube creators"
+      - "The name 'Thoughtmarks' is incredibly searchable and memorable"
+      - "That yellow will pop in the App Store - literally impossible to miss"
+
+  appendix_color_specifications:
+    primary_yellow_deep_dive:
+      hex: "#FEFF00"
+      characteristics:
+        - "Near-pure yellow at maximum brightness (254 red, 255 green, 0 blue)"
+        - "One of the most saturated yellows possible in RGB space"
+        - "Sits at the extreme edge of the color gamut"
+        - "Highly visible and attention-grabbing"
+        - "Can appear to 'glow' on modern displays"
+      
+      perceptual_notes:
+        - "Extremely high luminance - will be the brightest element on screen"
+        - "May appear slightly greenish on some displays due to maxed green channel"
+        - "Can cause eye fatigue if overused or in large areas"
+        - "Excellent for small accent elements, problematic for large fills"
+        - "Works best against very dark backgrounds (#000000 or #181818)"
+      
+      display_considerations:
+        oled: "Will be extremely vibrant, may bloom slightly"
+        lcd: "Still very bright but slightly more controlled"
+        print: "Requires 100% yellow ink, may need color matching test"
+        web_srgb: "Displays accurately in sRGB as it's within gamut"
+        display_p3: "Even more vibrant on P3 displays (iPhone X and newer)"
+      
+      usage_rules:
+        do:
+          - "Use for CTAs and interactive elements that demand attention"
+          - "Use for the bookmark icon element"
+          - "Use for tagline text 'bookmarks for your brain!'"
+          - "Use sparingly as accent - less than 10% of total composition"
+        dont:
+          - "Don't use for large background areas (eye strain)"
+          - "Don't use for body text (readability issues)"
+          - "Don't pair with other bright saturated colors (visual chaos)"
+          - "Don't use at 100% opacity on anything except black backgrounds"
+      
+      accessibility_testing:
+        black_background: "AAA contrast (21:1 ratio) - perfect"
+        shark_background: "AA contrast (15:1 ratio) - good for large text"
+        bombay_gray_text: "Test required - may not meet AA for small text"
+        note: "Always test yellow text on specific background before implementation"
+    
+    print_production:
+      note: "Dark-heavy brand means print will be ink-intensive. Consider inverse treatments for certain applications."
+      yellow_print_considerations:
+        - "Test yellow on various paper stocks - may need adjustment for newsprint vs coated"
+        - "100% yellow ink can appear too vibrant - consider 95% for more natural appearance"
+        - "Overprinting black + yellow creates green tint - use knockout technique"
+        - "Pantone equivalent would be closest to Pantone Yellow C or 012 C (test for best match)"
+        - "Spot color printing recommended for brand consistency vs CMYK build"
+    
+    digital_accessibility:
+      wcag_compliance:
+        yellow_on_black: "AAA compliant for all text sizes"
+        yellow_on_shark: "AA compliant for large text (18pt+)"
+        yellow_on_bombay: "Likely fails AA - needs testing with actual hex values"
+      
+      colorblind_considerations:
+        - "Yellow/black works for most colorblind types (protanopia, deuteranopia)"
+        - "May be less distinct for tritanopia (blue-yellow colorblindness) - rare but possible"
+        - "Circuit gray may be less visible for some - ensure other differentiators (shape, position)"
+        - "Consider pattern fills as alternative to color alone for critical information"
+    
+    screen_color_variation:
+      issue: "Yellow displays differently on OLED vs LCD vs print"
+      mitigation:
+        - "Test on multiple devices during development (iPhone, Android, various monitors)"
+        - "Consider slightly desaturated yellow for more consistent appearance (not recommended for brand)"
+        - "Use color profiles in assets (sRGB for web, P3 for modern devices)"
+        - "Document that #FEFF00 is the canonical color regardless of display variation"
+        - "Accept that perfect consistency across all displays is impossible with such saturated yellow"
+
+version_history:
+  v1.0: "Initial brand guide compiled from app screenshots and landing page analysis"
+  future_updates:
+    - "Add exact color specifications once confirmed"
+    - "Include typography license details when finalized"
+    - "Expand with product screenshots as features launch"
+    - "Add competitive analysis as market evolves"

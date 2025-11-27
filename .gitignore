@@ -15,6 +15,8 @@
 node_modules/
 dist/
 build/
+.cursor/
+.wrangler/
 .cache/
 .cache-*/
 .git/
@@ -186,3 +188,18 @@ temp/
 .backup/
 # Expo-specific files (excluded from 1Password sync)
 .env.expo
+/**.DS_Store */
+*.png
+*.svg
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.ico
+*.webp
+*.heic
+*.heif
+*.psd 
+*.ai
+dist/.DS_Store
