@@ -1,0 +1,120 @@
+---
+import Button from './Button.astro';
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+  <!-- Subtle background gradient -->
+  <div class="absolute inset-0 bg-gradient-to-b from-bg-base via-bg-base to-bg-elevated opacity-50"></div>
+  
+  <!-- Subtle accent glow -->
+  <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] 
+              bg-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="container-wide relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Copy -->
+      <div class="text-center lg:text-left space-y-8">
+        <!-- Tagline -->
+        <p class="tagline-script text-2xl sm:text-3xl opacity-0 animate-fade-up">
+          bookmarks for your brain
+        </p>
+
+        <!-- Headline -->
+        <h1 class="text-display font-black text-text-primary leading-tight 
+                   opacity-0 animate-fade-up animation-delay-100">
+          Never forget to<br />
+          <span class="text-gradient">remember</span> again.
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-xl sm:text-2xl text-text-secondary max-w-xl mx-auto lg:mx-0
+                  opacity-0 animate-fade-up animation-delay-200">
+          Voice-first note capture with AI organization. 
+          Capture ideas at the speed of life.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start
+                    opacity-0 animate-fade-up animation-delay-300">
+          <Button href="#download" variant="primary" size="lg">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            Download for iOS
+          </Button>
+          <Button href="#how-it-works" variant="secondary" size="lg">
+            See How It Works
+          </Button>
+        </div>
+
+        <!-- Trust signal -->
+        <p class="text-sm text-text-muted opacity-0 animate-fade-up animation-delay-400">
+          Free to try. No credit card required.
+        </p>
+      </div>
+
+      <!-- App Mockup -->
+      <div class="relative flex justify-center lg:justify-end
+                  opacity-0 animate-scale-in animation-delay-200">
+        <!-- Glow behind phone -->
+        <div class="absolute inset-0 flex items-center justify-center">
+          <div class="w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <!-- Phone mockup container -->
+        <div class="relative">
+          <!-- Phone frame with perspective -->
+          <div class="relative transform perspective-1000 rotate-y-[-5deg] rotate-x-[5deg]
+                      transition-transform duration-500 hover:rotate-y-0 hover:rotate-x-0">
+            <img
+              src="/assets/MAIN-mockup-page-dashboard.PNG"
+              alt="Thoughtmarks app dashboard showing organized notes and voice capture"
+              class="w-72 sm:w-80 lg:w-96 rounded-3xl shadow-2xl 
+                     border border-white/10"
+              width="384"
+              height="832"
+              loading="eager"
+            />
+          </div>
+
+          <!-- Floating accent elements -->
+          <div class="absolute -top-4 -right-4 w-20 h-20 bg-accent/20 rounded-2xl 
+                      blur-xl animate-float"></div>
+          <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-brand-yellow/10 rounded-full 
+                      blur-xl animate-float animation-delay-300"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 
+              opacity-0 animate-fade-in animation-delay-500">
+    <a href="#features" class="flex flex-col items-center gap-2 text-text-muted 
+                               hover:text-text-secondary transition-colors">
+      <span class="text-sm">Scroll to explore</span>
+      <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<style>
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .rotate-y-\[-5deg\] {
+    transform: rotateY(-5deg);
+  }
+  
+  .rotate-x-\[5deg\] {
+    transform: rotateX(5deg);
+  }
+  
+  .hover\:rotate-y-0:hover {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+</style>
+

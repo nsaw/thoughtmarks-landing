@@ -1,0 +1,229 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import Card from '@/components/astro/Card.astro';
+import Button from '@/components/astro/Button.astro';
+
+const topics = [
+  {
+    title: 'Voice Recording',
+    description: 'Learn how to capture thoughts with voice',
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                  d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+          </svg>`,
+    items: ['How to record a voice note', 'Transcription accuracy tips', 'Offline voice recording', 'Editing transcriptions'],
+  },
+  {
+    title: 'Organization',
+    description: 'Master bins, tags, and smart organization',
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                  d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/>
+          </svg>`,
+    items: ['Creating and managing bins', 'Using tags effectively', 'AI-powered organization', 'Search and filters'],
+  },
+  {
+    title: 'Search & AI',
+    description: 'Find anything instantly with AI-powered search',
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>`,
+    items: ['Semantic search explained', 'Using AI insights', 'Discovering patterns', 'AI processing modes'],
+  },
+  {
+    title: 'Apple Watch',
+    description: 'Use Thoughtmarks on your wrist',
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>`,
+    items: ['Setting up watch app', 'Quick capture with raise-to-speak', 'Watch complications', 'Sync troubleshooting'],
+    link: { label: 'Complete Watch Guide', href: '/support/watch' },
+  },
+  {
+    title: 'Privacy & Security',
+    description: 'Protect your thoughts and data',
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>`,
+    items: ['Biometric authentication', 'End-to-end encryption', 'On-device AI processing', 'Data export and backup'],
+    link: { label: 'Privacy Policy', href: '/legal/privacy' },
+  },
+  {
+    title: 'Settings & Account',
+    description: 'Manage your account and preferences',
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>`,
+    items: ['Account settings', 'Subscription management', 'Theme customization', 'Notification preferences'],
+  },
+];
+
+const faqs = [
+  {
+    question: 'What is Thoughtmarks?',
+    answer: 'Thoughtmarks is an AI-powered note-taking app designed for capturing brilliant ideas at the speed of life. With voice-first design and intelligent organization, you never lose another breakthrough moment.',
+  },
+  {
+    question: 'How does voice recording work?',
+    answer: 'Tap the microphone, speak your thought, tap again to stop. AI transcribes your voice with 95%+ accuracy. Works offline and syncs when you are back online. Available on iPhone, iPad, and Apple Watch.',
+  },
+  {
+    question: 'Is my data safe?',
+    answer: 'Absolutely. We use AES-256 encryption, hardware-backed keychain storage, and offer on-device AI processing. Your data never leaves your device unless you choose cloud features. GDPR and CCPA compliant.',
+  },
+  {
+    question: 'Does it work offline?',
+    answer: 'Yes. Full offline functionality including voice recording, note creation, search, and organization. Everything syncs automatically when you are back online.',
+  },
+  {
+    question: 'How much does it cost?',
+    answer: 'Thoughtmarks offers a free tier with core features. Premium subscription includes advanced AI, cloud backup, and unlimited voice recording. Premium features are free during beta.',
+  },
+  {
+    question: 'Can I export my data?',
+    answer: 'Yes. Export all your data in JSON, Markdown, or CSV format. Settings, Privacy and Data, Export My Data. Full data portability guaranteed under GDPR and CCPA.',
+  },
+];
+---
+
+<BaseLayout
+  title="Support Center | Thoughtmarks"
+  description="Get help with Thoughtmarks. Find answers, troubleshoot issues, and contact our support team."
+>
+  <Nav />
+  
+  <main class="pt-24 pb-16">
+    <div class="container-wide">
+      <!-- Hero -->
+      <header class="text-center mb-16">
+        <h1 class="text-h1 font-bold text-text-primary mb-4">Support Center</h1>
+        <p class="text-xl text-text-secondary mb-8">
+          We are here to help you succeed.
+        </p>
+        
+        <!-- Contact buttons -->
+        <div class="flex flex-wrap justify-center gap-4">
+          <Button href="mailto:support@thoughtmarks.app" variant="primary">
+            Email Support
+          </Button>
+          <Button href="mailto:support@thoughtmarks.app?subject=Feature Request" variant="secondary">
+            Feature Request
+          </Button>
+          <Button href="mailto:support@thoughtmarks.app?subject=Bug Report" variant="secondary">
+            Report Bug
+          </Button>
+        </div>
+        
+        <p class="text-sm text-text-muted mt-4">
+          Our support team responds within 24 hours.
+        </p>
+      </header>
+
+      <!-- Topics Grid -->
+      <section class="mb-20">
+        <h2 class="text-h2 font-bold text-text-primary mb-8">Popular Topics</h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {topics.map((topic) => (
+            <Card>
+              <div class="text-accent mb-4" set:html={topic.icon} />
+              <h3 class="text-xl font-semibold text-text-primary mb-2">
+                {topic.title}
+              </h3>
+              <p class="text-text-muted text-sm mb-4">
+                {topic.description}
+              </p>
+              <ul class="text-text-secondary text-sm space-y-2 mb-4">
+                {topic.items.map((item) => (
+                  <li class="flex items-start gap-2">
+                    <span class="text-accent mt-1">
+                      <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                      </svg>
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              {topic.link && (
+                <a href={topic.link.href} class="text-accent hover:text-accent-hover text-sm font-medium">
+                  {topic.link.label} &rarr;
+                </a>
+              )}
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <!-- FAQs -->
+      <section class="mb-20">
+        <h2 class="text-h2 font-bold text-text-primary mb-8">Frequently Asked Questions</h2>
+        
+        <div class="space-y-4 max-w-3xl">
+          {faqs.map((faq) => (
+            <Card hover={false}>
+              <h3 class="text-lg font-semibold text-text-primary mb-2">
+                {faq.question}
+              </h3>
+              <p class="text-text-secondary">
+                {faq.answer}
+              </p>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="bg-bg-elevated rounded-2xl border border-border p-8 lg:p-12">
+        <h2 class="text-h2 font-bold text-text-primary mb-6">Need More Help?</h2>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <p class="text-text-secondary mb-6">
+              Still have questions? We are here to help.
+            </p>
+            <ul class="space-y-4">
+              <li>
+                <span class="block text-text-muted text-sm">General Support</span>
+                <a href="mailto:support@thoughtmarks.app" class="text-accent hover:text-accent-hover">
+                  support@thoughtmarks.app
+                </a>
+              </li>
+              <li>
+                <span class="block text-text-muted text-sm">Watch Support</span>
+                <a href="mailto:support@thoughtmarks.app?subject=Apple Watch Support" class="text-accent hover:text-accent-hover">
+                  support@thoughtmarks.app
+                </a>
+              </li>
+              <li>
+                <span class="block text-text-muted text-sm">Privacy Questions</span>
+                <a href="mailto:privacy@thoughtmarks.app" class="text-accent hover:text-accent-hover">
+                  privacy@thoughtmarks.app
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="bg-bg-surface rounded-xl p-6">
+            <h3 class="font-semibold text-text-primary mb-3">Support Hours</h3>
+            <ul class="text-text-secondary text-sm space-y-2">
+              <li>Monday - Friday: 9 AM - 6 PM PST</li>
+              <li>Emergency Support: 24/7 for critical issues</li>
+              <li>Response Time: Within 24 hours (usually much faster)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+

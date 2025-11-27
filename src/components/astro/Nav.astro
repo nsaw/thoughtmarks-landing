@@ -1,0 +1,89 @@
+---
+import MobileNav from '@/components/react/MobileNav';
+
+interface Props {
+  transparent?: boolean;
+}
+
+const { transparent = false } = Astro.props;
+
+const navLinks = [
+  { label: 'Features', href: '#features' },
+  { label: 'How It Works', href: '#how-it-works' },
+  { label: 'Support', href: '/support' },
+];
+---
+
+<header
+  class:list={[
+    'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+    transparent ? 'bg-transparent' : 'bg-bg-base/80 backdrop-blur-xl border-b border-border/50',
+  ]}
+  id="main-nav"
+>
+  <nav class="container-wide">
+    <div class="flex h-16 items-center justify-between lg:h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 group">
+        <img
+          src="/assets/AppIcon.png"
+          alt="Thoughtmarks"
+          class="h-10 w-10 rounded-xl transition-transform duration-300 group-hover:scale-105"
+          width="40"
+          height="40"
+        />
+        <span class="text-lg font-bold text-text-primary tracking-tight hidden sm:block">
+          THOUGHTMARKS
+        </span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex lg:items-center lg:gap-8">
+        <ul class="flex items-center gap-6">
+          {navLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="text-text-secondary hover:text-text-primary transition-colors 
+                       font-medium text-sm tracking-wide"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <a href="#download" class="btn-primary text-sm">
+          Get the App
+        </a>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <MobileNav client:load />
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Add background on scroll
+  const nav = document.getElementById('main-nav');
+  
+  const handleScroll = () => {
+    if (!nav) return;
+    
+    if (window.scrollY > 50) {
+      nav.classList.remove('bg-transparent');
+      nav.classList.add('bg-bg-base/80', 'backdrop-blur-xl', 'border-b', 'border-border/50');
+    } else {
+      nav.classList.add('bg-transparent');
+      nav.classList.remove('bg-bg-base/80', 'backdrop-blur-xl', 'border-b', 'border-border/50');
+    }
+  };
+
+  // Initial check
+  handleScroll();
+  
+  // Listen for scroll
+  window.addEventListener('scroll', handleScroll, { passive: true });
+</script>
+

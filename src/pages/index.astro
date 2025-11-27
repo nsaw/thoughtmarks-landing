@@ -1,0 +1,28 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Hero from '@/components/astro/Hero.astro';
+import Features from '@/components/astro/Features.astro';
+import HowItWorks from '@/components/astro/HowItWorks.astro';
+import AppShowcase from '@/components/react/AppShowcase';
+import FinalCTA from '@/components/astro/FinalCTA.astro';
+import Footer from '@/components/astro/Footer.astro';
+---
+
+<BaseLayout
+  title="Thoughtmarks | Bookmarks for Your Brain"
+  description="Capture ideas at the speed of life. Voice-first note capture with AI organization. Never forget to remember again."
+>
+  <Nav transparent={true} />
+  
+  <main>
+    <Hero />
+    <Features />
+    <HowItWorks />
+    <AppShowcase client:visible />
+    <FinalCTA />
+  </main>
+
+  <Footer />
+</BaseLayout>
+

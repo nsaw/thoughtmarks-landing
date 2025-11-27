@@ -1,20 +1,33 @@
 {
   "name": "thoughtmarks-landing",
-  "version": "1.0.0",
-  "description": "Thoughtmarks static landing site with legal documentation and support pages",
   "type": "module",
+  "version": "2.0.0",
+  "description": "Thoughtmarks marketing landing page - Astro + React",
   "scripts": {
-    "build:site": "node scripts/build/assemble.mjs",
-    "preview:tree": "find dist -type f -maxdepth 4 | sort",
-    "validate:html": "npx html-validate 'dist/**/*.html'",
-    "serve": "npx serve dist",
-    "deploy": "npx wrangler pages deploy dist --project-name thoughtmarks-landing --branch production"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "build:legacy": "node scripts/build/assemble.mjs",
+    "deploy": "pnpm build && npx wrangler pages deploy dist --project-name thoughtmarks-landing --branch production",
+    "prepare": "husky"
   },
-  "keywords": ["thoughtmarks", "landing", "static-site"],
-  "author": "Thoughtmarks Team",
-  "license": "UNLICENSED",
+  "dependencies": {
+    "@astrojs/react": "^4.2.1",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.8.0",
+    "framer-motion": "^12.12.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
   "devDependencies": {
-    "html-validate": "^8.0.0"
-  }
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.6",
+    "autoprefixer": "^10.4.21",
+    "husky": "^9.1.7",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.3"
+  },
+  "packageManager": "pnpm@9.15.0"
 }
-

@@ -1,0 +1,86 @@
+---
+import Card from './Card.astro';
+
+const features = [
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                  d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+          </svg>`,
+    title: 'Voice-First Capture',
+    description: 'Speak your thoughts and they are captured, transcribed, and stored instantly. No fumbling with apps.',
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                  d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+          </svg>`,
+    title: 'AI Organization',
+    description: 'Your notes are automatically tagged, linked, and filed. No folders to manage, no systems to maintain.',
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>`,
+    title: 'Semantic Search',
+    description: 'Find that thing you half remember. Search by exact words or by meaning.',
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>`,
+    title: 'Private by Default',
+    description: 'Your thoughts stay yours. Encrypted on device, secure sync optional. No data mining.',
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                  d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>`,
+    title: 'Instant Recall',
+    description: 'Your best ideas on tap. From capture to searchable in seconds, not hours.',
+  },
+  {
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                  d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                  d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"/>
+          </svg>`,
+    title: 'AI Insights',
+    description: 'Discover connections between your thoughts. See patterns you never noticed.',
+  },
+];
+---
+
+<section id="features" class="section bg-bg-base">
+  <div class="container-wide">
+    <!-- Section Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <h2 class="text-h1 font-bold text-text-primary mb-6">
+        Your brain is for thinking,<br />not storing.
+      </h2>
+      <p class="text-xl text-text-secondary">
+        Let Thoughtmarks handle the remembering so you can focus on what matters.
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {features.map((feature, index) => (
+        <Card class={`opacity-0 animate-fade-up animation-delay-${(index % 3) * 100}`}>
+          <div class="text-accent mb-4" set:html={feature.icon} />
+          <h3 class="text-xl font-semibold text-text-primary mb-3">
+            {feature.title}
+          </h3>
+          <p class="text-text-secondary leading-relaxed">
+            {feature.description}
+          </p>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+

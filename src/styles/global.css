@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font imports are handled via fonts.css loaded in the layout */
+
+@layer base {
+  :root {
+    /* Custom properties for JS access if needed */
+    --color-bg-base: #09090B;
+    --color-bg-elevated: #18181B;
+    --color-bg-surface: #27272A;
+    --color-text-primary: #FAFAFA;
+    --color-text-secondary: #A1A1AA;
+    --color-text-muted: #71717A;
+    --color-accent: #3B82F6;
+    --color-accent-hover: #2563EB;
+    --color-brand-yellow: #FEFF00;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-bg-base text-text-secondary font-sans;
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  /* Focus styles for accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-bg-base;
+  }
+
+  /* Selection styling */
+  ::selection {
+    @apply bg-accent/30 text-text-primary;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-text-primary font-display;
+  }
+
+  h1 {
+    @apply text-h1 font-bold;
+  }
+
+  h2 {
+    @apply text-h2 font-bold;
+  }
+
+  h3 {
+    @apply text-h3 font-semibold;
+  }
+
+  /* Links */
+  a {
+    @apply text-accent transition-colors duration-200;
+  }
+
+  a:hover {
+    @apply text-accent-hover;
+  }
+
+  /* Smooth scrolling for reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Button base styles */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 
+           font-semibold rounded-xl transition-all duration-200
+           focus-visible:outline-none focus-visible:ring-2 
+           focus-visible:ring-accent focus-visible:ring-offset-2 
+           focus-visible:ring-offset-bg-base;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent text-white hover:bg-accent-hover 
+           shadow-glow-sm hover:shadow-glow-md;
+  }
+
+  .btn-secondary {
+    @apply btn bg-transparent text-text-primary border border-border
+           hover:bg-bg-surface hover:border-text-muted;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-text-secondary 
+           hover:text-text-primary hover:bg-bg-surface;
+  }
+
+  /* Card styles */
+  .card {
+    @apply bg-bg-elevated rounded-2xl border border-border p-6
+           transition-all duration-300;
+  }
+
+  .card-hover {
+    @apply card hover:border-accent/30 hover:shadow-card-hover
+           hover:-translate-y-1;
+  }
+
+  /* Container */
+  .container-narrow {
+    @apply max-w-3xl mx-auto px-4 sm:px-6;
+  }
+
+  .container-wide {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-full {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Section spacing */
+  .section {
+    @apply py-16 sm:py-24 lg:py-32;
+  }
+
+  .section-sm {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent;
+  }
+
+  /* Tagline script font */
+  .tagline-script {
+    @apply font-script text-brand-yellow;
+  }
+}
+
+@layer utilities {
+  /* Animation delays */
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
+
+  /* Backdrop blur fallback */
+  .backdrop-blur-fallback {
+    @apply backdrop-blur-xl;
+    background-color: rgba(9, 9, 11, 0.8);
+  }
+
+  @supports (backdrop-filter: blur(24px)) {
+    .backdrop-blur-fallback {
+      background-color: rgba(9, 9, 11, 0.6);
+    }
+  }
+}
+

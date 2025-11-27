@@ -1,0 +1,86 @@
+---
+import '@/styles/fonts.css';
+import '@/styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
+}
+
+const {
+  title = 'Thoughtmarks | Bookmarks for Your Brain',
+  description = 'Capture ideas at the speed of life. Voice-first note capture with AI organization. Never forget to remember again.',
+  image = '/assets/Logo-iOS-Default-1024x1024@1x.png',
+  canonicalURL = Astro.url.href,
+} = Astro.props;
+
+const siteTitle = title.includes('Thoughtmarks') ? title : `${title} | Thoughtmarks`;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- Primary Meta Tags -->
+    <title>{siteTitle}</title>
+    <meta name="title" content={siteTitle} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/AppIcon.png" />
+    <link rel="apple-touch-icon" href="/assets/AppIcon.png" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={siteTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:site_name" content="Thoughtmarks" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={siteTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    
+    <!-- App-specific meta -->
+    <meta name="apple-mobile-web-app-title" content="Thoughtmarks" />
+    <meta name="application-name" content="Thoughtmarks" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="theme-color" content="#09090B" />
+    
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Thoughtmarks",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "iOS",
+        "description": "Voice-first note capture with AI organization. Capture ideas at the speed of life.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+  </head>
+  <body class="min-h-screen bg-bg-base text-text-secondary antialiased">
+    <slot />
+  </body>
+</html>
+

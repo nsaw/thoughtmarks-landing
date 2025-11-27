@@ -1,0 +1,91 @@
+---
+const steps = [
+  {
+    number: '01',
+    title: 'Capture',
+    description: 'Voice or text in seconds. Speak your thoughts while driving, cooking, walking. Siri integration means hands-free capture whenever inspiration strikes.',
+    image: '/assets/MAIN-mockup-page-VTT.png',
+    imageAlt: 'Voice capture screen showing real-time transcription',
+  },
+  {
+    number: '02',
+    title: 'Organize',
+    description: 'AI automatically tags, links, and categorizes your notes. No folders to manage, no elaborate systems to maintain. Organization happens in the background.',
+    image: '/assets/MAIN-mockup-page-Bins.png',
+    imageAlt: 'Organized bins showing AI-categorized notes',
+  },
+  {
+    number: '03',
+    title: 'Recall',
+    description: 'Find anything instantly. Search by exact words or by meaning. That quote from that podcast three months ago? Found in seconds.',
+    image: '/assets/MAIN-mockup-page-Thoughtmark.png',
+    imageAlt: 'Search results showing semantic search capabilities',
+  },
+];
+---
+
+<section id="how-it-works" class="section bg-bg-elevated">
+  <div class="container-wide">
+    <!-- Section Header -->
+    <div class="text-center max-w-2xl mx-auto mb-20">
+      <h2 class="text-h1 font-bold text-text-primary mb-6">
+        Three steps to a clearer mind.
+      </h2>
+      <p class="text-xl text-text-secondary">
+        Capture, organize, recall. It really is that simple.
+      </p>
+    </div>
+
+    <!-- Steps -->
+    <div class="space-y-24 lg:space-y-32">
+      {steps.map((step, index) => (
+        <div class:list={[
+          'grid lg:grid-cols-2 gap-12 lg:gap-20 items-center',
+          index % 2 === 1 ? 'lg:flex-row-reverse' : '',
+        ]}>
+          <!-- Content -->
+          <div class:list={[
+            'space-y-6',
+            index % 2 === 1 ? 'lg:order-2' : '',
+          ]}>
+            <div class="flex items-center gap-4">
+              <span class="text-6xl font-black text-accent/20">
+                {step.number}
+              </span>
+              <h3 class="text-h2 font-bold text-text-primary">
+                {step.title}
+              </h3>
+            </div>
+            <p class="text-lg text-text-secondary leading-relaxed max-w-lg">
+              {step.description}
+            </p>
+          </div>
+
+          <!-- Image -->
+          <div class:list={[
+            'relative flex justify-center',
+            index % 2 === 1 ? 'lg:order-1' : '',
+          ]}>
+            <!-- Glow -->
+            <div class="absolute inset-0 flex items-center justify-center">
+              <div class="w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
+            </div>
+            
+            <!-- Phone mockup -->
+            <img
+              src={step.image}
+              alt={step.imageAlt}
+              class="relative w-64 sm:w-72 lg:w-80 rounded-3xl shadow-2xl 
+                     border border-white/10 transition-transform duration-500
+                     hover:scale-105"
+              width="320"
+              height="693"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+

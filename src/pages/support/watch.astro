@@ -1,0 +1,275 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import Card from '@/components/astro/Card.astro';
+import Button from '@/components/astro/Button.astro';
+---
+
+<BaseLayout
+  title="Apple Watch Guide | Thoughtmarks Support"
+  description="Complete guide to using Thoughtmarks on Apple Watch. Quick capture, sync, complications, and troubleshooting."
+>
+  <Nav />
+  
+  <main class="pt-24 pb-16">
+    <div class="container-narrow">
+      <!-- Hero -->
+      <header class="text-center mb-16">
+        <h1 class="text-h1 font-bold text-text-primary mb-4">Apple Watch Guide</h1>
+        <p class="text-xl text-text-secondary mb-8">
+          Capture thoughts from your wrist.
+        </p>
+        
+        <!-- Watch mockup -->
+        <div class="relative inline-block">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="w-48 h-48 bg-accent/10 rounded-full blur-3xl"></div>
+          </div>
+          <img
+            src="/assets/Watch-companion-home.png"
+            alt="Thoughtmarks Apple Watch interface"
+            class="relative w-48 rounded-3xl shadow-2xl border border-white/10"
+            width="192"
+            height="234"
+          />
+        </div>
+      </header>
+
+      <!-- Overview -->
+      <section class="mb-16">
+        <h2 class="text-h2 font-bold text-text-primary mb-4">Overview</h2>
+        <p class="text-lg text-text-secondary leading-relaxed mb-6">
+          The Thoughtmarks Apple Watch app brings instant voice capture to your wrist. 
+          Record thoughts while running, cooking, or driving. Hands-free capture that 
+          seamlessly syncs with your iPhone.
+        </p>
+        
+        <div class="bg-accent/10 border-l-4 border-accent rounded-r-lg p-4">
+          <strong class="text-text-primary">Key Benefits:</strong>
+          <span class="text-text-secondary"> Raise your wrist, record a thought, done. 
+          Seamless sync. Offline-first. Complications for quick access.</span>
+        </div>
+      </section>
+
+      <!-- Getting Started -->
+      <section class="mb-16">
+        <h2 class="text-h2 font-bold text-text-primary mb-8">Getting Started</h2>
+        
+        <div class="space-y-6">
+          <Card hover={false}>
+            <h3 class="text-xl font-semibold text-text-primary mb-4">1. Setup</h3>
+            <ol class="text-text-secondary space-y-2 list-decimal list-inside">
+              <li>Install Thoughtmarks on your iPhone</li>
+              <li>Open the Watch app on iPhone</li>
+              <li>Find "Thoughtmarks" in the app list</li>
+              <li>Tap "Install" to add to Apple Watch</li>
+              <li>Wait for installation to complete (1-2 minutes)</li>
+            </ol>
+            <p class="text-text-muted text-sm mt-4">
+              Requires watchOS 10.0 or later
+            </p>
+          </Card>
+
+          <Card hover={false}>
+            <h3 class="text-xl font-semibold text-text-primary mb-4">2. First Voice Capture</h3>
+            <ol class="text-text-secondary space-y-2 list-decimal list-inside">
+              <li>Open Thoughtmarks on your Apple Watch</li>
+              <li>Tap the large <strong class="text-text-primary">Record</strong> button</li>
+              <li>Speak your thought clearly</li>
+              <li>Tap <strong class="text-text-primary">Stop</strong> when finished</li>
+              <li>Recording automatically syncs to iPhone</li>
+            </ol>
+            <div class="bg-green-500/10 border-l-4 border-green-500 rounded-r-lg p-3 mt-4">
+              <strong class="text-text-primary">Tip:</strong>
+              <span class="text-text-secondary"> You can also use Siri: "Hey Siri, capture a Thoughtmark"</span>
+            </div>
+          </Card>
+
+          <Card hover={false}>
+            <h3 class="text-xl font-semibold text-text-primary mb-4">3. View Recent Thoughts</h3>
+            <p class="text-text-secondary mb-3">
+              Scroll down on the main watch screen to see your recent Thoughtmarks. Tap any thought to:
+            </p>
+            <ul class="text-text-secondary space-y-1 list-disc list-inside">
+              <li>View transcription</li>
+              <li>Play back recording</li>
+              <li>Add tags (voice input)</li>
+              <li>Delete recording</li>
+            </ul>
+          </Card>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="mb-16">
+        <h2 class="text-h2 font-bold text-text-primary mb-8">Features</h2>
+        
+        <div class="grid sm:grid-cols-2 gap-6">
+          <Card>
+            <div class="text-3xl mb-4">
+              <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                      d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-text-primary mb-2">Quick Voice Capture</h3>
+            <p class="text-text-secondary text-sm">
+              Raise your wrist, tap record, speak. Done in seconds. Perfect for capturing fleeting ideas while moving.
+            </p>
+          </Card>
+
+          <Card>
+            <div class="text-3xl mb-4">
+              <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                      d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-text-primary mb-2">Seamless Sync</h3>
+            <p class="text-text-secondary text-sm">
+              Recordings automatically sync to iPhone via Bluetooth or WiFi. View, edit, and organize on the big screen.
+            </p>
+          </Card>
+
+          <Card>
+            <div class="text-3xl mb-4">
+              <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                      d="M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-text-primary mb-2">Offline First</h3>
+            <p class="text-text-secondary text-sm">
+              Record thoughts without iPhone nearby. Everything queues and syncs when devices reconnect. Never lose an idea.
+            </p>
+          </Card>
+
+          <Card>
+            <div class="text-3xl mb-4">
+              <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" 
+                      d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <h3 class="text-lg font-semibold text-text-primary mb-2">Complications</h3>
+            <p class="text-text-secondary text-sm">
+              Add Thoughtmarks complication to your watch face for one-tap access to voice recording.
+            </p>
+          </Card>
+        </div>
+      </section>
+
+      <!-- Complications Setup -->
+      <section class="mb-16">
+        <h2 class="text-h2 font-bold text-text-primary mb-8">Complications Setup</h2>
+        
+        <Card hover={false}>
+          <h3 class="text-xl font-semibold text-text-primary mb-4">Adding Thoughtmarks Complication</h3>
+          <ol class="text-text-secondary space-y-2 list-decimal list-inside mb-6">
+            <li>Press and hold your watch face</li>
+            <li>Tap "Edit"</li>
+            <li>Swipe to complications screen</li>
+            <li>Tap the complication slot you want to use</li>
+            <li>Scroll to find "Thoughtmarks"</li>
+            <li>Select the complication style you prefer</li>
+            <li>Press Digital Crown to save</li>
+          </ol>
+          
+          <h4 class="font-semibold text-text-primary mb-3">Available Complications</h4>
+          <ul class="text-text-secondary space-y-1 list-disc list-inside mb-4">
+            <li><strong class="text-text-primary">Circular:</strong> Quick tap to start recording</li>
+            <li><strong class="text-text-primary">Corner:</strong> Shows recent thought count</li>
+            <li><strong class="text-text-primary">Graphic:</strong> Large button for easy access</li>
+          </ul>
+          
+          <div class="bg-green-500/10 border-l-4 border-green-500 rounded-r-lg p-3">
+            <strong class="text-text-primary">Recommended:</strong>
+            <span class="text-text-secondary"> Use Graphic complication for easiest one-tap recording</span>
+          </div>
+        </Card>
+      </section>
+
+      <!-- Troubleshooting -->
+      <section class="mb-16">
+        <h2 class="text-h2 font-bold text-text-primary mb-8">Troubleshooting</h2>
+        
+        <div class="space-y-6">
+          <Card hover={false}>
+            <h3 class="text-lg font-semibold text-text-primary mb-3">Watch App Not Installing</h3>
+            <ul class="text-text-secondary space-y-1 list-disc list-inside">
+              <li>Ensure watch is on WiFi or near iPhone</li>
+              <li>Check available watch storage (need about 50MB)</li>
+              <li>Restart both watch and iPhone</li>
+              <li>Update to latest watchOS version</li>
+            </ul>
+          </Card>
+
+          <Card hover={false}>
+            <h3 class="text-lg font-semibold text-text-primary mb-3">Voice Recording Issues</h3>
+            <ul class="text-text-secondary space-y-1 list-disc list-inside">
+              <li>Ensure microphone permission is enabled</li>
+              <li>Check watch is not in silent mode</li>
+              <li>Speak clearly 6-12 inches from watch</li>
+              <li>Ensure sufficient watch storage</li>
+            </ul>
+          </Card>
+
+          <Card hover={false}>
+            <h3 class="text-lg font-semibold text-text-primary mb-3">Sync Delays</h3>
+            <ul class="text-text-secondary space-y-1 list-disc list-inside">
+              <li>Normal sync: 5-30 seconds</li>
+              <li>Large recordings: Up to 2 minutes</li>
+              <li>Offline queue: Syncs when reconnected</li>
+              <li>Force sync: Open iPhone app to trigger immediate sync</li>
+            </ul>
+          </Card>
+        </div>
+      </section>
+
+      <!-- Privacy -->
+      <section class="mb-16">
+        <h2 class="text-h2 font-bold text-text-primary mb-6">Privacy & Security</h2>
+        
+        <div class="bg-green-500/10 border-l-4 border-green-500 rounded-r-lg p-6">
+          <p class="text-text-primary font-semibold mb-3">Your watch recordings are fully encrypted:</p>
+          <ul class="text-text-secondary space-y-1">
+            <li>Encrypted on watch before sync</li>
+            <li>Encrypted in transit to iPhone</li>
+            <li>Encrypted at rest on iPhone</li>
+            <li>Hardware-backed encryption (Secure Enclave)</li>
+          </ul>
+        </div>
+        
+        <p class="text-text-secondary mt-4">
+          For complete privacy details, see our{' '}
+          <a href="/legal/privacy" class="text-accent hover:text-accent-hover">Privacy Policy</a>.
+        </p>
+      </section>
+
+      <!-- Contact -->
+      <section class="bg-bg-elevated rounded-2xl border border-border p-8">
+        <h2 class="text-h2 font-bold text-text-primary mb-4">Need Help?</h2>
+        <p class="text-text-secondary mb-6">Apple Watch specific support:</p>
+        
+        <ul class="text-text-secondary space-y-2 mb-6">
+          <li>
+            <strong class="text-text-primary">Email:</strong>{' '}
+            <a href="mailto:support@thoughtmarks.app?subject=Apple Watch Support" class="text-accent hover:text-accent-hover">
+              support@thoughtmarks.app
+            </a>
+          </li>
+          <li><strong class="text-text-primary">Subject:</strong> "Apple Watch Support"</li>
+          <li><strong class="text-text-primary">Include:</strong> Watch model, watchOS version, and description of issue</li>
+        </ul>
+        
+        <Button href="/support" variant="secondary">
+          Back to Support Center
+        </Button>
+      </section>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+

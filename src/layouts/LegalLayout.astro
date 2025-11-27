@@ -1,0 +1,146 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  effectiveDate?: string;
+  lastUpdated?: string;
+  version?: string;
+}
+
+const {
+  title,
+  description,
+  effectiveDate = 'October 1, 2025',
+  lastUpdated = 'October 1, 2025',
+  version = '1.0',
+} = Astro.props;
+---
+
+<BaseLayout title={`${title} | Thoughtmarks`} description={description}>
+  <Nav />
+  
+  <main class="pt-24 pb-16">
+    <div class="container-narrow">
+      <article class="prose prose-invert max-w-none">
+        <header class="mb-12">
+          <h1 class="text-h1 font-bold text-text-primary mb-6">{title}</h1>
+          
+          <div class="bg-bg-elevated rounded-xl border border-border p-4 text-sm">
+            <p class="text-text-muted">
+              <span class="font-semibold text-text-secondary">Effective Date:</span> {effectiveDate}
+            </p>
+            <p class="text-text-muted">
+              <span class="font-semibold text-text-secondary">Last Updated:</span> {lastUpdated}
+            </p>
+            <p class="text-text-muted">
+              <span class="font-semibold text-text-secondary">Version:</span> {version}
+            </p>
+          </div>
+        </header>
+
+        <div class="legal-content space-y-8">
+          <slot />
+        </div>
+
+        <!-- Related Documents -->
+        <footer class="mt-16 pt-8 border-t border-border">
+          <h3 class="text-lg font-semibold text-text-primary mb-4">Related Documents</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="/legal/privacy" class="text-accent hover:text-accent-hover">
+                Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="/legal/terms" class="text-accent hover:text-accent-hover">
+                Terms of Service
+              </a>
+            </li>
+            <li>
+              <a href="/legal/eula" class="text-accent hover:text-accent-hover">
+                End User License Agreement
+              </a>
+            </li>
+          </ul>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
+<style is:global>
+  .legal-content h2 {
+    @apply text-h2 font-bold text-text-primary mt-12 mb-4;
+  }
+
+  .legal-content h3 {
+    @apply text-h3 font-semibold text-text-primary mt-8 mb-3;
+  }
+
+  .legal-content h4 {
+    @apply text-lg font-semibold text-text-primary mt-6 mb-2;
+  }
+
+  .legal-content p {
+    @apply text-text-secondary leading-relaxed mb-4;
+  }
+
+  .legal-content ul, .legal-content ol {
+    @apply text-text-secondary ml-6 mb-4 space-y-2;
+  }
+
+  .legal-content ul {
+    @apply list-disc;
+  }
+
+  .legal-content ol {
+    @apply list-decimal;
+  }
+
+  .legal-content li {
+    @apply leading-relaxed;
+  }
+
+  .legal-content a {
+    @apply text-accent hover:text-accent-hover underline underline-offset-2;
+  }
+
+  .legal-content strong {
+    @apply text-text-primary font-semibold;
+  }
+
+  .legal-content table {
+    @apply w-full border-collapse my-6;
+  }
+
+  .legal-content th, .legal-content td {
+    @apply border border-border px-4 py-3 text-left;
+  }
+
+  .legal-content th {
+    @apply bg-bg-elevated text-text-primary font-semibold;
+  }
+
+  .legal-content td {
+    @apply text-text-secondary;
+  }
+
+  .legal-note {
+    @apply bg-accent/10 border-l-4 border-accent p-4 rounded-r-lg my-6;
+  }
+
+  .legal-warning {
+    @apply bg-yellow-500/10 border-l-4 border-yellow-500 p-4 rounded-r-lg my-6;
+  }
+
+  .legal-success {
+    @apply bg-green-500/10 border-l-4 border-green-500 p-4 rounded-r-lg my-6;
+  }
+</style>
+
