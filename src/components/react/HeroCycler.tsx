@@ -57,7 +57,7 @@ export default function HeroCycler() {
           {current.headline.map((line, i) => (
             <span key={i}>
               {i === current.headline.length - 1 ? (
-                <span className="text-accent">{line}</span>
+                <span className="text-accent font-bold">{line}</span>
               ) : (
                 <>{line}<br /></>
               )}
