@@ -1,0 +1,186 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+  priority?: boolean;
+}
+
+const { src, alt, class: className = '', priority = false } = Astro.props;
+---
+
+<div class={`phone-mockup-container ${className}`}>
+  <!-- 3D perspective wrapper -->
+  <div class="phone-3d-wrapper">
+    <!-- Phone frame (the "device") -->
+    <div class="phone-frame">
+      <!-- Dynamic Island -->
+      <div class="dynamic-island"></div>
+      
+      <!-- Screen area with screenshot -->
+      <div class="phone-screen">
+        <img
+          src={src}
+          alt={alt}
+          class="phone-screenshot"
+          loading={priority ? 'eager' : 'lazy'}
+        />
+      </div>
+      
+      <!-- Subtle frame highlights for 3D effect -->
+      <div class="frame-highlight-top"></div>
+      <div class="frame-highlight-left"></div>
+    </div>
+    
+    <!-- Reflection/shine layer -->
+    <div class="phone-reflection"></div>
+  </div>
+</div>
+
+<style>
+  .phone-mockup-container {
+    --phone-width: 280px;
+    --phone-radius: 47px;
+    --frame-width: 12px;
+    --screen-radius: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: 640px) {
+    .phone-mockup-container {
+      --phone-width: 320px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .phone-mockup-container {
+      --phone-width: 380px;
+      --phone-radius: 52px;
+      --frame-width: 14px;
+      --screen-radius: 44px;
+    }
+  }
+
+  .phone-3d-wrapper {
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1200px;
+  }
+
+  .phone-frame {
+    position: relative;
+    width: var(--phone-width);
+    background: linear-gradient(
+      145deg,
+      #1a1a1a 0%,
+      #0a0a0a 50%,
+      #1a1a1a 100%
+    );
+    border-radius: var(--phone-radius);
+    padding: var(--frame-width);
+    box-shadow:
+      /* Outer glow */
+      0 0 80px -20px rgba(59, 130, 246, 0.3),
+      /* Deep shadow */
+      0 25px 50px -12px rgba(0, 0, 0, 0.8),
+      /* Inner shadow for depth */
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      /* Bottom edge highlight */
+      inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+    
+    /* 3D rotation */
+    transform: rotateY(-3deg) rotateX(2deg);
+    transition: transform 0.5s ease-out;
+  }
+
+  .phone-frame:hover {
+    transform: rotateY(0deg) rotateX(0deg) scale(1.02);
+  }
+
+  .dynamic-island {
+    position: absolute;
+    top: calc(var(--frame-width) + 12px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 28px;
+    background: #000;
+    border-radius: 20px;
+    z-index: 10;
+  }
+
+  @media (min-width: 1024px) {
+    .dynamic-island {
+      width: 110px;
+      height: 32px;
+      top: calc(var(--frame-width) + 14px);
+    }
+  }
+
+  .phone-screen {
+    position: relative;
+    border-radius: var(--screen-radius);
+    overflow: hidden;
+    background: #000;
+  }
+
+  .phone-screenshot {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--screen-radius);
+  }
+
+  /* Subtle highlight on top-left edge for 3D effect */
+  .frame-highlight-top {
+    position: absolute;
+    top: 0;
+    left: var(--phone-radius);
+    right: var(--phone-radius);
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.2) 20%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0.2) 80%,
+      transparent 100%
+    );
+  }
+
+  .frame-highlight-left {
+    position: absolute;
+    top: var(--phone-radius);
+    left: 0;
+    bottom: var(--phone-radius);
+    width: 1px;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.15) 20%,
+      rgba(255, 255, 255, 0.1) 80%,
+      transparent 100%
+    );
+  }
+
+  /* Glass reflection overlay */
+  .phone-reflection {
+    position: absolute;
+    top: var(--frame-width);
+    left: var(--frame-width);
+    right: var(--frame-width);
+    height: 40%;
+    border-radius: var(--screen-radius) var(--screen-radius) 0 0;
+    background: linear-gradient(
+      165deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.02) 40%,
+      transparent 60%
+    );
+    pointer-events: none;
+    z-index: 5;
+  }
+</style>
+

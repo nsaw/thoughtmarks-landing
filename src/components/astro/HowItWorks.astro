@@ -1,4 +1,6 @@
 ---
+import PhoneMockup from './PhoneMockup.astro';
+
 const steps = [
   {
     number: '01',
@@ -64,22 +66,18 @@ const steps = [
             </p>
           </div>
 
-          <!-- Image with strong contrast treatment -->
-          <div class={`relative ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-            <!-- Glow behind image -->
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="w-full h-full bg-gradient-to-br from-accent/15 via-accent/5 to-transparent rounded-3xl blur-2xl"></div>
+          <!-- Phone mockup with 3D treatment -->
+          <div class={`relative flex justify-center ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+            <!-- Glow behind phone -->
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div class="w-[350px] h-[500px] bg-gradient-to-br from-accent/15 via-accent/5 to-transparent rounded-full blur-3xl"></div>
             </div>
             
-            <!-- Image container with border for contrast -->
-            <div class="relative">
-              <img
-                src={step.image}
-                alt={step.imageAlt}
-                class="w-full max-w-md mx-auto rounded-2xl border-2 border-white/10 shadow-[0_0_80px_-20px_rgba(59,130,246,0.3)]"
-                loading="lazy"
-              />
-            </div>
+            <PhoneMockup 
+              src={step.image}
+              alt={step.imageAlt}
+              class="mockup-smaller"
+            />
           </div>
         </div>
       ))}
@@ -95,3 +93,21 @@ const steps = [
     </div>
   </div>
 </section>
+
+<style>
+  .mockup-smaller {
+    --phone-width: 240px;
+  }
+
+  @media (min-width: 640px) {
+    .mockup-smaller {
+      --phone-width: 280px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .mockup-smaller {
+      --phone-width: 320px;
+    }
+  }
+</style>
