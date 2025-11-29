@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Thoughtmarks Trial is Ending</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #09090B;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .card {
+      background-color: #18181B;
+      border-radius: 16px;
+      padding: 40px;
+      border: 1px solid #27272A;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+    .tagline {
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      color: #FCD34D;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    h1 {
+      color: #FAFAFA;
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+    .subtitle {
+      color: #A1A1AA;
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .content {
+      color: #D4D4D8;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .content p {
+      margin: 0 0 16px 0;
+    }
+    .urgency-box {
+      background: linear-gradient(135deg, #DC2626 0%, #991B1B 100%);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+      text-align: center;
+    }
+    .urgency-box p {
+      color: #FFFFFF;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0;
+    }
+    .urgency-box .days {
+      font-size: 32px;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 4px;
+    }
+    .highlight-box {
+      background-color: #27272A;
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+    }
+    .highlight-box h3 {
+      color: #3B82F6;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0 0 12px 0;
+    }
+    .highlight-box ul {
+      color: #D4D4D8;
+      margin: 0;
+      padding-left: 20px;
+    }
+    .highlight-box li {
+      margin-bottom: 8px;
+    }
+    .cta-button {
+      display: block;
+      background-color: #3B82F6;
+      color: #FFFFFF !important;
+      text-decoration: none;
+      padding: 18px 32px;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      margin: 32px 0;
+    }
+    .secondary-button {
+      display: block;
+      background-color: transparent;
+      color: #3B82F6 !important;
+      text-decoration: none;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+      border: 1px solid #3B82F6;
+      margin-top: 12px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #27272A;
+    }
+    .footer p {
+      color: #71717A;
+      font-size: 14px;
+      margin: 8px 0;
+    }
+    .footer a {
+      color: #71717A;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="logo">
+        <img src="https://thoughtmarks.app/assets/Thoughtmarks-branding.png" alt="Thoughtmarks" />
+      </div>
+      
+      <p class="tagline">bookmarks for your brain</p>
+      
+      <h1>Your trial is ending soon</h1>
+      <p class="subtitle">Don't lose access to your thoughts</p>
+      
+      <div class="content">
+        <p>Hey {{name}},</p>
+        
+        <div class="urgency-box">
+          <p>
+            <span class="days">{{days_remaining}} days</span>
+            left in your trial
+          </p>
+        </div>
+        
+        <p>You've been capturing great ideas with Thoughtmarks. Don't let them slip away when your trial ends on <strong>{{trial_end_date}}</strong>.</p>
+        
+        <div class="highlight-box">
+          <h3>What you'll keep with Thoughtmarks Pro:</h3>
+          <ul>
+            <li><strong>Unlimited voice captures</strong> — Keep talking, we'll keep listening</li>
+            <li><strong>AI-powered organization</strong> — Your notes, perfectly sorted</li>
+            <li><strong>Semantic search</strong> — Find by meaning, not just keywords</li>
+            <li><strong>Cross-device sync</strong> — Your thoughts, everywhere</li>
+            <li><strong>Priority support</strong> — We've got your back</li>
+          </ul>
+        </div>
+        
+        <a href="{{upgrade_url}}" class="cta-button">
+          Upgrade to Pro — ${{price}}/month
+        </a>
+        
+        <a href="{{manage_subscription_url}}" class="secondary-button">
+          View all plans
+        </a>
+        
+        <p style="text-align: center; color: #71717A; font-size: 14px; margin-top: 24px;">
+          Questions? Just reply to this email — we read every message.
+        </p>
+      </div>
+      
+      <div class="footer">
+        <p>You're receiving this because you signed up for Thoughtmarks.</p>
+        <p>
+          <a href="{{{unsubscribe}}}">Unsubscribe</a> | 
+          <a href="https://thoughtmarks.app/legal/privacy">Privacy Policy</a>
+        </p>
+        <p>© 2025 Thoughtmarks. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

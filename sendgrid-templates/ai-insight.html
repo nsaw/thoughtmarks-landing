@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New AI Insight from Thoughtmarks</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #09090B;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .card {
+      background-color: #18181B;
+      border-radius: 16px;
+      padding: 40px;
+      border: 1px solid #27272A;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+    .tagline {
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      color: #FCD34D;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    h1 {
+      color: #FAFAFA;
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+    .accent {
+      color: #3B82F6;
+    }
+    .subtitle {
+      color: #A1A1AA;
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .content {
+      color: #D4D4D8;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .content p {
+      margin: 0 0 16px 0;
+    }
+    .insight-card {
+      background: linear-gradient(135deg, #1E3A5F 0%, #1E293B 100%);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+      border-left: 4px solid #3B82F6;
+    }
+    .insight-card .icon {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+    .insight-card h3 {
+      color: #FAFAFA;
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0 0 12px 0;
+    }
+    .insight-card p {
+      color: #D4D4D8;
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    .connection-box {
+      background-color: #27272A;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .connection-box h4 {
+      color: #A1A1AA;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 0 0 12px 0;
+    }
+    .connection-item {
+      display: block;
+      color: #3B82F6;
+      text-decoration: none;
+      padding: 8px 0;
+      border-bottom: 1px solid #3F3F46;
+      font-size: 14px;
+    }
+    .connection-item:last-child {
+      border-bottom: none;
+    }
+    .cta-button {
+      display: block;
+      background-color: #3B82F6;
+      color: #FFFFFF !important;
+      text-decoration: none;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      margin: 32px 0 16px 0;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #27272A;
+    }
+    .footer p {
+      color: #71717A;
+      font-size: 14px;
+      margin: 8px 0;
+    }
+    .footer a {
+      color: #71717A;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="logo">
+        <img src="https://thoughtmarks.app/assets/Thoughtmarks-branding.png" alt="Thoughtmarks" />
+      </div>
+      
+      <p class="tagline">bookmarks for your brain</p>
+      
+      <h1>Your thoughts are <span class="accent">connecting</span></h1>
+      <p class="subtitle">AI discovered something interesting</p>
+      
+      <div class="content">
+        <p>Hey {{name}},</p>
+        
+        <p>Our AI noticed a pattern in your recent thoughtmarks. Here's an insight that might spark something:</p>
+        
+        <div class="insight-card">
+          <div class="icon">💡</div>
+          <h3>{{insight_title}}</h3>
+          <p>{{insight_summary}}</p>
+        </div>
+        
+        <div class="connection-box">
+          <h4>Related Thoughtmarks</h4>
+          {{#each related_thoughtmarks}}
+          <a href="{{this.url}}" class="connection-item">{{this.title}}</a>
+          {{/each}}
+        </div>
+        
+        <p>These connections might help you dive deeper or see your ideas from a new angle.</p>
+        
+        <a href="{{insight_url}}" class="cta-button">
+          Explore This Insight
+        </a>
+        
+        <p style="text-align: center; color: #71717A; font-size: 14px;">
+          Want more or fewer AI insights? <a href="{{preferences_url}}" style="color: #3B82F6;">Adjust your preferences</a>
+        </p>
+      </div>
+      
+      <div class="footer">
+        <p>You're receiving AI insights because you enabled them in settings.</p>
+        <p>
+          <a href="{{{unsubscribe}}}">Unsubscribe from insights</a> | 
+          <a href="https://thoughtmarks.app/legal/privacy">Privacy Policy</a>
+        </p>
+        <p>© 2025 Thoughtmarks. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

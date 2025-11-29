@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Daily Thoughtmarks Digest</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #09090B;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .card {
+      background-color: #18181B;
+      border-radius: 16px;
+      padding: 40px;
+      border: 1px solid #27272A;
+    }
+    .logo {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+    .tagline {
+      font-family: 'Georgia', serif;
+      font-style: italic;
+      color: #FCD34D;
+      font-size: 18px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    h1 {
+      color: #FAFAFA;
+      font-size: 28px;
+      font-weight: 700;
+      text-align: center;
+      margin: 0 0 8px 0;
+      line-height: 1.3;
+    }
+    .date {
+      color: #A1A1AA;
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .content {
+      color: #D4D4D8;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .content p {
+      margin: 0 0 16px 0;
+    }
+    .stats-grid {
+      display: table;
+      width: 100%;
+      margin: 24px 0;
+      background-color: #27272A;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .stats-row {
+      display: table-row;
+    }
+    .stat {
+      display: table-cell;
+      width: 33.33%;
+      padding: 20px;
+      text-align: center;
+      border-right: 1px solid #3F3F46;
+    }
+    .stat:last-child {
+      border-right: none;
+    }
+    .stat-value {
+      color: #3B82F6;
+      font-size: 28px;
+      font-weight: 700;
+      display: block;
+    }
+    .stat-label {
+      color: #A1A1AA;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .section-title {
+      color: #FAFAFA;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 28px 0 12px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #27272A;
+    }
+    .thoughtmark-item {
+      background-color: #27272A;
+      border-radius: 8px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+    .thoughtmark-item .title {
+      color: #FAFAFA;
+      font-size: 15px;
+      font-weight: 500;
+      margin: 0 0 4px 0;
+    }
+    .thoughtmark-item .preview {
+      color: #A1A1AA;
+      font-size: 14px;
+      margin: 0 0 8px 0;
+      line-height: 1.4;
+    }
+    .thoughtmark-item .meta {
+      color: #71717A;
+      font-size: 12px;
+    }
+    .thoughtmark-item .tag {
+      display: inline-block;
+      background-color: #3F3F46;
+      color: #A1A1AA;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      margin-right: 4px;
+    }
+    .insight-preview {
+      background: linear-gradient(135deg, #1E3A5F 0%, #1E293B 100%);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 16px 0;
+      border-left: 4px solid #3B82F6;
+    }
+    .insight-preview h4 {
+      color: #3B82F6;
+      font-size: 14px;
+      margin: 0 0 8px 0;
+    }
+    .insight-preview p {
+      color: #D4D4D8;
+      font-size: 14px;
+      margin: 0;
+    }
+    .cta-button {
+      display: block;
+      background-color: #3B82F6;
+      color: #FFFFFF !important;
+      text-decoration: none;
+      padding: 16px 32px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      margin: 32px 0 16px 0;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid #27272A;
+    }
+    .footer p {
+      color: #71717A;
+      font-size: 14px;
+      margin: 8px 0;
+    }
+    .footer a {
+      color: #71717A;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="logo">
+        <img src="https://thoughtmarks.app/assets/Thoughtmarks-branding.png" alt="Thoughtmarks" />
+      </div>
+      
+      <p class="tagline">bookmarks for your brain</p>
+      
+      <h1>Your Daily Digest</h1>
+      <p class="date">{{digest_date}}</p>
+      
+      <div class="content">
+        <p>Good {{time_of_day}}, {{name}}! Here's what's been happening in your brain:</p>
+        
+        <div class="stats-grid">
+          <div class="stats-row">
+            <div class="stat">
+              <span class="stat-value">{{new_thoughtmarks_count}}</span>
+              <span class="stat-label">New Captures</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">{{total_thoughtmarks_count}}</span>
+              <span class="stat-label">Total Thoughts</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">{{connections_count}}</span>
+              <span class="stat-label">Connections</span>
+            </div>
+          </div>
+        </div>
+        
+        {{#if recent_thoughtmarks}}
+        <h3 class="section-title">Recent Captures</h3>
+        {{#each recent_thoughtmarks}}
+        <div class="thoughtmark-item">
+          <p class="title">{{this.title}}</p>
+          <p class="preview">{{this.preview}}</p>
+          <div class="meta">
+            {{#each this.tags}}
+            <span class="tag">{{this}}</span>
+            {{/each}}
+            <span>• {{this.time_ago}}</span>
+          </div>
+        </div>
+        {{/each}}
+        {{/if}}
+        
+        {{#if ai_insight}}
+        <h3 class="section-title">AI Insight</h3>
+        <div class="insight-preview">
+          <h4>💡 {{ai_insight.title}}</h4>
+          <p>{{ai_insight.summary}}</p>
+        </div>
+        {{/if}}
+        
+        <a href="{{dashboard_url}}" class="cta-button">
+          Open Thoughtmarks
+        </a>
+        
+        <p style="text-align: center; color: #71717A; font-size: 14px;">
+          What will you capture today?
+        </p>
+      </div>
+      
+      <div class="footer">
+        <p>Digest sent {{digest_frequency}} • <a href="{{preferences_url}}">Change frequency</a></p>
+        <p>
+          <a href="{{{unsubscribe}}}">Unsubscribe from digests</a> | 
+          <a href="https://thoughtmarks.app/legal/privacy">Privacy Policy</a>
+        </p>
+        <p>© 2025 Thoughtmarks. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
