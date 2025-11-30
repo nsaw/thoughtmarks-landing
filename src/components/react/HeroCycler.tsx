@@ -43,7 +43,7 @@ export default function HeroCycler() {
   const current = heroVariants[currentIndex];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6" aria-live="polite" aria-atomic="true">
       {/* Headline */}
       <AnimatePresence mode="wait">
         <motion.h1
@@ -80,19 +80,28 @@ export default function HeroCycler() {
         </motion.p>
       </AnimatePresence>
 
-      {/* Progress dots */}
-      <div className="flex gap-2 pt-2">
+      {/* Progress dots - 44x44px touch targets per WCAG 2.5.5 */}
+      <div className="flex gap-1 pt-2" role="tablist" aria-label="Headline selector">
         {heroVariants.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrentIndex(i)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              i === currentIndex 
-                ? 'bg-accent w-6' 
-                : 'bg-zinc-700 hover:bg-zinc-600'
-            }`}
-            aria-label={`View headline ${i + 1}`}
-          />
+            role="tab"
+            aria-selected={i === currentIndex}
+            aria-label={`View headline ${i + 1} of ${heroVariants.length}`}
+            className={`w-11 h-11 flex items-center justify-center rounded-full 
+                       transition-all duration-300 focus-visible:outline-none 
+                       focus-visible:ring-2 focus-visible:ring-accent`}
+          >
+            <span 
+              className={`rounded-full transition-all duration-300 ${
+                i === currentIndex 
+                  ? 'bg-accent w-6 h-2' 
+                  : 'bg-zinc-700 hover:bg-zinc-600 w-2 h-2'
+              }`}
+              aria-hidden="true"
+            />
+          </button>
         ))}
       </div>
     </div>

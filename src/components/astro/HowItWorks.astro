@@ -30,8 +30,8 @@ const steps = [
 ---
 
 <section id="how-it-works" class="section relative overflow-hidden bg-zinc-950">
-  <!-- Organic shapes -->
-  <div class="absolute inset-0 pointer-events-none">
+  <!-- Organic shapes (decorative, hidden from screen readers) -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
     <div class="absolute top-0 left-1/4 w-[600px] h-[400px] rounded-full bg-gradient-to-b from-accent/5 to-transparent blur-3xl"></div>
     <div class="absolute bottom-0 right-1/4 w-[500px] h-[300px] rounded-full bg-gradient-to-t from-amber-500/5 to-transparent blur-3xl"></div>
   </div>
@@ -55,9 +55,12 @@ const steps = [
           <!-- Content -->
           <div class={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
             <div class="flex items-baseline gap-4">
-              <span class="text-6xl sm:text-7xl font-black text-accent/30">{step.number}</span>
+              <!-- Decorative step number - hidden from screen readers (low contrast is intentional for design) -->
+              <span class="text-6xl sm:text-7xl font-black text-accent/30" aria-hidden="true">{step.number}</span>
               <div>
-                <h3 class="text-3xl sm:text-4xl font-bold text-white">{step.title}</h3>
+                <h3 class="text-3xl sm:text-4xl font-bold text-white">
+                  <span class="sr-only">Step {step.number}: </span>{step.title}
+                </h3>
                 <p class="text-lg text-zinc-400 mt-1">{step.subtitle}</p>
               </div>
             </div>
@@ -68,8 +71,8 @@ const steps = [
 
           <!-- Phone mockup with 3D treatment -->
           <div class={`relative flex justify-center ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-            <!-- Glow behind phone -->
-            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <!-- Glow behind phone (decorative) -->
+            <div class="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
               <div class="w-[350px] h-[500px] bg-gradient-to-br from-accent/15 via-accent/5 to-transparent rounded-full blur-3xl"></div>
             </div>
             

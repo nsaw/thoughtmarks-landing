@@ -99,10 +99,11 @@ export default function WaitlistForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6" noValidate>
       <div>
         <label htmlFor="waitlist-page-email" className="block text-sm font-medium text-zinc-300 mb-2">
-          Email address <span className="text-accent">*</span>
+          Email address <span className="text-accent" aria-hidden="true">*</span>
+          <span className="sr-only">(required)</span>
         </label>
         <input
           ref={emailInputRef}
@@ -112,11 +113,15 @@ export default function WaitlistForm() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="you@example.com"
           disabled={formState === 'submitting'}
-          className="w-full px-5 py-4 bg-zinc-800 border border-zinc-700 rounded-xl
+          required
+          aria-required="true"
+          aria-invalid={errorMessage ? 'true' : undefined}
+          aria-describedby={errorMessage ? 'waitlist-error' : undefined}
+          className={`w-full px-5 py-4 bg-zinc-800 border rounded-xl
                      text-white text-lg placeholder-zinc-500 
                      focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent
                      disabled:opacity-50 disabled:cursor-not-allowed
-                     transition-colors"
+                     transition-colors ${errorMessage ? 'border-red-500' : 'border-zinc-700'}`}
         />
       </div>
 
@@ -141,6 +146,9 @@ export default function WaitlistForm() {
 
       {errorMessage && (
         <motion.p
+          id="waitlist-error"
+          role="alert"
+          aria-live="assertive"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-red-400"
