@@ -1,0 +1,269 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+---
+
+<BaseLayout
+  title="Thoughtmarks for ADHD: Capture Ideas Before They Vanish"
+  description="Built for ADHD brains. Voice-capture ideas in seconds, AI organizes automatically. No folders, no friction, no forgotten brilliance."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <div class="container-narrow">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          Built for ADHD Brains
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          Capture Before You Forget
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+          Your brain moves fast. Your note app should too. Voice in, organized out—
+          no friction, no folders, no forgotten brilliance.
+        </p>
+      </div>
+
+      <!-- The ADHD Problem -->
+      <div class="bg-gradient-to-br from-amber-500/10 to-amber-500/5 border border-amber-500/20 
+                  rounded-2xl p-8 mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6">
+          Sound familiar?
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="text-amber-400 text-xl">💡</span>
+              <p class="text-zinc-300">Brilliant idea in the shower... gone by the time you dry off</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-amber-400 text-xl">🚗</span>
+              <p class="text-zinc-300">Perfect solution while driving... what was it again?</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-amber-400 text-xl">📝</span>
+              <p class="text-zinc-300">Hundreds of notes across 5 apps... can't find any of them</p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="text-amber-400 text-xl">⏰</span>
+              <p class="text-zinc-300">"I'll organize my notes later"... narrator: they never did</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-amber-400 text-xl">🔄</span>
+              <p class="text-zinc-300">Set up a new system... abandoned it two weeks later</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-amber-400 text-xl">😤</span>
+              <p class="text-zinc-300">Know you had the perfect idea for this... somewhere</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why Thoughtmarks Works for ADHD -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-8 text-center">
+          Why Thoughtmarks Works for ADHD Brains
+        </h2>
+        
+        <div class="grid gap-6">
+          <!-- Feature 1 -->
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">
+                  5-Second Capture
+                </h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  "Hey Siri, add a Thoughtmark" → speak your idea → done. No app to open, 
+                  no screen to unlock, no decision about where to save it. Your thought is captured 
+                  before your ADHD brain can switch contexts.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Zero Organization Required
+                </h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  No folders to create. No tags to remember. No "where should this go?" paralysis. 
+                  AI automatically understands what your note is about and connects it to related ideas. 
+                  You just dump thoughts—it handles the rest.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Find It When You Half-Remember
+                </h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  "That thing about... habits? And compound interest? From like a month ago?" 
+                  Semantic search finds your notes by meaning, not exact words. 
+                  Because ADHD brains remember concepts, not specific phrases.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">
+                  Works With Your Impulses
+                </h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  Thought while walking? Capture from your Apple Watch. 
+                  Driving? Siri handles it hands-free. 
+                  In bed? No blinding screens—just voice. 
+                  Capture anywhere, anytime, without breaking your flow.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">
+                  AI Finds Connections You Missed
+                </h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  ADHD brains make incredible leaps—but sometimes forget to connect the dots. 
+                  Thoughtmarks AI surfaces related ideas you captured weeks ago. 
+                  That shower thought? It connects to that podcast insight, which connects to your project idea.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison with other approaches -->
+      <div class="mb-16 bg-zinc-900/50 border border-zinc-800 rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-6">
+          ADHD-Friendly vs ADHD-Hostile
+        </h2>
+        <div class="overflow-x-auto">
+          <table class="w-full">
+            <thead>
+              <tr class="border-b border-zinc-800">
+                <th class="text-left py-3 px-4 text-zinc-400 font-semibold">Approach</th>
+                <th class="text-center py-3 px-4 text-red-400 font-semibold">ADHD-Hostile</th>
+                <th class="text-center py-3 px-4 text-accent font-semibold">Thoughtmarks</th>
+              </tr>
+            </thead>
+            <tbody class="text-zinc-300">
+              <tr class="border-b border-zinc-800/50">
+                <td class="py-3 px-4">Capture Time</td>
+                <td class="py-3 px-4 text-center text-red-300">30+ seconds</td>
+                <td class="py-3 px-4 text-center text-accent font-semibold">5 seconds</td>
+              </tr>
+              <tr class="border-b border-zinc-800/50">
+                <td class="py-3 px-4">Hands Required</td>
+                <td class="py-3 px-4 text-center text-red-300">Both hands</td>
+                <td class="py-3 px-4 text-center text-accent font-semibold">Hands-free</td>
+              </tr>
+              <tr class="border-b border-zinc-800/50">
+                <td class="py-3 px-4">Organization</td>
+                <td class="py-3 px-4 text-center text-red-300">Manual (never happens)</td>
+                <td class="py-3 px-4 text-center text-accent font-semibold">Automatic</td>
+              </tr>
+              <tr class="border-b border-zinc-800/50">
+                <td class="py-3 px-4">Finding Notes</td>
+                <td class="py-3 px-4 text-center text-red-300">Exact keyword match</td>
+                <td class="py-3 px-4 text-center text-accent font-semibold">Meaning-based search</td>
+              </tr>
+              <tr class="border-b border-zinc-800/50">
+                <td class="py-3 px-4">Setup Required</td>
+                <td class="py-3 px-4 text-center text-red-300">Hours of templates</td>
+                <td class="py-3 px-4 text-center text-accent font-semibold">Zero</td>
+              </tr>
+              <tr>
+                <td class="py-3 px-4">Maintenance</td>
+                <td class="py-3 px-4 text-center text-red-300">Constant organizing</td>
+                <td class="py-3 px-4 text-center text-accent font-semibold">None</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Testimonial placeholder -->
+      <div class="mb-16 bg-zinc-900/50 border border-zinc-800 rounded-xl p-8 text-center">
+        <p class="text-xl text-zinc-300 italic mb-4">
+          "I've tried every note app. Notion, Obsidian, Apple Notes, Roam. 
+          I set them up, use them for a week, then forget they exist. 
+          Thoughtmarks is the first one that actually works with my brain instead of against it."
+        </p>
+        <p class="text-zinc-500">
+          — Early beta tester with ADHD
+        </p>
+      </div>
+
+      <!-- Final CTA -->
+      <div class="text-center bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">
+          Stop losing your best ideas
+        </h2>
+        <p class="text-zinc-400 mb-6 max-w-xl mx-auto">
+          Join the waitlist. 14-day free trial. $5/week, $15/month, or $60/year. 
+          Built for the way your brain actually works.
+        </p>
+        <WaitlistCTA variant="primary" size="lg" client:load data-track-cta="for-adhd-cta" data-cta-location="use-case-page">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          Join the Waitlist
+        </WaitlistCTA>
+        <p class="text-sm text-zinc-500 mt-4">
+          iOS + Apple Watch. Your ideas, captured.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+

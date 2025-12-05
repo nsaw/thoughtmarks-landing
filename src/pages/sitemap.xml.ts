@@ -8,6 +8,13 @@ const pages = [
   { url: '/', priority: 1.0, changefreq: 'weekly' },
   { url: '/waitlist', priority: 0.9, changefreq: 'weekly' },
   { url: '/blog', priority: 0.7, changefreq: 'weekly' },
+  // Comparison pages (high-intent SEO)
+  { url: '/vs/voicenotes', priority: 0.8, changefreq: 'monthly' },
+  { url: '/vs/notion', priority: 0.8, changefreq: 'monthly' },
+  // Use case pages (persona-specific)
+  { url: '/for/adhd', priority: 0.8, changefreq: 'monthly' },
+  { url: '/for/creatives', priority: 0.8, changefreq: 'monthly' },
+  // Legal & support
   { url: '/legal/privacy', priority: 0.3, changefreq: 'monthly' },
   { url: '/legal/terms', priority: 0.3, changefreq: 'monthly' },
   { url: '/legal/eula', priority: 0.3, changefreq: 'monthly' },

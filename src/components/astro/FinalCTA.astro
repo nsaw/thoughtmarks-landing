@@ -40,21 +40,48 @@ import WaitlistCTA from '../react/WaitlistCTA';
         </p>
       </div>
 
-      <!-- Trust signals -->
-      <div class="flex flex-wrap justify-center gap-8 pt-8 border-t border-border">
-        <div class="text-center">
-          <p class="text-2xl font-bold text-text-primary">Free</p>
-          <p class="text-sm text-text-muted">14-day trial</p>
+      <!-- Pricing Teaser -->
+      <div class="pt-8 border-t border-border">
+        <p class="text-sm text-text-muted mb-6">After your 14-day free trial</p>
+        <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+          <!-- Weekly -->
+          <div class="bg-bg-primary/50 border border-border rounded-xl p-4 min-w-[120px] text-center">
+            <p class="text-2xl font-black text-text-primary">$5</p>
+            <p class="text-sm text-text-muted">per week</p>
+            <p class="text-xs text-text-muted mt-1">Try it out</p>
+          </div>
+          <!-- Monthly -->
+          <div class="bg-bg-primary/50 border border-border rounded-xl p-4 min-w-[120px] text-center">
+            <p class="text-2xl font-black text-text-primary">$15</p>
+            <p class="text-sm text-text-muted">per month</p>
+            <p class="text-xs text-text-muted mt-1">Most flexible</p>
+          </div>
+          <!-- Annual - Highlighted -->
+          <div class="bg-accent/10 border-2 border-accent rounded-xl p-4 min-w-[120px] text-center relative">
+            <span class="absolute -top-2.5 left-1/2 -translate-x-1/2 bg-accent text-black text-xs font-bold px-2 py-0.5 rounded-full">
+              Best value
+            </span>
+            <p class="text-2xl font-black text-accent">$60</p>
+            <p class="text-sm text-text-muted">per year</p>
+            <p class="text-xs text-accent mt-1">Save 67%</p>
+          </div>
         </div>
-        <div class="text-center">
-          <p class="text-2xl font-bold text-text-primary">Secure</p>
-          <p class="text-sm text-text-muted">End-to-end encrypted</p>
-        </div>
-        <div class="text-center">
-          <p class="text-2xl font-bold text-text-primary">Private</p>
-          <p class="text-sm text-text-muted">Your data stays yours</p>
-        </div>
+      </div>
 
+      <!-- Trust signals -->
+      <div class="flex flex-wrap justify-center gap-8 pt-6">
+        <div class="text-center">
+          <p class="text-lg font-bold text-text-primary">🔒 Secure</p>
+          <p class="text-xs text-text-muted">End-to-end encrypted</p>
+        </div>
+        <div class="text-center">
+          <p class="text-lg font-bold text-text-primary">🛡️ Private</p>
+          <p class="text-xs text-text-muted">Your data stays yours</p>
+        </div>
+        <div class="text-center">
+          <p class="text-lg font-bold text-text-primary">⌚ Apple Watch</p>
+          <p class="text-xs text-text-muted">Full companion app</p>
+        </div>
       </div>
     </div>
   </div>

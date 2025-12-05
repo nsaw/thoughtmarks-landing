@@ -1,0 +1,240 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+
+const comparisonData = [
+  { feature: 'Weekly Price', thoughtmarks: '$5/week', competitor: 'N/A', advantage: 'thoughtmarks' },
+  { feature: 'Monthly Price', thoughtmarks: '$15/month', competitor: '$14.99/month', advantage: 'tie' },
+  { feature: 'Annual Price', thoughtmarks: '$60/year', competitor: '$99.99/year', advantage: 'thoughtmarks' },
+  { feature: 'Free Trial', thoughtmarks: '14 days', competitor: '7 days', advantage: 'thoughtmarks' },
+  { feature: 'Voice Capture', thoughtmarks: '✓', competitor: '✓', advantage: 'tie' },
+  { feature: 'Siri Integration', thoughtmarks: '✓ Deep integration', competitor: 'Basic', advantage: 'thoughtmarks' },
+  { feature: 'Apple Watch App', thoughtmarks: '✓ Full companion app', competitor: '✓', advantage: 'thoughtmarks' },
+  { feature: 'AI Transcription', thoughtmarks: '✓', competitor: '✓', advantage: 'tie' },
+  { feature: 'Auto-Organization', thoughtmarks: '✓ No manual tagging', competitor: 'Manual folders', advantage: 'thoughtmarks' },
+  { feature: 'Semantic Search', thoughtmarks: '✓ Search by meaning', competitor: 'Keyword only', advantage: 'thoughtmarks' },
+  { feature: 'Idea Connections', thoughtmarks: '✓ AI-discovered links', competitor: 'Manual linking', advantage: 'thoughtmarks' },
+  { feature: 'Meeting Transcription', thoughtmarks: 'Notes focus', competitor: '✓ Meeting focus', advantage: 'competitor' },
+  { feature: 'Android Support', thoughtmarks: 'Coming soon', competitor: '✓', advantage: 'competitor' },
+  { feature: 'Windows Support', thoughtmarks: 'Coming soon', competitor: '✓', advantage: 'competitor' },
+  { feature: 'Chrome Extension', thoughtmarks: 'Coming soon', competitor: '✓', advantage: 'competitor' },
+  { feature: 'Privacy (No AI Training)', thoughtmarks: '✓ Never', competitor: 'Unclear', advantage: 'thoughtmarks' },
+  { feature: 'End-to-End Encryption', thoughtmarks: '✓', competitor: 'Partial', advantage: 'thoughtmarks' },
+];
+---
+
+<BaseLayout
+  title="Thoughtmarks vs Voicenotes: Which Voice Note App is Right for You?"
+  description="Compare Thoughtmarks and Voicenotes side-by-side. See pricing, features, and which AI voice notes app is best for capturing and organizing your ideas."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <div class="container-narrow">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          Comparison Guide
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          Thoughtmarks vs Voicenotes
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+          Both apps help you capture voice notes. But which one is better for 
+          <em>catching ideas</em> vs <em>transcribing meetings</em>?
+        </p>
+      </div>
+
+      <!-- Quick Verdict -->
+      <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 
+                  rounded-2xl p-8 mb-16">
+        <h2 class="text-2xl font-bold text-white mb-4">
+          The Quick Verdict
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold text-accent mb-2">Choose Thoughtmarks if:</h3>
+            <ul class="space-y-2 text-zinc-300">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You capture random ideas throughout the day</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You want AI to organize without manual effort</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You need to search by meaning, not exact words</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You're all-in on Apple ecosystem (iPhone + Watch)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Flexible pricing ($5/week or $60/year)</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-zinc-400 mb-2">Choose Voicenotes if:</h3>
+            <ul class="space-y-2 text-zinc-400">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-zinc-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You need to transcribe long meetings</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-zinc-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You need Android or Windows support today</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-zinc-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You want a Chrome browser extension</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-zinc-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You prefer organizing notes manually</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Detailed Comparison Table -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6">
+          Feature-by-Feature Comparison
+        </h2>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="border-b border-zinc-800">
+                <th class="text-left py-4 px-4 text-zinc-400 font-semibold">Feature</th>
+                <th class="text-center py-4 px-4 text-accent font-semibold">Thoughtmarks</th>
+                <th class="text-center py-4 px-4 text-zinc-400 font-semibold">Voicenotes</th>
+              </tr>
+            </thead>
+            <tbody>
+              {comparisonData.map((row, index) => (
+                <tr class={`border-b border-zinc-800/50 ${row.advantage === 'thoughtmarks' ? 'bg-accent/5' : ''}`}>
+                  <td class="py-4 px-4 text-zinc-300 font-medium">{row.feature}</td>
+                  <td class={`py-4 px-4 text-center ${row.advantage === 'thoughtmarks' ? 'text-accent font-semibold' : 'text-zinc-400'}`}>
+                    {row.thoughtmarks}
+                  </td>
+                  <td class={`py-4 px-4 text-center ${row.advantage === 'competitor' ? 'text-white font-semibold' : 'text-zinc-400'}`}>
+                    {row.competitor}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Key Differences Deep Dive -->
+      <div class="space-y-12 mb-16">
+        <h2 class="text-2xl font-bold text-white">
+          Key Differences Explained
+        </h2>
+
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-white mb-3">
+            1. Purpose: Idea Capture vs Meeting Transcription
+          </h3>
+          <p class="text-zinc-300 leading-relaxed mb-4">
+            <strong class="text-white">Voicenotes</strong> is primarily designed for transcribing meetings and long-form audio. 
+            It's great if you spend a lot of time in meetings and need accurate transcripts.
+          </p>
+          <p class="text-zinc-300 leading-relaxed">
+            <strong class="text-accent">Thoughtmarks</strong> is built for capturing quick ideas throughout your day—shower thoughts, 
+            driving insights, walking epiphanies. It's optimized for the "I need to capture this NOW before I forget" moments, 
+            not hour-long recordings.
+          </p>
+        </div>
+
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-white mb-3">
+            2. Organization: Manual vs Automatic
+          </h3>
+          <p class="text-zinc-300 leading-relaxed mb-4">
+            <strong class="text-white">Voicenotes</strong> uses traditional folders and manual organization. 
+            You decide where each note goes.
+          </p>
+          <p class="text-zinc-300 leading-relaxed">
+            <strong class="text-accent">Thoughtmarks</strong> uses AI to automatically tag, categorize, and link your notes. 
+            You never have to think about organization—just capture. The AI finds connections you might have missed.
+          </p>
+        </div>
+
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-white mb-3">
+            3. Search: Keywords vs Meaning
+          </h3>
+          <p class="text-zinc-300 leading-relaxed mb-4">
+            <strong class="text-white">Voicenotes</strong> searches for exact words. If you don't remember the specific 
+            words you used, you might not find what you're looking for.
+          </p>
+          <p class="text-zinc-300 leading-relaxed">
+            <strong class="text-accent">Thoughtmarks</strong> uses semantic search—it understands meaning. 
+            Search for "that thing about habits and compound interest" and find your note even if you never used those exact words.
+          </p>
+        </div>
+
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-white mb-3">
+            4. Price: Flexible vs One-Size-Fits-All
+          </h3>
+          <p class="text-zinc-300 leading-relaxed">
+            <strong class="text-accent">Thoughtmarks</strong> offers flexible pricing: try it for $5/week, 
+            go monthly at $15/month, or save 67% with annual at $60/year. Voicenotes only offers 
+            monthly ($14.99) or annual ($99.99). Our annual plan saves you 40% compared to theirs.
+          </p>
+        </div>
+      </div>
+
+      <!-- Final CTA -->
+      <div class="text-center bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">
+          Ready to try the idea capture approach?
+        </h2>
+        <p class="text-zinc-400 mb-6 max-w-xl mx-auto">
+          Join the waitlist for Thoughtmarks. 14-day free trial, then just $5/week, 
+          $15/month, or $60/year. No commitments, cancel anytime.
+        </p>
+        <WaitlistCTA variant="primary" size="lg" client:load data-track-cta="vs-voicenotes-cta" data-cta-location="comparison-page">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          Join the Waitlist
+        </WaitlistCTA>
+        <p class="text-sm text-zinc-500 mt-4">
+          Available on iOS with Apple Watch companion app.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+

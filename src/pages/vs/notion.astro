@@ -1,0 +1,281 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+
+const comparisonData = [
+  { feature: 'Weekly Price', thoughtmarks: '$5/week', competitor: 'N/A', advantage: 'thoughtmarks' },
+  { feature: 'Monthly Price', thoughtmarks: '$15/month', competitor: 'Free + $10/month', advantage: 'tie' },
+  { feature: 'Annual Price', thoughtmarks: '$60/year', competitor: '$96/year', advantage: 'thoughtmarks' },
+  { feature: 'Setup Time', thoughtmarks: '0 minutes', competitor: 'Hours to days', advantage: 'thoughtmarks' },
+  { feature: 'Learning Curve', thoughtmarks: 'None', competitor: 'Steep', advantage: 'thoughtmarks' },
+  { feature: 'Voice Capture', thoughtmarks: '✓ Native Siri integration', competitor: 'Limited', advantage: 'thoughtmarks' },
+  { feature: 'Hands-Free Recording', thoughtmarks: '✓ Hey Siri', competitor: '✗', advantage: 'thoughtmarks' },
+  { feature: 'Apple Watch App', thoughtmarks: '✓ Full app', competitor: '✗', advantage: 'thoughtmarks' },
+  { feature: 'Auto-Organization', thoughtmarks: '✓ AI handles it', competitor: 'Manual only', advantage: 'thoughtmarks' },
+  { feature: 'Semantic Search', thoughtmarks: '✓ Search by meaning', competitor: 'Keyword only', advantage: 'thoughtmarks' },
+  { feature: 'Databases', thoughtmarks: '✗', competitor: '✓', advantage: 'competitor' },
+  { feature: 'Team Collaboration', thoughtmarks: 'Personal use', competitor: '✓ Teams', advantage: 'competitor' },
+  { feature: 'Project Management', thoughtmarks: '✗', competitor: '✓', advantage: 'competitor' },
+  { feature: 'Wikis', thoughtmarks: '✗', competitor: '✓', advantage: 'competitor' },
+  { feature: 'Templates', thoughtmarks: 'Auto-generated', competitor: '✓ 1000s', advantage: 'competitor' },
+  { feature: 'Privacy', thoughtmarks: '✓ E2E encrypted', competitor: 'Server-side', advantage: 'thoughtmarks' },
+  { feature: 'Offline Mode', thoughtmarks: '✓ Full', competitor: 'Limited', advantage: 'thoughtmarks' },
+  { feature: 'Mobile-First', thoughtmarks: '✓ Native iOS', competitor: 'Web-first', advantage: 'thoughtmarks' },
+];
+---
+
+<BaseLayout
+  title="Thoughtmarks vs Notion: Simple Idea Capture vs Everything Workspace"
+  description="Compare Thoughtmarks and Notion for note-taking. If you're drowning in Notion's complexity or just want to capture ideas fast, see which app is right for you."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <div class="container-narrow">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          Comparison Guide
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          Thoughtmarks vs Notion
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+          Notion does everything. Thoughtmarks does one thing brilliantly: 
+          <em>capture ideas before they disappear</em>.
+        </p>
+      </div>
+
+      <!-- Quick Verdict -->
+      <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 
+                  rounded-2xl p-8 mb-16">
+        <h2 class="text-2xl font-bold text-white mb-4">
+          The Quick Verdict
+        </h2>
+        <div class="bg-zinc-900/50 rounded-xl p-6 mb-6">
+          <p class="text-lg text-zinc-300 leading-relaxed">
+            <span class="text-white font-bold">Notion</span> is a powerful all-in-one workspace—databases, wikis, project management, 
+            team collaboration. It's incredible if you have time to set it up and maintain it.
+          </p>
+          <p class="text-lg text-zinc-300 leading-relaxed mt-4">
+            <span class="text-accent font-bold">Thoughtmarks</span> is for people who just want to capture ideas 
+            without the homework. No setup. No templates. No decision fatigue. Just speak and go.
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold text-accent mb-2">Choose Thoughtmarks if:</h3>
+            <ul class="space-y-2 text-zinc-300">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You've set up Notion 5 times and abandoned it 5 times</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You want to capture ideas while driving, walking, or cooking</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You hate deciding where to file things</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You want something that just works on day one</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-accent mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Personal note-taking, not team collaboration</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-zinc-400 mb-2">Choose Notion if:</h3>
+            <ul class="space-y-2 text-zinc-400">
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-zinc-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You need databases and relational data</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-zinc-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You work with a team and need shared workspaces</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-zinc-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You enjoy building elaborate systems</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-zinc-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You need project management features</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <svg class="w-5 h-5 text-zinc-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>You want an all-in-one workspace</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- The Real Problem -->
+      <div class="mb-16 bg-zinc-900/50 border border-zinc-800 rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">
+          The Notion Problem Nobody Talks About
+        </h2>
+        <p class="text-zinc-300 leading-relaxed mb-4">
+          Notion is powerful. Maybe too powerful. For every person who builds an amazing "second brain" in Notion, 
+          there are ten who:
+        </p>
+        <ul class="space-y-3 text-zinc-300 mb-6">
+          <li class="flex items-start gap-3">
+            <span class="text-amber-400">•</span>
+            Spent weeks setting up the perfect template, then never used it
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-amber-400">•</span>
+            Have a "Capture" page with 500 unsorted items
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-amber-400">•</span>
+            Can't find that note from 3 weeks ago because it's in the wrong database
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-amber-400">•</span>
+            Feel guilty every time they open the app because of their organizational debt
+          </li>
+        </ul>
+        <p class="text-accent font-semibold">
+          Thoughtmarks exists for these people. The ones who don't want a productivity hobby—they just want to remember their ideas.
+        </p>
+      </div>
+
+      <!-- Detailed Comparison Table -->
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6">
+          Feature Comparison
+        </h2>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="border-b border-zinc-800">
+                <th class="text-left py-4 px-4 text-zinc-400 font-semibold">Feature</th>
+                <th class="text-center py-4 px-4 text-accent font-semibold">Thoughtmarks</th>
+                <th class="text-center py-4 px-4 text-zinc-400 font-semibold">Notion</th>
+              </tr>
+            </thead>
+            <tbody>
+              {comparisonData.map((row) => (
+                <tr class={`border-b border-zinc-800/50 ${row.advantage === 'thoughtmarks' ? 'bg-accent/5' : ''}`}>
+                  <td class="py-4 px-4 text-zinc-300 font-medium">{row.feature}</td>
+                  <td class={`py-4 px-4 text-center ${row.advantage === 'thoughtmarks' ? 'text-accent font-semibold' : 'text-zinc-400'}`}>
+                    {row.thoughtmarks}
+                  </td>
+                  <td class={`py-4 px-4 text-center ${row.advantage === 'competitor' ? 'text-white font-semibold' : 'text-zinc-400'}`}>
+                    {row.competitor}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Key Differences Deep Dive -->
+      <div class="space-y-12 mb-16">
+        <h2 class="text-2xl font-bold text-white">
+          Why They're Actually Different Tools
+        </h2>
+
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-white mb-3">
+            Notion is a Canvas. Thoughtmarks is a Net.
+          </h3>
+          <p class="text-zinc-300 leading-relaxed mb-4">
+            <strong class="text-white">Notion</strong> gives you a blank canvas. You can build anything—
+            but you have to build it. It's a construction tool.
+          </p>
+          <p class="text-zinc-300 leading-relaxed">
+            <strong class="text-accent">Thoughtmarks</strong> is a net that catches ideas falling out of your head. 
+            It's not about building systems—it's about not losing thoughts. The AI handles the organization 
+            so you can stay in creative mode.
+          </p>
+        </div>
+
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-white mb-3">
+            The Capture Problem
+          </h3>
+          <p class="text-zinc-300 leading-relaxed mb-4">
+            Great ideas don't come when you're at your computer. They come in the shower, 
+            while driving, during a walk, in conversations.
+          </p>
+          <p class="text-zinc-300 leading-relaxed mb-4">
+            <strong class="text-white">Notion</strong> requires you to: open app → navigate to right page → type → tag → organize. 
+            By the time you're done, you've either forgotten the idea or broken your flow.
+          </p>
+          <p class="text-zinc-300 leading-relaxed">
+            <strong class="text-accent">Thoughtmarks</strong> is: "Hey Siri, add a Thoughtmark" → speak → done. 
+            5 seconds. Hands-free. AI handles the rest.
+          </p>
+        </div>
+
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-white mb-3">
+            Can You Use Both?
+          </h3>
+          <p class="text-zinc-300 leading-relaxed">
+            Absolutely. Many people use <strong class="text-accent">Thoughtmarks</strong> as their idea capture layer—
+            the quick-capture tool for raw thoughts. Then periodically process them into 
+            <strong class="text-white">Notion</strong> for deeper organization and project management. 
+            Capture fast, organize later.
+          </p>
+        </div>
+      </div>
+
+      <!-- Final CTA -->
+      <div class="text-center bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">
+          Tired of your notes app being homework?
+        </h2>
+        <p class="text-zinc-400 mb-6 max-w-xl mx-auto">
+          Try the effortless approach to idea capture. 14-day free trial, then $5/week, 
+          $15/month, or $60/year. No setup required.
+        </p>
+        <WaitlistCTA variant="primary" size="lg" client:load data-track-cta="vs-notion-cta" data-cta-location="comparison-page">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          Join the Waitlist
+        </WaitlistCTA>
+        <p class="text-sm text-zinc-500 mt-4">
+          Available on iOS with Apple Watch companion app.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</BaseLayout>
+
