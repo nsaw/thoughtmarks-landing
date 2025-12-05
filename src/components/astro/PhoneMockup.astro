@@ -24,6 +24,7 @@ const { src, alt, class: className = '', priority = false } = Astro.props;
           alt={alt}
           class="phone-screenshot"
           loading={priority ? 'eager' : 'lazy'}
+          fetchpriority={priority ? 'high' : 'auto'}
         />
       </div>
       

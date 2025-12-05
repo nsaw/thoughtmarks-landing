@@ -12,11 +12,12 @@ interface Props {
 const {
   title = 'Thoughtmarks | Bookmarks for Your Brain',
   description = 'Capture ideas at the speed of life. Voice-first note capture with AI organization. Never forget to remember again.',
-  image = '/assets/thoughtmarks-share-square.jpg',
+  image = 'https://thoughtmarksapp.com/assets/thoughtmarks-share-square.jpg',
   canonicalURL = Astro.url.href,
 } = Astro.props;
 
 const siteTitle = title.includes('Thoughtmarks') ? title : `${title} | Thoughtmarks`;
+const absoluteImage = image.startsWith('http') ? image : `https://thoughtmarksapp.com${image}`;
 ---
 
 <!DOCTYPE html>
@@ -30,6 +31,7 @@ const siteTitle = title.includes('Thoughtmarks') ? title : `${title} | Thoughtma
     <title>{siteTitle}</title>
     <meta name="title" content={siteTitle} />
     <meta name="description" content={description} />
+    <meta name="keywords" content="note taking app, voice notes, idea capture, voice to text, second brain, knowledge management, AI notes, voice recorder, productivity app, note organization" />
     <link rel="canonical" href={canonicalURL} />
     
     <!-- Favicon -->
@@ -41,15 +43,18 @@ const siteTitle = title.includes('Thoughtmarks') ? title : `${title} | Thoughtma
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={siteTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    <meta property="og:image" content={absoluteImage} />
     <meta property="og:site_name" content="Thoughtmarks" />
+    <meta property="og:locale" content="en_US" />
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={siteTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
+    <meta name="twitter:image" content={absoluteImage} />
+    <meta name="twitter:site" content="@thoughtmarks" />
+    <meta name="twitter:creator" content="@thoughtmarks" />
     
     <!-- App-specific meta -->
     <meta name="apple-mobile-web-app-title" content="Thoughtmarks" />
@@ -58,25 +63,60 @@ const siteTitle = title.includes('Thoughtmarks') ? title : `${title} | Thoughtma
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="theme-color" content="#09090B" />
     
-    <!-- Preconnect to external resources -->
+    <!-- App Store Smart Banner (READY FOR LAUNCH - Uncomment and add App ID) -->
+    <!-- <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID, app-argument=https://thoughtmarksapp.com"> -->
+    
+    <!-- Preconnect and preload critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://us.i.posthog.com" />
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Thoughtmarks",
-        "applicationCategory": "ProductivityApplication",
-        "operatingSystem": "iOS",
-        "description": "Voice-first note capture with AI organization. Capture ideas at the speed of life.",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "Thoughtmarks",
+          "applicationCategory": "ProductivityApplication",
+          "operatingSystem": "iOS",
+          "description": "Voice-first note capture with AI organization. Capture ideas at the speed of life.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Thoughtmarks",
+          "url": "https://thoughtmarksapp.com",
+          "logo": "https://thoughtmarksapp.com/assets/AppIcon.png",
+          "description": "Thoughtmarks helps you capture and organize your best ideas at the speed of life with voice-first note taking and AI organization.",
+          "sameAs": [
+            "https://twitter.com/thoughtmarks",
+            "https://instagram.com/thoughtmarks"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "support@thoughtmarks.app",
+            "contactType": "Customer Support"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Thoughtmarks",
+          "url": "https://thoughtmarksapp.com",
+          "description": "Bookmarks for your brain. Capture ideas at the speed of life.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://thoughtmarksapp.com/?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
         }
-      }
+      ]
     </script>
     
     <!-- PostHog Analytics -->
@@ -88,6 +128,45 @@ const siteTitle = title.includes('Thoughtmarks') ? title : `${title} | Thoughtma
         capture_pageview: true,
         capture_pageleave: true,
         autocapture: true,
+        capture_performance: true,
+        session_recording: {
+          maskAllInputs: false,
+          maskInputOptions: { password: true, email: true }
+        }
+      });
+
+      // Scroll depth tracking
+      let maxScroll = 0;
+      const scrollThresholds = [25, 50, 75, 100];
+      window.addEventListener('scroll', function() {
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = scrollHeight > 0 ? Math.round((window.scrollY / scrollHeight) * 100) : 0;
+        
+        scrollThresholds.forEach(function(threshold) {
+          if (scrollPercent >= threshold && maxScroll < threshold) {
+            maxScroll = threshold;
+            posthog.capture('scroll_depth', { depth: threshold });
+          }
+        });
+      });
+
+      // Time on page tracking
+      let pageLoadTime = Date.now();
+      window.addEventListener('beforeunload', function() {
+        const timeOnPage = Math.round((Date.now() - pageLoadTime) / 1000);
+        posthog.capture('time_on_page', { seconds: timeOnPage });
+      });
+
+      // CTA click tracking
+      document.addEventListener('click', function(e) {
+        const target = e.target.closest('[data-track-cta]');
+        if (target) {
+          posthog.capture('cta_click', {
+            cta_name: target.getAttribute('data-track-cta'),
+            cta_location: target.getAttribute('data-cta-location') || 'unknown',
+            cta_text: target.textContent.trim()
+          });
+        }
       });
     </script>
   </head>

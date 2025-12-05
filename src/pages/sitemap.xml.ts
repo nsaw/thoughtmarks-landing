@@ -7,6 +7,7 @@ const SITE_URL = 'https://thoughtmarksapp.com';
 const pages = [
   { url: '/', priority: 1.0, changefreq: 'weekly' },
   { url: '/waitlist', priority: 0.9, changefreq: 'weekly' },
+  { url: '/blog', priority: 0.7, changefreq: 'weekly' },
   { url: '/legal/privacy', priority: 0.3, changefreq: 'monthly' },
   { url: '/legal/terms', priority: 0.3, changefreq: 'monthly' },
   { url: '/legal/eula', priority: 0.3, changefreq: 'monthly' },

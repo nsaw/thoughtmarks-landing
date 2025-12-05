@@ -1,0 +1,151 @@
+---
+const faqs = [
+  {
+    question: "How much does Thoughtmarks cost?",
+    answer: "Thoughtmarks offers a 14-day free trial with no credit card required. After that, it's a simple subscription model. We'll announce pricing details closer to launch."
+  },
+  {
+    question: "What platforms does Thoughtmarks support?",
+    answer: "Thoughtmarks is currently available on iOS and includes an Apple Watch companion app. We're planning Android and web versions based on user feedback."
+  },
+  {
+    question: "How does voice capture work?",
+    answer: "Thoughtmarks integrates with Siri for hands-free voice capture. Just say 'Hey Siri, add a Thoughtmark' and speak your idea. We use advanced transcription to convert your voice into text instantly."
+  },
+  {
+    question: "Is my data private and secure?",
+    answer: "Absolutely. Your thoughts stay yours. All data is encrypted end-to-end, stored securely, and never used to train AI models or sold to third parties. You can export or delete your data anytime."
+  },
+  {
+    question: "How does AI organization work?",
+    answer: "Thoughtmarks uses AI to automatically tag, categorize, and link your notes based on meaning and context. It finds connections you might miss and suggests related content to explore. No manual filing required."
+  },
+  {
+    question: "Can I use Thoughtmarks offline?",
+    answer: "Yes! Capture works offline and syncs automatically when you're back online. Your most recent thoughtmarks are cached locally for quick access."
+  },
+  {
+    question: "What happens to my data if I cancel?",
+    answer: "You own your data. Before canceling, you can export everything in standard formats (JSON, Markdown). After cancellation, your data is retained for 30 days then permanently deleted."
+  },
+  {
+    question: "Can I import notes from other apps?",
+    answer: "Yes! Thoughtmarks supports importing from popular note-taking apps including Apple Notes, Notion, Evernote, and plain text/Markdown files."
+  }
+];
+
+// Generate JSON-LD FAQPage schema
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
+---
+
+<section id="faq" class="section relative overflow-hidden">
+  <!-- Background accent -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-1/4 right-0 w-[500px] h-[500px] rounded-full 
+                bg-gradient-to-l from-accent/5 to-transparent blur-3xl"></div>
+  </div>
+
+  <div class="container-narrow relative z-10">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+        Questions? We've got answers.
+      </h2>
+      <p class="text-xl text-zinc-400">
+        Everything you need to know about Thoughtmarks.
+      </p>
+    </div>
+
+    <!-- FAQ Accordion -->
+    <div class="space-y-4">
+      {faqs.map((faq, index) => (
+        <details 
+          class="group bg-zinc-900/50 border border-zinc-800 rounded-xl 
+                 hover:border-zinc-700 transition-colors overflow-hidden"
+        >
+          <summary 
+            class="flex items-center justify-between px-6 py-5 cursor-pointer 
+                   select-none list-none"
+          >
+            <h3 class="text-lg font-semibold text-white pr-8">
+              {faq.question}
+            </h3>
+            <svg 
+              class="w-5 h-5 text-zinc-400 transition-transform group-open:rotate-180 flex-shrink-0" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </summary>
+          <div class="px-6 pb-5">
+            <p class="text-zinc-300 leading-relaxed">
+              {faq.answer}
+            </p>
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <!-- Still have questions CTA -->
+    <div class="mt-12 text-center">
+      <p class="text-zinc-400 mb-4">
+        Still have questions? We're here to help.
+      </p>
+      <a 
+        href="mailto:support@thoughtmarks.app" 
+        class="inline-flex items-center gap-2 text-accent hover:text-accent-hover 
+               font-semibold transition-colors"
+      >
+        Contact Support
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FAQ Schema Markup -->
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+</section>
+
+<style>
+  /* Remove default disclosure triangle */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  summary::marker {
+    display: none;
+  }
+
+  /* Smooth accordion animation */
+  details[open] summary ~ * {
+    animation: slideDown 0.2s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+

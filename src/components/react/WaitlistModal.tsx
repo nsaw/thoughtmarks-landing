@@ -9,11 +9,51 @@ interface WaitlistModalProps {
 
 type FormState = 'idle' | 'submitting' | 'success' | 'error';
 
+interface UTMParams {
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utm_term?: string;
+  utm_content?: string;
+}
+
+// Capture and persist UTM parameters
+function getUTMParams(): UTMParams {
+  if (typeof window === 'undefined') return {};
+  
+  // Check localStorage first
+  const stored = localStorage.getItem('tm_utm');
+  if (stored) {
+    try {
+      return JSON.parse(stored);
+    } catch {}
+  }
+  
+  // Parse from URL
+  const params = new URLSearchParams(window.location.search);
+  const utm: UTMParams = {};
+  
+  ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach(key => {
+    const value = params.get(key);
+    if (value) {
+      utm[key as keyof UTMParams] = value;
+    }
+  });
+  
+  // Store if found
+  if (Object.keys(utm).length > 0) {
+    localStorage.setItem('tm_utm', JSON.stringify(utm));
+  }
+  
+  return utm;
+}
+
 export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [formState, setFormState] = useState<FormState>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+  const [utmParams] = useState<UTMParams>(getUTMParams());
   const modalRef = useRef<HTMLDivElement>(null);
   const emailInputRef = useRef<HTMLInputElement>(null);
 
@@ -85,6 +125,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
           email: email.trim(),
           name: name.trim() || undefined,
           source: 'landing-modal',
+          ...utmParams,
         }),
       });
 
@@ -100,6 +141,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
         (window as unknown as { posthog: { capture: (event: string, props: Record<string, string>) => void } }).posthog.capture('waitlist_signup', {
           source: 'landing-modal',
           email_domain: email.split('@')[1] || 'unknown',
+          ...utmParams,
         });
       }
       
@@ -238,6 +280,8 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="text-red-400 text-sm"
+                        role="alert"
+                        aria-live="polite"
                       >
                         {errorMessage}
                       </motion.p>

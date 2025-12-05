@@ -1,0 +1,21 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "TEAMID.com.thoughtmarks.app",
+        "paths": [
+          "/app/*",
+          "/thoughtmark/*",
+          "/bin/*"
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "TEAMID.com.thoughtmarks.app"
+    ]
+  }
+}
+
