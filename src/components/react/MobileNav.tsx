@@ -19,6 +19,7 @@ const compareLinks: NavLink[] = [
 ];
 
 const useCaseLinks: NavLink[] = [
+  { label: 'For Humans', href: '/for/humans' },
   { label: 'For ADHD', href: '/for/adhd' },
   { label: 'For Creatives', href: '/for/creatives' },
   { label: 'For Students', href: '/for/students' },

@@ -15,6 +15,7 @@ const pages = [
   { url: '/vs/obsidian', priority: 0.8, changefreq: 'monthly' },
   
   // Use case pages (persona-specific)
+  { url: '/for/humans', priority: 0.8, changefreq: 'monthly' },
   { url: '/for/adhd', priority: 0.8, changefreq: 'monthly' },
   { url: '/for/creatives', priority: 0.8, changefreq: 'monthly' },
   { url: '/for/students', priority: 0.8, changefreq: 'monthly' },

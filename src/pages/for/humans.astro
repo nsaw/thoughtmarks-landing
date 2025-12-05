@@ -1,0 +1,236 @@
+---
+// src/pages/for/humans.astro
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+---
+
+<BaseLayout
+  title="Thoughtmarks for Humans: Ideas Happen Everywhere"
+  description="For podcast lovers, bookworms, dog walkers, busy parents, and forgetful trophy husbands. Capture ideas whenever life hands them to you."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <div class="container-narrow">
+      <div class="text-center mb-16">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          For Humans
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          Ideas Don't Care About Your Schedule
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+          Whether you're walking the dog, stuck in carpool, or half-asleep at 2am—
+          brilliance strikes when it strikes. Catch it.
+        </p>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-8 text-center">You Know Who You Are</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          
+          <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <span class="text-4xl">🎧</span>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Podcast Lovers</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  That guest just dropped a life-changing book recommendation. 
+                  Or a business idea. Or a quote you need to remember. 
+                  You're driving. Hands on wheel, idea in brain—speak it, save it.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <span class="text-4xl">📚</span>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Bookworms</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  Page 247 just connected to something you read six months ago. 
+                  You'll never find this page again. Capture the insight now—
+                  AI will connect it to your other reading notes later.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <span class="text-4xl">🐕</span>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Dog Walkers</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  Walking is thinking. Your dog doesn't care about your epiphany—
+                  they found a squirrel. Quick capture from your watch or AirPods 
+                  while maintaining plausible deniability with the neighbors.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <span class="text-4xl">👨‍👩‍👧‍👦</span>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Busy Parents</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  You have 47 seconds between "Mom, watch this!" and the next 
+                  crisis. Ideas arrive during chaos. Capture in three words, 
+                  expand later when the house is quiet (so... never, but at least it's saved).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-rose-500/10 to-pink-500/10 border border-rose-500/20 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <span class="text-4xl">🏆</span>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Forgetful Trophy Husbands</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  She mentioned the anniversary dinner reservation. 
+                  And her friend's name. And where she put the car keys. 
+                  You were definitely listening. Capture it before you have to ask again.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-violet-500/10 to-indigo-500/10 border border-violet-500/20 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <span class="text-4xl">🚿</span>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Shower Thinkers</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  The best ideas happen when you're wet, naked, and can't type. 
+                  "Hey Siri, add a Thoughtmark" works from in there. 
+                  Waterproof Apple Watch optional but highly recommended.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-yellow-500/10 to-amber-500/10 border border-yellow-500/20 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <span class="text-4xl">🚗</span>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Commuters</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  The highway is where you solve problems your desk couldn't. 
+                  CarPlay, AirPods, locked phone—speak your idea, eyes on road, 
+                  arrive smarter than you left.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gradient-to-br from-slate-500/10 to-zinc-500/10 border border-slate-500/20 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <span class="text-4xl">🌙</span>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">2am Philosophers</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  Can't sleep because you just solved climate change. 
+                  Or remembered you forgot to email Gary. 
+                  Whisper to your phone, don't wake the household, 
+                  review your genius in the morning (or discover it was nonsense).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16 bg-zinc-900/50 border border-zinc-800 rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-6 text-center">The Universal Truth</h2>
+        <p class="text-lg text-zinc-300 text-center max-w-2xl mx-auto leading-relaxed">
+          You're not forgetful. You're not disorganized. You're just <em>human</em>—
+          and humans have ideas at inconvenient times. The solution isn't better memory. 
+          It's faster capture.
+        </p>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-8 text-center">How It Works for Real Life</h2>
+        <div class="grid gap-6">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-accent font-bold text-xl">1</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Idea Happens</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  Walking the dog. Waiting in line. Watching your kid's soccer game. 
+                  Falling asleep. That's when it hits.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-accent font-bold text-xl">2</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Speak It</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  "Hey Siri, add a Thoughtmark" or tap your Apple Watch. 
+                  Three seconds, hands-free. Done.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-accent font-bold text-xl">3</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">AI Handles the Rest</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  Transcribed, tagged, categorized, connected to your other ideas. 
+                  You didn't organize anything. It just works.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-accent font-bold text-xl">4</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Find It Later</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  "That book from the podcast" or "anniversary dinner thing"—
+                  semantic search finds what you half-remember. No exact words needed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">For humans. By humans who forget stuff too.</h2>
+        <p class="text-zinc-400 mb-6 max-w-xl mx-auto">
+          14-day free trial. $5/week, $15/month, or $60/year. 
+          Works wherever life happens.
+        </p>
+        <WaitlistCTA variant="primary" size="lg" client:load />
+        <p class="text-sm text-zinc-500 mt-4">iOS + Apple Watch. Your ideas, captured.</p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+
