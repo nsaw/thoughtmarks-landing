@@ -1,16 +1,50 @@
 ---
+// src/pages/blog/index.astro
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Nav from '@/components/astro/Nav.astro';
 import Footer from '@/components/astro/Footer.astro';
 
-// Note: This is a placeholder. Implement content collections when ready to publish blog posts.
 const posts = [
   {
-    title: "Coming Soon",
-    slug: "coming-soon",
-    description: "Blog posts will appear here soon.",
-    date: "2024-12-05"
-  }
+    title: "The Complete Guide to Capturing Ideas (Before You Forget Them)",
+    slug: "capturing-ideas-complete-guide",
+    description: "Why we forget our best ideas, the science behind idea capture, and practical systems to never lose a great thought again.",
+    date: "2024-12-01",
+    category: "Idea Capture",
+    readTime: "12 min"
+  },
+  {
+    title: "Second Brain Apps Compared: 2024 Ultimate Guide",
+    slug: "second-brain-apps-compared",
+    description: "Notion vs Obsidian vs Roam vs Apple Notes vs Thoughtmarks. The honest comparison of PKM and second brain apps.",
+    date: "2024-12-01",
+    category: "Tools & Reviews",
+    readTime: "15 min"
+  },
+  {
+    title: "Voice Notes vs Typing: What Science Says About Idea Capture",
+    slug: "voice-notes-vs-typing",
+    description: "Speaking is 3x faster than typing and preserves the flow of thought. The science behind why voice capture is better for ideas.",
+    date: "2024-12-01",
+    category: "Science & Research",
+    readTime: "8 min"
+  },
+  {
+    title: "ADHD Productivity: Tools That Actually Work",
+    slug: "adhd-productivity-tools",
+    description: "Not another productivity system that makes you feel broken. Tools and techniques designed for how ADHD brains actually function.",
+    date: "2024-12-01",
+    category: "ADHD & Productivity",
+    readTime: "10 min"
+  },
+  {
+    title: "How AI is Changing Note-Taking Forever",
+    slug: "ai-changing-note-taking",
+    description: "From manual filing to automatic organization. From keyword search to semantic understanding. The AI revolution in personal knowledge management.",
+    date: "2024-12-01",
+    category: "AI & Technology",
+    readTime: "9 min"
+  },
 ];
 ---
 
@@ -22,7 +56,6 @@ const posts = [
   
   <main class="min-h-screen pt-32 pb-20">
     <div class="container-narrow">
-      <!-- Header -->
       <div class="text-center mb-16">
         <p class="tagline-script text-2xl sm:text-3xl mb-4">
           insights & ideas
@@ -35,34 +68,39 @@ const posts = [
         </p>
       </div>
 
-      <!-- Posts Grid (Placeholder) -->
-      <div class="space-y-8">
-        <div class="text-center py-20 bg-zinc-900/50 border border-zinc-800 rounded-2xl">
-          <svg class="w-16 h-16 mx-auto mb-6 text-zinc-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-          </svg>
-          <h2 class="text-2xl font-bold text-white mb-3">
-            Coming Soon
-          </h2>
-          <p class="text-zinc-400 mb-8">
-            We're working on some great content. Check back soon!
-          </p>
+      <div class="space-y-6">
+        {posts.map((post) => (
           <a 
-            href="/"
-            class="inline-flex items-center gap-2 px-6 py-3 bg-accent text-white 
-                   rounded-xl hover:bg-accent-hover transition-colors font-semibold"
+            href={`/blog/${post.slug}`}
+            class="block bg-zinc-900/50 border border-zinc-800 rounded-2xl p-6 sm:p-8
+                   hover:border-accent/50 hover:bg-zinc-900/70 transition-all duration-200 group"
           >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
-            </svg>
-            Back to Home
+            <div class="flex flex-wrap items-center gap-3 mb-4">
+              <span class="text-accent text-xs font-semibold uppercase tracking-wider">
+                {post.category}
+              </span>
+              <span class="text-zinc-600">•</span>
+              <span class="text-zinc-500 text-sm">{post.date}</span>
+              <span class="text-zinc-600">•</span>
+              <span class="text-zinc-500 text-sm">{post.readTime}</span>
+            </div>
+            <h2 class="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-accent transition-colors">
+              {post.title}
+            </h2>
+            <p class="text-zinc-400 leading-relaxed">
+              {post.description}
+            </p>
+            <div class="mt-4 flex items-center gap-2 text-accent text-sm font-semibold">
+              <span>Read more</span>
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </div>
           </a>
-        </div>
+        ))}
       </div>
     </div>
   </main>
 
   <Footer />
 </BaseLayout>
-

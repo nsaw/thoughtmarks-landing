@@ -1,0 +1,297 @@
+---
+// src/pages/blog/second-brain-apps-compared.astro
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+
+const publishDate = '2024-12-01';
+const readTime = '15 min read';
+---
+
+<BaseLayout
+  title="Second Brain Apps Compared: 2024 Ultimate Guide"
+  description="Notion vs Obsidian vs Roam vs Apple Notes vs Thoughtmarks. The honest comparison of PKM and second brain apps. Find the right tool for how you actually think."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <article class="container-narrow">
+      <header class="mb-12">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          Tools & Reviews
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          Second Brain Apps Compared: 2024 Ultimate Guide
+        </h1>
+        <div class="flex items-center gap-4 text-zinc-400 text-sm">
+          <time datetime={publishDate}>December 1, 2024</time>
+          <span>•</span>
+          <span>{readTime}</span>
+        </div>
+      </header>
+
+      <div class="prose prose-invert prose-lg max-w-none">
+        <p class="text-xl text-zinc-300 leading-relaxed">
+          "Building a second brain" has become a cottage industry. Notion, Obsidian, Roam, Logseq, 
+          Apple Notes, and now AI-powered newcomers. But which tool actually helps you think better? 
+          Here's the honest breakdown.
+        </p>
+
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 my-8">
+          <h3 class="text-lg font-bold text-white mb-3">Quick Navigation</h3>
+          <ul class="text-zinc-300 space-y-1">
+            <li><a href="#notion" class="text-accent hover:underline">Notion</a> — The all-in-one workspace</li>
+            <li><a href="#obsidian" class="text-accent hover:underline">Obsidian</a> — The graph-based PKM</li>
+            <li><a href="#roam" class="text-accent hover:underline">Roam Research</a> — The original backlinker</li>
+            <li><a href="#apple-notes" class="text-accent hover:underline">Apple Notes</a> — The default choice</li>
+            <li><a href="#thoughtmarks" class="text-accent hover:underline">Thoughtmarks</a> — The capture-first approach</li>
+            <li><a href="#verdict" class="text-accent hover:underline">The Verdict</a> — Which to choose?</li>
+          </ul>
+        </div>
+
+        <h2 id="notion" class="text-2xl font-bold text-white mt-12 mb-4">Notion</h2>
+        
+        <p class="text-zinc-300 leading-relaxed">
+          Notion wants to be everything: notes, wikis, databases, project management, docs. 
+          And it's remarkably good at being everything—which is both its strength and weakness.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 my-6">
+          <div class="bg-zinc-900/50 border border-green-500/20 rounded-xl p-4">
+            <h4 class="text-green-400 font-bold mb-2">✓ Strengths</h4>
+            <ul class="text-zinc-300 text-sm space-y-1">
+              <li>• Extremely flexible</li>
+              <li>• Great for structured data</li>
+              <li>• Beautiful templates</li>
+              <li>• Team collaboration</li>
+              <li>• Database views</li>
+            </ul>
+          </div>
+          <div class="bg-zinc-900/50 border border-red-500/20 rounded-xl p-4">
+            <h4 class="text-red-400 font-bold mb-2">✗ Weaknesses</h4>
+            <ul class="text-zinc-300 text-sm space-y-1">
+              <li>• Slow on mobile</li>
+              <li>• Steep learning curve</li>
+              <li>• Online-only (mostly)</li>
+              <li>• Can feel overwhelming</li>
+              <li>• Easy to over-engineer</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="text-zinc-300 leading-relaxed">
+          <strong class="text-white">Best for:</strong> People who want one tool for everything and don't mind spending 
+          time setting it up. Teams. Documentation. Project management with notes attached.
+        </p>
+        <p class="text-zinc-300 leading-relaxed">
+          <strong class="text-white">Not for:</strong> Quick capture. Mobile-first workflows. People who want simple.
+        </p>
+
+        <h2 id="obsidian" class="text-2xl font-bold text-white mt-12 mb-4">Obsidian</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Obsidian is the darling of the PKM (Personal Knowledge Management) community. 
+          Local-first, markdown-based, endlessly customizable with plugins. The graph view 
+          makes you feel like a genius.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 my-6">
+          <div class="bg-zinc-900/50 border border-green-500/20 rounded-xl p-4">
+            <h4 class="text-green-400 font-bold mb-2">✓ Strengths</h4>
+            <ul class="text-zinc-300 text-sm space-y-1">
+              <li>• Local-first (own your data)</li>
+              <li>• Pure markdown files</li>
+              <li>• Powerful backlinks</li>
+              <li>• 1000+ plugins</li>
+              <li>• Graph visualization</li>
+              <li>• Free (sync is paid)</li>
+            </ul>
+          </div>
+          <div class="bg-zinc-900/50 border border-red-500/20 rounded-xl p-4">
+            <h4 class="text-red-400 font-bold mb-2">✗ Weaknesses</h4>
+            <ul class="text-zinc-300 text-sm space-y-1">
+              <li>• Steep learning curve</li>
+              <li>• Plugin rabbit hole</li>
+              <li>• Mobile app is okay, not great</li>
+              <li>• No native voice capture</li>
+              <li>• Manual linking/organizing</li>
+              <li>• Can become a hobby itself</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="text-zinc-300 leading-relaxed">
+          <strong class="text-white">Best for:</strong> Tinkerers. People who enjoy building systems. 
+          Writers who think in connections. Privacy-conscious users.
+        </p>
+        <p class="text-zinc-300 leading-relaxed">
+          <strong class="text-white">Not for:</strong> People who want capture without configuration. 
+          Those who get lost in productivity porn.
+        </p>
+
+        <h2 id="roam" class="text-2xl font-bold text-white mt-12 mb-4">Roam Research</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Roam pioneered bidirectional linking in mainstream note-taking. The daily notes 
+          format and block references were revolutionary. It built a cult following—and a 
+          $200/year price tag.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 my-6">
+          <div class="bg-zinc-900/50 border border-green-500/20 rounded-xl p-4">
+            <h4 class="text-green-400 font-bold mb-2">✓ Strengths</h4>
+            <ul class="text-zinc-300 text-sm space-y-1">
+              <li>• Block-level references</li>
+              <li>• Powerful queries</li>
+              <li>• Daily notes workflow</li>
+              <li>• Passionate community</li>
+            </ul>
+          </div>
+          <div class="bg-zinc-900/50 border border-red-500/20 rounded-xl p-4">
+            <h4 class="text-red-400 font-bold mb-2">✗ Weaknesses</h4>
+            <ul class="text-zinc-300 text-sm space-y-1">
+              <li>• Expensive ($200/year)</li>
+              <li>• Steep learning curve</li>
+              <li>• Cloud-only</li>
+              <li>• Slow development recently</li>
+              <li>• No mobile app (web only)</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="text-zinc-300 leading-relaxed">
+          <strong class="text-white">Best for:</strong> Researchers. People who think in connections. 
+          Heavy outliners. True believers in networked thought.
+        </p>
+        <p class="text-zinc-300 leading-relaxed">
+          <strong class="text-white">Not for:</strong> Budget-conscious users. Mobile-first workflows. 
+          Quick capture needs.
+        </p>
+
+        <h2 id="apple-notes" class="text-2xl font-bold text-white mt-12 mb-4">Apple Notes</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          The default that ships on every Apple device. Simple, fast, syncs automatically. 
+          Don't underestimate it—Apple Notes is genuinely useful.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 my-6">
+          <div class="bg-zinc-900/50 border border-green-500/20 rounded-xl p-4">
+            <h4 class="text-green-400 font-bold mb-2">✓ Strengths</h4>
+            <ul class="text-zinc-300 text-sm space-y-1">
+              <li>• Free and pre-installed</li>
+              <li>• Fast and reliable</li>
+              <li>• Seamless Apple sync</li>
+              <li>• Supports rich media</li>
+              <li>• Good search</li>
+              <li>• No setup required</li>
+            </ul>
+          </div>
+          <div class="bg-zinc-900/50 border border-red-500/20 rounded-xl p-4">
+            <h4 class="text-red-400 font-bold mb-2">✗ Weaknesses</h4>
+            <ul class="text-zinc-300 text-sm space-y-1">
+              <li>• Basic organization (folders only)</li>
+              <li>• No backlinks/connections</li>
+              <li>• Limited formatting</li>
+              <li>• Apple ecosystem only</li>
+              <li>• Voice memos are separate</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="text-zinc-300 leading-relaxed">
+          <strong class="text-white">Best for:</strong> Simple needs. Shopping lists to project notes. 
+          People who don't want to think about their notes app.
+        </p>
+        <p class="text-zinc-300 leading-relaxed">
+          <strong class="text-white">Not for:</strong> Knowledge management. Finding connections. 
+          Advanced organization.
+        </p>
+
+        <h2 id="thoughtmarks" class="text-2xl font-bold text-white mt-12 mb-4">Thoughtmarks</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Full disclosure: we built this. But here's the honest take. Thoughtmarks is different—
+          it's capture-first, not organization-first. Voice input, AI organization, semantic search. 
+          The anti-Obsidian.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 my-6">
+          <div class="bg-zinc-900/50 border border-green-500/20 rounded-xl p-4">
+            <h4 class="text-green-400 font-bold mb-2">✓ Strengths</h4>
+            <ul class="text-zinc-300 text-sm space-y-1">
+              <li>• Voice-first capture</li>
+              <li>• AI auto-organization</li>
+              <li>• Semantic (meaning-based) search</li>
+              <li>• Apple Watch app</li>
+              <li>• Siri integration</li>
+              <li>• Zero setup required</li>
+            </ul>
+          </div>
+          <div class="bg-zinc-900/50 border border-red-500/20 rounded-xl p-4">
+            <h4 class="text-red-400 font-bold mb-2">✗ Weaknesses</h4>
+            <ul class="text-zinc-300 text-sm space-y-1">
+              <li>• iOS only (for now)</li>
+              <li>• Less customizable</li>
+              <li>• No graph view</li>
+              <li>• New (smaller community)</li>
+              <li>• Paid ($60/year)</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="text-zinc-300 leading-relaxed">
+          <strong class="text-white">Best for:</strong> People who hate organizing but love capturing. 
+          Voice-first workflows. Apple Watch users. ADHD brains.
+        </p>
+        <p class="text-zinc-300 leading-relaxed">
+          <strong class="text-white">Not for:</strong> Android users. People who want full control over organization. 
+          Graph visualization enthusiasts.
+        </p>
+
+        <h2 id="verdict" class="text-2xl font-bold text-white mt-12 mb-4">The Verdict: How to Choose</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          There's no "best" second brain app—only the best one for how you actually work. 
+          Ask yourself:
+        </p>
+
+        <div class="space-y-4 my-8">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">"I want to build elaborate systems"</p>
+            <p class="text-zinc-400">→ Obsidian or Notion</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">"I want quick capture without thinking"</p>
+            <p class="text-zinc-400">→ Thoughtmarks or Apple Notes</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">"I want team collaboration"</p>
+            <p class="text-zinc-400">→ Notion</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">"I want AI to handle organization"</p>
+            <p class="text-zinc-400">→ Thoughtmarks</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">"I want free and simple"</p>
+            <p class="text-zinc-400">→ Apple Notes</p>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-xl p-8 my-12">
+          <h3 class="text-xl font-bold text-white mb-4">Try Thoughtmarks Free</h3>
+          <p class="text-zinc-300 mb-6">
+            If capture-first sounds right for you, give Thoughtmarks a try. 
+            14-day free trial, voice capture, AI organization, semantic search.
+          </p>
+          <WaitlistCTA variant="primary" size="lg" client:load />
+          <p class="text-sm text-zinc-500 mt-4">$5/week, $15/month, or $60/year after trial.</p>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
+

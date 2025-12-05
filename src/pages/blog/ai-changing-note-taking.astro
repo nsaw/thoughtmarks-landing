@@ -1,0 +1,195 @@
+---
+// src/pages/blog/ai-changing-note-taking.astro
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+
+const publishDate = '2024-12-01';
+const readTime = '9 min read';
+---
+
+<BaseLayout
+  title="How AI is Changing Note-Taking Forever"
+  description="From manual filing to automatic organization. From keyword search to semantic understanding. The AI revolution in personal knowledge management."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <article class="container-narrow">
+      <header class="mb-12">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          AI & Technology
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          How AI is Changing Note-Taking Forever
+        </h1>
+        <div class="flex items-center gap-4 text-zinc-400 text-sm">
+          <time datetime={publishDate}>December 1, 2024</time>
+          <span>•</span>
+          <span>{readTime}</span>
+        </div>
+      </header>
+
+      <div class="prose prose-invert prose-lg max-w-none">
+        <p class="text-xl text-zinc-300 leading-relaxed">
+          For decades, note-taking followed the same pattern: you write it, you file it, you (maybe) 
+          find it later. AI is flipping this paradigm entirely. Here's what's changing and why it matters.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">The Old Paradigm: Human as Organizer</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Traditional note-taking put all the organizational burden on you:
+        </p>
+
+        <ul class="text-zinc-300 space-y-2 my-6">
+          <li>• Choose which folder/notebook</li>
+          <li>• Decide what tags to use</li>
+          <li>• Create titles and headings</li>
+          <li>• Manually link related notes</li>
+          <li>• Remember your filing system months later</li>
+        </ul>
+
+        <p class="text-zinc-300 leading-relaxed">
+          This works fine if you're methodical, consistent, and have time to maintain the system. 
+          For everyone else, it meant notes went into a black hole—captured but effectively lost.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">The New Paradigm: AI as Organizer</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Modern AI changes the equation fundamentally. Instead of you organizing for the computer 
+          to retrieve, the computer organizes for you to retrieve.
+        </p>
+
+        <div class="grid gap-6 my-8">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-accent mb-2">Automatic Tagging</h3>
+            <p class="text-zinc-300">
+              AI reads your note and assigns relevant tags based on content, context, and concepts. 
+              Not just keywords—actual understanding. "Call mom about her birthday" gets tagged 
+              with family, reminders, events—without you lifting a finger.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-accent mb-2">Smart Categorization</h3>
+            <p class="text-zinc-300">
+              Instead of rigid folders, AI creates dynamic categories based on your actual content. 
+              These categories emerge organically from what you capture, not from a system you 
+              have to maintain.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-accent mb-2">Connection Discovery</h3>
+            <p class="text-zinc-300">
+              AI finds relationships between notes you'd never notice. That idea from three months 
+              ago is conceptually related to what you captured today—AI surfaces this connection 
+              automatically.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-accent mb-2">Semantic Search</h3>
+            <p class="text-zinc-300">
+              Search by meaning, not exact words. "That marketing psychology thing" finds your 
+              note about "loss aversion in pricing." You describe what you remember; AI finds 
+              what matches.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">What This Enables</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          These capabilities combine to enable a completely different workflow:
+        </p>
+
+        <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-xl p-6 my-8">
+          <h3 class="text-lg font-bold text-white mb-4">The Capture-First Workflow</h3>
+          <ol class="text-zinc-300 space-y-3">
+            <li><strong class="text-accent">1. Capture everything.</strong> Don't filter, don't organize, just capture. Voice, text, whatever's fastest.</li>
+            <li><strong class="text-accent">2. Trust the system.</strong> AI handles the organization. You don't need to know "where" something went.</li>
+            <li><strong class="text-accent">3. Find by meaning.</strong> When you need something, describe it. Search understands concepts, not just keywords.</li>
+            <li><strong class="text-accent">4. Discover connections.</strong> AI shows you relationships between ideas you'd never have linked yourself.</li>
+          </ol>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">The Technology Behind It</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Three AI technologies make this possible:
+        </p>
+
+        <div class="space-y-6 my-8">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-white mb-2">1. Large Language Models (LLMs)</h3>
+            <p class="text-zinc-300">
+              GPT-4 and similar models understand the meaning and context of text at a near-human 
+              level. They can read a note and understand what it's about, what topics it relates to, 
+              and how it connects to other concepts.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-white mb-2">2. Vector Embeddings</h3>
+            <p class="text-zinc-300">
+              Every piece of text can be converted into a high-dimensional vector that represents 
+              its meaning. Similar ideas have similar vectors, enabling semantic search and 
+              connection discovery based on conceptual similarity.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-white mb-2">3. Speech Recognition</h3>
+            <p class="text-zinc-300">
+              Whisper and similar models transcribe speech with remarkable accuracy. Combined with 
+              LLMs, this enables voice-first capture that's automatically formatted and organized.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">What's Coming Next</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          The AI note-taking revolution is just beginning. Emerging capabilities include:
+        </p>
+
+        <ul class="text-zinc-300 space-y-2 my-6">
+          <li>• <strong class="text-white">Proactive surfacing:</strong> AI that brings relevant past notes to your attention when they become useful</li>
+          <li>• <strong class="text-white">Synthesis:</strong> AI that can summarize and combine insights from across your notes</li>
+          <li>• <strong class="text-white">Question answering:</strong> Ask questions about your own knowledge base and get accurate answers</li>
+          <li>• <strong class="text-white">Predictive tagging:</strong> AI that learns your personal vocabulary and concepts over time</li>
+        </ul>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">The Human Element</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          AI doesn't replace thinking—it amplifies it. By handling the organizational overhead, 
+          AI frees you to focus on what humans do best: having insights, making connections, 
+          and creating new ideas.
+        </p>
+
+        <p class="text-zinc-300 leading-relaxed">
+          The best note-taking AI is invisible. You capture thoughts naturally, AI works in 
+          the background, and when you need something, it's there. No system to maintain, 
+          no organization homework—just you and your ideas.
+        </p>
+
+        <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-xl p-8 my-12">
+          <h3 class="text-xl font-bold text-white mb-4">Experience AI-Powered Note-Taking</h3>
+          <p class="text-zinc-300 mb-6">
+            Thoughtmarks brings these AI capabilities to your everyday idea capture. 
+            Voice-first input, automatic organization, semantic search.
+          </p>
+          <WaitlistCTA variant="primary" size="lg" client:load />
+          <p class="text-sm text-zinc-500 mt-4">14-day free trial. $5/week, $15/month, or $60/year.</p>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
+

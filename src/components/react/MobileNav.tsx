@@ -14,11 +14,15 @@ const navLinks: NavLink[] = [
 const compareLinks: NavLink[] = [
   { label: 'vs Voicenotes', href: '/vs/voicenotes' },
   { label: 'vs Notion', href: '/vs/notion' },
+  { label: 'vs Otter.ai', href: '/vs/otter' },
+  { label: 'vs Obsidian', href: '/vs/obsidian' },
 ];
 
 const useCaseLinks: NavLink[] = [
   { label: 'For ADHD', href: '/for/adhd' },
   { label: 'For Creatives', href: '/for/creatives' },
+  { label: 'For Students', href: '/for/students' },
+  { label: 'For Entrepreneurs', href: '/for/entrepreneurs' },
 ];
 
 export default function MobileNav() {

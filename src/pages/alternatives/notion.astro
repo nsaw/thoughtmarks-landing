@@ -1,0 +1,175 @@
+---
+// src/pages/alternatives/notion.astro
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+---
+
+<BaseLayout
+  title="Best Notion Alternatives for Simple Note Taking (2024)"
+  description="Notion is powerful but overwhelming. Here are the best simpler alternatives for people who just want to capture ideas without the complexity."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <article class="container-narrow">
+      <header class="mb-12">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          Alternatives Guide
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          Best Notion Alternatives for Simple Note Taking
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl">
+          Love the idea of Notion. Overwhelmed by the reality. If you want to capture ideas 
+          without building a workspace empire, here are your best options.
+        </p>
+      </header>
+
+      <div class="prose prose-invert prose-lg max-w-none">
+        <div class="bg-zinc-900/50 border border-amber-500/20 rounded-xl p-6 my-8">
+          <h3 class="text-lg font-bold text-amber-400 mb-3">The Notion Problem</h3>
+          <p class="text-zinc-300">
+            Notion is genuinely powerful. It's also genuinely overwhelming. You open it to 
+            capture a quick thought and end up: creating a database, designing a template, 
+            watching YouTube tutorials on "the perfect Notion setup." 
+            <br/><br/>
+            Three hours later, the thought is gone and you have an elaborate system you'll 
+            never use again.
+          </p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-6">Top Notion Alternatives</h2>
+
+        <div class="space-y-8">
+          <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-xl p-6">
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <h3 class="text-xl font-bold text-accent">1. Thoughtmarks</h3>
+              <span class="bg-accent/20 text-accent text-xs font-bold px-2 py-1 rounded">BEST FOR CAPTURE</span>
+            </div>
+            <p class="text-zinc-300 mb-4">
+              Voice-first capture with AI organization. Speak your ideas, AI handles the filing. 
+              No databases, no templates, no setup. The anti-Notion.
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p class="text-zinc-500 mb-1">Best for:</p>
+                <p class="text-zinc-300">Quick ideas, voice capture, zero setup</p>
+              </div>
+              <div>
+                <p class="text-zinc-500 mb-1">Price:</p>
+                <p class="text-zinc-300">$5/week, $15/month, or $60/year</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">2. Apple Notes</h3>
+            <p class="text-zinc-300 mb-4">
+              Free, fast, and surprisingly capable. If you're in the Apple ecosystem and want 
+              simple notes without any learning curve, Apple Notes just works.
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p class="text-zinc-500 mb-1">Best for:</p>
+                <p class="text-zinc-300">Simple needs, Apple users, free option</p>
+              </div>
+              <div>
+                <p class="text-zinc-500 mb-1">Price:</p>
+                <p class="text-zinc-300">Free</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">3. Bear</h3>
+            <p class="text-zinc-300 mb-4">
+              Beautiful markdown notes with tags and nested tags. More structured than Apple Notes, 
+              less complex than Notion. Great for writers.
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p class="text-zinc-500 mb-1">Best for:</p>
+                <p class="text-zinc-300">Writers, markdown lovers, beautiful design</p>
+              </div>
+              <div>
+                <p class="text-zinc-500 mb-1">Price:</p>
+                <p class="text-zinc-300">$30/year</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">4. Drafts</h3>
+            <p class="text-zinc-300 mb-4">
+              Text starts here. Drafts is built for capture—open it and start typing immediately. 
+              Then send text wherever it needs to go. Great for iOS power users.
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p class="text-zinc-500 mb-1">Best for:</p>
+                <p class="text-zinc-300">Automation fans, quick text capture</p>
+              </div>
+              <div>
+                <p class="text-zinc-500 mb-1">Price:</p>
+                <p class="text-zinc-300">Free / $30/year Pro</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">5. Simplenote</h3>
+            <p class="text-zinc-300 mb-4">
+              Plain text notes, instant sync across everything. No formatting, no features, 
+              no friction. If you want notes and literally nothing else.
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 text-sm">
+              <div>
+                <p class="text-zinc-500 mb-1">Best for:</p>
+                <p class="text-zinc-300">Minimalists, cross-platform users</p>
+              </div>
+              <div>
+                <p class="text-zinc-500 mb-1">Price:</p>
+                <p class="text-zinc-300">Free</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-6">How to Choose</h2>
+
+        <div class="space-y-4 my-8">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">"I want voice capture and zero organization"</p>
+            <p class="text-accent">→ Thoughtmarks</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">"I want free and simple"</p>
+            <p class="text-zinc-400">→ Apple Notes or Simplenote</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">"I want beautiful markdown"</p>
+            <p class="text-zinc-400">→ Bear</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">"I want capture → action workflows"</p>
+            <p class="text-zinc-400">→ Drafts</p>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-xl p-8 my-12">
+          <h3 class="text-xl font-bold text-white mb-4">Try Thoughtmarks</h3>
+          <p class="text-zinc-300 mb-6">
+            If you're leaving Notion because it's too complex, Thoughtmarks is the opposite: 
+            voice-first capture, AI organization, semantic search. Ideas in, organization out.
+          </p>
+          <WaitlistCTA variant="primary" size="lg" client:load />
+          <p class="text-sm text-zinc-500 mt-4">14-day free trial. $5/week, $15/month, or $60/year.</p>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
+

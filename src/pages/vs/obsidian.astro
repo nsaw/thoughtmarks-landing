@@ -1,0 +1,176 @@
+---
+// src/pages/vs/obsidian.astro
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+
+const comparisonData = [
+  { feature: 'Primary Use', thoughtmarks: 'Capture ideas fast', competitor: 'Build knowledge graph', advantage: 'different' },
+  { feature: 'Learning Curve', thoughtmarks: 'None—just speak', competitor: 'Steep (weeks to months)', advantage: 'thoughtmarks' },
+  { feature: 'Setup Time', thoughtmarks: '0 minutes', competitor: 'Hours to customize', advantage: 'thoughtmarks' },
+  { feature: 'Price', thoughtmarks: '$60/year', competitor: 'Free (sync $96/year)', advantage: 'tie' },
+  { feature: 'Voice Capture', thoughtmarks: '✓ Native Siri', competitor: 'Via plugins', advantage: 'thoughtmarks' },
+  { feature: 'Apple Watch', thoughtmarks: '✓ Full app', competitor: '✗', advantage: 'thoughtmarks' },
+  { feature: 'Auto-Organization', thoughtmarks: '✓ AI handles it', competitor: 'Manual linking', advantage: 'thoughtmarks' },
+  { feature: 'Semantic Search', thoughtmarks: '✓ Meaning-based', competitor: 'Keyword + graph', advantage: 'thoughtmarks' },
+  { feature: 'Backlinks', thoughtmarks: 'AI-discovered', competitor: '✓ Manual [[links]]', advantage: 'tie' },
+  { feature: 'Graph View', thoughtmarks: 'Connections view', competitor: '✓ Full graph', advantage: 'competitor' },
+  { feature: 'Plugins', thoughtmarks: 'Built-in AI', competitor: '✓ 1000+ plugins', advantage: 'competitor' },
+  { feature: 'Customization', thoughtmarks: 'Opinionated', competitor: '✓ Unlimited', advantage: 'competitor' },
+  { feature: 'Local-First', thoughtmarks: '✓', competitor: '✓', advantage: 'tie' },
+  { feature: 'Markdown', thoughtmarks: 'Auto-formatted', competitor: '✓ Pure markdown', advantage: 'competitor' },
+  { feature: 'Mobile Experience', thoughtmarks: '✓ Native iOS', competitor: 'Good, not great', advantage: 'thoughtmarks' },
+];
+---
+
+<BaseLayout
+  title="Thoughtmarks vs Obsidian: Quick Capture vs Knowledge Graph"
+  description="Compare Thoughtmarks and Obsidian. One catches ideas in seconds, the other builds intricate knowledge systems. Which second brain approach is right for you?"
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <div class="container-narrow">
+      <div class="text-center mb-16">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          Comparison Guide
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          Thoughtmarks vs Obsidian
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+          Obsidian is a vault. Thoughtmarks is a net. Both capture knowledge—
+          but one requires construction, the other just catches.
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-2xl p-8 mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6">The Quick Verdict</h2>
+        <div class="bg-zinc-900/50 rounded-xl p-6 mb-6">
+          <p class="text-lg text-zinc-300 leading-relaxed">
+            <span class="text-white font-bold">Obsidian</span> is a powerful tool for people who love building systems. 
+            Graph views, backlinks, plugins, templates—it's a PKM (Personal Knowledge Management) playground.
+          </p>
+          <p class="text-lg text-zinc-300 leading-relaxed mt-4">
+            <span class="text-accent font-bold">Thoughtmarks</span> is for people who want to capture ideas 
+            without becoming a productivity YouTuber. No setup, no graph anxiety—just speak and forget about organizing.
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold text-accent mb-2">Choose Thoughtmarks if:</h3>
+            <ul class="space-y-2 text-zinc-300">
+              <li class="flex items-start gap-2">
+                <span class="text-accent">✓</span>
+                <span>You want capture without configuration</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent">✓</span>
+                <span>You've abandoned Obsidian setups before</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent">✓</span>
+                <span>You need voice-first, hands-free capture</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent">✓</span>
+                <span>You prefer AI organization over manual linking</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-zinc-400 mb-2">Choose Obsidian if:</h3>
+            <ul class="space-y-2 text-zinc-400">
+              <li class="flex items-start gap-2">
+                <span class="text-zinc-500">✓</span>
+                <span>You enjoy building knowledge systems</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-zinc-500">✓</span>
+                <span>You want full control and customization</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-zinc-500">✓</span>
+                <span>You love plugins and workflows</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-zinc-500">✓</span>
+                <span>Graph views spark joy for you</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16 bg-zinc-900/50 border border-zinc-800 rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-6">The Obsidian Paradox</h2>
+        <p class="text-zinc-300 leading-relaxed mb-4">
+          Obsidian is incredibly powerful. It's also a rabbit hole. For every person who builds 
+          a beautiful, functioning second brain, there are many more who:
+        </p>
+        <ul class="space-y-3 text-zinc-300 mb-6">
+          <li class="flex items-start gap-3">
+            <span class="text-amber-400">•</span>
+            Spent more time configuring than capturing
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-amber-400">•</span>
+            Watched hours of "my Obsidian workflow" videos
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-amber-400">•</span>
+            Started over with a "better system" multiple times
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-amber-400">•</span>
+            Feel guilty looking at their graph with no connections
+          </li>
+        </ul>
+        <p class="text-accent font-semibold">
+          Thoughtmarks exists for people who'd rather capture ideas than optimize capture systems.
+        </p>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6">Feature Comparison</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="border-b border-zinc-800">
+                <th class="text-left py-4 px-4 text-zinc-400 font-semibold">Feature</th>
+                <th class="text-center py-4 px-4 text-accent font-semibold">Thoughtmarks</th>
+                <th class="text-center py-4 px-4 text-zinc-400 font-semibold">Obsidian</th>
+              </tr>
+            </thead>
+            <tbody>
+              {comparisonData.map((row) => (
+                <tr class={`border-b border-zinc-800/50 ${row.advantage === 'thoughtmarks' ? 'bg-accent/5' : ''}`}>
+                  <td class="py-4 px-4 text-zinc-300 font-medium">{row.feature}</td>
+                  <td class={`py-4 px-4 text-center ${row.advantage === 'thoughtmarks' ? 'text-accent font-semibold' : 'text-zinc-400'}`}>
+                    {row.thoughtmarks}
+                  </td>
+                  <td class={`py-4 px-4 text-center ${row.advantage === 'competitor' ? 'text-white font-semibold' : 'text-zinc-400'}`}>
+                    {row.competitor}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="text-center bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Ready for capture without the homework?</h2>
+        <p class="text-zinc-400 mb-6 max-w-xl mx-auto">
+          14-day free trial. $5/week, $15/month, or $60/year. No plugins required.
+        </p>
+        <WaitlistCTA variant="primary" size="lg" client:load />
+        <p class="text-sm text-zinc-500 mt-4">iOS + Apple Watch. Works on day one.</p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+

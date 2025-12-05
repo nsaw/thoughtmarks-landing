@@ -1,0 +1,260 @@
+---
+// src/pages/blog/capturing-ideas-complete-guide.astro
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+
+const publishDate = '2024-12-01';
+const readTime = '12 min read';
+---
+
+<BaseLayout
+  title="The Complete Guide to Capturing Ideas (Before You Forget Them)"
+  description="Why we forget our best ideas, the science behind idea capture, and practical systems to never lose a great thought again. A comprehensive guide."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <article class="container-narrow">
+      <header class="mb-12">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          Idea Capture
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          The Complete Guide to Capturing Ideas (Before You Forget Them)
+        </h1>
+        <div class="flex items-center gap-4 text-zinc-400 text-sm">
+          <time datetime={publishDate}>December 1, 2024</time>
+          <span>•</span>
+          <span>{readTime}</span>
+        </div>
+      </header>
+
+      <div class="prose prose-invert prose-lg max-w-none">
+        <p class="text-xl text-zinc-300 leading-relaxed">
+          You've had the experience. A brilliant idea strikes—in the shower, while driving, falling asleep—and 
+          by the time you could write it down, it's gone. Vapor. Like it never existed. This guide will change that.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">Why We Forget Our Best Ideas</h2>
+        
+        <p class="text-zinc-300 leading-relaxed">
+          The human brain isn't designed to hold onto ideas. It's designed to <em>have</em> them. 
+          Working memory—the mental notepad where new ideas live—can only hold 4-7 items for about 20 seconds 
+          before they start fading.
+        </p>
+        
+        <p class="text-zinc-300 leading-relaxed">
+          This isn't a bug; it's a feature. Your brain is constantly filtering, deciding what deserves 
+          long-term storage and what can be discarded. The problem? It's terrible at distinguishing 
+          "brilliant startup idea" from "remember to buy milk."
+        </p>
+
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 my-8">
+          <h3 class="text-lg font-bold text-white mb-3">The Forgetting Curve</h3>
+          <p class="text-zinc-300">
+            Hermann Ebbinghaus discovered that we forget approximately:
+          </p>
+          <ul class="text-zinc-300 mt-3 space-y-2">
+            <li>• <strong class="text-white">50%</strong> of new information within an hour</li>
+            <li>• <strong class="text-white">70%</strong> within 24 hours</li>
+            <li>• <strong class="text-white">90%</strong> within a week (if not reinforced)</li>
+          </ul>
+          <p class="text-zinc-400 mt-3 text-sm">
+            Your brilliant shower thought has about 60 seconds before it starts dissolving.
+          </p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">The Science of Idea Capture</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Capturing an idea externally—writing it down, speaking it aloud, recording it—does two things:
+        </p>
+
+        <ol class="text-zinc-300 space-y-4 my-6">
+          <li>
+            <strong class="text-white">1. It creates a retrieval cue.</strong> Your brain can now associate 
+            the idea with the act of capturing it, making it more likely to be consolidated into long-term memory.
+          </li>
+          <li>
+            <strong class="text-white">2. It frees working memory.</strong> Once externalized, your brain 
+            stops trying to hold onto the idea, freeing cognitive resources for the next thought.
+          </li>
+        </ol>
+
+        <p class="text-zinc-300 leading-relaxed">
+          This is why prolific thinkers throughout history have been obsessive note-takers. 
+          Darwin, da Vinci, Edison—all carried notebooks everywhere. They understood that ideas 
+          are fleeting, but captured ideas compound.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">The Capture Gap Problem</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          The time between having an idea and capturing it is the "capture gap." 
+          The longer this gap, the lower your chances of preserving the idea intact.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-4 my-8">
+          <div class="bg-zinc-900/50 border border-green-500/30 rounded-xl p-4 text-center">
+            <p class="text-2xl font-bold text-green-400">0-5 sec</p>
+            <p class="text-zinc-400 text-sm">~95% retention</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-amber-500/30 rounded-xl p-4 text-center">
+            <p class="text-2xl font-bold text-amber-400">5-30 sec</p>
+            <p class="text-zinc-400 text-sm">~70% retention</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-red-500/30 rounded-xl p-4 text-center">
+            <p class="text-2xl font-bold text-red-400">30+ sec</p>
+            <p class="text-zinc-400 text-sm">~30% retention</p>
+          </div>
+        </div>
+
+        <p class="text-zinc-300 leading-relaxed">
+          This is why traditional note-taking fails. By the time you've unlocked your phone, 
+          opened an app, decided which folder, and started typing... the idea is already degraded.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">The Capture System Framework</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          An effective capture system has three properties:
+        </p>
+
+        <div class="space-y-6 my-8">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-accent mb-2">1. Ubiquity</h3>
+            <p class="text-zinc-300">
+              Available everywhere you have ideas. Shower, car, bed, desk, gym. 
+              If your capture tool isn't there when inspiration strikes, it doesn't exist.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-accent mb-2">2. Frictionlessness</h3>
+            <p class="text-zinc-300">
+              Under 5 seconds from thought to captured. Every second of friction 
+              costs you fidelity. Every tap, swipe, or decision is a leak in your idea bucket.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-accent mb-2">3. Trust</h3>
+            <p class="text-zinc-300">
+              You must trust that captured ideas will be findable later. 
+              A system you don't trust is a system you won't use.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">Capture Methods Compared</h2>
+
+        <div class="overflow-x-auto my-8">
+          <table class="w-full border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-zinc-800">
+                <th class="text-left py-3 px-4 text-zinc-400">Method</th>
+                <th class="text-center py-3 px-4 text-zinc-400">Speed</th>
+                <th class="text-center py-3 px-4 text-zinc-400">Ubiquity</th>
+                <th class="text-center py-3 px-4 text-zinc-400">Trust</th>
+              </tr>
+            </thead>
+            <tbody class="text-zinc-300">
+              <tr class="border-b border-zinc-800/50">
+                <td class="py-3 px-4">Physical notebook</td>
+                <td class="text-center py-3 px-4">Medium</td>
+                <td class="text-center py-3 px-4">Low</td>
+                <td class="text-center py-3 px-4">Low</td>
+              </tr>
+              <tr class="border-b border-zinc-800/50">
+                <td class="py-3 px-4">Notes app (typing)</td>
+                <td class="text-center py-3 px-4">Slow</td>
+                <td class="text-center py-3 px-4">Medium</td>
+                <td class="text-center py-3 px-4">Medium</td>
+              </tr>
+              <tr class="border-b border-zinc-800/50">
+                <td class="py-3 px-4">Voice memo</td>
+                <td class="text-center py-3 px-4">Fast</td>
+                <td class="text-center py-3 px-4">Medium</td>
+                <td class="text-center py-3 px-4">Low</td>
+              </tr>
+              <tr class="border-b border-zinc-800/50 bg-accent/5">
+                <td class="py-3 px-4 font-semibold text-accent">Voice + AI organization</td>
+                <td class="text-center py-3 px-4 text-accent">Fast</td>
+                <td class="text-center py-3 px-4 text-accent">High</td>
+                <td class="text-center py-3 px-4 text-accent">High</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">Practical Implementation</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Here's how to build a capture system that actually works:
+        </p>
+
+        <h3 class="text-xl font-bold text-white mt-8 mb-3">Step 1: Identify Your Idea Zones</h3>
+        <p class="text-zinc-300 leading-relaxed">
+          Where do your best ideas happen? Track for a week. Common zones: shower, commute, 
+          walking, exercising, falling asleep, waking up, during meetings, while reading.
+        </p>
+
+        <h3 class="text-xl font-bold text-white mt-8 mb-3">Step 2: Eliminate Friction</h3>
+        <p class="text-zinc-300 leading-relaxed">
+          For each zone, what's the fastest possible capture method? Can you use voice? 
+          Can you capture without unlocking? Without deciding where to put it?
+        </p>
+
+        <h3 class="text-xl font-bold text-white mt-8 mb-3">Step 3: Build the Habit</h3>
+        <p class="text-zinc-300 leading-relaxed">
+          Capture everything for 2 weeks, even dumb ideas. Volume builds the habit. 
+          The goal isn't to have good ideas—it's to make capturing automatic.
+        </p>
+
+        <h3 class="text-xl font-bold text-white mt-8 mb-3">Step 4: Trust the System</h3>
+        <p class="text-zinc-300 leading-relaxed">
+          Once captured, stop trying to remember. Trust that your system will surface 
+          the idea when you need it. This mental release is crucial.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">The Compound Effect</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Here's what most people miss: ideas compound. That shower thought connects 
+          to something you captured last month, which connects to a book note from last year. 
+          These connections only happen if the ideas are captured and findable.
+        </p>
+
+        <p class="text-zinc-300 leading-relaxed">
+          One captured idea is nice. A thousand captured ideas, connected and searchable, 
+          is a superpower.
+        </p>
+
+        <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-xl p-8 my-12">
+          <h3 class="text-xl font-bold text-white mb-4">Start Capturing Today</h3>
+          <p class="text-zinc-300 mb-6">
+            Thoughtmarks was built for exactly this: voice-first capture, AI organization, 
+            semantic search for finding half-remembered ideas. The system that actually gets used.
+          </p>
+          <WaitlistCTA variant="primary" size="lg" client:load />
+          <p class="text-sm text-zinc-500 mt-4">14-day free trial. $5/week, $15/month, or $60/year.</p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">TL;DR</h2>
+
+        <ul class="text-zinc-300 space-y-2">
+          <li>• Your brain forgets 50% of new ideas within an hour</li>
+          <li>• The capture gap (time to record) determines idea survival</li>
+          <li>• Effective systems are: ubiquitous, frictionless, trustworthy</li>
+          <li>• Voice capture beats typing for speed</li>
+          <li>• AI organization means no filing homework</li>
+          <li>• Captured ideas compound; lost ideas don't</li>
+        </ul>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
+

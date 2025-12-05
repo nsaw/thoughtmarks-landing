@@ -1,0 +1,205 @@
+---
+// src/pages/blog/voice-notes-vs-typing.astro
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+
+const publishDate = '2024-12-01';
+const readTime = '8 min read';
+---
+
+<BaseLayout
+  title="Voice Notes vs Typing: What Science Says About Idea Capture"
+  description="Speaking is 3x faster than typing and preserves the flow of thought. The science behind why voice capture is better for ideas."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <article class="container-narrow">
+      <header class="mb-12">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          Science & Research
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          Voice Notes vs Typing: What Science Says
+        </h1>
+        <div class="flex items-center gap-4 text-zinc-400 text-sm">
+          <time datetime={publishDate}>December 1, 2024</time>
+          <span>•</span>
+          <span>{readTime}</span>
+        </div>
+      </header>
+
+      <div class="prose prose-invert prose-lg max-w-none">
+        <p class="text-xl text-zinc-300 leading-relaxed">
+          You probably type most of your notes. But what if that's actually the wrong tool for 
+          capturing ideas? Here's what research tells us about voice vs. typing for thought capture.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">The Speed Difference</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Let's start with the obvious: speaking is faster than typing. Much faster.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-4 my-8">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 text-center">
+            <p class="text-4xl font-black text-accent mb-2">150</p>
+            <p class="text-zinc-400">Words per minute (speaking)</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 text-center">
+            <p class="text-4xl font-black text-zinc-400 mb-2">40</p>
+            <p class="text-zinc-400">Words per minute (average typing)</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 text-center">
+            <p class="text-4xl font-black text-green-400 mb-2">3.75x</p>
+            <p class="text-zinc-400">Speed advantage</p>
+          </div>
+        </div>
+
+        <p class="text-zinc-300 leading-relaxed">
+          But speed isn't just about efficiency. When capturing fleeting ideas, speed determines 
+          whether you capture the thought intact or just the faded echo of it.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">The Cognitive Load Problem</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Typing requires more cognitive resources than speaking. Think about what your brain 
+          does when you type:
+        </p>
+
+        <ul class="text-zinc-300 space-y-2 my-6">
+          <li>• Hold the thought in working memory</li>
+          <li>• Translate thought to words</li>
+          <li>• Map words to key positions</li>
+          <li>• Execute motor commands</li>
+          <li>• Monitor for errors</li>
+          <li>• Correct mistakes</li>
+        </ul>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Speaking, by contrast, uses pathways that are deeply automatic—you've been doing it 
+          since you were two. The cognitive overhead is dramatically lower, leaving more mental 
+          resources for the actual thinking.
+        </p>
+
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 my-8">
+          <h3 class="text-lg font-bold text-white mb-3">Research Finding</h3>
+          <p class="text-zinc-300">
+            Studies on cognitive load show that dictation preserves more of the original thought 
+            than typing. Typists tend to simplify and shorten their ideas because of the effort 
+            involved—losing nuance in the process.
+          </p>
+          <p class="text-zinc-500 text-sm mt-3">
+            — Kellogg, R.T., "Training writing skills: A cognitive developmental perspective"
+          </p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">Flow State & Thought Fidelity</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Here's something less obvious: typing interrupts the flow of thought in a way speaking doesn't.
+        </p>
+
+        <p class="text-zinc-300 leading-relaxed">
+          When you speak, your thoughts flow continuously. One idea connects to the next naturally. 
+          The transcription happens at the speed of thought.
+        </p>
+
+        <p class="text-zinc-300 leading-relaxed">
+          When you type, each keystroke creates a tiny interruption. Your brain constantly switches 
+          between "what am I thinking?" and "what key do I press?" These micro-interruptions 
+          fragment the thought stream.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 my-8">
+          <div class="bg-zinc-900/50 border border-accent/20 rounded-xl p-6">
+            <h4 class="text-accent font-bold mb-3">Speaking Flow</h4>
+            <p class="text-zinc-400 text-sm font-mono">
+              "So the idea is that if we — and this is related to what I was thinking about 
+              yesterday — if we could somehow make the onboarding more like a conversation 
+              than a form, users would feel more..."
+            </p>
+            <p class="text-zinc-500 text-xs mt-3">Natural, connected, exploratory</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-700 rounded-xl p-6">
+            <h4 class="text-zinc-400 font-bold mb-3">Typing Flow</h4>
+            <p class="text-zinc-400 text-sm font-mono">
+              "Onboarding idea: make it more conversational"
+            </p>
+            <p class="text-zinc-500 text-xs mt-3">Truncated, simplified, lost nuance</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">The Context Capture Advantage</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Voice captures more than words—it captures context. Enthusiasm, uncertainty, emphasis. 
+          When you listen back to a voice note, you remember not just what you thought, but how 
+          you felt about it.
+        </p>
+
+        <p class="text-zinc-300 leading-relaxed">
+          "This is DEFINITELY the solution" lands differently than "this is definitely the solution." 
+          Typed text loses that signal.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">When Typing Wins</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Voice isn't better for everything. Typing has advantages for:
+        </p>
+
+        <ul class="text-zinc-300 space-y-2 my-6">
+          <li>• <strong class="text-white">Structured content:</strong> Tables, lists, formatted documents</li>
+          <li>• <strong class="text-white">Editing:</strong> Revising and refining text</li>
+          <li>• <strong class="text-white">Quiet environments:</strong> Libraries, shared offices</li>
+          <li>• <strong class="text-white">Technical notation:</strong> Code, equations, symbols</li>
+        </ul>
+
+        <p class="text-zinc-300 leading-relaxed">
+          The optimal approach uses voice for capture and typing for editing. Get the raw thought 
+          out at speech speed, refine it later with keyboard precision.
+        </p>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">The Practical Takeaway</h2>
+
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 my-8">
+          <h3 class="text-lg font-bold text-white mb-3">When to Use Voice</h3>
+          <ul class="text-zinc-300 space-y-2">
+            <li>✓ Capturing initial ideas</li>
+            <li>✓ Thinking through problems</li>
+            <li>✓ On the move (walking, driving, commuting)</li>
+            <li>✓ When you need to preserve your train of thought</li>
+            <li>✓ Brainstorming and free association</li>
+          </ul>
+        </div>
+
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6 my-8">
+          <h3 class="text-lg font-bold text-white mb-3">When to Use Typing</h3>
+          <ul class="text-zinc-300 space-y-2">
+            <li>✓ Editing and refining</li>
+            <li>✓ Creating structured documents</li>
+            <li>✓ Quiet environments</li>
+            <li>✓ Technical or formatted content</li>
+            <li>✓ Final outputs (emails, docs, posts)</li>
+          </ul>
+        </div>
+
+        <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-xl p-8 my-12">
+          <h3 class="text-xl font-bold text-white mb-4">Capture Ideas at the Speed of Thought</h3>
+          <p class="text-zinc-300 mb-6">
+            Thoughtmarks is built voice-first—capture ideas 3x faster than typing, 
+            with AI handling the organization so you can focus on thinking.
+          </p>
+          <WaitlistCTA variant="primary" size="lg" client:load />
+          <p class="text-sm text-zinc-500 mt-4">14-day free trial. $5/week, $15/month, or $60/year.</p>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
+

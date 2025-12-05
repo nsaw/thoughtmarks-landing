@@ -1,0 +1,204 @@
+---
+// src/pages/blog/adhd-productivity-tools.astro
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+
+const publishDate = '2024-12-01';
+const readTime = '10 min read';
+---
+
+<BaseLayout
+  title="ADHD Productivity: Tools That Actually Work"
+  description="Not another productivity system that makes you feel broken. Tools and techniques designed for how ADHD brains actually function. From someone who gets it."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <article class="container-narrow">
+      <header class="mb-12">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          ADHD & Productivity
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          ADHD Productivity: Tools That Actually Work
+        </h1>
+        <div class="flex items-center gap-4 text-zinc-400 text-sm">
+          <time datetime={publishDate}>December 1, 2024</time>
+          <span>•</span>
+          <span>{readTime}</span>
+        </div>
+      </header>
+
+      <div class="prose prose-invert prose-lg max-w-none">
+        <p class="text-xl text-zinc-300 leading-relaxed">
+          Most productivity advice is written by neurotypical people for neurotypical people. 
+          "Just write it down!" "Make a list!" "Set a reminder!" As if we haven't tried that 
+          a thousand times. Here's what actually works for ADHD brains.
+        </p>
+
+        <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-6 my-8">
+          <h3 class="text-lg font-bold text-white mb-3">The ADHD Paradox</h3>
+          <p class="text-zinc-300">
+            ADHD doesn't mean you can't focus—it means you can't choose what to focus on. 
+            You have <em>more</em> thoughts than average, not fewer. The problem isn't having ideas; 
+            it's that they arrive at inconvenient times and vanish before you can act on them.
+          </p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">Why Traditional Tools Fail</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Before we talk about what works, let's acknowledge why conventional productivity 
+          tools often don't:
+        </p>
+
+        <div class="space-y-4 my-6">
+          <div class="bg-zinc-900/50 border border-red-500/20 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">❌ "Write it in your notebook"</p>
+            <p class="text-zinc-400 text-sm">Notebook isn't with you. Or you'll lose the notebook. Or you'll start 47 notebooks and never look at any of them again.</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-red-500/20 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">❌ "Organize it in folders"</p>
+            <p class="text-zinc-400 text-sm">Deciding which folder takes so long the idea is gone. Also, you won't remember which folder later.</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-red-500/20 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">❌ "Set a reminder"</p>
+            <p class="text-zinc-400 text-sm">You'll set 50 reminders, ignore all of them, and feel guilty about it.</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-red-500/20 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">❌ "Build a second brain system"</p>
+            <p class="text-zinc-400 text-sm">You'll hyperfocus on building the perfect system for 3 weeks, then abandon it entirely.</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">The ADHD-Friendly Tool Framework</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Tools that actually work for ADHD brains share certain properties:
+        </p>
+
+        <div class="grid gap-6 my-8">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-accent mb-2">1. Zero Decisions Required</h3>
+            <p class="text-zinc-300">
+              Every decision point is a chance to get distracted or give up. The best tools 
+              eliminate choices: one button, one action, done. No "where should this go?" 
+              No "how should I tag this?" Just capture and move on.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-accent mb-2">2. Works in Under 5 Seconds</h3>
+            <p class="text-zinc-300">
+              ADHD working memory is shorter than neurotypical working memory. If your tool 
+              takes 10+ seconds to use, you've lost the thought. Voice capture beats typing 
+              because you can get the idea out before it evaporates.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-accent mb-2">3. Always Within Reach</h3>
+            <p class="text-zinc-300">
+              Shower thoughts. Driving epiphanies. 3am revelations. If the capture tool 
+              isn't there in that moment, the idea is lost. Wearables, voice assistants, 
+              and always-on devices matter more for ADHD than for others.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-accent mb-2">4. Forgives Chaos</h3>
+            <p class="text-zinc-300">
+              Your capture will be messy. Half-sentences, tangents, random observations. 
+              The tool should handle chaos gracefully—ideally, with AI that makes sense 
+              of the mess so you don't have to.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-accent mb-2">5. Finds Things You Half-Remember</h3>
+            <p class="text-zinc-300">
+              "That thing I thought about last week about the project..." ADHD memory is 
+              associative and approximate. Search that requires exact keywords fails. 
+              Semantic search that understands meaning succeeds.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">Tools Worth Trying</h2>
+
+        <div class="space-y-6 my-8">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-white mb-2">For Idea Capture: Voice-First Apps</h3>
+            <p class="text-zinc-300 mb-3">
+              Voice capture is transformative for ADHD. Speaking is faster than typing, 
+              requires less executive function, and preserves the natural flow of thought.
+            </p>
+            <p class="text-accent font-semibold">
+              Try: Thoughtmarks, Otter, Voice Memos (but Thoughtmarks adds AI organization)
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-white mb-2">For Task Management: Body Doubling Apps</h3>
+            <p class="text-zinc-300 mb-3">
+              Working alongside others (even virtually) helps ADHD brains maintain focus. 
+              Body doubling apps create that accountability without requiring actual coordination.
+            </p>
+            <p class="text-zinc-500 font-semibold">
+              Try: Focusmate, Flow Club, or even just Discord study channels
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-white mb-2">For Time Awareness: Visual Timers</h3>
+            <p class="text-zinc-300 mb-3">
+              Time blindness is real. Visual timers that show time passing (not just counting) 
+              help ADHD brains develop time awareness.
+            </p>
+            <p class="text-zinc-500 font-semibold">
+              Try: Time Timer app, Visual Timer on Apple Watch
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-lg font-bold text-white mb-2">For Focus: Distraction Blockers</h3>
+            <p class="text-zinc-300 mb-3">
+              ADHD impulse control is weak. Remove the temptation entirely rather than 
+              relying on willpower. Block distracting sites and apps automatically.
+            </p>
+            <p class="text-zinc-500 font-semibold">
+              Try: Freedom, Cold Turkey, Screen Time (built into iOS)
+            </p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-4">The Anti-Advice</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          What NOT to do:
+        </p>
+
+        <ul class="text-zinc-300 space-y-2 my-6">
+          <li>• <strong class="text-white">Don't try to build the perfect system.</strong> You'll hyperfocus on the system instead of using it.</li>
+          <li>• <strong class="text-white">Don't add more tools.</strong> Each new tool is another thing to remember to use.</li>
+          <li>• <strong class="text-white">Don't fight your brain.</strong> Work with how it functions, not against it.</li>
+          <li>• <strong class="text-white">Don't feel guilty about "messy" capture.</strong> Messy but captured beats elegant and forgotten.</li>
+        </ul>
+
+        <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-8 my-12">
+          <h3 class="text-xl font-bold text-white mb-4">Built for ADHD Brains</h3>
+          <p class="text-zinc-300 mb-6">
+            Thoughtmarks was designed with ADHD in mind: 5-second voice capture, zero organization 
+            required, AI that handles the mess, and semantic search for half-remembered ideas.
+          </p>
+          <WaitlistCTA variant="primary" size="lg" client:load />
+          <p class="text-sm text-zinc-500 mt-4">14-day free trial. $5/week, $15/month, or $60/year.</p>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
+

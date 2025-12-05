@@ -1,0 +1,202 @@
+---
+// src/pages/features/apple-watch.astro
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+---
+
+<BaseLayout
+  title="Capture Ideas from Your Wrist | Thoughtmarks Apple Watch"
+  description="Full Thoughtmarks app on Apple Watch. Capture voice notes, view recent ideas, and never miss a thought—even without your phone."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <div class="container-narrow">
+      <div class="text-center mb-16">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          Feature Deep Dive
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          Ideas From Your Wrist
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+          Full Thoughtmarks app on Apple Watch. Not a remote—a complete capture experience. 
+          Works offline, syncs automatically.
+        </p>
+      </div>
+
+      <div class="mb-16">
+        <div class="bg-gradient-to-br from-pink-500/10 to-rose-500/10 border border-pink-500/20 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-white mb-6 text-center">Why Watch Capture Matters</h2>
+          <p class="text-lg text-zinc-300 text-center max-w-2xl mx-auto">
+            Your phone is in your pocket, bag, or charging across the room. 
+            Your watch is on your wrist. When inspiration strikes, 
+            the difference between 2 seconds and 15 seconds is whether you capture or forget.
+          </p>
+        </div>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-8">Watch-First Scenarios</h2>
+        <div class="grid gap-6">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🏃</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">During Workouts</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  Running without your phone? Lift your wrist, tap, speak your idea. 
+                  Phone-free workouts don't mean idea-free workouts. 
+                  Some of the best thinking happens during exercise.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🤝</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">In Meetings</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  Quick wrist tap to capture that insight without being the person 
+                  typing on their phone. Discreet, fast, professional. 
+                  Your idea, saved; your attention, present.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🚶</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">On Walks</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  Phone stays in pocket, hands stay swinging. 
+                  Raise wrist, speak idea, keep walking. 
+                  The friction-free capture that actually gets used.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-pink-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🛒</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">While Shopping</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  Hands full of groceries, idea pops in. 
+                  Don't put everything down—just speak to your wrist. 
+                  Thoughtmarks captures while you juggle.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16 grid md:grid-cols-2 gap-8">
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-white mb-4">Watch App Features</h3>
+          <ul class="space-y-3 text-zinc-300">
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Voice capture with transcription</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>View recent thoughtmarks</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Complication for instant access</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Offline capture (syncs later)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Haptic confirmation</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Works without iPhone nearby</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-white mb-4">Capture Methods</h3>
+          <ul class="space-y-4 text-zinc-300">
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-accent text-sm font-bold">1</span>
+              </div>
+              <span><strong class="text-white">App:</strong> Open app, tap record, speak</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-accent text-sm font-bold">2</span>
+              </div>
+              <span><strong class="text-white">Complication:</strong> Tap face, instant capture</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-accent text-sm font-bold">3</span>
+              </div>
+              <span><strong class="text-white">Siri:</strong> "Hey Siri, add a Thoughtmark"</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mb-16 bg-zinc-900/50 border border-zinc-800 rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-6">Offline-First Design</h2>
+        <p class="text-zinc-300 leading-relaxed mb-4">
+          Your watch app works independently. No phone required for capture. 
+          Running with just your watch? Swimming with waterproof watch? 
+          Ideas still get captured.
+        </p>
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+          <div class="text-center">
+            <p class="text-3xl font-black text-accent mb-2">GPS</p>
+            <p class="text-zinc-400 text-sm">Works with GPS-only watches</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-black text-accent mb-2">LTE</p>
+            <p class="text-zinc-400 text-sm">Real-time sync with cellular</p>
+          </div>
+          <div class="text-center">
+            <p class="text-3xl font-black text-accent mb-2">Auto</p>
+            <p class="text-zinc-400 text-sm">Syncs when reconnected</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center bg-gradient-to-br from-pink-500/10 to-rose-500/10 border border-pink-500/20 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Your wrist, your second brain</h2>
+        <p class="text-zinc-400 mb-6 max-w-xl mx-auto">
+          14-day free trial. $5/week, $15/month, or $60/year. 
+          Apple Watch app included—no extra cost.
+        </p>
+        <WaitlistCTA variant="primary" size="lg" client:load />
+        <p class="text-sm text-zinc-500 mt-4">iOS + Apple Watch. Always within reach.</p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+

@@ -1,0 +1,186 @@
+---
+// src/pages/alternatives/forgetful.astro
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+---
+
+<BaseLayout
+  title="Best Apps for People Who Forget Everything (2024)"
+  description="You're not forgetful—you're just not using the right tools. Apps designed for people whose best ideas vanish before they can write them down."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <article class="container-narrow">
+      <header class="mb-12">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          Alternatives Guide
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          Best Apps for People Who Forget Everything
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl">
+          Not a character flaw—a tool problem. Here are apps designed for people whose 
+          best ideas arrive at the worst times.
+        </p>
+      </header>
+
+      <div class="prose prose-invert prose-lg max-w-none">
+        <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-6 my-8">
+          <h3 class="text-lg font-bold text-purple-400 mb-3">First, a Reality Check</h3>
+          <p class="text-zinc-300">
+            You probably don't actually "forget everything." You forget <em>the things you didn't capture fast enough</em>. 
+            Working memory holds ideas for about 20 seconds. If your capture system takes 30 seconds 
+            to use... you've lost.
+            <br/><br/>
+            The solution isn't better memory. It's faster capture.
+          </p>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-6">What "Forgetful" People Actually Need</h2>
+
+        <div class="grid gap-4 my-8">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold">⚡ Ultra-fast capture</p>
+            <p class="text-zinc-400 text-sm">Under 5 seconds from idea to saved</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold">🌍 Always available</p>
+            <p class="text-zinc-400 text-sm">Works in shower, car, bed, gym</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold">🧠 Zero decisions</p>
+            <p class="text-zinc-400 text-sm">No "where should this go?" paralysis</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold">🔍 Fuzzy finding</p>
+            <p class="text-zinc-400 text-sm">Search by "that thing about..." not exact words</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-6">Best Apps for Forgetful Brains</h2>
+
+        <div class="space-y-8">
+          <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-xl p-6">
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <h3 class="text-xl font-bold text-accent">1. Thoughtmarks</h3>
+              <span class="bg-accent/20 text-accent text-xs font-bold px-2 py-1 rounded">BUILT FOR THIS</span>
+            </div>
+            <p class="text-zinc-300 mb-4">
+              Literally built for people who forget their best ideas. Voice capture via Siri 
+              or Apple Watch (no unlocking required), AI auto-organization (no decisions), 
+              semantic search (find by meaning, not exact words).
+            </p>
+            <div class="text-sm">
+              <p class="text-zinc-500">Why it works for forgetful people:</p>
+              <ul class="text-zinc-300 mt-2 space-y-1">
+                <li>• "Hey Siri, add a Thoughtmark" — captured in 3 seconds</li>
+                <li>• AI handles filing — zero decisions</li>
+                <li>• Search: "that marketing thing from last week" — actually finds it</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">2. Apple Reminders</h3>
+            <p class="text-zinc-300 mb-4">
+              Siri-accessible, location-based, time-based. Great for "remind me when I get home" 
+              or "remind me tomorrow morning." For action items, not idea capture.
+            </p>
+            <div class="text-sm">
+              <p class="text-zinc-500">Best for:</p>
+              <p class="text-zinc-300 mt-1">Tasks and to-dos, not fleeting ideas</p>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">3. Due</h3>
+            <p class="text-zinc-300 mb-4">
+              Relentless reminders that won't stop until you act. Perfect for things you 
+              absolutely cannot forget. Annoying by design.
+            </p>
+            <div class="text-sm">
+              <p class="text-zinc-500">Best for:</p>
+              <p class="text-zinc-300 mt-1">Critical tasks that need persistent nagging</p>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">4. Voice Memos + Siri</h3>
+            <p class="text-zinc-300 mb-4">
+              Free and always available. "Hey Siri, record a voice memo" works from 
+              locked screen, AirPods, CarPlay. Basic but accessible.
+            </p>
+            <div class="text-sm">
+              <p class="text-zinc-500">Limitation:</p>
+              <p class="text-zinc-300 mt-1">No organization, hard to find things later</p>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">5. Google Keep</h3>
+            <p class="text-zinc-300 mb-4">
+              Quick notes with color coding and labels. Google Assistant integration 
+              for voice capture. Good for Android users.
+            </p>
+            <div class="text-sm">
+              <p class="text-zinc-500">Best for:</p>
+              <p class="text-zinc-300 mt-1">Android users who want simple + visual</p>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-6">Techniques That Help</h2>
+
+        <p class="text-zinc-300 leading-relaxed">
+          Beyond apps, these habits help forgetful people:
+        </p>
+
+        <div class="space-y-4 my-8">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-2">1. The "Capture Everything" Rule</p>
+            <p class="text-zinc-400 text-sm">
+              Capture every idea, even dumb ones. Building the habit of capturing is more 
+              important than the quality of what you capture. You can filter later.
+            </p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-2">2. Voice Over Typing</p>
+            <p class="text-zinc-400 text-sm">
+              Speaking is 3x faster than typing. The faster you capture, the more of the 
+              original idea you preserve.
+            </p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-2">3. Wearable Capture</p>
+            <p class="text-zinc-400 text-sm">
+              Apple Watch or AirPods always with you. Phone might be charging, but your 
+              watch is on your wrist.
+            </p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-2">4. Stop Trusting Your Memory</p>
+            <p class="text-zinc-400 text-sm">
+              The moment you think "I'll remember this," you won't. That thought is your 
+              cue to capture immediately.
+            </p>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-xl p-8 my-12">
+          <h3 class="text-xl font-bold text-white mb-4">Built for Forgetful People</h3>
+          <p class="text-zinc-300 mb-6">
+            Thoughtmarks was made for people like us—who have brilliant ideas at the worst 
+            times and forget them before reaching a keyboard. Voice in, organized out.
+          </p>
+          <WaitlistCTA variant="primary" size="lg" client:load />
+          <p class="text-sm text-zinc-500 mt-4">14-day free trial. $5/week, $15/month, or $60/year.</p>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
+

@@ -1,0 +1,164 @@
+---
+// src/pages/for/entrepreneurs.astro
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+---
+
+<BaseLayout
+  title="Thoughtmarks for Founders & Entrepreneurs: Ideas to Execution"
+  description="Capture business ideas, customer insights, and pivot moments before they vanish. Voice-first idea capture for founders who move fast."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <div class="container-narrow">
+      <div class="text-center mb-16">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          For Founders & Entrepreneurs
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          Ideas Move Fast. Capture Faster.
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+          Customer insights during calls. Pivot ideas in the shower. 
+          Marketing copy while walking. Don't let momentum slip away.
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 border border-emerald-500/20 rounded-2xl p-8 mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6">The Founder's Capture Problem</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="text-emerald-400 text-xl">📞</span>
+              <p class="text-zinc-300">Customer call gold—buried in meeting notes you'll never review</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-emerald-400 text-xl">🚿</span>
+              <p class="text-zinc-300">The perfect positioning hit you in the shower... gone by towel-off</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-emerald-400 text-xl">🏃</span>
+              <p class="text-zinc-300">Walking between meetings when the pivot becomes obvious</p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="text-emerald-400 text-xl">✈️</span>
+              <p class="text-zinc-300">On a flight with no WiFi when you crack the growth strategy</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-emerald-400 text-xl">🌙</span>
+              <p class="text-zinc-300">3am founder insomnia—brilliant or terrible? Either way, capture it</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-emerald-400 text-xl">🎯</span>
+              <p class="text-zinc-300">Competitor insight at a conference—can't pull out laptop mid-conversation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-8 text-center">Built for Founder Workflows</h2>
+        <div class="grid gap-6">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">💡</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Product Ideas</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  Feature requests from users, integration ideas, "what if we..." moments. 
+                  Capture in seconds, AI tags by theme. Review your product backlog of raw insights 
+                  when you're ready to prioritize.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🎤</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Marketing & Messaging</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  The best copy comes from how you naturally describe your product. 
+                  Capture those authentic explanations, customer success phrases, and 
+                  "aha" positioning moments—your best marketing writes itself.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🔗</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Connect the Dots</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  That customer complaint from Tuesday connects to the feature idea from last month 
+                  which solves the churn problem you identified in Q1. AI surfaces these connections 
+                  automatically—patterns you'd never find manually.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">⚡</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Zero-Friction Capture</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  "Hey Siri, add a Thoughtmark"—done. From your watch while shaking hands. 
+                  From your phone while walking to your car. 5 seconds, no app switching, 
+                  no "where do I put this?" paralysis.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16 bg-zinc-900/50 border border-zinc-800 rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-6">From Chaos to Clarity</h2>
+        <div class="grid md:grid-cols-3 gap-6 text-center">
+          <div>
+            <p class="text-4xl font-black text-accent mb-2">100+</p>
+            <p class="text-zinc-400">Ideas captured per month by active founders</p>
+          </div>
+          <div>
+            <p class="text-4xl font-black text-accent mb-2">5 sec</p>
+            <p class="text-zinc-400">Average capture time</p>
+          </div>
+          <div>
+            <p class="text-4xl font-black text-accent mb-2">0</p>
+            <p class="text-zinc-400">Organization required</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center bg-gradient-to-br from-emerald-500/10 to-teal-500/10 border border-emerald-500/20 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Stop losing million-dollar ideas</h2>
+        <p class="text-zinc-400 mb-6 max-w-xl mx-auto">
+          14-day free trial. $5/week, $15/month, or $60/year. 
+          Less than one customer coffee meeting.
+        </p>
+        <WaitlistCTA variant="primary" size="lg" client:load />
+        <p class="text-sm text-zinc-500 mt-4">iOS + Apple Watch. Your co-founder for ideas.</p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+

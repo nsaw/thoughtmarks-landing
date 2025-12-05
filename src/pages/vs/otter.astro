@@ -1,0 +1,173 @@
+---
+// src/pages/vs/otter.astro
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+
+const comparisonData = [
+  { feature: 'Primary Use', thoughtmarks: 'Idea capture', competitor: 'Meeting transcription', advantage: 'different' },
+  { feature: 'Weekly Price', thoughtmarks: '$5/week', competitor: 'N/A', advantage: 'thoughtmarks' },
+  { feature: 'Monthly Price', thoughtmarks: '$15/month', competitor: '$16.99/month', advantage: 'thoughtmarks' },
+  { feature: 'Annual Price', thoughtmarks: '$60/year', competitor: '$99.99/year', advantage: 'thoughtmarks' },
+  { feature: 'Free Tier', thoughtmarks: '14-day trial', competitor: '300 min/month', advantage: 'competitor' },
+  { feature: 'Voice Capture', thoughtmarks: '✓ Quick ideas', competitor: '✓ Long recordings', advantage: 'tie' },
+  { feature: 'Siri Integration', thoughtmarks: '✓ Hands-free capture', competitor: '✗', advantage: 'thoughtmarks' },
+  { feature: 'Apple Watch', thoughtmarks: '✓ Full app', competitor: '✗', advantage: 'thoughtmarks' },
+  { feature: 'Auto-Organization', thoughtmarks: '✓ AI tags & links', competitor: 'Manual folders', advantage: 'thoughtmarks' },
+  { feature: 'Semantic Search', thoughtmarks: '✓ Meaning-based', competitor: 'Keyword only', advantage: 'thoughtmarks' },
+  { feature: 'Meeting Recording', thoughtmarks: 'Notes focus', competitor: '✓ Meeting focus', advantage: 'competitor' },
+  { feature: 'Speaker Identification', thoughtmarks: '✗', competitor: '✓', advantage: 'competitor' },
+  { feature: 'Live Transcription', thoughtmarks: '✓', competitor: '✓', advantage: 'tie' },
+  { feature: 'Zoom/Teams Integration', thoughtmarks: '✗', competitor: '✓', advantage: 'competitor' },
+  { feature: 'Privacy', thoughtmarks: '✓ E2E encrypted', competitor: 'Cloud-based', advantage: 'thoughtmarks' },
+  { feature: 'Offline Mode', thoughtmarks: '✓ Full', competitor: 'Limited', advantage: 'thoughtmarks' },
+];
+---
+
+<BaseLayout
+  title="Thoughtmarks vs Otter.ai: Idea Capture vs Meeting Transcription"
+  description="Compare Thoughtmarks and Otter.ai. One captures fleeting ideas, the other transcribes meetings. Which AI voice app is right for you?"
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <div class="container-narrow">
+      <div class="text-center mb-16">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          Comparison Guide
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          Thoughtmarks vs Otter.ai
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+          Different tools for different problems. One transcribes meetings. 
+          The other catches ideas before they vanish.
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-2xl p-8 mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6">The Quick Verdict</h2>
+        <div class="bg-zinc-900/50 rounded-xl p-6 mb-6">
+          <p class="text-lg text-zinc-300 leading-relaxed">
+            <span class="text-white font-bold">Otter.ai</span> is a meeting transcription powerhouse—
+            perfect for turning hour-long Zoom calls into searchable text with speaker labels.
+          </p>
+          <p class="text-lg text-zinc-300 leading-relaxed mt-4">
+            <span class="text-accent font-bold">Thoughtmarks</span> is for the other 23 hours—
+            when you're walking, driving, showering, and brilliance strikes. Quick capture, auto-organized.
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold text-accent mb-2">Choose Thoughtmarks if:</h3>
+            <ul class="space-y-2 text-zinc-300">
+              <li class="flex items-start gap-2">
+                <span class="text-accent">✓</span>
+                <span>You need to capture quick ideas throughout the day</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent">✓</span>
+                <span>You want hands-free Siri or Apple Watch capture</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent">✓</span>
+                <span>You hate organizing—let AI handle it</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent">✓</span>
+                <span>Privacy and encryption matter to you</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-zinc-400 mb-2">Choose Otter.ai if:</h3>
+            <ul class="space-y-2 text-zinc-400">
+              <li class="flex items-start gap-2">
+                <span class="text-zinc-500">✓</span>
+                <span>You need to transcribe long meetings</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-zinc-500">✓</span>
+                <span>Speaker identification is important</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-zinc-500">✓</span>
+                <span>You need Zoom/Teams integration</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-zinc-500">✓</span>
+                <span>You work with recorded interviews</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6">Feature Comparison</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full border-collapse">
+            <thead>
+              <tr class="border-b border-zinc-800">
+                <th class="text-left py-4 px-4 text-zinc-400 font-semibold">Feature</th>
+                <th class="text-center py-4 px-4 text-accent font-semibold">Thoughtmarks</th>
+                <th class="text-center py-4 px-4 text-zinc-400 font-semibold">Otter.ai</th>
+              </tr>
+            </thead>
+            <tbody>
+              {comparisonData.map((row) => (
+                <tr class={`border-b border-zinc-800/50 ${row.advantage === 'thoughtmarks' ? 'bg-accent/5' : ''}`}>
+                  <td class="py-4 px-4 text-zinc-300 font-medium">{row.feature}</td>
+                  <td class={`py-4 px-4 text-center ${row.advantage === 'thoughtmarks' ? 'text-accent font-semibold' : 'text-zinc-400'}`}>
+                    {row.thoughtmarks}
+                  </td>
+                  <td class={`py-4 px-4 text-center ${row.advantage === 'competitor' ? 'text-white font-semibold' : 'text-zinc-400'}`}>
+                    {row.competitor}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="space-y-8 mb-16">
+        <h2 class="text-2xl font-bold text-white">Key Differences</h2>
+        
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-white mb-3">Otter Transcribes. Thoughtmarks Captures.</h3>
+          <p class="text-zinc-300 leading-relaxed">
+            Otter.ai is optimized for recording long sessions—meetings, interviews, lectures. 
+            It's fantastic at what it does: multi-speaker identification, timestamps, summaries.
+            <br/><br/>
+            Thoughtmarks is optimized for the <em>opposite</em> scenario: when you have 5 seconds 
+            to capture an idea before it evaporates. Walking to your car, in the shower, falling asleep. 
+            Different problems, different tools.
+          </p>
+        </div>
+
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-white mb-3">Can You Use Both?</h3>
+          <p class="text-zinc-300 leading-relaxed">
+            Absolutely. Use <strong class="text-white">Otter</strong> for meetings and interviews. 
+            Use <strong class="text-accent">Thoughtmarks</strong> for the random brilliance that strikes 
+            when you're not at your desk. They solve different problems.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-center bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Ready to capture ideas everywhere?</h2>
+        <p class="text-zinc-400 mb-6 max-w-xl mx-auto">
+          14-day free trial. $5/week, $15/month, or $60/year. Works where meetings don't happen.
+        </p>
+        <WaitlistCTA variant="primary" size="lg" client:load />
+        <p class="text-sm text-zinc-500 mt-4">iOS + Apple Watch. Ideas captured.</p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+

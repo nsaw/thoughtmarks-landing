@@ -1,0 +1,189 @@
+---
+// src/pages/features/voice-capture.astro
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+---
+
+<BaseLayout
+  title="Hands-Free Voice Capture with Siri | Thoughtmarks"
+  description="Capture ideas without touching your phone. Siri integration, Apple Watch support, and real-time transcription. Voice notes that actually work."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <div class="container-narrow">
+      <div class="text-center mb-16">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          Feature Deep Dive
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          Hands-Free Voice Capture
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+          Your best ideas don't wait for a convenient moment. 
+          Capture them while driving, cooking, walking—no hands required.
+        </p>
+      </div>
+
+      <div class="mb-16">
+        <div class="bg-gradient-to-br from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-white mb-6 text-center">"Hey Siri, add a Thoughtmark"</h2>
+          <p class="text-lg text-zinc-300 text-center max-w-2xl mx-auto">
+            That's it. No app switching. No unlock. No finding the right note. 
+            Just speak your idea and keep moving. Siri sends it directly to Thoughtmarks.
+          </p>
+        </div>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-8">Three Ways to Capture</h2>
+        <div class="grid gap-6">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <span class="text-3xl">🗣️</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Siri Shortcuts</h3>
+                <p class="text-zinc-300 leading-relaxed mb-3">
+                  Native Siri integration means you can capture from anywhere iOS is listening. 
+                  CarPlay, AirPods, HomePod, locked phone—just speak.
+                </p>
+                <code class="text-accent bg-accent/10 px-3 py-1 rounded-lg text-sm">
+                  "Hey Siri, add a Thoughtmark: [your idea here]"
+                </code>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <span class="text-3xl">⌚</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Apple Watch</h3>
+                <p class="text-zinc-300 leading-relaxed mb-3">
+                  Full Thoughtmarks app on your wrist. Raise to speak, tap to record, 
+                  or use complications for instant capture. Perfect for meetings, workouts, walks.
+                </p>
+                <span class="text-zinc-500 text-sm">
+                  Works offline, syncs when connected
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-16 h-16 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center flex-shrink-0">
+                <span class="text-3xl">📱</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">In-App Recording</h3>
+                <p class="text-zinc-300 leading-relaxed mb-3">
+                  When you do have your phone, one tap starts recording. 
+                  Real-time transcription shows your words as you speak. 
+                  Smart punctuation, natural formatting.
+                </p>
+                <span class="text-zinc-500 text-sm">
+                  Works in background—switch apps without stopping
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16 grid md:grid-cols-2 gap-8">
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-white mb-4">Transcription That Works</h3>
+          <ul class="space-y-3 text-zinc-300">
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Real-time transcription as you speak</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Smart punctuation & formatting</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Works in noisy environments</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Handles technical terms & names</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Edit after transcription if needed</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-white mb-4">Capture Anywhere</h3>
+          <ul class="space-y-3 text-zinc-300">
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Driving (hands on wheel, idea in brain)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Walking (don't stop your flow)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Cooking (messy hands, clean capture)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Working out (between sets revelation)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Falling asleep (pillow talk to self)</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mb-16 bg-zinc-900/50 border border-zinc-800 rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-6">Why Voice Beats Typing</h2>
+        <div class="grid md:grid-cols-3 gap-6 text-center mb-8">
+          <div>
+            <p class="text-4xl font-black text-accent mb-2">3x</p>
+            <p class="text-zinc-400">Faster than typing</p>
+          </div>
+          <div>
+            <p class="text-4xl font-black text-accent mb-2">150</p>
+            <p class="text-zinc-400">Words per minute (speaking)</p>
+          </div>
+          <div>
+            <p class="text-4xl font-black text-accent mb-2">40</p>
+            <p class="text-zinc-400">Words per minute (typing)</p>
+          </div>
+        </div>
+        <p class="text-zinc-300 text-center max-w-2xl mx-auto">
+          Voice capture isn't just faster—it preserves the natural flow of thought. 
+          You don't lose ideas to autocorrect, slow thumbs, or finding the right emoji.
+        </p>
+      </div>
+
+      <div class="text-center bg-gradient-to-br from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Start capturing hands-free</h2>
+        <p class="text-zinc-400 mb-6 max-w-xl mx-auto">
+          14-day free trial. $5/week, $15/month, or $60/year. 
+          Your ideas, captured at the speed of speech.
+        </p>
+        <WaitlistCTA variant="primary" size="lg" client:load />
+        <p class="text-sm text-zinc-500 mt-4">iOS + Apple Watch + Siri. Voice-first capture.</p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+

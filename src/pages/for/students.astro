@@ -1,0 +1,172 @@
+---
+// src/pages/for/students.astro
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+---
+
+<BaseLayout
+  title="Thoughtmarks for Students: Voice Notes to Study Notes"
+  description="Turn lectures, ideas, and study thoughts into organized notes. Voice capture that actually helps you study. ADHD-friendly. Apple Watch ready."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <div class="container-narrow">
+      <div class="text-center mb-16">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          For Students
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          Voice Notes → Study Notes
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+          Capture lecture insights, study group revelations, and midnight epiphanies. 
+          AI organizes so you can focus on learning.
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-2xl p-8 mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6">Sound familiar?</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="text-blue-400 text-xl">📚</span>
+              <p class="text-zinc-300">Professor says something brilliant... you're still writing the last thing</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-blue-400 text-xl">🚶</span>
+              <p class="text-zinc-300">Walking to class when you finally understand the concept</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-blue-400 text-xl">📝</span>
+              <p class="text-zinc-300">Notes scattered across 5 apps, 3 notebooks, and loose papers</p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="text-blue-400 text-xl">💡</span>
+              <p class="text-zinc-300">"I'll remember this for the exam"... you didn't</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-blue-400 text-xl">🌙</span>
+              <p class="text-zinc-300">2am study session insight—gone by morning</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-blue-400 text-xl">🔍</span>
+              <p class="text-zinc-300">"I know I wrote this somewhere..."—exam tomorrow</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-8 text-center">How Students Use Thoughtmarks</h2>
+        <div class="grid gap-6">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🎓</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">During Lectures</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  Quietly tap your Apple Watch to capture that key insight without breaking focus. 
+                  Or whisper "Hey Siri, add a Thoughtmark" for hands-free capture. 
+                  Stay present in class while never losing a concept.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🤝</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Study Groups</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  When someone explains it perfectly, capture the explanation in their words. 
+                  Later, AI connects it to your lecture notes and textbook highlights. 
+                  Build understanding, not just notes.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🧠</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Exam Prep</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  Search by meaning: "that thing about mitochondria and energy" finds your notes 
+                  even if you didn't use those exact words. AI surfaces connections between topics 
+                  you might have missed.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🚴</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Between Classes</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  Walking across campus when you finally understand the reading? 
+                  Capture it. Biking to the library with a thesis idea? Don't lose it. 
+                  Those transition moments are often when concepts click.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16 bg-zinc-900/50 border border-zinc-800 rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-6">ADHD-Friendly by Design</h2>
+        <p class="text-zinc-300 leading-relaxed mb-4">
+          Many students with ADHD have brilliant ideas but struggle with traditional note-taking. 
+          Thoughtmarks is built for how your brain actually works:
+        </p>
+        <ul class="space-y-3 text-zinc-300">
+          <li class="flex items-start gap-3">
+            <span class="text-accent">→</span>
+            <span><strong class="text-white">5-second capture</strong>—before you context-switch</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-accent">→</span>
+            <span><strong class="text-white">Zero organization required</strong>—AI handles filing</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-accent">→</span>
+            <span><strong class="text-white">Semantic search</strong>—find things by vague memory</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-accent">→</span>
+            <span><strong class="text-white">No guilt</strong>—messy capture is the point</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="text-center bg-gradient-to-br from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Never lose another lecture insight</h2>
+        <p class="text-zinc-400 mb-6 max-w-xl mx-auto">
+          14-day free trial. $5/week, $15/month, or $60/year. 
+          Less than a coffee a week to never forget your best ideas.
+        </p>
+        <WaitlistCTA variant="primary" size="lg" client:load />
+        <p class="text-sm text-zinc-500 mt-4">iOS + Apple Watch. Your study companion.</p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+

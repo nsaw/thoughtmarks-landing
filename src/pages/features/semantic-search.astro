@@ -1,0 +1,191 @@
+---
+// src/pages/features/semantic-search.astro
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+---
+
+<BaseLayout
+  title="Search by Meaning, Not Just Keywords | Thoughtmarks"
+  description="Find ideas by describing what you remember, not exact words. Semantic AI search that understands context, concepts, and half-remembered thoughts."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <div class="container-narrow">
+      <div class="text-center mb-16">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          Feature Deep Dive
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          Search by Meaning
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+          "That thing about the energy stuff from last month"—
+          and actually find it. Semantic search that understands what you mean.
+        </p>
+      </div>
+
+      <div class="mb-16">
+        <div class="bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-2xl p-8">
+          <h2 class="text-2xl font-bold text-white mb-6 text-center">The Half-Remembered Problem</h2>
+          <p class="text-lg text-zinc-300 text-center max-w-2xl mx-auto">
+            You know you captured something important. You remember what it was <em>about</em>, 
+            but not the exact words you used. Traditional search fails here. Thoughtmarks doesn't.
+          </p>
+        </div>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-8">Search Examples</h2>
+        <div class="grid gap-4">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-5">
+            <div class="flex items-center gap-4">
+              <span class="text-amber-400 text-xl">🔍</span>
+              <div>
+                <p class="text-zinc-400 text-sm mb-1">You search:</p>
+                <p class="text-white font-mono">"that marketing idea about psychology"</p>
+              </div>
+            </div>
+            <div class="mt-3 pl-10">
+              <p class="text-zinc-400 text-sm mb-1">Finds your note that said:</p>
+              <p class="text-accent italic">"Use loss aversion in the pricing page—people hate losing more than they like gaining"</p>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-5">
+            <div class="flex items-center gap-4">
+              <span class="text-amber-400 text-xl">🔍</span>
+              <div>
+                <p class="text-zinc-400 text-sm mb-1">You search:</p>
+                <p class="text-white font-mono">"book recommendation from podcast"</p>
+              </div>
+            </div>
+            <div class="mt-3 pl-10">
+              <p class="text-zinc-400 text-sm mb-1">Finds your note that said:</p>
+              <p class="text-accent italic">"Tim Ferriss guest mentioned 'Thinking Fast and Slow'—add to reading list"</p>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-5">
+            <div class="flex items-center gap-4">
+              <span class="text-amber-400 text-xl">🔍</span>
+              <div>
+                <p class="text-zinc-400 text-sm mb-1">You search:</p>
+                <p class="text-white font-mono">"startup idea about food"</p>
+              </div>
+            </div>
+            <div class="mt-3 pl-10">
+              <p class="text-zinc-400 text-sm mb-1">Finds your note that said:</p>
+              <p class="text-accent italic">"What if there was an app for leftover meal planning? Reduce waste, save money"</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16 grid md:grid-cols-2 gap-8">
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+            <span class="text-red-400">❌</span> Keyword Search
+          </h3>
+          <ul class="space-y-3 text-zinc-400">
+            <li class="flex items-start gap-3">
+              <span class="text-red-400/60">•</span>
+              <span>Requires exact word matches</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-400/60">•</span>
+              <span>Fails on synonyms ("car" vs "vehicle")</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-400/60">•</span>
+              <span>Can't understand concepts</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-400/60">•</span>
+              <span>Returns too many or zero results</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-red-400/60">•</span>
+              <span>You have to remember your own words</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-zinc-900/50 border border-accent/30 rounded-xl p-6">
+          <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+            <span class="text-accent">✓</span> Semantic Search
+          </h3>
+          <ul class="space-y-3 text-zinc-300">
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Understands meaning, not just words</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Handles synonyms automatically</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Finds conceptually related ideas</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Ranks by relevance, not recency</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent">✓</span>
+              <span>Search the way you think</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mb-16 bg-zinc-900/50 border border-zinc-800 rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-6">How It Works</h2>
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-accent font-bold">1</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-white">Embedding Your Ideas</h3>
+              <p class="text-zinc-400">Every thoughtmark is converted into a semantic embedding—a mathematical representation of its meaning, not just its words.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-accent font-bold">2</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-white">Understanding Your Query</h3>
+              <p class="text-zinc-400">When you search, your query gets the same treatment—converted to meaning, not matched word-by-word.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-8 h-8 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-accent font-bold">3</span>
+            </div>
+            <div>
+              <h3 class="text-lg font-semibold text-white">Finding Connections</h3>
+              <p class="text-zinc-400">AI finds thoughtmarks that are semantically similar to your query, even if they share no common words.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Find the thing you half-remember</h2>
+        <p class="text-zinc-400 mb-6 max-w-xl mx-auto">
+          14-day free trial. $5/week, $15/month, or $60/year. 
+          Search the way your brain actually works.
+        </p>
+        <WaitlistCTA variant="primary" size="lg" client:load />
+        <p class="text-sm text-zinc-500 mt-4">iOS + Apple Watch. Ideas found, not lost.</p>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+

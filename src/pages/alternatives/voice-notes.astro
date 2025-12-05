@@ -1,0 +1,264 @@
+---
+// src/pages/alternatives/voice-notes.astro
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+---
+
+<BaseLayout
+  title="Top Voice Notes Apps Compared (2024)"
+  description="The best voice note and voice memo apps compared. From Apple's Voice Memos to Otter to Thoughtmarks. Find the right voice capture tool for your needs."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <article class="container-narrow">
+      <header class="mb-12">
+        <p class="text-accent font-semibold text-sm uppercase tracking-wider mb-4">
+          Alternatives Guide
+        </p>
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          Top Voice Notes Apps Compared (2024)
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl">
+          Voice capture is 3x faster than typing. But which voice notes app is actually 
+          worth using? Here's our honest comparison.
+        </p>
+      </header>
+
+      <div class="prose prose-invert prose-lg max-w-none">
+        <h2 class="text-2xl font-bold text-white mt-8 mb-6">Quick Comparison</h2>
+
+        <div class="overflow-x-auto mb-12">
+          <table class="w-full border-collapse text-sm">
+            <thead>
+              <tr class="border-b border-zinc-800">
+                <th class="text-left py-3 px-4 text-zinc-400">App</th>
+                <th class="text-center py-3 px-4 text-zinc-400">Transcription</th>
+                <th class="text-center py-3 px-4 text-zinc-400">Organization</th>
+                <th class="text-center py-3 px-4 text-zinc-400">Search</th>
+                <th class="text-center py-3 px-4 text-zinc-400">Price</th>
+              </tr>
+            </thead>
+            <tbody class="text-zinc-300">
+              <tr class="border-b border-zinc-800/50 bg-accent/5">
+                <td class="py-3 px-4 font-semibold text-accent">Thoughtmarks</td>
+                <td class="text-center py-3 px-4">✓ AI</td>
+                <td class="text-center py-3 px-4">✓ Auto AI</td>
+                <td class="text-center py-3 px-4">✓ Semantic</td>
+                <td class="text-center py-3 px-4">$60/yr</td>
+              </tr>
+              <tr class="border-b border-zinc-800/50">
+                <td class="py-3 px-4">Voice Memos (Apple)</td>
+                <td class="text-center py-3 px-4">✓ Basic</td>
+                <td class="text-center py-3 px-4">Manual</td>
+                <td class="text-center py-3 px-4">Basic</td>
+                <td class="text-center py-3 px-4">Free</td>
+              </tr>
+              <tr class="border-b border-zinc-800/50">
+                <td class="py-3 px-4">Otter.ai</td>
+                <td class="text-center py-3 px-4">✓ AI</td>
+                <td class="text-center py-3 px-4">Manual</td>
+                <td class="text-center py-3 px-4">Keyword</td>
+                <td class="text-center py-3 px-4">$100/yr</td>
+              </tr>
+              <tr class="border-b border-zinc-800/50">
+                <td class="py-3 px-4">Voicenotes.com</td>
+                <td class="text-center py-3 px-4">✓ AI</td>
+                <td class="text-center py-3 px-4">Tags</td>
+                <td class="text-center py-3 px-4">Keyword</td>
+                <td class="text-center py-3 px-4">$100/yr</td>
+              </tr>
+              <tr class="border-b border-zinc-800/50">
+                <td class="py-3 px-4">Just Press Record</td>
+                <td class="text-center py-3 px-4">✓ Basic</td>
+                <td class="text-center py-3 px-4">Manual</td>
+                <td class="text-center py-3 px-4">Basic</td>
+                <td class="text-center py-3 px-4">$5 once</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-6">Detailed Reviews</h2>
+
+        <div class="space-y-8">
+          <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-xl p-6">
+            <div class="flex items-start justify-between gap-4 mb-4">
+              <h3 class="text-xl font-bold text-accent">Thoughtmarks</h3>
+              <span class="bg-accent/20 text-accent text-xs font-bold px-2 py-1 rounded">EDITOR'S CHOICE</span>
+            </div>
+            <p class="text-zinc-300 mb-4">
+              Built specifically for idea capture, not meeting transcription. Voice recordings 
+              are transcribed, AI auto-organizes into smart bins, and semantic search lets you 
+              find things by meaning (not just keywords). Apple Watch app included.
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 text-sm mb-4">
+              <div>
+                <p class="text-green-400 mb-1">✓ Strengths</p>
+                <ul class="text-zinc-400 space-y-1">
+                  <li>• AI auto-organization</li>
+                  <li>• Semantic search</li>
+                  <li>• Apple Watch app</li>
+                  <li>• Siri integration</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-red-400 mb-1">✗ Limitations</p>
+                <ul class="text-zinc-400 space-y-1">
+                  <li>• iOS only</li>
+                  <li>• Not for long meetings</li>
+                </ul>
+              </div>
+            </div>
+            <p class="text-zinc-500 text-sm">Price: $5/week, $15/month, or $60/year</p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">Voice Memos (Apple)</h3>
+            <p class="text-zinc-300 mb-4">
+              The default that ships with every iPhone. Simple, reliable, free. Recent iOS 
+              updates added transcription (in iOS 18+). Good for basic voice capture without 
+              any setup.
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 text-sm mb-4">
+              <div>
+                <p class="text-green-400 mb-1">✓ Strengths</p>
+                <ul class="text-zinc-400 space-y-1">
+                  <li>• Free and built-in</li>
+                  <li>• Simple and fast</li>
+                  <li>• iCloud sync</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-red-400 mb-1">✗ Limitations</p>
+                <ul class="text-zinc-400 space-y-1">
+                  <li>• No AI organization</li>
+                  <li>• Basic search</li>
+                  <li>• Gets cluttered fast</li>
+                </ul>
+              </div>
+            </div>
+            <p class="text-zinc-500 text-sm">Price: Free</p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">Otter.ai</h3>
+            <p class="text-zinc-300 mb-4">
+              Excellent for meeting transcription with speaker identification and summaries. 
+              Integrates with Zoom and Teams. Less suited for quick idea capture—it's built 
+              for longer recordings.
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 text-sm mb-4">
+              <div>
+                <p class="text-green-400 mb-1">✓ Strengths</p>
+                <ul class="text-zinc-400 space-y-1">
+                  <li>• Great for meetings</li>
+                  <li>• Speaker identification</li>
+                  <li>• Zoom/Teams integration</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-red-400 mb-1">✗ Limitations</p>
+                <ul class="text-zinc-400 space-y-1">
+                  <li>• Not for quick ideas</li>
+                  <li>• Manual organization</li>
+                  <li>• No Watch app</li>
+                </ul>
+              </div>
+            </div>
+            <p class="text-zinc-500 text-sm">Price: Free tier / $100/year Pro</p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">Voicenotes.com</h3>
+            <p class="text-zinc-300 mb-4">
+              AI-powered voice notes with transcription and summaries. Cross-platform (iOS, 
+              Android, web). Good middle ground between Voice Memos and Otter.
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 text-sm mb-4">
+              <div>
+                <p class="text-green-400 mb-1">✓ Strengths</p>
+                <ul class="text-zinc-400 space-y-1">
+                  <li>• Cross-platform</li>
+                  <li>• AI summaries</li>
+                  <li>• Good transcription</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-red-400 mb-1">✗ Limitations</p>
+                <ul class="text-zinc-400 space-y-1">
+                  <li>• Manual tagging</li>
+                  <li>• Keyword search only</li>
+                  <li>• More expensive</li>
+                </ul>
+              </div>
+            </div>
+            <p class="text-zinc-500 text-sm">Price: Free tier / $100/year Pro</p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">Just Press Record</h3>
+            <p class="text-zinc-300 mb-4">
+              One-tap recording with Apple Watch support. Good for capturing voice quickly, 
+              with basic transcription. One-time purchase makes it cost-effective.
+            </p>
+            <div class="grid md:grid-cols-2 gap-4 text-sm mb-4">
+              <div>
+                <p class="text-green-400 mb-1">✓ Strengths</p>
+                <ul class="text-zinc-400 space-y-1">
+                  <li>• One-time purchase</li>
+                  <li>• Apple Watch complication</li>
+                  <li>• Simple interface</li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-red-400 mb-1">✗ Limitations</p>
+                <ul class="text-zinc-400 space-y-1">
+                  <li>• No AI features</li>
+                  <li>• Manual organization</li>
+                  <li>• Basic search</li>
+                </ul>
+              </div>
+            </div>
+            <p class="text-zinc-500 text-sm">Price: $5 one-time</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold text-white mt-12 mb-6">How to Choose</h2>
+
+        <div class="space-y-4 my-8">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">"I want AI to organize my voice notes"</p>
+            <p class="text-accent">→ Thoughtmarks</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">"I want to transcribe long meetings"</p>
+            <p class="text-zinc-400">→ Otter.ai</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">"I want free and simple"</p>
+            <p class="text-zinc-400">→ Voice Memos</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-4">
+            <p class="text-white font-bold mb-1">"I want cross-platform"</p>
+            <p class="text-zinc-400">→ Voicenotes.com</p>
+          </div>
+        </div>
+
+        <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-xl p-8 my-12">
+          <h3 class="text-xl font-bold text-white mb-4">Try Thoughtmarks</h3>
+          <p class="text-zinc-300 mb-6">
+            Voice capture that actually stays organized. AI handles the filing, 
+            semantic search finds what you half-remember.
+          </p>
+          <WaitlistCTA variant="primary" size="lg" client:load />
+          <p class="text-sm text-zinc-500 mt-4">14-day free trial. $5/week, $15/month, or $60/year.</p>
+        </div>
+      </div>
+    </article>
+  </main>
+  <Footer />
+</BaseLayout>
+
