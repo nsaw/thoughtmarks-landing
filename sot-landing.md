@@ -344,9 +344,10 @@ Landing page is **frontend-only**. Backend services hosted separately:
 
 ### API Calls from Landing Page
 - **Waitlist Signup**: POST to `https://api.thoughtmarks.app/api/waitlist`
-  - Payload: `{ email, firstName?, lastName?, referralSource? }`
-  - Response: Success/error confirmation
-  - Triggers SendGrid confirmation email
+  - Payload: `{ email, name?, source? }`
+  - Response: Success/error confirmation (HTTP 201)
+  - Triggers SendGrid confirmation email (fire-and-forget)
+  - **CORS**: Configured to allow `thoughtmarksapp.com`, `thoughtmarks.ai`, all subdomains
 
 ---
 
@@ -624,6 +625,15 @@ When making changes:
 - **Reason**: `.app` TLD causing iOS Universal Links app download prompts
 - **Action**: Configured 301 redirect via Cloudflare Page Rule
 - **Result**: All domains active, redirect working
+
+### December 5, 2025 - Waitlist Form CORS Fix
+- **Issue**: Form submission failing with "Load failed" error
+- **Root Cause**: Backend CORS missing new domain, frontend using wrong API URL
+- **Fix**: 
+  - Updated backend `ALLOWED_ORIGINS` to include new domains
+  - Corrected frontend API URL from `thoughtmarks-api.fly.dev` to `api.thoughtmarks.app`
+- **Deployment**: Backend deployed to Fly.io, frontend deployed to Cloudflare Pages
+- **Result**: Waitlist API working (HTTP 201 + CORS headers verified)
 
 ---
 
