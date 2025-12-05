@@ -1,11 +1,11 @@
 # robots.txt for Thoughtmarks Landing Page
-# https://thoughtmarks.app
+# https://thoughtmarksapp.com
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://thoughtmarks.app/sitemap.xml
+Sitemap: https://thoughtmarksapp.com/sitemap.xml
 
 # Disallow admin/API routes (when backend is integrated)
 Disallow: /api/

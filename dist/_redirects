@@ -1,15 +1,26 @@
 # Redirects for Thoughtmarks Landing Page (Astro)
+# Primary domain: thoughtmarksapp.com
 
-# Old landing paths redirect to root
+# Old .app domain redirects to new primary .com domain
+https://thoughtmarks.app/*  https://thoughtmarksapp.com/:splat  301
+http://thoughtmarks.app/*   https://thoughtmarksapp.com/:splat  301
+https://www.thoughtmarks.app/*  https://thoughtmarksapp.com/:splat  301
+
+# Alternative .ai domain redirects to primary .com domain
+https://thoughtmarks.ai/*  https://thoughtmarksapp.com/:splat  301
+http://thoughtmarks.ai/*   https://thoughtmarksapp.com/:splat  301
+https://www.thoughtmarks.ai/*  https://thoughtmarksapp.com/:splat  301
+
+# WWW redirect to apex for primary domain
+https://www.thoughtmarksapp.com/*  https://thoughtmarksapp.com/:splat  301
+http://www.thoughtmarksapp.com/*   https://thoughtmarksapp.com/:splat  301
+
+# Legacy landing paths redirect to root
 /landing  /  301
 /landing/  /  301
-
-# Old domain redirects
-https://thoughtmarksapp.com/*  https://thoughtmarks.app/:splat  301
-http://thoughtmarksapp.com/*   https://thoughtmarks.app/:splat  301
+/landing/index.html  /  301
 
 # Legacy HTML paths redirect to new Astro paths
-/landing/index.html  /  301
 /legal/privacy.html  /legal/privacy  301
 /legal/terms.html  /legal/terms  301
 /legal/eula.html  /legal/eula  301

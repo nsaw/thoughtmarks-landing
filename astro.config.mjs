@@ -5,7 +5,7 @@ import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://thoughtmarks.app',
+  site: 'https://thoughtmarksapp.com',
   output: 'static',
   integrations: [
     react(),

@@ -1,7 +1,7 @@
 // src/pages/sitemap.xml.ts
 import type { APIRoute } from 'astro';
 
-const SITE_URL = 'https://thoughtmarks.app';
+const SITE_URL = 'https://thoughtmarksapp.com';
 
 // Static pages with their priorities and change frequencies
 const pages = [
