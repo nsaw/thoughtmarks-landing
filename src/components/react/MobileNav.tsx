@@ -9,11 +9,22 @@ interface NavLink {
 const navLinks: NavLink[] = [
   { label: 'Features', href: '#features' },
   { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Support', href: '/support' },
+];
+
+const compareLinks: NavLink[] = [
+  { label: 'vs Voicenotes', href: '/vs/voicenotes' },
+  { label: 'vs Notion', href: '/vs/notion' },
+];
+
+const useCaseLinks: NavLink[] = [
+  { label: 'For ADHD', href: '/for/adhd' },
+  { label: 'For Creatives', href: '/for/creatives' },
 ];
 
 export default function MobileNav() {
   const [isOpen, setIsOpen] = useState(false);
+  const [compareOpen, setCompareOpen] = useState(false);
+  const [useCasesOpen, setUseCasesOpen] = useState(false);
 
   // Close menu on escape key
   useEffect(() => {
@@ -102,6 +113,107 @@ export default function MobileNav() {
                     </a>
                   </li>
                 ))}
+
+                {/* Compare Section */}
+                <li>
+                  <button
+                    onClick={() => setCompareOpen(!compareOpen)}
+                    className="w-full flex items-center justify-between rounded-xl px-4 py-3 
+                               text-text-secondary hover:bg-bg-surface hover:text-text-primary 
+                               transition-colors"
+                  >
+                    <span>Compare</span>
+                    <svg 
+                      className={`w-4 h-4 transition-transform ${compareOpen ? 'rotate-180' : ''}`} 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
+                    </svg>
+                  </button>
+                  <AnimatePresence>
+                    {compareOpen && (
+                      <motion.ul
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="overflow-hidden ml-4 border-l border-border"
+                      >
+                        {compareLinks.map((link) => (
+                          <li key={link.href}>
+                            <a
+                              href={link.href}
+                              onClick={() => setIsOpen(false)}
+                              className="block rounded-r-xl px-4 py-2 text-sm text-text-secondary 
+                                         hover:bg-bg-surface hover:text-text-primary transition-colors"
+                            >
+                              {link.label}
+                            </a>
+                          </li>
+                        ))}
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
+                </li>
+
+                {/* Use Cases Section */}
+                <li>
+                  <button
+                    onClick={() => setUseCasesOpen(!useCasesOpen)}
+                    className="w-full flex items-center justify-between rounded-xl px-4 py-3 
+                               text-text-secondary hover:bg-bg-surface hover:text-text-primary 
+                               transition-colors"
+                  >
+                    <span>Use Cases</span>
+                    <svg 
+                      className={`w-4 h-4 transition-transform ${useCasesOpen ? 'rotate-180' : ''}`} 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7"/>
+                    </svg>
+                  </button>
+                  <AnimatePresence>
+                    {useCasesOpen && (
+                      <motion.ul
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: 'auto', opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="overflow-hidden ml-4 border-l border-border"
+                      >
+                        {useCaseLinks.map((link) => (
+                          <li key={link.href}>
+                            <a
+                              href={link.href}
+                              onClick={() => setIsOpen(false)}
+                              className="block rounded-r-xl px-4 py-2 text-sm text-text-secondary 
+                                         hover:bg-bg-surface hover:text-text-primary transition-colors"
+                            >
+                              {link.label}
+                            </a>
+                          </li>
+                        ))}
+                      </motion.ul>
+                    )}
+                  </AnimatePresence>
+                </li>
+
+                {/* Support Link */}
+                <li>
+                  <a
+                    href="/support"
+                    onClick={() => setIsOpen(false)}
+                    className="block rounded-xl px-4 py-3 text-text-secondary 
+                               hover:bg-bg-surface hover:text-text-primary 
+                               transition-colors"
+                  >
+                    Support
+                  </a>
+                </li>
               </ul>
 
               <div className="mt-4 border-t border-border pt-4">

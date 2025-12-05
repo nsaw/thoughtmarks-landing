@@ -10,7 +10,16 @@ const { transparent = false } = Astro.props;
 const navLinks = [
   { label: 'Features', href: '#features' },
   { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Support', href: '/support' },
+];
+
+const compareLinks = [
+  { label: 'vs Voicenotes', href: '/vs/voicenotes' },
+  { label: 'vs Notion', href: '/vs/notion' },
+];
+
+const useCaseLinks = [
+  { label: 'For ADHD', href: '/for/adhd' },
+  { label: 'For Creatives', href: '/for/creatives' },
 ];
 ---
 
@@ -51,6 +60,70 @@ const navLinks = [
               </a>
             </li>
           ))}
+          
+          <!-- Compare Dropdown -->
+          <li class="relative group">
+            <button
+              class="text-text-secondary hover:text-text-primary transition-colors 
+                     font-medium text-sm tracking-wide flex items-center gap-1"
+            >
+              Compare
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 
+                        group-hover:visible transition-all duration-200">
+              <div class="bg-bg-elevated border border-border rounded-xl shadow-card p-2 min-w-[160px]">
+                {compareLinks.map((link) => (
+                  <a
+                    href={link.href}
+                    class="block px-4 py-2 text-sm text-text-secondary hover:text-text-primary 
+                           hover:bg-bg-surface rounded-lg transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </li>
+
+          <!-- Use Cases Dropdown -->
+          <li class="relative group">
+            <button
+              class="text-text-secondary hover:text-text-primary transition-colors 
+                     font-medium text-sm tracking-wide flex items-center gap-1"
+            >
+              Use Cases
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 
+                        group-hover:visible transition-all duration-200">
+              <div class="bg-bg-elevated border border-border rounded-xl shadow-card p-2 min-w-[160px]">
+                {useCaseLinks.map((link) => (
+                  <a
+                    href={link.href}
+                    class="block px-4 py-2 text-sm text-text-secondary hover:text-text-primary 
+                           hover:bg-bg-surface rounded-lg transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a
+              href="/support"
+              class="text-text-secondary hover:text-text-primary transition-colors 
+                     font-medium text-sm tracking-wide"
+            >
+              Support
+            </a>
+          </li>
         </ul>
 
         <a href="#download" class="btn-primary text-sm">
