@@ -1,0 +1,174 @@
+---
+// src/pages/voice-notes-app.astro
+// SEO Landing Page targeting: "voice notes app" (12K/mo), "voice to text notes" (4K/mo)
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+import RelatedContent from '@/components/astro/RelatedContent.astro';
+
+const relatedLinks = [
+  { title: "Voice Notes vs Typing", href: "/blog/voice-notes-vs-typing", description: "The science behind why voice capture is 3x faster.", category: "Research" },
+  { title: "For Busy Parents", href: "/for/humans", description: "Capture ideas while juggling life.", category: "Use Cases" },
+  { title: "Apple Watch Capture", href: "/features/apple-watch", description: "Full voice notes app on your wrist.", category: "Features" },
+];
+---
+
+<BaseLayout
+  title="Voice Notes App with AI Transcription | Thoughtmarks"
+  description="The best voice notes app for iPhone & Apple Watch. AI transcription, automatic organization, semantic search. Capture ideas at the speed of speech."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <div class="container-narrow">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          The Voice Notes App That<br/>
+          <span class="text-accent">Actually Organizes Itself</span>
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+          Speak your ideas. AI transcribes, tags, and connects them automatically. 
+          No folders. No filing. Just capture and find.
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-2xl p-8 mb-16 text-center">
+        <p class="text-lg text-zinc-300 mb-6">
+          Voice notes are 3x faster than typing—but most voice apps become graveyards 
+          of unlabeled recordings you'll never find again. Thoughtmarks is different.
+        </p>
+        <WaitlistCTA variant="primary" size="lg" client:load>
+          Try Free for 14 Days
+        </WaitlistCTA>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-8 text-center">Why Thoughtmarks Beats Other Voice Notes Apps</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">🎙️ Voice-to-Text That Works</h3>
+            <p class="text-zinc-300 leading-relaxed">
+              Real-time transcription as you speak. Smart punctuation, natural formatting. 
+              Works in noisy environments. Your voice becomes searchable text instantly.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">🤖 AI Auto-Organization</h3>
+            <p class="text-zinc-300 leading-relaxed">
+              Every <a href="/features/ai-organization" class="text-accent hover:underline">voice note is automatically tagged</a> and categorized. 
+              AI finds connections between your ideas. No manual filing ever.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">🔍 Semantic Search</h3>
+            <p class="text-zinc-300 leading-relaxed">
+              Search by meaning, not exact words. "That marketing idea from last week" 
+              actually finds it. <a href="/features/semantic-search" class="text-accent hover:underline">Search the way you think</a>.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <h3 class="text-xl font-bold text-white mb-3">⌚ Apple Watch App</h3>
+            <p class="text-zinc-300 leading-relaxed">
+              <a href="/features/apple-watch" class="text-accent hover:underline">Full voice notes app on your wrist</a>. 
+              Capture ideas during workouts, walks, meetings—without pulling out your phone.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-8 text-center">Capture Voice Notes Anywhere</h2>
+        <div class="grid sm:grid-cols-3 gap-4">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-5 text-center">
+            <span class="text-3xl mb-3 block">🗣️</span>
+            <h3 class="font-bold text-white mb-2">Siri Integration</h3>
+            <p class="text-zinc-400 text-sm">"Hey Siri, add a Thoughtmark"</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-5 text-center">
+            <span class="text-3xl mb-3 block">⌚</span>
+            <h3 class="font-bold text-white mb-2">Apple Watch</h3>
+            <p class="text-zinc-400 text-sm">Full app, works offline</p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-5 text-center">
+            <span class="text-3xl mb-3 block">🚗</span>
+            <h3 class="font-bold text-white mb-2">CarPlay Ready</h3>
+            <p class="text-zinc-400 text-sm">Hands-free while driving</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16 bg-zinc-900/50 border border-zinc-800 rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-6">Compare Voice Notes Apps</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-zinc-700">
+                <th class="text-left py-3 px-2 text-zinc-400">Feature</th>
+                <th class="text-center py-3 px-2 text-accent font-bold">Thoughtmarks</th>
+                <th class="text-center py-3 px-2 text-zinc-400">Voice Memos</th>
+                <th class="text-center py-3 px-2 text-zinc-400">Otter.ai</th>
+              </tr>
+            </thead>
+            <tbody class="text-zinc-300">
+              <tr class="border-b border-zinc-800">
+                <td class="py-3 px-2">AI Transcription</td>
+                <td class="text-center py-3 px-2 text-accent">✓</td>
+                <td class="text-center py-3 px-2">Basic</td>
+                <td class="text-center py-3 px-2">✓</td>
+              </tr>
+              <tr class="border-b border-zinc-800">
+                <td class="py-3 px-2">Auto-Organization</td>
+                <td class="text-center py-3 px-2 text-accent">✓ AI</td>
+                <td class="text-center py-3 px-2 text-zinc-500">✗</td>
+                <td class="text-center py-3 px-2 text-zinc-500">Manual</td>
+              </tr>
+              <tr class="border-b border-zinc-800">
+                <td class="py-3 px-2">Semantic Search</td>
+                <td class="text-center py-3 px-2 text-accent">✓</td>
+                <td class="text-center py-3 px-2 text-zinc-500">✗</td>
+                <td class="text-center py-3 px-2 text-zinc-500">Keywords</td>
+              </tr>
+              <tr class="border-b border-zinc-800">
+                <td class="py-3 px-2">Apple Watch</td>
+                <td class="text-center py-3 px-2 text-accent">✓ Full App</td>
+                <td class="text-center py-3 px-2">Basic</td>
+                <td class="text-center py-3 px-2 text-zinc-500">✗</td>
+              </tr>
+              <tr class="border-b border-zinc-800">
+                <td class="py-3 px-2">Price</td>
+                <td class="text-center py-3 px-2 text-accent">$60/yr</td>
+                <td class="text-center py-3 px-2">Free</td>
+                <td class="text-center py-3 px-2">$100/yr</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-zinc-500 text-sm mt-4">
+          See detailed comparisons: <a href="/vs/voicenotes" class="text-accent hover:underline">vs Voicenotes</a> • 
+          <a href="/vs/otter" class="text-accent hover:underline">vs Otter.ai</a> • 
+          <a href="/alternatives/voice-notes" class="text-accent hover:underline">All voice notes apps compared</a>
+        </p>
+      </div>
+
+      <div class="text-center bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Try the Best Voice Notes App</h2>
+        <p class="text-zinc-400 mb-6 max-w-xl mx-auto">
+          14-day free trial. $5/week, $15/month, or $60/year. 
+          Voice notes that organize themselves.
+        </p>
+        <WaitlistCTA variant="primary" size="lg" client:load>
+          Join the Waitlist
+        </WaitlistCTA>
+        <p class="text-sm text-zinc-500 mt-4">iOS + Apple Watch. Built by Nick—a woodworking, filmmaking nerd with ADHD.</p>
+      </div>
+
+      <RelatedContent links={relatedLinks} title="Learn More" />
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+

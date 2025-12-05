@@ -8,6 +8,12 @@ const pages = [
   { url: '/', priority: 1.0, changefreq: 'weekly' },
   { url: '/waitlist', priority: 0.9, changefreq: 'weekly' },
   
+  // High-volume keyword landing pages (SEO)
+  { url: '/voice-notes-app', priority: 0.9, changefreq: 'monthly' },
+  { url: '/second-brain-app', priority: 0.9, changefreq: 'monthly' },
+  { url: '/ai-note-taking', priority: 0.9, changefreq: 'monthly' },
+  { url: '/adhd-note-taking', priority: 0.9, changefreq: 'monthly' },
+  
   // Comparison pages (high-intent SEO)
   { url: '/vs/voicenotes', priority: 0.8, changefreq: 'monthly' },
   { url: '/vs/notion', priority: 0.8, changefreq: 'monthly' },

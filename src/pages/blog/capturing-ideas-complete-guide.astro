@@ -4,8 +4,15 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Nav from '@/components/astro/Nav.astro';
 import Footer from '@/components/astro/Footer.astro';
 import WaitlistCTA from '@/components/react/WaitlistCTA';
+import RelatedContent from '@/components/astro/RelatedContent.astro';
 
 const publishDate = '2024-12-01';
+
+const relatedLinks = [
+  { title: "Voice Notes App", href: "/voice-notes-app", description: "Voice capture for instant idea capture.", category: "Product" },
+  { title: "Voice vs Typing", href: "/blog/voice-notes-vs-typing", description: "Why voice is 3x faster for capturing ideas.", category: "Blog" },
+  { title: "For ADHD Brains", href: "/for/adhd", description: "Capture that works with scattered thinking.", category: "Use Case" },
+];
 const readTime = '12 min read';
 ---
 
@@ -250,10 +257,12 @@ const readTime = '12 min read';
           <li>• Your brain forgets 50% of new ideas within an hour</li>
           <li>• The capture gap (time to record) determines idea survival</li>
           <li>• Effective systems are: ubiquitous, frictionless, trustworthy</li>
-          <li>• Voice capture beats typing for speed</li>
-          <li>• AI organization means no filing homework</li>
+          <li>• <a href="/blog/voice-notes-vs-typing" class="text-accent hover:underline">Voice capture beats typing for speed</a></li>
+          <li>• <a href="/features/ai-organization" class="text-accent hover:underline">AI organization</a> means no filing homework</li>
           <li>• Captured ideas compound; lost ideas don't</li>
         </ul>
+
+        <RelatedContent links={relatedLinks} />
       </div>
     </article>
   </main>

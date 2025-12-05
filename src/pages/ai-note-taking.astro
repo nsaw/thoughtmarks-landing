@@ -1,0 +1,218 @@
+---
+// src/pages/ai-note-taking.astro
+// SEO Landing Page targeting: "ai note taking app" (6K/mo), "ai that connects your ideas"
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+import RelatedContent from '@/components/astro/RelatedContent.astro';
+
+const relatedLinks = [
+  { title: "How AI is Changing Notes", href: "/blog/ai-changing-note-taking", description: "The AI revolution in personal knowledge.", category: "Blog" },
+  { title: "AI Organization", href: "/features/ai-organization", description: "Zero-org philosophy explained.", category: "Features" },
+  { title: "Semantic Search", href: "/features/semantic-search", description: "Find by meaning, not keywords.", category: "Features" },
+];
+---
+
+<BaseLayout
+  title="AI Note Taking App | Thoughtmarks"
+  description="AI note taking that actually helps. Auto-transcription, intelligent organization, semantic search, connection discovery. The future of capturing ideas."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <div class="container-narrow">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          AI Note Taking That<br/>
+          <span class="text-accent">Actually Helps</span>
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+          Not AI that writes your notes. AI that transcribes, organizes, connects, 
+          and finds them—so you can focus on thinking instead of filing.
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8 mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6 text-center">AI That Works for You, Not Instead of You</h2>
+        <p class="text-lg text-zinc-300 text-center max-w-2xl mx-auto">
+          Some AI apps want to write your notes. We think that's backwards. 
+          Your ideas should be yours. AI should handle the boring parts: 
+          transcription, organization, finding things later.
+        </p>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-8 text-center">Four AI Superpowers</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-3xl">🎙️</span>
+              <h3 class="text-xl font-bold text-white">AI Transcription</h3>
+            </div>
+            <p class="text-zinc-300 leading-relaxed">
+              <a href="/features/voice-capture" class="text-accent hover:underline">Speak your ideas</a>, 
+              AI converts to text in real-time. Smart punctuation, natural formatting. 
+              Works in noisy environments. Handles technical terms.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-3xl">🏷️</span>
+              <h3 class="text-xl font-bold text-white">AI Organization</h3>
+            </div>
+            <p class="text-zinc-300 leading-relaxed">
+              <a href="/features/ai-organization" class="text-accent hover:underline">Every note is automatically tagged</a> 
+              and categorized. Not just keywords—AI understands context. 
+              "Call mom about birthday" gets tagged: family, reminder, events.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-3xl">🔗</span>
+              <h3 class="text-xl font-bold text-white">AI Connections</h3>
+            </div>
+            <p class="text-zinc-300 leading-relaxed">
+              AI finds relationships between ideas you'd never notice. That thought from three weeks ago? 
+              Related to what you captured today. Patterns emerge automatically.
+            </p>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-3xl">🔍</span>
+              <h3 class="text-xl font-bold text-white">AI Search</h3>
+            </div>
+            <p class="text-zinc-300 leading-relaxed">
+              <a href="/features/semantic-search" class="text-accent hover:underline">Semantic search</a> 
+              understands meaning, not just keywords. "That marketing psychology thing" 
+              finds your note about "loss aversion in pricing."
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16 bg-zinc-900/50 border border-zinc-800 rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-6">How AI Note Taking Works</h2>
+        <div class="space-y-4">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-accent font-bold">1</span>
+            </div>
+            <div>
+              <span class="text-white font-semibold">You capture</span>
+              <span class="text-zinc-400"> — voice or text, whatever's fastest</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-accent font-bold">2</span>
+            </div>
+            <div>
+              <span class="text-white font-semibold">AI transcribes</span>
+              <span class="text-zinc-400"> — real-time, accurate, formatted</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-accent font-bold">3</span>
+            </div>
+            <div>
+              <span class="text-white font-semibold">AI organizes</span>
+              <span class="text-zinc-400"> — tags, categories, connections—automatically</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center flex-shrink-0">
+              <span class="text-accent font-bold">4</span>
+            </div>
+            <div>
+              <span class="text-white font-semibold">You search</span>
+              <span class="text-zinc-400"> — by meaning, and find what you half-remember</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16 grid md:grid-cols-3 gap-6 text-center">
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <p class="text-3xl font-black text-accent mb-2">0</p>
+          <p class="text-zinc-400">Manual organization required</p>
+        </div>
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <p class="text-3xl font-black text-accent mb-2">100%</p>
+          <p class="text-zinc-400">Of your ideas, findable</p>
+        </div>
+        <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+          <p class="text-3xl font-black text-accent mb-2">3x</p>
+          <p class="text-zinc-400">Faster than typing</p>
+        </div>
+      </div>
+
+      <div class="mb-16 bg-zinc-900/50 border border-zinc-800 rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-6">AI Note Taking vs Traditional Apps</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-zinc-700">
+                <th class="text-left py-3 px-2 text-zinc-400">Capability</th>
+                <th class="text-center py-3 px-2 text-accent font-bold">Thoughtmarks</th>
+                <th class="text-center py-3 px-2 text-zinc-400">Apple Notes</th>
+                <th class="text-center py-3 px-2 text-zinc-400">Notion</th>
+              </tr>
+            </thead>
+            <tbody class="text-zinc-300">
+              <tr class="border-b border-zinc-800">
+                <td class="py-3 px-2">AI Transcription</td>
+                <td class="text-center py-3 px-2 text-accent">✓</td>
+                <td class="text-center py-3 px-2 text-zinc-500">Basic</td>
+                <td class="text-center py-3 px-2 text-zinc-500">✗</td>
+              </tr>
+              <tr class="border-b border-zinc-800">
+                <td class="py-3 px-2">AI Organization</td>
+                <td class="text-center py-3 px-2 text-accent">✓ Automatic</td>
+                <td class="text-center py-3 px-2 text-zinc-500">✗ Manual</td>
+                <td class="text-center py-3 px-2 text-zinc-500">✗ Manual</td>
+              </tr>
+              <tr class="border-b border-zinc-800">
+                <td class="py-3 px-2">AI Connections</td>
+                <td class="text-center py-3 px-2 text-accent">✓ Discovered</td>
+                <td class="text-center py-3 px-2 text-zinc-500">✗</td>
+                <td class="text-center py-3 px-2 text-zinc-500">✗ Manual</td>
+              </tr>
+              <tr class="border-b border-zinc-800">
+                <td class="py-3 px-2">Semantic Search</td>
+                <td class="text-center py-3 px-2 text-accent">✓</td>
+                <td class="text-center py-3 px-2 text-zinc-500">Keywords</td>
+                <td class="text-center py-3 px-2">AI add-on</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="text-zinc-500 text-sm mt-4">
+          See detailed comparisons: <a href="/vs/notion" class="text-accent hover:underline">vs Notion</a> • 
+          <a href="/vs/obsidian" class="text-accent hover:underline">vs Obsidian</a> • 
+          <a href="/alternatives/notion" class="text-accent hover:underline">Notion alternatives</a>
+        </p>
+      </div>
+
+      <div class="text-center bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Try AI-Powered Note Taking</h2>
+        <p class="text-zinc-400 mb-6 max-w-xl mx-auto">
+          14-day free trial. $5/week, $15/month, or $60/year. 
+          AI that helps you think, not write for you.
+        </p>
+        <WaitlistCTA variant="primary" size="lg" client:load>
+          Join the Waitlist
+        </WaitlistCTA>
+        <p class="text-sm text-zinc-500 mt-4">iOS + Apple Watch. Built by Nick—a woodworking, filmmaking nerd with ADHD.</p>
+      </div>
+
+      <RelatedContent links={relatedLinks} />
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+

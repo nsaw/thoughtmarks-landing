@@ -1,0 +1,189 @@
+---
+// src/pages/second-brain-app.astro
+// SEO Landing Page targeting: "second brain app" (8K/mo), "organize thoughts app" (1K/mo)
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+import RelatedContent from '@/components/astro/RelatedContent.astro';
+
+const relatedLinks = [
+  { title: "Second Brain Apps Compared", href: "/blog/second-brain-apps-compared", description: "Notion vs Obsidian vs Thoughtmarks.", category: "Comparison" },
+  { title: "vs Obsidian", href: "/vs/obsidian", description: "Quick capture vs knowledge graphs.", category: "Compare" },
+  { title: "How AI Organizes", href: "/features/ai-organization", description: "Zero-org philosophy explained.", category: "Features" },
+];
+---
+
+<BaseLayout
+  title="Second Brain App That Builds Itself | Thoughtmarks"
+  description="The second brain app for people who don't have time to build systems. Voice capture, AI organization, semantic search. Your ideas, connected automatically."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <div class="container-narrow">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          A Second Brain That<br/>
+          <span class="text-accent">Builds Itself</span>
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+          Most second brain apps require hours of setup and constant maintenance. 
+          Thoughtmarks builds your knowledge system automatically while you just... capture ideas.
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-br from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-2xl p-8 mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6 text-center">The Second Brain Problem</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold text-red-400 mb-3">❌ Traditional Second Brains</h3>
+            <ul class="space-y-2 text-zinc-400 text-sm">
+              <li>• Hours spent designing the "perfect" system</li>
+              <li>• Manual linking, tagging, filing</li>
+              <li>• Abandoned after 2 weeks</li>
+              <li>• Guilt about the unused system</li>
+              <li>• More time organizing than capturing</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-accent mb-3">✓ Thoughtmarks Approach</h3>
+            <ul class="space-y-2 text-zinc-300 text-sm">
+              <li>• Zero setup required</li>
+              <li>• AI handles all organization</li>
+              <li>• Works on day one, forever</li>
+              <li>• Capture without thinking about filing</li>
+              <li>• All time spent capturing, none organizing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-8 text-center">How Your Second Brain Grows</h2>
+        <div class="space-y-6">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-accent font-bold text-xl">1</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Capture Everything</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  <a href="/features/voice-capture" class="text-accent hover:underline">Voice or text</a>, whenever ideas strike. 
+                  Shower thoughts, book insights, meeting notes, random epiphanies. Don't filter—just capture.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-accent font-bold text-xl">2</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">AI Understands & Organizes</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  <a href="/features/ai-organization" class="text-accent hover:underline">AI reads each capture</a>, 
+                  understands the meaning, assigns tags, and categorizes into smart bins. 
+                  Your system builds itself from your actual thoughts.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-accent font-bold text-xl">3</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Connections Emerge</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  AI finds relationships between ideas you'd never notice. That thought from last month 
+                  connects to today's insight. Your knowledge compounds automatically.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-accent font-bold text-xl">4</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Find by Meaning</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  <a href="/features/semantic-search" class="text-accent hover:underline">Semantic search</a> finds 
+                  ideas by what they mean, not exact words. "That marketing psychology thing" actually works.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16 bg-zinc-900/50 border border-zinc-800 rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-6">Who This Second Brain Is For</h2>
+        <div class="grid sm:grid-cols-2 gap-6">
+          <div>
+            <h3 class="font-bold text-white mb-2">Perfect For:</h3>
+            <ul class="space-y-2 text-zinc-300">
+              <li class="flex items-start gap-2">
+                <span class="text-accent">✓</span>
+                <span>People who've abandoned Notion/Obsidian</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent">✓</span>
+                <span><a href="/for/adhd" class="text-accent hover:underline">ADHD brains</a> who hate organizing</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent">✓</span>
+                <span><a href="/for/creatives" class="text-accent hover:underline">Creatives</a> with ideas everywhere</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-accent">✓</span>
+                <span><a href="/for/entrepreneurs" class="text-accent hover:underline">Founders</a> moving too fast to file</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold text-white mb-2">Not For:</h3>
+            <ul class="space-y-2 text-zinc-400">
+              <li class="flex items-start gap-2">
+                <span class="text-zinc-500">→</span>
+                <span>People who enjoy building PKM systems</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-zinc-500">→</span>
+                <span>Those who want full control over organization</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-zinc-500">→</span>
+                <span>Graph view enthusiasts (try <a href="/vs/obsidian" class="text-accent hover:underline">Obsidian</a>)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center bg-gradient-to-br from-violet-500/10 to-purple-500/10 border border-violet-500/20 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Start Building Your Second Brain</h2>
+        <p class="text-zinc-400 mb-6 max-w-xl mx-auto">
+          14-day free trial. $5/week, $15/month, or $60/year. 
+          No setup. No maintenance. It just works.
+        </p>
+        <WaitlistCTA variant="primary" size="lg" client:load>
+          Join the Waitlist
+        </WaitlistCTA>
+        <p class="text-sm text-zinc-500 mt-4">iOS + Apple Watch. Built by Nick—a woodworking, filmmaking nerd with ADHD.</p>
+      </div>
+
+      <RelatedContent links={relatedLinks} />
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+

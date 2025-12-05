@@ -1,0 +1,225 @@
+---
+// src/pages/adhd-note-taking.astro
+// SEO Landing Page targeting: "adhd note taking" (3K/mo), "note app for people with adhd"
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/astro/Nav.astro';
+import Footer from '@/components/astro/Footer.astro';
+import WaitlistCTA from '@/components/react/WaitlistCTA';
+import RelatedContent from '@/components/astro/RelatedContent.astro';
+
+const relatedLinks = [
+  { title: "ADHD Productivity Tools", href: "/blog/adhd-productivity-tools", description: "Tools that actually work for ADHD brains.", category: "Blog" },
+  { title: "For ADHD", href: "/for/adhd", description: "Built for how your brain works.", category: "Use Case" },
+  { title: "Voice Capture", href: "/features/voice-capture", description: "5-second capture before you forget.", category: "Features" },
+];
+---
+
+<BaseLayout
+  title="ADHD Note Taking App | Thoughtmarks"
+  description="Note taking designed for ADHD brains. 5-second voice capture, zero organization required, AI handles filing, semantic search for half-remembered ideas."
+>
+  <Nav transparent={false} />
+  
+  <main class="min-h-screen pt-32 pb-20">
+    <div class="container-narrow">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl sm:text-5xl font-black text-white mb-6 leading-tight">
+          ADHD Note Taking That<br/>
+          <span class="text-accent">Actually Works</span>
+        </h1>
+        <p class="text-xl text-zinc-400 max-w-2xl mx-auto">
+          Built by someone with ADHD, for people with ADHD. 
+          Fast capture, zero organization, finds things you half-remember.
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-8 mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6 text-center">Why Traditional Note Apps Fail ADHD Brains</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="text-red-400 text-xl">✗</span>
+              <p class="text-zinc-300">Too many steps to capture—idea lost before you get there</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-red-400 text-xl">✗</span>
+              <p class="text-zinc-300">"Where should this go?" paralysis kills momentum</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-red-400 text-xl">✗</span>
+              <p class="text-zinc-300">Elaborate systems get abandoned in weeks</p>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-3">
+              <span class="text-red-400 text-xl">✗</span>
+              <p class="text-zinc-300">Can't find things without exact keywords</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-red-400 text-xl">✗</span>
+              <p class="text-zinc-300">Guilt about messy, disorganized notes</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="text-red-400 text-xl">✗</span>
+              <p class="text-zinc-300">Designed for neurotypical organizational patterns</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-8 text-center">Designed for How ADHD Actually Works</h2>
+        <div class="grid gap-6">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">⚡</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">5-Second Capture</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  "Hey Siri, add a Thoughtmark"—done. 
+                  <a href="/features/voice-capture" class="text-accent hover:underline">Voice capture</a> 
+                  gets the idea out before your brain moves to the next thing. 
+                  No unlocking, no app-finding, no decisions.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🚫</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Zero Organization Required</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  No folders to choose. No tags to assign. No "where does this go?" paralysis. 
+                  <a href="/features/ai-organization" class="text-accent hover:underline">AI handles all the filing</a>—
+                  you just capture messy thoughts as they come.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">🧠</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Search by Vague Memory</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  "That thing about the marketing stuff from last week" actually finds it. 
+                  <a href="/features/semantic-search" class="text-accent hover:underline">Semantic search</a> 
+                  understands meaning, not just keywords. Works the way ADHD memory works.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span class="text-2xl">⌚</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white mb-2">Capture from Anywhere</h3>
+                <p class="text-zinc-300 leading-relaxed">
+                  <a href="/features/apple-watch" class="text-accent hover:underline">Apple Watch</a>, 
+                  Siri, AirPods, CarPlay. Phone might be across the room—your watch is on your wrist. 
+                  ADHD ideas don't wait for convenient moments.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16 bg-zinc-900/50 border border-zinc-800 rounded-xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-6">ADHD-Friendly Features</h2>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="flex items-start gap-3">
+            <span class="text-accent">✓</span>
+            <span class="text-zinc-300">No setup required—works on day one</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-accent">✓</span>
+            <span class="text-zinc-300">Voice-first—3x faster than typing</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-accent">✓</span>
+            <span class="text-zinc-300">AI auto-tags everything</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-accent">✓</span>
+            <span class="text-zinc-300">Messy capture is the point</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-accent">✓</span>
+            <span class="text-zinc-300">Find things by description, not exact words</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-accent">✓</span>
+            <span class="text-zinc-300">AI finds connections you'd miss</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-accent">✓</span>
+            <span class="text-zinc-300">Works offline—syncs when connected</span>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="text-accent">✓</span>
+            <span class="text-zinc-300">No maintenance—system stays working forever</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-16">
+        <h2 class="text-2xl font-bold text-white mb-6 text-center">Common ADHD Note Taking Scenarios</h2>
+        <div class="grid gap-4">
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-5">
+            <p class="text-zinc-300">
+              <span class="text-white font-semibold">"I had this amazing idea in the shower and forgot it by the time I got to my phone"</span>
+              <br/><span class="text-accent">→ Siri works in the shower. "Hey Siri, add a Thoughtmark: [idea]"</span>
+            </p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-5">
+            <p class="text-zinc-300">
+              <span class="text-white font-semibold">"I know I wrote this somewhere but I can't remember where or what I called it"</span>
+              <br/><span class="text-accent">→ Semantic search finds it by meaning. Just describe what you remember.</span>
+            </p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-5">
+            <p class="text-zinc-300">
+              <span class="text-white font-semibold">"I start note apps and abandon them after a week"</span>
+              <br/><span class="text-accent">→ No system to maintain. Just capture. It works forever.</span>
+            </p>
+          </div>
+          <div class="bg-zinc-900/50 border border-zinc-800 rounded-xl p-5">
+            <p class="text-zinc-300">
+              <span class="text-white font-semibold">"By the time I decide where to put a note, I've forgotten what I was going to write"</span>
+              <br/><span class="text-accent">→ No decisions required. Just speak. AI files it.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-8">
+        <h2 class="text-2xl font-bold text-white mb-4">Note Taking That Gets ADHD</h2>
+        <p class="text-zinc-400 mb-6 max-w-xl mx-auto">
+          14-day free trial. $5/week, $15/month, or $60/year. 
+          Built by Nick—a woodworking, filmmaking nerd with ADHD.
+        </p>
+        <WaitlistCTA variant="primary" size="lg" client:load>
+          Join the Waitlist
+        </WaitlistCTA>
+        <p class="text-sm text-zinc-500 mt-4">iOS + Apple Watch. Works the way your brain works.</p>
+      </div>
+
+      <RelatedContent links={relatedLinks} />
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
+
