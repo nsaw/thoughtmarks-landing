@@ -35,8 +35,8 @@ export default function WaitlistForm() {
     setErrorMessage('');
 
     try {
-      // API URL - Fly.io production deployment
-      const apiUrl = 'https://thoughtmarks-api.fly.dev';
+      // API URL - Production backend
+      const apiUrl = 'https://api.thoughtmarks.app';
       
       const response = await fetch(`${apiUrl}/api/waitlist`, {
         method: 'POST',
