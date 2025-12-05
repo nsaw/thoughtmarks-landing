@@ -1,4 +1,7 @@
 ---
+// src/components/astro/PhoneMockup.astro
+// Phone mockup with cache-busting for reliable image loading
+
 interface Props {
   src: string;
   alt: string;
@@ -7,6 +10,10 @@ interface Props {
 }
 
 const { src, alt, class: className = '', priority = false } = Astro.props;
+
+// Cache-bust version - increment when images change
+const CACHE_VERSION = 'v2';
+const cacheBustedSrc = src.includes('?') ? `${src}&cb=${CACHE_VERSION}` : `${src}?cb=${CACHE_VERSION}`;
 ---
 
 <div class={`phone-mockup-container ${className}`}>
@@ -20,11 +27,14 @@ const { src, alt, class: className = '', priority = false } = Astro.props;
       <!-- Screen area with screenshot -->
       <div class="phone-screen">
         <img
-          src={src}
+          src={cacheBustedSrc}
           alt={alt}
           class="phone-screenshot"
           loading={priority ? 'eager' : 'lazy'}
           fetchpriority={priority ? 'high' : 'auto'}
+          decoding={priority ? 'sync' : 'async'}
+          width="390"
+          height="844"
         />
       </div>
       
