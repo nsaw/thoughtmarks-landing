@@ -192,11 +192,11 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
 
             <div className="p-8">
               {formState === 'success' ? (
-                // Success state
+                // Success state with double opt-in messaging
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="text-center py-8"
+                  className="text-center py-6"
                 >
                   <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-accent/20 flex items-center justify-center">
                     <svg className="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -206,12 +206,35 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
                   <h3 className="text-2xl font-bold text-white mb-2">
                     You're in.
                   </h3>
-                  <p className="text-zinc-400 mb-2">
+                  <p className="text-zinc-400 mb-4">
                     (We knew you were interesting.)
                   </p>
-                  <p className="text-zinc-500 text-sm mb-6">
-                    Check your inbox for a confirmation email.
+                  
+                  {/* Email confirmation notice */}
+                  <div className="bg-zinc-800/50 border border-zinc-700 rounded-xl p-4 mb-6 text-left">
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 mt-0.5">
+                        <svg className="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                      <div>
+                        <p className="text-white font-medium text-sm mb-1">
+                          Check your email to confirm
+                        </p>
+                        <p className="text-zinc-400 text-sm">
+                          We sent a confirmation to your inbox. 
+                          <span className="text-amber-400 font-medium"> Can't find it? Check your spam or junk folder</span> — 
+                          sometimes we end up there by mistake.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-zinc-500 text-xs mb-6">
+                    Add <span className="text-zinc-400 font-medium">hello@thoughtmarksapp.com</span> to your contacts so you don't miss our launch email.
                   </p>
+                  
                   <button
                     onClick={resetAndClose}
                     className="px-6 py-3 bg-zinc-800 text-white rounded-xl 

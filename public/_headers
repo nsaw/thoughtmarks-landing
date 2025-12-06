@@ -1,3 +1,4 @@
+# Security headers for all pages
 /*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
@@ -6,23 +7,16 @@
   Content-Security-Policy: default-src 'self' https:; img-src 'self' https: data:; style-src 'self' 'unsafe-inline' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; font-src 'self' https: data:; connect-src 'self' https:;
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
 
-# Critical images - short cache for quick updates, but still cached
-/assets/MAIN-mockup-*.PNG
-  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+# All static assets - reasonable cache with revalidation
+# Using stale-while-revalidate to serve stale content while fetching fresh
+/assets/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+  Vary: Accept-Encoding
 
-/assets/MAIN-mockup-*.png
-  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
-
-# Static assets - long cache
-/assets/*.jpg
-  Cache-Control: public, max-age=31536000, immutable
-
-/assets/*.png
-  Cache-Control: public, max-age=31536000, immutable
-
+# Fonts - long cache (they rarely change)
 /assets/fonts/*
   Cache-Control: public, max-age=31536000, immutable
 
-# App icon - medium cache
-/assets/AppIcon.png
+# Well-known files
+/.well-known/*
   Cache-Control: public, max-age=86400
