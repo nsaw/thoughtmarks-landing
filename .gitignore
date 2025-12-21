@@ -86,7 +86,9 @@ build/
 *~
 
 # OS files
+# macOS Finder metadata files - ignore in all directories recursively
 .DS_Store
+**/.DS_Store
 Thumbs.db
 Desktop.ini
 
