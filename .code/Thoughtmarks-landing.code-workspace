@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../tm-mobile-cursor/mobile-native-fresh/backend"
+		}
+	],
+	"settings": {
+		"search.quickAccess.preserveInput": true,
+		"search.quickOpen.includeSymbols": true
+	}
+}

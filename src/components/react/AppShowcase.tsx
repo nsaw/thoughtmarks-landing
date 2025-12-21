@@ -32,6 +32,13 @@ const appScreens: Screen[] = [
     image: '/assets/MAIN-mockup-page-Bins.png',
   },
   {
+    id: 'intelligence-hub',
+    title: 'Intelligence Hub',
+    subtitle: 'AI-powered insights.',
+    description: 'Connections, recommendations, and patterns you never noticed. Your thinking, amplified.',
+    image: '/assets/MAIN-mockup-page-AI.png',
+  },
+  {
     id: 'thoughtmark-view',
     title: 'Deep Dive',
     subtitle: 'Your thoughts, connected.',

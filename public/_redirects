@@ -26,3 +26,7 @@ http://www.thoughtmarksapp.com/*   https://thoughtmarksapp.com/:splat  301
 /legal/eula.html  /legal/eula  301
 /support/index.html  /support  301
 /support/watch.html  /support/watch  301
+
+# App Store download redirect
+/download  https://apps.apple.com/app/id6746895453  301
+/download/  https://apps.apple.com/app/id6746895453  301

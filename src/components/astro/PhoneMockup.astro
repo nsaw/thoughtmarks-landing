@@ -12,7 +12,7 @@ interface Props {
 const { src, alt, class: className = '', priority = false } = Astro.props;
 
 // Cache-bust version - increment when images change
-const CACHE_VERSION = 'v2';
+const CACHE_VERSION = 'v3';
 const cacheBustedSrc = src.includes('?') ? `${src}&cb=${CACHE_VERSION}` : `${src}?cb=${CACHE_VERSION}`;
 ---
 
