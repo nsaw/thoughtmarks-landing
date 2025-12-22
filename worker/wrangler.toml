@@ -1,0 +1,23 @@
+# Cloudflare Worker Configuration for Domain Redirect
+# Redirects multiple domains to thoughtmarksapp.com
+# - dontforgetthisapp.com (and www.dontforgetthisapp.com)
+# - iforgottoremember.com (and www.iforgottoremember.com)
+
+name = "dontforgetthisapp-redirect"
+main = "index.ts"
+compatibility_date = "2025-01-15"
+
+# Custom domains - these will be configured after domains are added to Cloudflare
+# To configure:
+# 1. Ensure domains are added to Cloudflare
+# 2. Go to Workers & Pages → dontforgetthisapp-redirect → Settings → Triggers
+# 3. Add Custom Domains:
+#    - dontforgetthisapp.com
+#    - www.dontforgetthisapp.com
+#    - iforgottoremember.com
+#    - www.iforgottoremember.com
+
+# Production environment
+[env.production]
+name = "dontforgetthisapp-redirect"
+
