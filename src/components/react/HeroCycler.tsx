@@ -9,18 +9,18 @@ interface HeroVariant {
 const heroVariants: HeroVariant[] = [
   {
     headline: ["Capture at the speed of life.", "Find at the speed of need."],
-    subhead: "Your ideas deserve better than your notes app.",
+    subhead: "Thought it and forgot it? Found it.",
   },
   {
     headline: ["Don't watch another shower thought", "circle the drain."],
     subhead: "Capture at the speed of life. Find it when you need it.",
   },
   {
-    headline: ["The notes app for people", "too busy being interesting."],
-    subhead: "Thought it and forgot it? Found it.",
+    headline: ["The notes app for people", "with great ideas and average memory."],
+    subhead: "Life’s moving. Your notes should keep up.",
   },
   {
-    headline: ["Your brain deserves a raise."],
+    headline: ["Your brain's tired", "your ideas shouldn't be."],
     subhead: "Your ideas deserve better than your notes app.",
   },
   {
@@ -35,7 +35,7 @@ export default function HeroCycler() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % heroVariants.length);
-    }, 6000); // Change every 6 seconds
+    }, 7000); // Change every 7 seconds
 
     return () => clearInterval(interval);
   }, []);
