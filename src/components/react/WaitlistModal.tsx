@@ -191,7 +191,7 @@ export default function WaitlistModal({ isOpen, onClose, onSuccess }: WaitlistMo
           >
             {/* Close button */}
             <button
-              onClick={handleSuccessAcknowledge}
+              onClick={resetAndClose}
               className="absolute top-4 right-4 p-2 text-zinc-400 hover:text-white 
                          transition-colors rounded-lg hover:bg-zinc-800"
               aria-label="Close modal"
@@ -247,7 +247,7 @@ export default function WaitlistModal({ isOpen, onClose, onSuccess }: WaitlistMo
                   </p>
                   
                   <button
-                    onClick={resetAndClose}
+                    onClick={handleSuccessAcknowledge}
                     className="px-6 py-3 bg-zinc-800 text-white rounded-xl 
                                hover:bg-zinc-700 transition-colors font-medium"
                   >
