@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 interface WaitlistModalProps {
   isOpen: boolean;
   onClose: () => void;
+  onSuccess?: () => void;
 }
 
 type FormState = 'idle' | 'submitting' | 'success' | 'error';
@@ -26,7 +27,9 @@ function getUTMParams(): UTMParams {
   if (stored) {
     try {
       return JSON.parse(stored);
-    } catch {}
+    } catch {
+      localStorage.removeItem('tm_utm');
+    }
   }
   
   // Parse from URL
@@ -48,7 +51,7 @@ function getUTMParams(): UTMParams {
   return utm;
 }
 
-export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
+export default function WaitlistModal({ isOpen, onClose, onSuccess }: WaitlistModalProps) {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [formState, setFormState] = useState<FormState>('idle');
@@ -113,8 +116,8 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
     setErrorMessage('');
 
     try {
-      // API URL - Fly.io production deployment
-      const apiUrl = 'https://thoughtmarks-api.fly.dev';
+      // API URL - Production backend
+      const apiUrl = 'https://api.thoughtmarks.app';
       
       const response = await fetch(`${apiUrl}/api/waitlist`, {
         method: 'POST',
@@ -135,6 +138,7 @@ export default function WaitlistModal({ isOpen, onClose }: WaitlistModalProps) {
       }
 
       setFormState('success');
+      onSuccess?.();
       
       // Track conversion in PostHog
       if (typeof window !== 'undefined' && (window as unknown as { posthog?: { capture: (event: string, props: Record<string, string>) => void } }).posthog) {

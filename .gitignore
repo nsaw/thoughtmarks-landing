@@ -205,3 +205,11 @@ temp/
 *.psd 
 *.ai
 dist/.DS_Store
+
+# ===== SITE ASSETS (REQUIRED FOR CLOUDFLARE PAGES DEPLOY) =====
+# This repo is an Astro static site. If these are ignored, Cloudflare Pages deploys
+# without images/fonts and browsers receive the HTML fallback for /assets/* requests.
+!public/_headers
+!public/_redirects
+!public/robots.txt
+!public/assets/**

@@ -15,7 +15,7 @@ export default function ExitIntent() {
     }
 
     let isExiting = false;
-    let exitTimer: NodeJS.Timeout;
+    let exitTimer: ReturnType<typeof setTimeout> | undefined;
 
     // Desktop: Mouse leaving viewport at top
     const handleMouseLeave = (e: MouseEvent) => {
@@ -48,7 +48,7 @@ export default function ExitIntent() {
     return () => {
       document.removeEventListener('mouseleave', handleMouseLeave);
       window.removeEventListener('popstate', handlePopState);
-      if (exitTimer) clearTimeout(exitTimer);
+      if (exitTimer !== undefined) clearTimeout(exitTimer);
     };
   }, []);
 
@@ -67,6 +67,7 @@ export default function ExitIntent() {
     <WaitlistModal 
       isOpen={showExitModal} 
       onClose={handleClose}
+      onSuccess={handleSuccess}
     />
   );
 }

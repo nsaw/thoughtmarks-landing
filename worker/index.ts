@@ -19,7 +19,7 @@ const REDIRECT_DOMAINS = [
 ];
 
 export default {
-  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+  async fetch(request: Request, _env: Env, _ctx: ExecutionContext): Promise<Response> {
     try {
       const url = new URL(request.url);
       const hostname = url.hostname.toLowerCase();
@@ -45,7 +45,5 @@ export default {
   },
 };
 
-interface Env {
-  // Add any environment variables here if needed
-}
+type Env = Record<string, never>;
 

@@ -36,7 +36,8 @@ const config: Config = {
       fontFamily: {
         sans: ['Lato', 'system-ui', '-apple-system', 'sans-serif'],
         display: ['Lato', 'system-ui', '-apple-system', 'sans-serif'],
-        script: ['Over the Rainbow', 'cursive'],
+        // Avoid "generic cursive" falling back to Comic Sans-like fonts on some platforms.
+        script: ['Over the Rainbow', 'Snell Roundhand', 'Apple Chancery', 'Segoe Script', 'cursive'],
         serif: ['Merriweather', 'Georgia', 'serif'],
       },
       fontSize: {
