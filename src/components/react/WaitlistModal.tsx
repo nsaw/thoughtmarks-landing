@@ -138,7 +138,6 @@ export default function WaitlistModal({ isOpen, onClose, onSuccess }: WaitlistMo
       }
 
       setFormState('success');
-      onSuccess?.();
       
       // Track conversion in PostHog
       if (typeof window !== 'undefined' && (window as unknown as { posthog?: { capture: (event: string, props: Record<string, string>) => void } }).posthog) {
@@ -163,6 +162,14 @@ export default function WaitlistModal({ isOpen, onClose, onSuccess }: WaitlistMo
     onClose();
   };
 
+  const handleSuccessAcknowledge = () => {
+    // IMPORTANT: don't call onSuccess synchronously after setFormState('success').
+    // Parents like ExitIntent close/unmount the modal in onSuccess, which would
+    // prevent the user from seeing the confirmation and spam-folder guidance.
+    onSuccess?.();
+    resetAndClose();
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -184,7 +191,7 @@ export default function WaitlistModal({ isOpen, onClose, onSuccess }: WaitlistMo
           >
             {/* Close button */}
             <button
-              onClick={resetAndClose}
+              onClick={handleSuccessAcknowledge}
               className="absolute top-4 right-4 p-2 text-zinc-400 hover:text-white 
                          transition-colors rounded-lg hover:bg-zinc-800"
               aria-label="Close modal"
