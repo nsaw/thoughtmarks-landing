@@ -35,8 +35,8 @@ const absoluteImage = image.startsWith('http') ? image : `https://thoughtmarksap
     <link rel="canonical" href={canonicalURL} />
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/assets/AppIcon.png" />
-    <link rel="apple-touch-icon" href="/assets/AppIcon.png" />
+    <link rel="icon" type="image/png" href="/assets/AppIcon.png?cb=v4" />
+    <link rel="apple-touch-icon" href="/assets/AppIcon.png?cb=v4" />
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -72,7 +72,7 @@ const absoluteImage = image.startsWith('http') ? image : `https://thoughtmarksap
     <link rel="dns-prefetch" href="https://us.i.posthog.com" />
     
     <!-- Preload hero image for faster LCP -->
-    <link rel="preload" as="image" href="/assets/MAIN-mockup-page-dashboard.PNG?cb=v3" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/MAIN-mockup-page-dashboard.PNG?cb=v4" fetchpriority="high" />
     
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json">
@@ -95,7 +95,7 @@ const absoluteImage = image.startsWith('http') ? image : `https://thoughtmarksap
           "@type": "Organization",
           "name": "Thoughtmarks",
           "url": "https://thoughtmarksapp.com",
-          "logo": "https://thoughtmarksapp.com/assets/AppIcon.png",
+          "logo": "https://thoughtmarksapp.com/assets/AppIcon.png?cb=v4",
           "description": "Thoughtmarks helps you capture and organize your best ideas at the speed of life with voice-first note taking and AI organization.",
           "sameAs": [
             "https://twitter.com/thoughtmarks",
