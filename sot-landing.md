@@ -37,6 +37,13 @@ npm run deploy:production  # Deploy to production branch
 4. Assets copied from `public/` to `dist/`
 5. Wrangler deploys to Cloudflare Pages CDN
 
+### Asset Caching + Cache-Busting
+- **Problem**: If Cloudflare caches the HTML SPA fallback for a missing asset path (e.g. a font/image URL),
+  the CDN can later serve **`text/html`** at that asset URL even after the file exists, causing broken fonts/images.
+- **Fix**: Bump the cache-bust version used by the site (e.g. `?cb=v4`) so clients request a fresh URL.
+  - **Images**: `src/components/astro/PhoneMockup.astro` appends `cb` automatically.
+  - **Fonts**: `src/styles/fonts.css` includes `?cb=` on `@font-face` URLs.
+
 ---
 
 ## Domains
