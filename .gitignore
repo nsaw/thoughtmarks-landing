@@ -75,7 +75,6 @@ log/
 .cache/
 cache/
 node_modules/
-dist/
 build/
 
 # IDE files
