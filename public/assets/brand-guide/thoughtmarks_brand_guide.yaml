@@ -1,30 +1,34 @@
 thoughtmarks_brand_guide:
-  version: "2.0"
-  last_updated: "2025-01-13"
+  version: "3.0.0"
+  last_updated: "2025-12-25"
+  source: "Based on actual deployment at thoughtmarksapp.com"
   
   quick_reference:
-    brand_yellow: "#FEFF00"
-    brand_black: "#000000"
-    card_background: "#1A1A1E"
-    circuit_gray: "#B3B9C0"
-    tagline: "bookmarks for your brain!"
-    positioning: "Cognitive capture tool for people who think faster than they can organize"
-    icon_color_space: "Display P3"
-    typography_ui: "Sans-serif (likely SF Pro for iOS)"
-    typography_tagline: "Handwritten casual script (yellow only)"
+    primary_accent: "#3B82F6"  # Blue (NOT yellow - yellow is tagline only)
+    brand_yellow: "#FEFF00"    # Yellow (tagline script text only)
+    background_base: "#09090B"  # Warm dark base
+    background_elevated: "#18181B"  # Card/surface backgrounds
+    background_surface: "#27272A"  # Elevated surfaces
+    text_primary: "#FAFAFA"    # Primary text (white)
+    text_secondary: "#A1A1AA"  # Secondary text (zinc-400)
+    text_muted: "#71717A"      # Muted text (zinc-500)
+    tagline: "bookmarks for your brain"
+    positioning: "Cognitive capture tool - built for speed, not organization"
+    typography_ui: "Lato (sans-serif)"
+    typography_tagline: "Over the Rainbow (script font, yellow only)"
     social_card_format: "1080x1920px (9:16) with glass morphism"
     never_use:
-      - "Gradients or color fades"
-      - "Multiple accent colors (yellow is the only accent)"
-      - "Light mode as default"
+      - "Yellow for buttons or primary CTAs (use blue #3B82F6)"
+      - "Pure black backgrounds (use warm dark #09090B)"
+      - "Light mode as default (dark is brand)"
       - "Productivity jargon in copy"
       - "Large areas of yellow background"
   
   brand_essence:
     core_idea: "Cognitive offloading made frictionless"
     positioning: "The capture tool for people who think faster than they can organize"
-    tagline_primary: "bookmarks for your brain!"
-    tagline_secondary: "Find FOCUS in the CHAOS"
+    tagline_primary: "bookmarks for your brain"
+    tagline_secondary: "Capture at the speed of life. Find at the speed of need."
     
   brand_personality:
     traits:
@@ -38,9 +42,9 @@ thoughtmarks_brand_guide:
       tone: Direct, energetic, slightly irreverent
       vocabulary: Active verbs, neurological metaphors, productivity language without corporate speak
       sentence_structure: Short, punchy, scannable
-      what_we_say: "Capture brilliant ideas", "Stay in flow", "Your digital brain"
+      what_we_say: "Capture brilliant ideas", "Stay in flow", "Your digital brain", "Capture at the speed of life"
       what_we_dont_say: "Maximize productivity", "Synergize", "Streamline workflows"
-
+  
   visual_identity:
     logo:
       primary_mark: "Brain with circuit board pattern + yellow bookmark flag"
@@ -113,113 +117,127 @@ thoughtmarks_brand_guide:
         - "Translucency values enable system integration (dark mode adaptation)"
     
     color_palette:
-      primary:
+      primary_accent:
+        thoughtmarks_blue:
+          hex: "#3B82F6"
+          rgb: "59, 130, 246"
+          name: "Blue 500 (Tailwind)"
+          usage: "Primary buttons, CTAs, links, interactive elements, focus rings, glow effects"
+          hover: "#2563EB"  # Blue 600
+          light: "#60A5FA"  # Blue 400
+          subtle: "#1E3A5F"  # Dark blue for backgrounds
+          accessibility_note: "AAA contrast against white, AA against warm dark backgrounds"
+          note: "This is the PRIMARY interactive color - NOT yellow. Yellow is tagline-only."
+        
+      brand_highlight:
         thoughtmarks_yellow:
           hex: "#FEFF00"
           rgb: "254, 255, 0"
-          cmyk: "0, 0, 100, 0 (approximate - test for best results)"
           display_p3: "Used in iOS icon for wider color gamut"
-          usage: "Bookmark flag, CTAs, highlights, accent elements, icon background"
+          usage: "Tagline script text ONLY ('bookmarks for your brain'), bookmark icon element, iOS icon"
           accessibility_note: "AAA contrast against black (#000000), verify against grays"
-          note: "This is an extremely saturated yellow - nearly pure yellow at max brightness"
+          note: "Extremely saturated yellow - use ONLY for tagline script text and icon elements. NOT for buttons or primary CTAs."
         
-      neutral:
-        circuit_gray:
-          hex: "#B3B9C0"
-          name: "Bombay"
-          rgb: "179, 185, 192"
-          usage: "Brain outline, circuit traces, secondary UI elements"
+      backgrounds:
+        base:
+          hex: "#09090B"
+          rgb: "9, 9, 11"
+          name: "Zinc 950 (warm dark)"
+          usage: "Primary page background, body background"
+          note: "Warm dark, not pure black - creates softer, more approachable feel"
         
-        deep_black:
-          hex: "#000000"
-          rgb: "0, 0, 0"
-          usage: "Primary backgrounds, app UI, high contrast base"
+        elevated:
+          hex: "#18181B"
+          rgb: "24, 24, 27"
+          name: "Zinc 900"
+          usage: "Card backgrounds, elevated surfaces, secondary backgrounds"
         
-        charcoal:
-          hex: "#1A1A1E"
-          name: "Shark"
-          rgb: "26, 26, 30"
-          usage: "Card backgrounds, elevated surfaces, subtle depth"
+        surface:
+          hex: "#27272A"
+          rgb: "39, 39, 42"
+          name: "Zinc 800"
+          usage: "Hover states, borders, tertiary surfaces"
         
-        oslo_gray:
-          hex: "#83868B"
-          rgb: "131, 134, 139"
-          usage: "Tertiary text, inactive elements"
+      text:
+        primary:
+          hex: "#FAFAFA"
+          rgb: "250, 250, 250"
+          name: "Zinc 50"
+          usage: "Primary headings, important text, high contrast text"
         
-        cod_gray:
-          hex: "#181818"
-          rgb: "24, 24, 24"
-          usage: "Deep background alternative, shadows"
-      
-      supporting:
-        white:
-          hex: "#FFFFFF"
-          usage: "Text on dark backgrounds, inverse treatments"
+        secondary:
+          hex: "#A1A1AA"
+          rgb: "161, 161, 170"
+          name: "Zinc 400"
+          usage: "Body text, secondary content, descriptions"
         
-        mercury:
-          hex: "#E0E0E0"
-          rgb: "224, 224, 224"
-          usage: "Light gray for subtle borders, dividers"
+        muted:
+          hex: "#71717A"
+          rgb: "113, 113, 122"
+          name: "Zinc 500"
+          usage: "Tertiary text, placeholders, disabled states"
         
-        perano:
-          hex: "#A4B5F7"
-          rgb: "164, 181, 247"
-          usage: "Optional accent for interactive states (use sparingly)"
+      borders:
+        default:
+          hex: "#27272A"
+          rgb: "39, 39, 42"
+          name: "Zinc 800"
+          usage: "Default borders, dividers"
         
-        wild_blue_yonder:
-          hex: "#8590BE"
-          rgb: "133, 144, 190"
-          usage: "Muted blue accent (use sparingly if needed)"
-      
-      extended_palette:
-        note: "These colors exist in the design system but should be used extremely sparingly if at all"
-        husk:
-          hex: "#B7A363"
-          rgb: "183, 163, 99"
-        buddha_gold:
-          hex: "#C99900"
-          rgb: "201, 153, 0"
-        buttered_rum:
-          hex: "#B07F12"
-          rgb: "176, 127, 18"
-        tabasco:
-          hex: "#AF2813"
-          rgb: "175, 40, 19"
+        hover:
+          hex: "#71717A"
+          rgb: "113, 113, 122"
+          name: "Zinc 500"
+          usage: "Border hover states"
       
       color_rules:
-        - "Yellow is THE brand color - use it confidently but sparingly"
-        - "Dark backgrounds are default - light mode is secondary"
-        - "Circuit gray for structure, yellow for action/attention"
-        - "Avoid color gradients - flat, high contrast is the aesthetic"
+        - "Blue (#3B82F6) is THE primary interactive color - use for all buttons, CTAs, links"
+        - "Yellow (#FEFF00) is ONLY for tagline script text and icon elements - NOT for buttons"
+        - "Warm dark backgrounds are default - light mode is secondary"
+        - "Gradients ARE used (subtle, with blur effects for depth)"
+        - "Glass morphism and blur effects are part of the design language"
     
     typography:
       primary_typeface:
-        family: "Sans-serif, geometric"
-        weight_range: "400 (regular) to 700 (bold)"
-        usage: "App UI, headers, body text, everything except tagline"
-        characteristics: "Clean, modern, high legibility, slightly technical feel"
-        examples: "SF Pro, Inter, Helvetica Neue"
+        family: "Lato"
+        weights: "300 (Light), 400 (Regular), 700 (Bold), 900 (Black)"
+        usage: "All UI text, headers, body text, everything except tagline"
+        characteristics: "Clean, modern, high legibility, geometric sans-serif"
+        fallback: "system-ui, -apple-system, sans-serif"
+        source: "Self-hosted TTF files in /assets/fonts/Lato/"
       
       accent_typeface:
-        family: "Handwritten or casual script"
-        usage: "Tagline only - 'bookmarks for your brain!'"
-        color: "Always yellow"
-        characteristics: "Playful, human, contrasts with technical brain icon"
-        note: "This creates personality without sacrificing professionalism"
+        family: "Over the Rainbow"
+        weight: "400 (Regular only)"
+        usage: "Tagline ONLY - 'bookmarks for your brain'"
+        color: "ALWAYS #FEFF00 (yellow)"
+        characteristics: "Handwritten, casual script, playful, human"
+        fallback: "Snell Roundhand, Apple Chancery, Segoe Script, cursive"
+        source: "Self-hosted TTF file in /assets/fonts/Over_the_Rainbow/"
+        note: "This creates personality without sacrificing professionalism. NEVER use for any other text."
+      
+      serif_typeface:
+        family: "Merriweather"
+        weights: "300 (Light), 400 (Regular), 700 (Bold)"
+        usage: "Available but not heavily used - reserved for special content"
+        source: "Google Fonts (loaded via CDN)"
+        note: "Use sparingly - primarily Lato is the brand font"
       
       hierarchy:
-        h1: "Bold, all caps, tracking +5%, large"
-        h2: "Bold, sentence case"
-        h3: "Medium weight, sentence case"
-        body: "Regular weight, comfortable line height (1.5-1.6)"
-        ui_labels: "Medium weight, slightly compressed"
-        tagline: "Handwritten accent font, yellow"
+        display: "4rem (64px), line-height 1.1, letter-spacing -0.02em, font-black"
+        h1: "3rem (48px), line-height 1.15, letter-spacing -0.02em, font-bold"
+        h2: "2rem (32px), line-height 1.2, letter-spacing -0.01em, font-bold"
+        h3: "1.5rem (24px), line-height 1.3, font-semibold"
+        body: "1.125rem (18px), line-height 1.6, font-normal"
+        small: "0.875rem (14px), line-height 1.5, font-normal"
+        tagline: "Over the Rainbow script, yellow (#FEFF00), 1.5rem-2rem"
       
       typographic_rules:
         - "All caps for THOUGHTMARKS wordmark"
         - "Sentence case for most headlines (more approachable)"
         - "Generous white space - let the copy breathe"
         - "Never center-align body text"
+        - "Use Lato for everything except tagline"
     
     iconography:
       style: "Line-based, geometric, circuit/tech inspired"
@@ -246,44 +264,86 @@ thoughtmarks_brand_guide:
   ui_design_system:
     layout_principles:
       - "Mobile-first (it's a phone app)"
-      - "Generous tap targets (44px minimum)"
+      - "Generous tap targets (44px minimum per WCAG 2.5.5)"
       - "Clear hierarchy through size and weight, not color"
       - "Floating action button for quick capture"
       - "Bottom navigation for primary functions"
     
     component_patterns:
       cards:
-        background: "Charcoal on deep black"
-        radius: "12px"
+        background: "#18181B (elevated) on #09090B (base)"
+        radius: "12px (rounded-xl) or 16px (rounded-2xl)"
         shadow: "Subtle, suggests elevation without being heavy"
-        padding: "16px"
+        padding: "24px (p-6)"
+        border: "#27272A (border) with hover state to #71717A"
+        hover: "border-accent/30, shadow-card-hover, translate-y-1"
       
       buttons:
         primary:
-          background: "Thoughtmarks yellow"
-          text: "Deep black"
-          style: "Bold, high contrast, impossible to miss"
+          background: "#3B82F6 (accent blue)"
+          text: "White (#FFFFFF)"
+          hover: "#2563EB (accent-hover)"
+          style: "Bold, high contrast, shadow-glow-sm on hover shadow-glow-md"
+          shadow: "rgba(59, 130, 246, 0.3) glow effect"
         secondary:
           background: "Transparent"
-          border: "Circuit gray"
-          text: "White"
-        
+          border: "#27272A (border)"
+          text: "#FAFAFA (text-primary)"
+          hover: "bg-bg-surface, border-text-muted"
+        ghost:
+          background: "Transparent"
+          text: "#A1A1AA (text-secondary)"
+          hover: "text-text-primary, bg-bg-surface"
+      
       input_fields:
-        background: "Charcoal"
-        border: "Circuit gray on focus, invisible at rest"
-        text: "White"
-        placeholder: "Circuit gray"
+        background: "#18181B (bg-elevated)"
+        border: "#27272A (border) on focus, invisible at rest"
+        text: "#FAFAFA (text-primary)"
+        placeholder: "#71717A (text-muted)"
+        focus: "ring-2 ring-accent ring-offset-2"
       
       tags:
-        background: "Circuit gray @ 20% opacity"
+        background: "Gray at 20% opacity"
         text: "White"
         style: "Pill-shaped, lowercase, compact"
     
     spacing_system:
       base_unit: "4px"
-      scale: "4, 8, 12, 16, 24, 32, 48, 64"
+      scale: "4, 8, 12, 16, 24, 32, 48, 64, 96, 128"
       rationale: "Consistent rhythm, predictable relationships"
+      custom: "18 (4.5rem), 22 (5.5rem), 30 (7.5rem) for special cases"
     
+    effects:
+      gradients:
+        usage: "Subtle gradients ARE used (contrary to old guide)"
+        examples:
+          - "Radial gradients for blob backgrounds (from-accent/10 to-transparent)"
+          - "Conic gradients for special effects"
+          - "Linear gradients for card accents (from-emerald-500/20 to-teal-400/10)"
+        note: "Gradients are subtle, low opacity (5-20%), with blur effects"
+      
+      blur:
+        usage: "Heavy use of backdrop-blur and blur effects"
+        examples:
+          - "backdrop-blur-sm for cards"
+          - "blur-3xl for organic blob shapes"
+          - "blur-2xl for floating orbs"
+        note: "Creates depth and modern glass morphism aesthetic"
+      
+      shadows:
+        glow_sm: "0 0 20px -5px rgba(59, 130, 246, 0.3)"
+        glow_md: "0 0 40px -10px rgba(59, 130, 246, 0.4)"
+        glow_lg: "0 0 60px -15px rgba(59, 130, 246, 0.5)"
+        card: "0 4px 20px -4px rgba(0, 0, 0, 0.5)"
+        card_hover: "0 8px 30px -6px rgba(0, 0, 0, 0.6)"
+      
+      animations:
+        fade_in: "0.6s ease-out forwards"
+        fade_up: "0.6s ease-out forwards (opacity + translateY)"
+        scale_in: "0.5s ease-out forwards"
+        float: "6s ease-in-out infinite (for decorative blobs)"
+        delays: "100ms, 200ms, 300ms, 400ms, 500ms for staggered animations"
+  
   brand_voice_messaging:
     target_audiences:
       busy_professionals:
@@ -316,10 +376,16 @@ thoughtmarks_brand_guide:
     
     key_messages:
       taglines_in_use:
-        primary: "bookmarks for your brain!"
-        secondary: "Find focus in the chaos"
+        primary: "bookmarks for your brain"
+        secondary: "Capture at the speed of life. Find at the speed of need."
+        hero_variants:
+          - "Capture at the speed of life. Find at the speed of need."
+          - "Don't watch another shower thought circle the drain."
+          - "The notes app for people with great ideas and average memory."
+          - "Your brain's tired, your ideas shouldn't be."
+          - "Tip-of-the-tongue, solved."
         alternatives:
-          - "Capture ideas at the speed of life"
+          - "Thought it and forgot it? Found it."
           - "Voice in. Organized out."
           - "Stop managing notes. Start catching them."
           - "Find the thing you half remember"
@@ -389,22 +455,24 @@ thoughtmarks_brand_guide:
     
     website_landing_page:
       hero:
-        headline: "Direct, benefit-focused (current: 'Find FOCUS in the CHAOS' is solid)"
-        subhead: "Expand on the specific problem solved"
-        cta: "Yellow button, can't miss it"
-        background: "Dark, clean, maybe subtle circuit pattern"
+        headline: "Cycling headlines (5 variants, 7 second intervals)"
+        subhead: "Contextual subheads that change with headlines"
+        cta: "Blue button (#3B82F6), can't miss it"
+        background: "Warm dark (#09090B) with subtle gradient blobs"
+        tagline: "Yellow script 'bookmarks for your brain'"
       
       sections:
         problem: "Acknowledge the universal experience of losing ideas"
         solution: "Show the app in context, actual screenshots"
         features: "Voice-first, AI organization, tagging, search"
         social_proof: "Real user quotes (keep it authentic)"
-        cta_footer: "Simple, yellow, impossible to ignore"
+        cta_footer: "Simple, blue, impossible to ignore"
     
     social_media:
       visual_style:
-        - "Dark backgrounds always"
-        - "High contrast yellow accents"
+        - "Dark backgrounds always (#09090B base)"
+        - "Blue accent for CTAs (#3B82F6)"
+        - "Yellow script for tagline only (#FEFF00)"
         - "Short video clips showing real usage"
         - "Screenshots with highlighted features"
       
@@ -417,10 +485,10 @@ thoughtmarks_brand_guide:
           middle_section: "Content text (white on dark, clean hierarchy)"
           bottom_section: "Tagline (yellow handwritten) + THOUGHTMARKS wordmark"
         typography:
-          title: "Bold, white, sentence case"
-          body: "Regular, white, comfortable line height"
-          tagline: "Handwritten style, yellow (#FEFF00)"
-          wordmark: "All caps, white, bold"
+          title: "Bold, white, sentence case (Lato)"
+          body: "Regular, white, comfortable line height (Lato)"
+          tagline: "Handwritten style, yellow (#FEFF00, Over the Rainbow)"
+          wordmark: "All caps, white, bold (Lato)"
         effects:
           background_blur: "Gaussian blur on brain pattern behind card"
           card_shadow: "Soft drop shadow for depth"
@@ -440,11 +508,11 @@ thoughtmarks_brand_guide:
       square_social_assets:
         dimensions: "1080x1080px"
         usage: "Instagram feed, Facebook, LinkedIn"
-        layout: "Similar to 9x16 but with more balanced composition"
+        layout: "Similar to 9:16 but with more balanced composition"
         
       story_highlights:
         style: "Circular icons with brain + bookmark on dark background"
-        text_treatment: "Category labels in clean sans-serif"
+        text_treatment: "Category labels in clean sans-serif (Lato)"
       
       content_themes:
         - "Lost idea horror stories (relatable)"
@@ -472,11 +540,13 @@ thoughtmarks_brand_guide:
   
   brand_dont_list:
     visual_donts:
-      - "No gradients or color fades (flat is the aesthetic)"
-      - "Don't add multiple colors - yellow is THE accent"
-      - "Don't use rounded, bubbly fonts (keep it clean and modern)"
+      - "No yellow buttons or primary CTAs (use blue #3B82F6)"
+      - "Don't use pure black backgrounds (use warm dark #09090B)"
+      - "Don't use yellow for anything except tagline script text"
+      - "Don't use rounded, bubbly fonts (keep it clean and modern - Lato)"
       - "Don't clutter the icon - brain + bookmark is sufficient"
       - "Don't use light mode as default (dark is brand)"
+      - "Don't avoid gradients entirely (subtle gradients with blur ARE used)"
     
     messaging_donts:
       - "Don't claim to 'fix' people or their brains"
@@ -509,7 +579,9 @@ thoughtmarks_brand_guide:
   
   implementation_priorities:
     phase_1_essentials:
-      - "Lock down yellow hex code across all platforms"
+      - "Lock down blue accent (#3B82F6) as primary interactive color"
+      - "Reserve yellow (#FEFF00) for tagline script text only"
+      - "Establish warm dark backgrounds (#09090B, #18181B, #27272A)"
       - "Create app store assets with consistent branding"
       - "Establish voice tone guide for all customer-facing copy"
       - "Design email templates with brand colors/fonts"
@@ -528,31 +600,33 @@ thoughtmarks_brand_guide:
   
   notes_for_founder:
     confirmed_specifications:
-      yellow_hex: "#FEFF00 (exact from color palette)"
+      primary_accent: "#3B82F6 (blue - NOT yellow)"
+      brand_yellow: "#FEFF00 (tagline script text ONLY)"
       color_space: "Display P3 for iOS icon (wider gamut than sRGB)"
       icon_construction: "Multi-layer with blend modes - gradient overlay, glass effects, translucency"
       social_templates: "9:16 Instagram format with glass morphism cards"
       messaging: "Value props and how-it-works flow documented"
-      typography: "Sans-serif for UI, handwritten casual for tagline only"
+      typography: "Lato for UI, Over the Rainbow for tagline only"
+      backgrounds: "Warm dark (#09090B) not pure black"
+      gradients: "Subtle gradients with blur ARE used (contrary to old guide)"
     
     remaining_questions:
-      - "What's the specific sans-serif font family? (SF Pro for iOS is likely but confirm for web)"
-      - "What's the exact handwritten font for the tagline? (appears to be casual script)"
       - "Are there specific error state colors defined beyond the main palette?"
-      - "Any animation/motion guidelines for the app?"
+      - "Any animation/motion guidelines for the app beyond what's on landing page?"
       - "Sound design specifications for UI interactions?"
     
     recommendations:
-      - "That yellow (#FEFF00) is basically pure saturated yellow - it's bold as hell. Own it completely."
+      - "Blue (#3B82F6) is the primary interactive color - this is correct and should be maintained"
+      - "Yellow (#FEFF00) reserved for tagline only maintains brand distinction"
+      - "Warm dark backgrounds create softer, more approachable feel than pure black"
+      - "Subtle gradients with blur effects are modern and should be embraced"
       - "The glass morphism in the icon is current but will age - consider a flatter fallback for longevity"
       - "Display P3 is smart for iOS but remember web needs sRGB fallback (#FEFF00 will be slightly less vibrant)"
       - "Social share cards are well-designed - the glass effect keeps them modern without being gimmicky"
-      - "Consider registering #FEFF00 as a trademark color - it's distinctive enough"
-      - "The multi-layer icon composition is production-grade - document layer order for any redesigns"
     
     brand_risks_to_watch:
       - "Being lumped in with generic note apps - your messaging must be crystal clear"
-      - "That yellow is INTENSE - on some displays it might feel harsh. Test across devices."
+      - "Blue accent might feel generic - but it's more accessible than yellow for buttons"
       - "Tech aesthetic might alienate less tech-savvy users - balance with warmth in copy"
       - "Voice-first might make people think it's ONLY voice - clarify hybrid approach"
       - "Glass morphism is trendy now but could date the design - have a refresh plan"
@@ -562,82 +636,12 @@ thoughtmarks_brand_guide:
       - "The ADHD/neurodivergent market could love this (capture without organization burden)"
       - "Partnership opportunities with productivity podcasts, YouTube creators"
       - "The name 'Thoughtmarks' is incredibly searchable and memorable"
-      - "That yellow will pop in the App Store - literally impossible to miss"
-
-  appendix_color_specifications:
-    primary_yellow_deep_dive:
-      hex: "#FEFF00"
-      characteristics:
-        - "Near-pure yellow at maximum brightness (254 red, 255 green, 0 blue)"
-        - "One of the most saturated yellows possible in RGB space"
-        - "Sits at the extreme edge of the color gamut"
-        - "Highly visible and attention-grabbing"
-        - "Can appear to 'glow' on modern displays"
-      
-      perceptual_notes:
-        - "Extremely high luminance - will be the brightest element on screen"
-        - "May appear slightly greenish on some displays due to maxed green channel"
-        - "Can cause eye fatigue if overused or in large areas"
-        - "Excellent for small accent elements, problematic for large fills"
-        - "Works best against very dark backgrounds (#000000 or #181818)"
-      
-      display_considerations:
-        oled: "Will be extremely vibrant, may bloom slightly"
-        lcd: "Still very bright but slightly more controlled"
-        print: "Requires 100% yellow ink, may need color matching test"
-        web_srgb: "Displays accurately in sRGB as it's within gamut"
-        display_p3: "Even more vibrant on P3 displays (iPhone X and newer)"
-      
-      usage_rules:
-        do:
-          - "Use for CTAs and interactive elements that demand attention"
-          - "Use for the bookmark icon element"
-          - "Use for tagline text 'bookmarks for your brain!'"
-          - "Use sparingly as accent - less than 10% of total composition"
-        dont:
-          - "Don't use for large background areas (eye strain)"
-          - "Don't use for body text (readability issues)"
-          - "Don't pair with other bright saturated colors (visual chaos)"
-          - "Don't use at 100% opacity on anything except black backgrounds"
-      
-      accessibility_testing:
-        black_background: "AAA contrast (21:1 ratio) - perfect"
-        shark_background: "AA contrast (15:1 ratio) - good for large text"
-        bombay_gray_text: "Test required - may not meet AA for small text"
-        note: "Always test yellow text on specific background before implementation"
-    
-    print_production:
-      note: "Dark-heavy brand means print will be ink-intensive. Consider inverse treatments for certain applications."
-      yellow_print_considerations:
-        - "Test yellow on various paper stocks - may need adjustment for newsprint vs coated"
-        - "100% yellow ink can appear too vibrant - consider 95% for more natural appearance"
-        - "Overprinting black + yellow creates green tint - use knockout technique"
-        - "Pantone equivalent would be closest to Pantone Yellow C or 012 C (test for best match)"
-        - "Spot color printing recommended for brand consistency vs CMYK build"
-    
-    digital_accessibility:
-      wcag_compliance:
-        yellow_on_black: "AAA compliant for all text sizes"
-        yellow_on_shark: "AA compliant for large text (18pt+)"
-        yellow_on_bombay: "Likely fails AA - needs testing with actual hex values"
-      
-      colorblind_considerations:
-        - "Yellow/black works for most colorblind types (protanopia, deuteranopia)"
-        - "May be less distinct for tritanopia (blue-yellow colorblindness) - rare but possible"
-        - "Circuit gray may be less visible for some - ensure other differentiators (shape, position)"
-        - "Consider pattern fills as alternative to color alone for critical information"
-    
-    screen_color_variation:
-      issue: "Yellow displays differently on OLED vs LCD vs print"
-      mitigation:
-        - "Test on multiple devices during development (iPhone, Android, various monitors)"
-        - "Consider slightly desaturated yellow for more consistent appearance (not recommended for brand)"
-        - "Use color profiles in assets (sRGB for web, P3 for modern devices)"
-        - "Document that #FEFF00 is the canonical color regardless of display variation"
-        - "Accept that perfect consistency across all displays is impossible with such saturated yellow"
+      - "Blue accent will work better for accessibility than yellow buttons"
 
 version_history:
   v1.0: "Initial brand guide compiled from app screenshots and landing page analysis"
+  v2.0: "Updated with iOS icon specifications and social media templates"
+  v3.0: "Complete rewrite based on actual deployment at thoughtmarksapp.com - corrected colors (blue primary, yellow tagline-only), typography (Lato), backgrounds (warm dark), and design system (gradients/blur effects ARE used)"
   future_updates:
     - "Add exact color specifications once confirmed"
     - "Include typography license details when finalized"

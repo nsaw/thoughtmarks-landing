@@ -1,200 +1,414 @@
 THOUGHTMARKS BRAND ASSET INVENTORY
 Complete file reference for brand implementation
+Version 3.0 - Based on actual deployment at thoughtmarksapp.com
 
 ═══════════════════════════════════════════════════════════════════
 
 ICON & LOGO ASSETS
 
-Thoughtmarks_icon.png
-  Type: iOS app icon (final rendered version)
-  Format: PNG
-  Usage: App store, device home screen
-  Color Space: Display P3
-  Contains: Complete icon with all layers rendered
-  
-icon2.png
-  Type: Alternative icon variant
-  Format: PNG
-  Note: Check usage context in icon.json
-  
-COMPONENT FILES (for icon construction)
+App Icons
+  AppIcon.png
+    Type: Primary app icon
+    Format: PNG
+    Usage: General app icon reference
+    Location: /public/assets/AppIcon.png
+    
+  AppIcon-round.png
+    Type: Round variant app icon
+    Format: PNG
+    Usage: Round icon variant
+    Location: /public/assets/AppIcon-round.png
+    
+  generated-icon.png
+    Type: Generated icon
+    Format: PNG
+    Usage: Auto-generated icon variant
+    Location: /public/assets/generated-icon.png
 
-brain.png
-  Element: Circuit brain outline
-  Color: Gray (#B3B9C0 range)
-  Style: Line art, bilateral symmetry, circuit traces
-  Usage: Base layer in icon composition
-  
-bookmark_.png
-  Element: Yellow bookmark flag
-  Color: #FEFF00
-  Style: Solid fill with flag notch
-  Usage: Primary accent element, top-right position
-  
-gradient_overlay.png
-  Element: Gradient lighting effect
-  Blend Mode: Plus-lighter
-  Usage: Adds dimensional depth to icon
-  Scale: 1.6x with positioning offset
-  
-bg.png
-  Element: Background texture
-  Usage: Base layer for icon
-  Scale: 2.11x
-  
-icon.json (x2)
-  Type: iOS icon configuration
-  Contains: Layer composition, blend modes, positioning
-  Platform Support: iOS (squares), watchOS (circles)
-  Color Space: Display P3
-  Fill: System-dark
+iOS Adaptive Icons
+  Logo-iOS-Default-1024x1024@1x.png
+    Type: iOS app icon (1024x1024)
+    Format: PNG
+    Usage: App Store, iOS home screen
+    Color Space: Display P3
+    Location: /public/assets/Logo-iOS-Default-1024x1024@1x.png
+    
+  Logo-iOS-Default-40x40@2x.png
+    Type: iOS icon 40pt @2x (80x80)
+    Format: PNG
+    Usage: iOS home screen, settings
+    
+  Logo-iOS-Default-60x60@2x.png
+    Type: iOS icon 60pt @2x (120x120)
+    Format: PNG
+    Usage: iOS home screen
+    
+  Logo-iOS-Default-76x76@2x.png
+    Type: iOS icon 76pt @2x (152x152)
+    Format: PNG
+    Usage: iPad home screen
+    
+  Logo-iOS-Default-83.5x83.5@2x.png
+    Type: iOS icon 83.5pt @2x (167x167)
+    Format: PNG
+    Usage: iPad Pro home screen
+
+watchOS Icons
+  LogoRound-watchOS-Default-1024x1024@1x 1.png
+    Type: watchOS app icon (1024x1024)
+    Format: PNG
+    Usage: watchOS app icon
+    Shape: Circular
+    
+  LogoRound-watchOS-Default-50x50@2x.png
+    Type: watchOS icon 50pt @2x (100x100)
+    Format: PNG
+    Usage: watchOS home screen
+
+Branding Assets
+  Thoughtmarks-branding.png
+    Type: Primary branding asset
+    Format: PNG
+    Usage: Marketing materials, presentations
+    
+  Thoughtmarks-branding-2.png
+    Type: Alternative branding variant
+    Format: PNG
+    Usage: Marketing materials
+    
+  Thoughtmarks-branding-3.png
+    Type: Alternative branding variant
+    Format: PNG
+    Usage: Marketing materials
+    
+  Thoughtmarks-title-tagline-above-trans.png
+    Type: Logo with tagline above (transparent)
+    Format: PNG
+    Usage: Marketing materials
+    
+  Thoughtmarks-title-tagline-below.png
+    Type: Logo with tagline below
+    Format: PNG
+    Usage: Marketing materials
 
 ═══════════════════════════════════════════════════════════════════
 
-SOCIAL MEDIA TEMPLATES
+APP MOCKUP SCREENSHOTS
 
-SOCIAL-SHARE-CARD-IG-VERTICAL-9x16.png
-  Format: 1080x1920px (Instagram Stories/Reels)
-  Background: Dark with blurred brain pattern
-  Card Style: Glass morphism, semi-transparent
-  Layout: 
-    - Top: User avatar circle + title text
-    - Middle: Content area (white text on dark card)
-    - Bottom: Yellow tagline + THOUGHTMARKS wordmark
-  Effects: Gaussian blur, drop shadow, frosted glass
-  Usage: User-generated content shares, quotes, features
-  
-SOCIAL-SHARE-PLACEHOLDERS.png
-  Type: Template layout guide
-  Shows: Placeholder positions for:
-    - USER PROFILE AVATAR (circular, top-left)
-    - THOUGHTMARK TITLE (top section)
-    - Content text area (middle)
-    - Tagline + branding (bottom)
-  Usage: Reference for creating new social cards
-  
-SOCIAL-SHARE-EXAMPLE.png
-  Type: Populated template example
-  Shows: Real content implementation
-  Profile: "FIRE, MEET ASS #369"
-  Quote: "The magic you were looking for is in the work you were avoiding."
-  Demonstrates: Proper text hierarchy, spacing, branding placement
+Main App Screenshots
+  MAIN-mockup-page-dashboard.PNG
+    Type: Dashboard screen mockup
+    Format: PNG
+    Usage: Landing page hero, marketing materials
+    Description: Main dashboard view
+    
+  MAIN-mockup-page-dashboard-01.PNG
+    Type: Dashboard screen variant
+    Format: PNG
+    Usage: Landing page, marketing
+    
+  MAIN-mockup-page-Thoughtmark.PNG
+    Type: Thoughtmark detail view
+    Format: PNG
+    Usage: Feature showcases
+    
+  MAIN-mockup-page-Thoughtmark-01.PNG
+    Type: Thoughtmark detail variant
+    Format: PNG
+    Usage: Feature showcases
+    
+  MAIN-mockup-page-VTT.png
+    Type: Voice-to-text capture screen
+    Format: PNG
+    Usage: Voice capture feature showcase
+    
+  MAIN-mockup-page-Bins.png
+    Type: Smart Bins organization view
+    Format: PNG
+    Usage: Organization feature showcase
+    
+  MAIN-mockup-page-AI.png
+    Type: AI/Intelligence Hub screen
+    Format: PNG
+    Usage: AI features showcase
+    
+  MAIN-mockup-page-settings.png
+    Type: Settings screen
+    Format: PNG
+    Usage: Settings feature showcase
+    
+  mockup-page-pashboard.png
+    Type: Dashboard variant (typo in filename)
+    Format: PNG
+    Usage: Dashboard showcase
+
+watchOS Screenshots
+  Watch-companion-home.png
+    Type: watchOS home screen
+    Format: PNG
+    Usage: watchOS feature showcase
+    
+  watch-companion-record.png
+    Type: watchOS recording screen
+    Format: PNG
+    Usage: Voice capture on watch showcase
+
+═══════════════════════════════════════════════════════════════════
+
+SOCIAL MEDIA ASSETS
+
+Instagram Templates
+  SOCIAL-SHARE-CARD-IG-VERTICAL-9x16.png
+    Format: 1080x1920px (9:16 ratio)
+    Type: Instagram Stories/Reels template
+    Background: Dark (#09090B) with blurred brain pattern
+    Card Style: Glass morphism, semi-transparent
+    Layout: 
+      - Top: User avatar circle + title text
+      - Middle: Content area (white text on dark card)
+      - Bottom: Yellow tagline (#FEFF00) + THOUGHTMARKS wordmark
+    Effects: Gaussian blur, drop shadow, frosted glass
+    Usage: User-generated content shares, quotes, features
+    Location: /public/assets/SOCIAL-SHARE-CARD-IG-VERTICAL-9x16.png
+    
+  SOCIAL-SHARE-PLACEHOLDERS.png
+    Type: Template layout guide
+    Shows: Placeholder positions for:
+      - USER PROFILE AVATAR (circular, top-left)
+      - THOUGHTMARK TITLE (top section)
+      - Content text area (middle)
+      - Tagline + branding (bottom)
+    Usage: Reference for creating new social cards
+    Location: /public/assets/SOCIAL-SHARE-PLACEHOLDERS.png
+    
+  SOCIAL-SHARE-EXAMPLE.png
+    Type: Populated template example
+    Shows: Real content implementation
+    Profile: "FIRE, MEET ASS #369"
+    Quote: "The magic you were looking for is in the work you were avoiding."
+    Demonstrates: Proper text hierarchy, spacing, branding placement
+    Location: /public/assets/SOCIAL-SHARE-EXAMPLE.png
+
+Social Share Layers (Source Files)
+  Location: /public/assets/social-share-layers/
+  Contains:
+    - USER PROFILE AVATAR copy.png
+    - THOUGHTMARK TITLE copy.png
+    - Layer 0.png, Layer 1.png (background layers)
+    - BLANK.png, BLANK copy.png (template bases)
+    - placeholders.png (layout reference)
+    - Example content images (FIRE, MEET ASS #369.png, etc.)
+
+Square Social Assets
+  thoughtmarks-share-square.jpg
+    Format: Square (1:1 ratio)
+    Type: Square social media share card
+    Usage: Instagram feed, Facebook, LinkedIn
+    
+  thoughtmarks-share.jpg
+    Format: Standard social share
+    Type: Social media share card
+    Usage: General social sharing
+
+PNG Assets (Legacy/Reference)
+  Location: /public/assets/PNG/
+  Contains:
+    - Apple logo variants (Apple 0.png, Apple 2.png, etc.)
+    - Social media icons (social_1.png, social-square.png, threads.png, x.png)
+    - Logo variants (logo-icon.png)
+    - Title/tagline combinations (title-tag.png, title+tag.png, etc.)
+  Note: Some files have @2x variants for Retina displays
+
+SVG Assets
+  Location: /public/assets/SVG/
+  Contains:
+    - Apple logo SVG (Apple-logo.svg)
+    - Social media icons (social.svg, social_1.svg, threads.svg, x.svg)
+    - Title/tagline combinations (title+tag.svg, title+tagover.svg, etc.)
+  Usage: Scalable vector graphics for web
+
+═══════════════════════════════════════════════════════════════════
+
+TYPOGRAPHY ASSETS
+
+Lato Font Family
+  Location: /public/assets/fonts/Lato/
+  Format: TTF (TrueType)
+  Weights Available:
+    - Lato-Light.ttf (300)
+    - Lato-Regular.ttf (400)
+    - Lato-Bold.ttf (700)
+    - Lato-Black.ttf (900)
+  Styles:
+    - Regular
+    - Italic (Lato-Italic.ttf)
+  Usage: Primary UI font for all interface elements
+  License: Check Lato license file in directory
+  Cache Busting: URLs include ?cb=v4 parameter
+
+Over the Rainbow Font (Script)
+  Location: /public/assets/fonts/Over_the_Rainbow/
+  Format: TTF (TrueType)
+  File: OvertheRainbow-Regular.ttf
+  Weight: 400 (Regular only)
+  Usage: Tagline script text ONLY ("bookmarks for your brain")
+  Color: Always #FEFF00 (yellow)
+  License: OFL.txt (Open Font License)
+  Cache Busting: URLs include ?cb=v4 parameter
+
+Merriweather Font (Serif)
+  Source: Google Fonts (CDN)
+  Format: Web font (loaded via CDN)
+  Weights: 300 (Light), 400 (Regular), 700 (Bold)
+  Usage: Available but not heavily used - reserved for special content
+  Note: Not self-hosted, loaded from Google Fonts
+
+═══════════════════════════════════════════════════════════════════
+
+TESTIMONIAL ASSETS
+
+Testimonial Avatars
+  Location: /public/assets/testimonial-memojis/
+  Format: PNG
+  Files:
+    - ALEX.png
+    - DAVID.png
+    - DAVID2.png
+    - EMILY.png
+    - MARCUS.png
+    - SARAH.png
+  Usage: User testimonials, social proof sections
+  Style: Memoji-style avatars
+
+═══════════════════════════════════════════════════════════════════
+
+MISC ASSETS
+
+Apple Logos
+  apple-logo.png
+    Type: Standard Apple logo
+    Format: PNG
+    Usage: App Store badges, platform references
+    
+  apple-logo-white.png
+    Type: White Apple logo
+    Format: PNG
+    Usage: Dark background contexts
+
+Splash Screen
+  splashscreen.png
+    Type: App splash screen
+    Format: PNG
+    Usage: App launch screen
+
+Title/Tagline Layers
+  Location: /public/assets/title-tagline-layer/
+  Contains:
+    - Color Fill 1.png
+    - Group 3 copy 2.png, Group 3 copy 3.png, Group 3 copy 4.png
+  Usage: Logo composition elements
 
 ═══════════════════════════════════════════════════════════════════
 
 COLOR REFERENCE
 
-Screenshot_2025-11-13_at_10_11_24_AM.jpg
+TM-COLOR-GUIDE.jpg
+  Location: /public/assets/brand-guide/TM-COLOR-GUIDE.jpg
   Type: Color palette specification
-  Contains: Exact hex codes for all brand colors
+  Format: JPG
+  Contains: Visual color reference with hex codes
   
-  PRIMARY
-    Yellow: #FEFF00
-  
-  NEUTRALS (light to dark)
-    White: #FFFFFF
-    Mercury: #E0E0E0
-    Bombay: #B3B9C0
-    Perano: #A4B5F7
-    Wild Blue Yonder: #8590BE
-    Oslo Gray: #83868B
-    Abbey: #52585C
-    Pickled Bluewood (2 variants): #36465D, #253346
-    Ebony Clay: #222D35
-    Shark: #1A1A1E
-    Bunker: #12181D
-    Cod Gray: #181818
-    Black: #000000
-  
-  EXTENDED (use sparingly)
-    Husk: #B7A363
-    Buddha Gold: #C99900
-    Buttered Rum: #B07F12
-    Tabasco: #AF2813
-  
-  Note: This is the authoritative color reference
-  Source File: Screenshot from design system
+  PRIMARY ACCENT (Interactive)
+    Blue: #3B82F6 (RGB 59, 130, 246)
+    Blue Hover: #2563EB (RGB 37, 99, 235)
+    Blue Light: #60A5FA (RGB 96, 165, 250)
+    
+  BRAND HIGHLIGHT (Tagline Only)
+    Yellow: #FEFF00 (RGB 254, 255, 0)
+    
+  BACKGROUNDS (Warm Darks)
+    Base: #09090B (RGB 9, 9, 11)
+    Elevated: #18181B (RGB 24, 24, 27)
+    Surface: #27272A (RGB 39, 39, 42)
+    
+  TEXT
+    Primary: #FAFAFA (RGB 250, 250, 250)
+    Secondary: #A1A1AA (RGB 161, 161, 170)
+    Muted: #71717A (RGB 113, 113, 122)
+    
+  BORDERS
+    Default: #27272A (RGB 39, 39, 42)
+    Hover: #71717A (RGB 113, 113, 122)
 
 ═══════════════════════════════════════════════════════════════════
 
-DOCUMENTATION
+ASSET USAGE BY CONTEXT
 
-MASTER_ARCHITECTURE_FLOW_GUIDE.md
-  Type: Technical architecture documentation
-  Contains: System flow, data architecture
-  Relevance: Backend integration, data flow understanding
-  Not brand-specific but useful for context
-  
-project-overview.md
-  Type: Project configuration & messaging
-  Contains:
-    - Value propositions
-    - How it works (3 steps)
-    - Technical stack details
-    - Build scripts
-    - Backend deployment info
-  Brand Relevance:
-    - Official value prop language
-    - Tagline variations
-    - Target audience pain points
-    - Feature descriptions
-  
-  Key Messaging Extracted:
-    Taglines:
-      - "bookmarks for your brain!"
-      - "Capture ideas at the speed of life"
-      - "Voice in. Organized out."
-      - "Stop managing notes. Start catching them."
-      - "Find the thing you half remember"
-      - "The notes app for people who are busy being interesting"
-    
-    How It Works:
-      1. Capture - voice or text in seconds
-      2. Organize - auto tags, categories, connections
-      3. Discover - search by words or meaning
-    
-    Value Props:
-      - Effortless Capture (Siri integrated VTT)
-      - Automatic structure (AI tags, no folders)
-      - Search that remembers (semantic + keyword)
-      - Privacy, plainly (lock on device, encrypted sync optional)
-
-═══════════════════════════════════════════════════════════════════
-
-FILE USAGE MATRIX
-
-FOR APP DEVELOPMENT
+FOR LANDING PAGE (thoughtmarksapp.com)
   Primary Assets:
-    - Thoughtmarks_icon.png (app icon)
-    - brain.png (component)
-    - bookmark_.png (component)
-    - icon.json (build configuration)
-    - Color palette screenshot (hex codes)
-  
+    - MAIN-mockup-page-*.png (app screenshots)
+    - Logo-iOS-Default-*.png (app icon references)
+    - Lato font files (UI typography)
+    - Over the Rainbow font (tagline)
+    - SOCIAL-SHARE-*.png (social proof)
+    
+  Referenced in:
+    - src/components/astro/PhoneMockup.astro
+    - src/components/react/AppShowcase.tsx
+    - src/styles/fonts.css
+    - tailwind.config.ts
+
+FOR APP DEVELOPMENT (iOS/watchOS)
+  Primary Assets:
+    - Logo-iOS-Default-*.png (iOS icons)
+    - LogoRound-watchOS-Default-*.png (watchOS icons)
+    - AppIcon.png, AppIcon-round.png (general icons)
+    
+  Note: Actual app icon construction uses multi-layer composition
+  with blend modes (see brand guide for details)
+
 FOR MARKETING/SOCIAL
   Primary Assets:
-    - SOCIAL-SHARE-CARD-IG-VERTICAL-9x16.png (template)
-    - SOCIAL-SHARE-PLACEHOLDERS.png (layout guide)
+    - SOCIAL-SHARE-CARD-IG-VERTICAL-9x16.png (Instagram template)
     - SOCIAL-SHARE-EXAMPLE.png (reference)
-    - Thoughtmarks_icon.png (profile images)
-  
+    - SOCIAL-SHARE-PLACEHOLDERS.png (layout guide)
+    - thoughtmarks-share-square.jpg (square format)
+    - testimonial-memojis/*.png (user avatars)
+    
 FOR WEB DEVELOPMENT
   Primary Assets:
-    - brain.png (SVG conversion recommended)
-    - bookmark_.png (SVG conversion recommended)
-    - Color palette screenshot (CSS variables)
-    - Messaging from project-overview.md
-  
-FOR PRINT MATERIALS
-  Required:
-    - High-res versions of icon components
-    - CMYK color conversions (not in current assets)
-    - Pantone specifications (yellow = approx 012 C)
-    - Vector versions of all logos (not in current assets)
+    - SVG files in /public/assets/SVG/ (scalable graphics)
+    - Font files in /public/assets/fonts/ (self-hosted fonts)
+    - Color values in tailwind.config.ts and global.css
 
 ═══════════════════════════════════════════════════════════════════
 
-MISSING ASSETS (NEEDED FOR COMPLETE BRAND SYSTEM)
+ASSET OPTIMIZATION NOTES
+
+Cache Busting
+  - Font URLs include ?cb=v4 parameter
+  - Image URLs may include ?cb=v4 parameter
+  - See src/styles/fonts.css and src/components/astro/PhoneMockup.astro
+  
+File Formats
+  - PNG: Screenshots, icons, graphics with transparency
+  - JPG: Social share cards, photos
+  - SVG: Scalable graphics (logos, icons)
+  - TTF: Font files (self-hosted)
+  
+Resolution Standards
+  - iOS icons: @2x and @3x variants for Retina
+  - Web images: Responsive with srcset where appropriate
+  - Social media: Platform-specific dimensions (1080x1920 for Instagram)
+
+Color Space
+  - iOS icons: Display P3 (wider gamut)
+  - Web assets: sRGB
+  - Social media: sRGB
+
+═══════════════════════════════════════════════════════════════════
+
+MISSING ASSETS (FOR FUTURE CREATION)
 
 Vector Files
   - brain.svg (scalable version of brain outline)
@@ -203,17 +417,11 @@ Vector Files
   - logo_lockup_vertical.svg (brain + wordmark stacked)
   - logo_icon_only.svg (just brain + bookmark)
   
-Typography Files
-  - Font license for sans-serif UI font
-  - Font files for handwritten tagline font
-  - Font specimen sheet showing all weights/styles
-  
 Print-Ready Files
   - Logo in CMYK (all variations)
   - Logo in Pantone (spot color versions)
   - Black & white logo versions
   - One-color logo versions (white, black)
-  - Minimum size reproduction tests
   
 Brand Templates
   - Presentation template (Keynote/PowerPoint)
@@ -221,77 +429,22 @@ Brand Templates
   - Business card design
   - Letterhead design
   - Social media profile covers (all platforms)
-  - Social media post templates (square 1:1)
+  - Square social media post templates (1:1)
   - Video intro/outro templates
-  
-Documentation
-  - Comprehensive brand guidelines PDF
-  - Icon construction guide (layer-by-layer breakdown)
-  - Typography specimen with usage examples
-  - Color accessibility testing results
-  - Animation/motion guidelines
-  - Sound design specifications
 
 ═══════════════════════════════════════════════════════════════════
 
-ASSET CREATION PRIORITIES
+VERSION HISTORY
 
-IMMEDIATE (Needed Now)
-  1. SVG versions of brain and bookmark
-  2. Typography license documentation
-  3. Square social media templates (1:1)
-  4. Email signature template
-  
-SHORT TERM (Next Month)
-  1. Presentation templates
-  2. Print-ready CMYK versions
-  3. Additional social formats (Twitter, LinkedIn)
-  4. Video intro/outro animations
-  
-LONG TERM (As Needed)
-  1. Comprehensive brand guidelines PDF
-  2. Merchandise templates
-  3. Partner/press kit
-  4. Animation style guide
-
-═══════════════════════════════════════════════════════════════════
-
-TECHNICAL NOTES
-
-Color Space Considerations
-  - iOS icon uses Display P3 (wider gamut)
-  - Web assets should use sRGB
-  - Print requires CMYK conversion
-  - #FEFF00 will appear slightly different across color spaces
-  - Document that Display P3 is canonical for iOS
-  
-File Format Recommendations
-  Web: SVG for logos, PNG for photos/complex images
-  iOS: PNG for raster assets, PDF for vectors
-  Print: PDF or EPS with embedded fonts
-  Social: PNG or JPG (RGB, sRGB color space)
-  
-Resolution Standards
-  Web: 2x and 3x for Retina displays
-  iOS: @2x and @3x asset catalogs
-  Print: 300 DPI minimum
-  Social: Platform-specific (usually 72 DPI acceptable)
-
-═══════════════════════════════════════════════════════════════════
-
-VERSION CONTROL
-
-Current Asset Version: 2.0
-Last Updated: January 13, 2025
-Next Review: As needed when new assets are created
-
-Changes from v1.0:
-  - Added exact color specifications (#FEFF00)
-  - Documented iOS icon construction (icon.json)
-  - Added social media template specifications
-  - Included messaging from project documentation
-  - Created asset inventory
-  - Identified missing assets for future creation
+v1.0: Initial asset inventory
+v2.0: Updated with iOS icon specifications
+v3.0: Complete rewrite based on actual deployment
+      - Added all actual files from /public/assets/
+      - Updated color references (blue primary, yellow tagline-only)
+      - Added font file locations and cache-busting notes
+      - Updated social media asset descriptions
+      - Added testimonial assets
+      - Corrected file paths and locations
 
 ═══════════════════════════════════════════════════════════════════
 
@@ -303,3 +456,9 @@ Nick@sawyerdesign.io
 sawyerdesign.io
 
 For new asset creation or modifications to existing assets
+
+═══════════════════════════════════════════════════════════════════
+
+For comprehensive brand guidelines, see thoughtmarks_brand_guide.yaml
+For quick reference, see thoughtmarks_brand_standards_quick_ref.txt
+For messaging framework, see thoughtmarks_messaging_framework.txt

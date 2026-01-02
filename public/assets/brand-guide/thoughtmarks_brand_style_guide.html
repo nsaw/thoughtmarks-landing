@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thoughtmarks Brand Style Guide</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>Thoughtmarks Brand Style Guide v3.0</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Over+the+Rainbow&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,22 +16,24 @@
         body {
             font-family: 'Lato', sans-serif;
             line-height: 1.6;
-            color: #ffffff;
+            color: #FAFAFA;
+            background: #09090B;
         }
         
         .page {
             width: 210mm;
-            height: 297mm;
+            min-height: 297mm;
             padding: 40mm;
-            margin: 0 auto;
+            margin: 0 auto 20mm;
             position: relative;
             page-break-after: always;
-            background: #000000;
+            background: #09090B;
+            border: 1px solid #27272A;
         }
         
         .page.light {
-            background: #ffffff;
-            color: #000000;
+            background: #FAFAFA;
+            color: #09090B;
         }
         
         .page-number {
@@ -39,6 +42,7 @@
             right: 40mm;
             font-size: 12pt;
             font-weight: 300;
+            color: #71717A;
         }
         
         .cover {
@@ -50,11 +54,10 @@
         }
         
         .cover-tagline {
-            font-family: cursive;
+            font-family: 'Over the Rainbow', cursive;
             color: #FEFF00;
             font-size: 48pt;
             margin-bottom: 20px;
-            font-style: italic;
         }
         
         .cover-wordmark {
@@ -63,6 +66,7 @@
             font-size: 72pt;
             letter-spacing: -2px;
             text-transform: uppercase;
+            color: #FAFAFA;
         }
         
         .cover-subtitle {
@@ -71,13 +75,14 @@
             font-weight: 300;
             letter-spacing: 4px;
             text-transform: uppercase;
+            color: #A1A1AA;
         }
         
         .cover-version {
             margin-top: 20px;
             font-size: 12pt;
             font-weight: 300;
-            opacity: 0.6;
+            color: #71717A;
         }
         
         h1 {
@@ -86,25 +91,45 @@
             margin-bottom: 30px;
             text-transform: uppercase;
             letter-spacing: -1px;
+            color: #FAFAFA;
+        }
+        
+        .page.light h1 {
+            color: #09090B;
         }
         
         h2 {
             font-size: 24pt;
             font-weight: 700;
             margin: 30px 0 15px 0;
-            text-transform: uppercase;
+            color: #FAFAFA;
+        }
+        
+        .page.light h2 {
+            color: #09090B;
         }
         
         h3 {
             font-size: 16pt;
             font-weight: 700;
             margin: 20px 0 10px 0;
+            color: #FAFAFA;
+        }
+        
+        .page.light h3 {
+            color: #09090B;
         }
         
         p, li {
             font-size: 11pt;
             font-weight: 400;
             margin-bottom: 10px;
+            color: #A1A1AA;
+        }
+        
+        .page.light p,
+        .page.light li {
+            color: #09090B;
         }
         
         .intro-text {
@@ -122,8 +147,9 @@
         
         .color-swatch {
             padding: 40px 20px;
-            border-radius: 8px;
+            border-radius: 12px;
             text-align: center;
+            border: 1px solid #27272A;
         }
         
         .color-name {
@@ -135,6 +161,7 @@
         .color-hex {
             font-family: 'Courier New', monospace;
             font-size: 12pt;
+            margin-bottom: 5px;
         }
         
         .color-rgb {
@@ -146,12 +173,14 @@
         .font-specimen {
             margin: 30px 0;
             padding: 30px;
-            background: #1A1A1E;
-            border-radius: 8px;
+            background: #18181B;
+            border-radius: 12px;
+            border: 1px solid #27272A;
         }
         
-        .font-specimen.light-bg {
+        .page.light .font-specimen {
             background: #F5F5F5;
+            border: 1px solid #E0E0E0;
         }
         
         .font-name {
@@ -192,9 +221,8 @@
             font-weight: 300;
         }
         
-        .marydale {
-            font-family: cursive;
-            font-style: italic;
+        .script-font {
+            font-family: 'Over the Rainbow', cursive;
         }
         
         .logo-grid {
@@ -206,18 +234,18 @@
         
         .logo-example {
             padding: 40px;
-            border-radius: 8px;
+            border-radius: 12px;
             text-align: center;
-            border: 1px solid #333;
+            border: 1px solid #27272A;
         }
         
         .logo-example.on-dark {
-            background: #000000;
+            background: #09090B;
         }
         
         .logo-example.on-light {
-            background: #ffffff;
-            color: #000000;
+            background: #FAFAFA;
+            color: #09090B;
         }
         
         .do-dont-grid {
@@ -229,7 +257,7 @@
         
         .do-dont-item {
             padding: 30px;
-            border-radius: 8px;
+            border-radius: 12px;
         }
         
         .do-item {
@@ -260,13 +288,23 @@
         .spacing-diagram {
             margin: 30px 0;
             padding: 40px;
-            background: #1A1A1E;
-            border-radius: 8px;
+            background: #18181B;
+            border-radius: 12px;
             text-align: center;
+            border: 1px solid #27272A;
+        }
+        
+        .page.light .spacing-diagram {
+            background: #F5F5F5;
+            border: 1px solid #E0E0E0;
         }
         
         ul {
             margin-left: 20px;
+        }
+        
+        .highlight-blue {
+            color: #3B82F6;
         }
         
         .highlight-yellow {
@@ -283,7 +321,12 @@
         .usage-table td {
             padding: 12px;
             text-align: left;
-            border-bottom: 1px solid #333;
+            border-bottom: 1px solid #27272A;
+        }
+        
+        .page.light .usage-table th,
+        .page.light .usage-table td {
+            border-bottom: 1px solid #E0E0E0;
         }
         
         .usage-table th {
@@ -291,6 +334,36 @@
             text-transform: uppercase;
             font-size: 10pt;
             letter-spacing: 1px;
+        }
+        
+        .button-example {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 12px;
+            font-weight: 600;
+            margin: 10px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: #3B82F6;
+            color: #FFFFFF;
+        }
+        
+        .btn-primary:hover {
+            background: #2563EB;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #FAFAFA;
+            border: 1px solid #27272A;
+        }
+        
+        .btn-secondary:hover {
+            background: #18181B;
+            border-color: #71717A;
         }
         
         @media print {
@@ -305,10 +378,10 @@
 
 <!-- COVER PAGE -->
 <div class="page cover">
-    <div class="cover-tagline">bookmarks for your brain!</div>
+    <div class="cover-tagline">bookmarks for your brain</div>
     <div class="cover-wordmark">THOUGHTMARKS</div>
     <div class="cover-subtitle">Brand Style Guide</div>
-    <div class="cover-version">Version 2.0 | January 2025</div>
+    <div class="cover-version">Version 3.0 | December 2025 | Based on actual deployment</div>
 </div>
 
 <!-- INTRODUCTION -->
@@ -319,8 +392,9 @@
         We're not another note-taking app. We're the app that catches ideas before they vanish.
     </p>
     <p class="intro-text">
-        This brand guide establishes the visual and verbal standards that ensure Thoughtmarks remains 
-        recognizable, consistent, and true to its core identity across all touchpoints.
+        This brand guide is based on the actual deployment at <strong>thoughtmarksapp.com</strong> and establishes 
+        the visual and verbal standards that ensure Thoughtmarks remains recognizable, consistent, and true to its 
+        core identity across all touchpoints.
     </p>
     
     <h2>Brand Essence</h2>
@@ -335,204 +409,197 @@
         trying to remember everything."
     </p>
     
+    <h2>Key Changes in v3.0</h2>
+    <ul>
+        <li><strong>Primary Accent:</strong> Blue (#3B82F6) is the primary interactive color, NOT yellow</li>
+        <li><strong>Brand Yellow:</strong> Reserved for tagline script text ONLY (#FEFF00)</li>
+        <li><strong>Backgrounds:</strong> Warm dark (#09090B) not pure black</li>
+        <li><strong>Typography:</strong> Lato (primary), Over the Rainbow (tagline only)</li>
+        <li><strong>Design Effects:</strong> Subtle gradients and blur effects ARE used</li>
+    </ul>
+    
     <div class="page-number">01</div>
 </div>
 
 <!-- LOGO & WORDMARK -->
 <div class="page light">
-    <h1 style="color: #000;">Logo & Wordmark</h1>
+    <h1 style="color: #09090B;">Logo & Wordmark</h1>
     
-    <h2 style="color: #000;">Primary Lockup</h2>
-    <div class="logo-example on-light" style="background: #ffffff; margin: 30px 0;">
-        <div style="font-family: cursive; font-style: italic; color: #FEFF00; font-size: 36pt; margin-bottom: 10px;">
-            bookmarks for your brain!
+    <h2 style="color: #09090B;">Primary Lockup</h2>
+    <div class="logo-example on-light" style="background: #FAFAFA; margin: 30px 0;">
+        <div style="font-family: 'Over the Rainbow', cursive; color: #FEFF00; font-size: 36pt; margin-bottom: 10px;">
+            bookmarks for your brain
         </div>
-        <div style="font-family: 'Lato', sans-serif; font-weight: 900; font-size: 48pt; color: #000000; letter-spacing: -1px;">
+        <div style="font-family: 'Lato', sans-serif; font-weight: 900; font-size: 48pt; color: #09090B; letter-spacing: -1px;">
             THOUGHTMARKS
         </div>
     </div>
     
-    <h2 style="color: #000;">On Dark Background</h2>
-    <div class="logo-example on-dark" style="background: #000000; margin: 30px 0;">
-        <div style="font-family: cursive; font-style: italic; color: #FEFF00; font-size: 36pt; margin-bottom: 10px;">
-            bookmarks for your brain!
+    <h2 style="color: #09090B;">On Dark Background</h2>
+    <div class="logo-example on-dark" style="background: #09090B; margin: 30px 0;">
+        <div style="font-family: 'Over the Rainbow', cursive; color: #FEFF00; font-size: 36pt; margin-bottom: 10px;">
+            bookmarks for your brain
         </div>
-        <div style="font-family: 'Lato', sans-serif; font-weight: 900; font-size: 48pt; color: #ffffff; letter-spacing: -1px;">
+        <div style="font-family: 'Lato', sans-serif; font-weight: 900; font-size: 48pt; color: #FAFAFA; letter-spacing: -1px;">
             THOUGHTMARKS
         </div>
     </div>
     
-    <h2 style="color: #000;">Usage Rules</h2>
-    <ul style="color: #000;">
-        <li>Tagline is ALWAYS in yellow (#FEFF00)</li>
-        <li>Wordmark is ALWAYS in Lato Black, all caps</li>
+    <h2 style="color: #09090B;">Usage Rules</h2>
+    <ul style="color: #09090B;">
+        <li>Tagline is ALWAYS in yellow (#FEFF00) using Over the Rainbow font</li>
+        <li>Wordmark is ALWAYS in Lato Black (900), all caps</li>
         <li>Maintain vertical stacking relationship</li>
-        <li>Tagline uses Marydale Regular (handwritten style)</li>
+        <li>Tagline uses script font ONLY for "bookmarks for your brain"</li>
+        <li>Never use yellow for buttons or CTAs (use blue #3B82F6)</li>
     </ul>
     
-    <div class="page-number" style="color: #000;">02</div>
-</div>
-
-<!-- LOGO VARIATIONS -->
-<div class="page">
-    <h1>Logo Variations</h1>
-    
-    <div class="logo-grid">
-        <div class="logo-example on-dark">
-            <div style="font-family: 'Lato', sans-serif; font-weight: 900; font-size: 36pt; color: #ffffff; letter-spacing: -1px;">
-                THOUGHTMARKS
-            </div>
-            <p style="margin-top: 15px; font-size: 10pt; opacity: 0.6;">WORDMARK ONLY<br>Use when space is limited</p>
-        </div>
-        
-        <div class="logo-example on-light">
-            <div style="font-family: cursive; font-style: italic; color: #FEFF00; font-size: 28pt;">
-                bookmarks for your brain!
-            </div>
-            <p style="margin-top: 15px; font-size: 10pt; opacity: 0.6;">TAGLINE ONLY<br>Use for brand reinforcement</p>
-        </div>
-    </div>
-    
-    <h2>Clear Space Requirements</h2>
-    <div class="spacing-diagram">
-        <p>Minimum clear space equals the height of the tagline text on all sides</p>
-        <p style="margin-top: 15px; opacity: 0.6;">This ensures the logo has room to breathe and remains visually distinct</p>
-    </div>
-    
-    <h2>Minimum Sizes</h2>
-    <table class="usage-table">
-        <tr>
-            <th>Application</th>
-            <th>Minimum Size</th>
-        </tr>
-        <tr>
-            <td>Digital (Screen)</td>
-            <td>120px width</td>
-        </tr>
-        <tr>
-            <td>Print</td>
-            <td>40mm width</td>
-        </tr>
-        <tr>
-            <td>App Icon</td>
-            <td>32x32px (legibility threshold)</td>
-        </tr>
-    </table>
-    
-    <div class="page-number">03</div>
+    <div class="page-number" style="color: #71717A;">02</div>
 </div>
 
 <!-- COLOR PALETTE PRIMARY -->
 <div class="page">
     <h1>Color Palette</h1>
     
-    <h2>Primary Colors</h2>
+    <h2>Primary Accent (Interactive Elements)</h2>
+    <div class="color-grid">
+        <div class="color-swatch" style="background: #3B82F6; color: #FFFFFF;">
+            <div class="color-name">Thoughtmarks Blue</div>
+            <div class="color-hex">#3B82F6</div>
+            <div class="color-rgb">RGB 59, 130, 246</div>
+            <div style="margin-top: 10px; font-size: 10pt;">PRIMARY INTERACTIVE COLOR</div>
+        </div>
+        
+        <div class="color-swatch" style="background: #2563EB; color: #FFFFFF;">
+            <div class="color-name">Blue Hover</div>
+            <div class="color-hex">#2563EB</div>
+            <div class="color-rgb">RGB 37, 99, 235</div>
+            <div style="margin-top: 10px; font-size: 10pt;">Hover state</div>
+        </div>
+    </div>
+    
+    <h2>Brand Highlight (Tagline Only)</h2>
     <div class="color-grid">
         <div class="color-swatch" style="background: #FEFF00; color: #000000;">
             <div class="color-name">Thoughtmarks Yellow</div>
             <div class="color-hex">#FEFF00</div>
             <div class="color-rgb">RGB 254, 255, 0</div>
-        </div>
-        
-        <div class="color-swatch" style="background: #000000; color: #ffffff; border: 1px solid #333;">
-            <div class="color-name">Deep Black</div>
-            <div class="color-hex">#000000</div>
-            <div class="color-rgb">RGB 0, 0, 0</div>
+            <div style="margin-top: 10px; font-size: 10pt;">TAGLINE SCRIPT TEXT ONLY</div>
         </div>
     </div>
     
-    <h2>Neutral Colors</h2>
+    <h2>Backgrounds (Warm Darks)</h2>
     <div class="color-grid">
-        <div class="color-swatch" style="background: #1A1A1E; color: #ffffff;">
-            <div class="color-name">Shark (Cards)</div>
-            <div class="color-hex">#1A1A1E</div>
-            <div class="color-rgb">RGB 26, 26, 30</div>
+        <div class="color-swatch" style="background: #09090B; color: #FAFAFA; border: 1px solid #27272A;">
+            <div class="color-name">Base Background</div>
+            <div class="color-hex">#09090B</div>
+            <div class="color-rgb">RGB 9, 9, 11</div>
+            <div style="margin-top: 10px; font-size: 10pt;">Primary page background</div>
         </div>
         
-        <div class="color-swatch" style="background: #B3B9C0; color: #000000;">
-            <div class="color-name">Bombay (Circuit Gray)</div>
-            <div class="color-hex">#B3B9C0</div>
-            <div class="color-rgb">RGB 179, 185, 192</div>
+        <div class="color-swatch" style="background: #18181B; color: #FAFAFA;">
+            <div class="color-name">Elevated</div>
+            <div class="color-hex">#18181B</div>
+            <div class="color-rgb">RGB 24, 24, 27</div>
+            <div style="margin-top: 10px; font-size: 10pt;">Card/surface backgrounds</div>
         </div>
         
-        <div class="color-swatch" style="background: #181818; color: #ffffff;">
-            <div class="color-name">Cod Gray</div>
-            <div class="color-hex">#181818</div>
-            <div class="color-rgb">RGB 24, 24, 24</div>
-        </div>
-        
-        <div class="color-swatch" style="background: #ffffff; color: #000000; border: 1px solid #ddd;">
-            <div class="color-name">White</div>
-            <div class="color-hex">#FFFFFF</div>
-            <div class="color-rgb">RGB 255, 255, 255</div>
+        <div class="color-swatch" style="background: #27272A; color: #FAFAFA;">
+            <div class="color-name">Surface</div>
+            <div class="color-hex">#27272A</div>
+            <div class="color-rgb">RGB 39, 39, 42</div>
+            <div style="margin-top: 10px; font-size: 10pt;">Borders, hover states</div>
         </div>
     </div>
     
-    <div class="page-number">04</div>
+    <h2>Text Colors</h2>
+    <div class="color-grid">
+        <div class="color-swatch" style="background: #FAFAFA; color: #09090B; border: 1px solid #27272A;">
+            <div class="color-name">Primary Text</div>
+            <div class="color-hex">#FAFAFA</div>
+            <div class="color-rgb">RGB 250, 250, 250</div>
+        </div>
+        
+        <div class="color-swatch" style="background: #A1A1AA; color: #09090B; border: 1px solid #27272A;">
+            <div class="color-name">Secondary Text</div>
+            <div class="color-hex">#A1A1AA</div>
+            <div class="color-rgb">RGB 161, 161, 170</div>
+        </div>
+        
+        <div class="color-swatch" style="background: #71717A; color: #FAFAFA; border: 1px solid #27272A;">
+            <div class="color-name">Muted Text</div>
+            <div class="color-hex">#71717A</div>
+            <div class="color-rgb">RGB 113, 113, 122</div>
+        </div>
+    </div>
+    
+    <div class="page-number">03</div>
 </div>
 
 <!-- COLOR USAGE -->
 <div class="page">
     <h1>Color Usage</h1>
     
-    <h2>Primary Yellow (#FEFF00)</h2>
-    <p>This is our brand identifier. Use it boldly but sparingly.</p>
+    <h2>Primary Blue (#3B82F6)</h2>
+    <p>This is THE primary interactive color. Use for all buttons, CTAs, links, and interactive elements.</p>
     <ul>
-        <li><span class="highlight-yellow">DO:</span> Use for CTAs, tagline, bookmark icon, accent elements</li>
-        <li><span class="highlight-yellow">DO:</span> Use on black backgrounds for maximum impact</li>
-        <li><span class="highlight-yellow">DO:</span> Keep usage to less than 10% of total composition</li>
+        <li><span class="highlight-blue">DO:</span> Use for primary buttons and CTAs</li>
+        <li><span class="highlight-blue">DO:</span> Use for links and focus rings</li>
+        <li><span class="highlight-blue">DO:</span> Use for glow effects and accents</li>
+        <li>DON'T: Use yellow for buttons (yellow is tagline-only)</li>
+        <li>DON'T: Use other accent colors (blue is primary)</li>
+    </ul>
+    
+    <h2>Brand Yellow (#FEFF00)</h2>
+    <p>This is ONLY for tagline script text. NEVER use for buttons or primary CTAs.</p>
+    <ul>
+        <li><span class="highlight-yellow">DO:</span> Use for tagline "bookmarks for your brain" script text</li>
+        <li><span class="highlight-yellow">DO:</span> Use in iOS icon bookmark element</li>
+        <li>DON'T: Use for buttons or primary CTAs</li>
         <li>DON'T: Use for large background areas (causes eye strain)</li>
         <li>DON'T: Use for body text (readability issues)</li>
-        <li>DON'T: Pair with other bright saturated colors</li>
     </ul>
     
-    <h2>Black & Dark Backgrounds</h2>
-    <p>Dark mode is our default. It's not an option, it's the brand.</p>
+    <h2>Warm Dark Backgrounds</h2>
+    <p>Dark mode is our default. Use warm dark backgrounds, not pure black.</p>
     <ul>
-        <li>Primary background: Deep Black (#000000)</li>
-        <li>Card surfaces: Shark (#1A1A1E)</li>
-        <li>Alternative backgrounds: Cod Gray (#181818)</li>
-    </ul>
-    
-    <h2>Gray Tones</h2>
-    <p>Use for structure, secondary elements, and inactive states.</p>
-    <ul>
-        <li>Bombay (#B3B9C0): Circuit traces, brain outline, secondary UI</li>
-        <li>Oslo Gray (#83868B): Tertiary text, inactive elements</li>
+        <li>Primary background: Base (#09090B) - warm dark, not pure black</li>
+        <li>Card surfaces: Elevated (#18181B) - for cards and elevated surfaces</li>
+        <li>Borders/hover: Surface (#27272A) - for borders and hover states</li>
     </ul>
     
     <h2>Accessibility Notes</h2>
     <ul>
+        <li>Blue on white: AAA contrast</li>
+        <li>Blue on warm dark: AA contrast</li>
         <li>Yellow on black: AAA contrast (21:1 ratio)</li>
-        <li>Yellow on Shark: AA contrast for large text</li>
-        <li>Always test yellow text on gray backgrounds before use</li>
-        <li>Consider colorblind users: yellow/black works for most types</li>
+        <li>Always test color combinations for accessibility</li>
     </ul>
     
-    <div class="page-number">05</div>
+    <div class="page-number">04</div>
 </div>
 
 <!-- TYPOGRAPHY PRIMARY -->
 <div class="page light">
-    <h1 style="color: #000;">Typography</h1>
+    <h1 style="color: #09090B;">Typography</h1>
     
-    <h2 style="color: #000;">Primary Typeface: Lato</h2>
+    <h2 style="color: #09090B;">Primary Typeface: Lato</h2>
     <div class="font-specimen light-bg">
-        <div class="font-name" style="color: #000;">Lato Family</div>
+        <div class="font-name" style="color: #09090B;">Lato Family</div>
         
         <div class="font-sample">
             <div class="font-label" style="color: #666;">LATO BLACK (900) - WORDMARK & HEADLINES</div>
-            <div class="lato-black" style="font-size: 32pt; color: #000;">THOUGHTMARKS</div>
+            <div class="lato-black" style="font-size: 32pt; color: #09090B;">THOUGHTMARKS</div>
         </div>
         
         <div class="font-sample">
             <div class="font-label" style="color: #666;">LATO BOLD (700) - SUBHEADS</div>
-            <div class="lato-bold" style="font-size: 24pt; color: #000;">Capture ideas at the speed of life</div>
+            <div class="lato-bold" style="font-size: 24pt; color: #09090B;">Capture at the speed of life</div>
         </div>
         
         <div class="font-sample">
             <div class="font-label" style="color: #666;">LATO REGULAR (400) - BODY TEXT</div>
-            <div class="lato-regular" style="font-size: 14pt; color: #000;">
+            <div class="lato-regular" style="font-size: 14pt; color: #09090B;">
                 Your brain shouldn't have to remember everything. Voice capture means brilliant ideas 
                 get saved before they vanish. No fumbling with apps, no broken flow.
             </div>
@@ -546,24 +613,24 @@
         </div>
     </div>
     
-    <h2 style="color: #000; margin-top: 40px;">Accent Typeface: Marydale</h2>
+    <h2 style="color: #09090B; margin-top: 40px;">Accent Typeface: Over the Rainbow</h2>
     <div class="font-specimen light-bg">
-        <div class="font-name" style="color: #000;">Marydale Regular</div>
+        <div class="font-name" style="color: #09090B;">Over the Rainbow (Script)</div>
         
         <div class="font-sample">
             <div class="font-label" style="color: #666;">TAGLINE ONLY</div>
-            <div class="marydale" style="font-size: 36pt; color: #FEFF00; text-shadow: 0 0 20px rgba(254, 255, 0, 0.3);">
-                bookmarks for your brain!
+            <div class="script-font" style="font-size: 36pt; color: #FEFF00;">
+                bookmarks for your brain
             </div>
         </div>
         
-        <p style="color: #000; margin-top: 20px;">
-            <strong>Usage:</strong> This font is exclusively for the tagline "bookmarks for your brain!" 
-            Always in yellow (#FEFF00). Never use for any other text.
+        <p style="color: #09090B; margin-top: 20px;">
+            <strong>Usage:</strong> This font is exclusively for the tagline "bookmarks for your brain" 
+            Always in yellow (#FEFF00). Never use for any other text. Source: Self-hosted TTF file.
         </p>
     </div>
     
-    <div class="page-number" style="color: #000;">06</div>
+    <div class="page-number" style="color: #71717A;">05</div>
 </div>
 
 <!-- TYPOGRAPHY HIERARCHY -->
@@ -588,7 +655,7 @@
         </tr>
         <tr>
             <td>Tagline</td>
-            <td>Marydale</td>
+            <td>Over the Rainbow</td>
             <td>Regular</td>
             <td>Variable</td>
             <td>lowercase</td>
@@ -597,376 +664,270 @@
             <td>H1 Headlines</td>
             <td>Lato</td>
             <td>Black (900)</td>
-            <td>36-48pt</td>
-            <td>ALL CAPS</td>
+            <td>3rem (48px)</td>
+            <td>Sentence case</td>
         </tr>
         <tr>
             <td>H2 Subheads</td>
             <td>Lato</td>
             <td>Bold (700)</td>
-            <td>24-32pt</td>
+            <td>2rem (32px)</td>
             <td>Sentence case</td>
         </tr>
         <tr>
-            <td>H3 Tertiary</td>
+            <td>H3</td>
             <td>Lato</td>
-            <td>Bold (700)</td>
-            <td>16-20pt</td>
+            <td>Semibold (600)</td>
+            <td>1.5rem (24px)</td>
             <td>Sentence case</td>
         </tr>
         <tr>
             <td>Body Text</td>
             <td>Lato</td>
             <td>Regular (400)</td>
-            <td>11-14pt</td>
+            <td>1.125rem (18px)</td>
             <td>Sentence case</td>
         </tr>
         <tr>
-            <td>UI Labels</td>
+            <td>Small Text</td>
             <td>Lato</td>
             <td>Regular (400)</td>
-            <td>10-12pt</td>
-            <td>Sentence case</td>
-        </tr>
-        <tr>
-            <td>Captions</td>
-            <td>Lato</td>
-            <td>Light (300)</td>
-            <td>9-11pt</td>
+            <td>0.875rem (14px)</td>
             <td>Sentence case</td>
         </tr>
     </table>
     
     <h2>Typography Rules</h2>
     <ul>
-        <li>ALL CAPS only for wordmark and major headlines</li>
-        <li>Sentence case for most content (more approachable)</li>
-        <li>Line height: 1.5-1.6 for body text, 1.2 for headlines</li>
-        <li>Letter spacing: Slightly negative (-1 to -2px) for large headlines</li>
-        <li>Never center-align body text</li>
+        <li>All caps for THOUGHTMARKS wordmark only</li>
+        <li>Sentence case for most headlines (more approachable)</li>
         <li>Generous white space - let the copy breathe</li>
+        <li>Never center-align body text</li>
+        <li>Use Lato for everything except tagline</li>
+        <li>Tagline always uses Over the Rainbow script in yellow</li>
     </ul>
     
-    <div class="page-number">07</div>
+    <div class="page-number">06</div>
 </div>
 
-<!-- ICON & BRAND MARK -->
+<!-- UI COMPONENTS -->
 <div class="page light">
-    <h1 style="color: #000;">Icon & Brand Mark</h1>
+    <h1 style="color: #09090B;">UI Components</h1>
     
-    <div style="text-align: center; margin: 40px 0;">
-        <div style="display: inline-block; padding: 60px; background: #000; border-radius: 20px;">
-            <div style="font-size: 120pt; color: #B3B9C0;">🧠</div>
-            <div style="position: absolute; margin-top: -80px; margin-left: 80px; font-size: 80pt;">📑</div>
-        </div>
-        <p style="color: #000; margin-top: 20px; font-style: italic;">Conceptual representation - actual icon uses circuit brain + yellow bookmark</p>
+    <h2 style="color: #09090B;">Buttons</h2>
+    
+    <h3 style="color: #09090B;">Primary Button</h3>
+    <div style="background: #09090B; padding: 30px; border-radius: 12px; margin: 20px 0;">
+        <a href="#" class="button-example btn-primary" style="color: #FFFFFF;">Join the Waitlist</a>
+    </div>
+    <p style="color: #09090B;">
+        <strong>Specs:</strong> Background #3B82F6, text white, hover #2563EB, rounded-xl (12px), 
+        shadow-glow-sm on hover shadow-glow-md
+    </p>
+    
+    <h3 style="color: #09090B;">Secondary Button</h3>
+    <div style="background: #09090B; padding: 30px; border-radius: 12px; margin: 20px 0;">
+        <a href="#" class="button-example btn-secondary" style="color: #FAFAFA;">See how it works</a>
+    </div>
+    <p style="color: #09090B;">
+        <strong>Specs:</strong> Transparent background, border #27272A, text #FAFAFA, 
+        hover bg #18181B, border #71717A
+    </p>
+    
+    <h2 style="color: #09090B; margin-top: 40px;">Cards</h2>
+    <div style="background: #18181B; padding: 24px; border-radius: 16px; border: 1px solid #27272A; margin: 20px 0;">
+        <h3 style="color: #FAFAFA; margin-bottom: 10px;">Card Example</h3>
+        <p style="color: #A1A1AA;">Card background #18181B, border #27272A, padding 24px, 
+        rounded-2xl (16px). Hover: border-accent/30, shadow-card-hover, translate-y-1</p>
     </div>
     
-    <h2 style="color: #000;">Icon Construction</h2>
-    <ul style="color: #000;">
-        <li><strong>Brain Element:</strong> Circuit pattern outline in Bombay gray (#B3B9C0)</li>
-        <li><strong>Bookmark Element:</strong> Yellow flag (#FEFF00) positioned top-right</li>
-        <li><strong>Style:</strong> Line art, geometric, 2px stroke weight</li>
-        <li><strong>Form:</strong> Bilateral symmetry, circuit traces as neural pathways</li>
+    <h2 style="color: #09090B; margin-top: 40px;">Design Effects</h2>
+    <ul style="color: #09090B;">
+        <li><strong>Gradients:</strong> Subtle radial/conic gradients with low opacity (5-20%)</li>
+        <li><strong>Blur:</strong> backdrop-blur-sm for cards, blur-3xl for decorative blobs</li>
+        <li><strong>Shadows:</strong> Glow effects with blue accent (rgba(59, 130, 246, 0.3-0.5))</li>
+        <li><strong>Animations:</strong> fade-in, fade-up, scale-in, float (6s infinite)</li>
     </ul>
     
-    <h2 style="color: #000;">iOS Icon Specifications</h2>
-    <ul style="color: #000;">
-        <li><strong>Color Space:</strong> Display P3 (wider gamut for iOS)</li>
-        <li><strong>Platforms:</strong> iOS (square), watchOS (circle)</li>
-        <li><strong>Effects:</strong> Multi-layer composition with glass morphism</li>
-        <li><strong>Background:</strong> Deep black with gradient overlay</li>
-        <li><strong>Treatment:</strong> Translucency, blur, screen blend modes</li>
-    </ul>
-    
-    <h2 style="color: #000;">Usage Guidelines</h2>
-    <ul style="color: #000;">
-        <li>Icon must be recognizable at 32x32px minimum</li>
-        <li>Bookmark flag must remain yellow in all variations</li>
-        <li>Brain outline should be visible against background</li>
-        <li>Don't add additional elements to the icon</li>
-        <li>Don't alter the brain or bookmark proportions</li>
-    </ul>
-    
-    <div class="page-number" style="color: #000;">08</div>
+    <div class="page-number" style="color: #71717A;">07</div>
 </div>
 
 <!-- DO'S AND DON'TS -->
 <div class="page">
     <h1>Do's and Don'ts</h1>
     
+    <h2>Visual Do's</h2>
     <div class="do-dont-grid">
-        <div class="do-item">
-            <div class="do-label">✓ DO</div>
-            <p>Use yellow sparingly as accent color (less than 10% of composition)</p>
+        <div class="do-dont-item do-item">
+            <div class="do-dont-label do-label">DO</div>
+            <ul>
+                <li>Use blue (#3B82F6) for all buttons and CTAs</li>
+                <li>Use yellow (#FEFF00) ONLY for tagline script text</li>
+                <li>Use warm dark backgrounds (#09090B, #18181B)</li>
+                <li>Use Lato for all UI text</li>
+                <li>Use subtle gradients with blur effects</li>
+                <li>Maintain generous white space</li>
+            </ul>
         </div>
         
-        <div class="dont-item">
-            <div class="dont-label">✗ DON'T</div>
-            <p>Use yellow for large background areas or body text</p>
-        </div>
-        
-        <div class="do-item">
-            <div class="do-label">✓ DO</div>
-            <p>Maintain dark backgrounds as default (it's the brand identity)</p>
-        </div>
-        
-        <div class="dont-item">
-            <div class="dont-label">✗ DON'T</div>
-            <p>Use light mode as primary treatment</p>
-        </div>
-        
-        <div class="do-item">
-            <div class="do-label">✓ DO</div>
-            <p>Keep tagline in Marydale font, always yellow</p>
-        </div>
-        
-        <div class="dont-item">
-            <div class="dont-label">✗ DON'T</div>
-            <p>Use Marydale for anything other than the tagline</p>
-        </div>
-        
-        <div class="do-item">
-            <div class="do-label">✓ DO</div>
-            <p>Use Lato Black for the wordmark, always all caps</p>
-        </div>
-        
-        <div class="dont-item">
-            <div class="dont-label">✗ DON'T</div>
-            <p>Use different fonts or change the lettercase</p>
-        </div>
-        
-        <div class="do-item">
-            <div class="do-label">✓ DO</div>
-            <p>Maintain high contrast between text and background</p>
-        </div>
-        
-        <div class="dont-item">
-            <div class="dont-label">✗ DON'T</div>
-            <p>Use low-contrast combinations that hurt readability</p>
-        </div>
-        
-        <div class="do-item">
-            <div class="do-label">✓ DO</div>
-            <p>Use flat colors without gradients</p>
-        </div>
-        
-        <div class="dont-item">
-            <div class="dont-label">✗ DON'T</div>
-            <p>Add gradients, color fades, or multiple accent colors</p>
+        <div class="do-dont-item dont-item">
+            <div class="do-dont-label dont-label">DON'T</div>
+            <ul>
+                <li>Don't use yellow for buttons or primary CTAs</li>
+                <li>Don't use pure black backgrounds</li>
+                <li>Don't use yellow for anything except tagline</li>
+                <li>Don't use script font for anything except tagline</li>
+                <li>Don't avoid gradients (subtle ones ARE used)</li>
+                <li>Don't clutter designs with too many colors</li>
+            </ul>
         </div>
     </div>
     
-    <div class="page-number">09</div>
+    <h2>Messaging Do's</h2>
+    <div class="do-dont-grid">
+        <div class="do-dont-item do-item">
+            <div class="do-dont-label do-label">DO</div>
+            <ul>
+                <li>Use active verbs: capture, build, remember</li>
+                <li>Acknowledge the chaos</li>
+                <li>Be specific about benefits</li>
+                <li>Short, punchy, scannable sentences</li>
+                <li>Use brain/neural metaphors sparingly</li>
+            </ul>
+        </div>
+        
+        <div class="do-dont-item dont-item">
+            <div class="do-dont-label dont-label">DON'T</div>
+            <ul>
+                <li>Don't use productivity jargon</li>
+                <li>Don't promise unrealistic outcomes</li>
+                <li>Don't talk down to users</li>
+                <li>Don't overcomplicate the value prop</li>
+                <li>Don't use emojis in brand materials</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="page-number">08</div>
 </div>
 
-<!-- VOICE & MESSAGING -->
-<div class="page">
-    <h1>Voice & Messaging</h1>
-    
-    <h2>Brand Voice</h2>
-    <ul>
-        <li><strong>Direct:</strong> Get to the point, no fluff</li>
-        <li><strong>Energetic:</strong> Active verbs, punchy sentences</li>
-        <li><strong>Honest:</strong> Acknowledge real problems, no BS</li>
-        <li><strong>Smart:</strong> Intelligent but not pretentious</li>
-        <li><strong>Supportive:</strong> We get it, chaos is normal</li>
-    </ul>
-    
-    <h2>What We Say</h2>
-    <ul>
-        <li>"Capture brilliant ideas"</li>
-        <li>"Stay in flow"</li>
-        <li>"Your digital brain"</li>
-        <li>"Voice in. Organized out."</li>
-        <li>"Find the thing you half remember"</li>
-    </ul>
-    
-    <h2>What We Never Say</h2>
-    <ul>
-        <li>"Maximize productivity" (corporate speak)</li>
-        <li>"Synergize" (meaningless jargon)</li>
-        <li>"Revolutionary transformation" (overpromising)</li>
-        <li>"Hack your brain" (guru nonsense)</li>
-        <li>"Be your best self" (preachy)</li>
-    </ul>
-    
-    <h2>Core Messages</h2>
-    <p><strong>How It Works:</strong></p>
-    <ol>
-        <li>Capture - voice or text in seconds</li>
-        <li>Organize - auto tags, categories, connections</li>
-        <li>Discover - search by words or meaning</li>
-    </ol>
-    
-    <p style="margin-top: 20px;"><strong>Value Props:</strong></p>
-    <ul>
-        <li>Effortless Capture (Siri integrated, voice-to-text)</li>
-        <li>Automatic Structure (AI tags, no folders, no chores)</li>
-        <li>Smart Search (semantic + keyword search)</li>
-        <li>Privacy First (lock on device, encrypted sync optional)</li>
-    </ul>
-    
-    <div class="page-number">10</div>
-</div>
-
-<!-- APPLICATIONS -->
+<!-- SPACING SYSTEM -->
 <div class="page light">
-    <h1 style="color: #000;">Applications</h1>
+    <h1 style="color: #09090B;">Spacing System</h1>
     
-    <h2 style="color: #000;">Social Media</h2>
-    <h3 style="color: #000;">Instagram Stories/Reels (9:16)</h3>
-    <ul style="color: #000;">
-        <li>Dimensions: 1080x1920px</li>
-        <li>Background: Dark with blurred brain pattern</li>
-        <li>Card: Glass morphism effect, max 70% height</li>
-        <li>Layout: Avatar + Title (top), Content (middle), Branding (bottom)</li>
-        <li>Tagline: Always yellow, always at bottom</li>
-    </ul>
+    <h2 style="color: #09090B;">Base Unit: 4px</h2>
+    <p style="color: #09090B;">
+        All spacing is based on a 4px grid system for consistency and predictable relationships.
+    </p>
     
-    <h3 style="color: #000;">Feed Posts (1:1)</h3>
-    <ul style="color: #000;">
-        <li>Dimensions: 1080x1080px</li>
-        <li>Style: Similar treatment, balanced composition</li>
-        <li>Background: Dark or very dark gray</li>
-        <li>Text: High contrast white on dark</li>
-    </ul>
-    
-    <h2 style="color: #000;">Email Templates</h2>
-    <ul style="color: #000;">
-        <li>Header: Tagline + Wordmark on dark background</li>
-        <li>Body: White background, black text, Lato Regular</li>
-        <li>CTAs: Yellow buttons with black text</li>
-        <li>Footer: Dark background, minimal information</li>
-    </ul>
-    
-    <h2 style="color: #000;">Presentation Templates</h2>
-    <ul style="color: #000;">
-        <li>Title slides: Dark background, yellow accents</li>
-        <li>Content slides: Dark or light depending on readability</li>
-        <li>Always include tagline or wordmark in footer</li>
-        <li>Use Lato throughout, maintain hierarchy</li>
-    </ul>
-    
-    <h2 style="color: #000;">Print Materials</h2>
-    <ul style="color: #000;">
-        <li>Business cards: Dark background, minimal design</li>
-        <li>Letterhead: Simple wordmark, mostly white space</li>
-        <li>Note: Yellow is ink-intensive, test on paper stocks</li>
-        <li>Consider spot color for brand consistency</li>
-    </ul>
-    
-    <div class="page-number" style="color: #000;">11</div>
-</div>
-
-<!-- TECHNICAL SPECIFICATIONS -->
-<div class="page">
-    <h1>Technical Specifications</h1>
-    
-    <h2>Color Profiles</h2>
+    <h2 style="color: #09090B;">Scale</h2>
     <table class="usage-table">
         <tr>
-            <th>Application</th>
-            <th>Color Space</th>
-            <th>Notes</th>
+            <th>Size</th>
+            <th>Pixels</th>
+            <th>Rem</th>
+            <th>Usage</th>
         </tr>
         <tr>
-            <td>iOS App</td>
-            <td>Display P3</td>
-            <td>Wider gamut, more vibrant yellow</td>
+            <td>4</td>
+            <td>4px</td>
+            <td>0.25rem</td>
+            <td>Tight spacing, icon padding</td>
         </tr>
         <tr>
-            <td>Web</td>
-            <td>sRGB</td>
-            <td>Standard web color space</td>
+            <td>8</td>
+            <td>8px</td>
+            <td>0.5rem</td>
+            <td>Small gaps</td>
         </tr>
         <tr>
-            <td>Print</td>
-            <td>CMYK</td>
-            <td>Test yellow on paper stock first</td>
+            <td>12</td>
+            <td>12px</td>
+            <td>0.75rem</td>
+            <td>Medium gaps</td>
         </tr>
         <tr>
-            <td>Social Media</td>
-            <td>sRGB</td>
-            <td>72 DPI acceptable</td>
+            <td>16</td>
+            <td>16px</td>
+            <td>1rem</td>
+            <td>Standard spacing</td>
+        </tr>
+        <tr>
+            <td>24</td>
+            <td>24px</td>
+            <td>1.5rem</td>
+            <td>Card padding, section gaps</td>
+        </tr>
+        <tr>
+            <td>32</td>
+            <td>32px</td>
+            <td>2rem</td>
+            <td>Large gaps</td>
+        </tr>
+        <tr>
+            <td>48</td>
+            <td>48px</td>
+            <td>3rem</td>
+            <td>Section spacing</td>
+        </tr>
+        <tr>
+            <td>64</td>
+            <td>64px</td>
+            <td>4rem</td>
+            <td>Major section spacing</td>
         </tr>
     </table>
     
-    <h2>File Formats</h2>
-    <ul>
-        <li><strong>Web:</strong> SVG for logos, PNG for raster images</li>
-        <li><strong>iOS:</strong> PNG at @2x and @3x, PDF for vectors</li>
-        <li><strong>Print:</strong> PDF or EPS with embedded fonts</li>
-        <li><strong>Social:</strong> PNG or JPG, RGB color mode</li>
+    <h2 style="color: #09090B;">Custom Spacing</h2>
+    <ul style="color: #09090B;">
+        <li>18 (4.5rem / 72px) - Special cases</li>
+        <li>22 (5.5rem / 88px) - Special cases</li>
+        <li>30 (7.5rem / 120px) - Special cases</li>
     </ul>
     
-    <h2>Resolution Standards</h2>
-    <ul>
-        <li><strong>Web:</strong> 2x and 3x for Retina displays</li>
-        <li><strong>Print:</strong> 300 DPI minimum</li>
-        <li><strong>iOS:</strong> @2x and @3x asset catalogs</li>
-        <li><strong>Social:</strong> Platform-specific requirements</li>
-    </ul>
-    
-    <h2>Font Files</h2>
-    <ul>
-        <li><strong>Lato:</strong> Available on Google Fonts (open source)</li>
-        <li><strong>Marydale:</strong> Licensed font (verify usage rights)</li>
-        <li>Always embed fonts in PDFs and presentations</li>
-        <li>Use web fonts (WOFF2) for website implementations</li>
-    </ul>
-    
-    <div class="page-number">12</div>
+    <div class="page-number" style="color: #71717A;">09</div>
 </div>
 
-<!-- CONTACT & RESOURCES -->
+<!-- FINAL NOTES -->
 <div class="page">
-    <h1>Resources & Contact</h1>
+    <h1>Final Notes</h1>
     
-    <h2>Brand Assets</h2>
-    <p>For access to brand assets including logos, icons, and templates:</p>
+    <h2>Version 3.0 Changes</h2>
+    <p>
+        This guide has been completely rewritten based on the actual deployment at thoughtmarksapp.com. 
+        Key corrections from previous versions:
+    </p>
     <ul>
-        <li>Icon components (brain.png, bookmark.png)</li>
-        <li>Social media templates</li>
-        <li>Color swatches and palettes</li>
-        <li>Font files and licenses</li>
+        <li><strong>Primary Accent:</strong> Blue (#3B82F6) is the primary interactive color, NOT yellow</li>
+        <li><strong>Brand Yellow:</strong> Reserved for tagline script text ONLY (#FEFF00)</li>
+        <li><strong>Backgrounds:</strong> Warm dark (#09090B) not pure black (#000000)</li>
+        <li><strong>Typography:</strong> Lato (primary), Over the Rainbow (tagline only)</li>
+        <li><strong>Design Effects:</strong> Subtle gradients and blur effects ARE used (contrary to old guide)</li>
+        <li><strong>Buttons:</strong> Blue buttons, not yellow</li>
     </ul>
     
-    <h2>Documentation</h2>
-    <p>Additional brand documentation available:</p>
+    <h2>Implementation Checklist</h2>
     <ul>
-        <li>thoughtmarks_brand_guide.yaml - Complete brand specifications</li>
-        <li>thoughtmarks_messaging_framework.txt - Voice and copy guidelines</li>
-        <li>thoughtmarks_asset_inventory.txt - Complete file reference</li>
-        <li>thoughtmarks_brand_standards_quick_ref.txt - Quick lookup guide</li>
+        <li>✅ Use blue (#3B82F6) for all buttons and CTAs</li>
+        <li>✅ Use yellow (#FEFF00) ONLY for tagline script text</li>
+        <li>✅ Use warm dark backgrounds (#09090B, #18181B, #27272A)</li>
+        <li>✅ Use Lato for all UI text</li>
+        <li>✅ Use Over the Rainbow for tagline only</li>
+        <li>✅ Include subtle gradients and blur effects</li>
+        <li>✅ Maintain 4px spacing grid</li>
+        <li>✅ Follow accessibility guidelines</li>
     </ul>
     
-    <h2>Questions or Clarifications</h2>
-    <p style="margin-top: 30px; margin-bottom: 10px;"><strong>Nick Sawyer</strong></p>
-    <p>Creator in Chief, Sawyer Design</p>
-    <p>Nick@sawyerdesign.io</p>
-    <p>sawyerdesign.io</p>
-    
-    <p style="margin-top: 30px;"><strong>Thoughtmarks</strong></p>
-    <p>thoughtmarks.app</p>
-    <p>App Store: thoughtmarks.app</p>
-    
-    <h2 style="margin-top: 40px;">Version History</h2>
+    <h2>Resources</h2>
     <ul>
-        <li><strong>v2.0</strong> - January 2025: Complete brand system documented</li>
-        <li><strong>v1.0</strong> - Initial brand development</li>
+        <li><strong>Landing Page:</strong> thoughtmarksapp.com</li>
+        <li><strong>Source Code:</strong> /Users/sawyer/gitSync/Thoughtmarks-landing</li>
+        <li><strong>Fonts:</strong> /assets/fonts/Lato/ and /assets/fonts/Over_the_Rainbow/</li>
+        <li><strong>Tailwind Config:</strong> tailwind.config.ts</li>
+        <li><strong>Global Styles:</strong> src/styles/global.css</li>
     </ul>
     
-    <div class="page-number">13</div>
-</div>
-
-<!-- BACK COVER -->
-<div class="page cover">
-    <div class="cover-tagline">bookmarks for your brain!</div>
-    <div class="cover-wordmark">THOUGHTMARKS</div>
-    <div style="margin-top: 60px; font-size: 14pt; opacity: 0.6;">
-        thoughtmarks.app
-    </div>
+    <div class="page-number">10</div>
 </div>
 
 </body>

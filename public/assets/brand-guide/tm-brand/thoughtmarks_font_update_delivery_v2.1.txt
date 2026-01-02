@@ -1,39 +1,101 @@
-THOUGHTMARKS BRAND GUIDE - FONT UPDATE
-Delivery Summary v2.1
+THOUGHTMARKS BRAND GUIDE - COMPREHENSIVE UPDATE
+Delivery Summary v3.0
+Based on actual deployment at thoughtmarksapp.com
 
 ═══════════════════════════════════════════════════════════════════
 
 WHAT CHANGED
 
-Issue Identified
-  The HTML brand style guide (v2.0) used a generic "cursive" font fallback
-  instead of the actual tagline font. This resulted in an unprofessional
-  appearance that didn't match the brand specification.
+Major Corrections from v2.0/v2.1
+  The previous brand guides (v2.0, v2.1) incorrectly stated that yellow
+  (#FEFF00) was the primary accent color. After reviewing the actual
+  deployment at thoughtmarksapp.com, the following corrections were made:
   
-Resolution
-  1. Tagline font officially designated as: Over the Rainbow Regular
-  2. Font properly embedded in SVG brand style guide
-  3. All documentation updated to reflect correct font
-  4. SIL Open Font License 1.1 confirmed (free commercial use)
-  
-Why Over the Rainbow
-  - You uploaded it, indicating it was the intended font
-  - It's an acceptable alternative to Marydale (per your direction)
-  - SIL OFL 1.1 license allows commercial use, embedding, distribution
-  - Playful handwritten style perfect for "bookmarks for your brain!"
-  - Now officially preferred over Marydale
+  1. PRIMARY ACCENT: Blue (#3B82F6) - NOT yellow
+     - Blue is used for all buttons, CTAs, links, focus rings
+     - Blue is the primary interactive color throughout the site
+     - Yellow is NEVER used for interactive elements
+     
+  2. YELLOW USAGE: Tagline script text ONLY
+     - Yellow (#FEFF00) is ONLY used for "bookmarks for your brain" tagline
+     - Always uses Over the Rainbow Regular font
+     - Never used for buttons, CTAs, or any interactive elements
+     
+  3. GRADIENTS: ARE used (contrary to old guide)
+     - Gradients are used for background blobs/effects
+     - Examples: from-accent/10 to-blue-400/5 (blue gradients)
+     - NOT used for buttons (those are solid blue)
+     
+  4. TYPOGRAPHY: Lato (not generic sans-serif)
+     - Primary UI font is Lato (self-hosted)
+     - Weights: 300, 400, 700, 900
+     - Location: /public/assets/fonts/Lato/
+     - Cache busting: URLs include ?cb=v4 parameter
+     
+  5. BACKGROUNDS: Warm darks (not pure black)
+     - Base: #09090B (warm dark, not #000000)
+     - Elevated: #18181B (card backgrounds)
+     - Surface: #27272A (borders, elevated surfaces)
+     
+  6. TEXT COLORS: Specific zinc palette
+     - Primary: #FAFAFA (Zinc-50)
+     - Secondary: #A1A1AA (Zinc-400)
+     - Muted: #71717A (Zinc-500)
+
+Font Specifications (Confirmed)
+  1. Tagline font: Over the Rainbow Regular
+     - Properly embedded in SVG brand style guide
+     - All documentation updated to reflect correct font
+     - SIL Open Font License 1.1 confirmed (free commercial use)
+     - File: OvertheRainbow-Regular.ttf
+     - Location: /public/assets/fonts/Over_the_Rainbow/
+     
+  2. UI font: Lato
+     - Self-hosted TTF files
+     - Weights: 300 (Light), 400 (Regular), 700 (Bold), 900 (Black)
+     - Location: /public/assets/fonts/Lato/
+     - Cache busting: URLs include ?cb=v4 parameter
 
 ═══════════════════════════════════════════════════════════════════
 
 NEW DELIVERABLES
 
-1. MULTI-ARTBOARD SVG BRAND STYLE GUIDE
+1. UPDATED YAML GUIDE (v3.0)
+   File: thoughtmarks_brand_guide.yaml
+   
+   Changes:
+   - version: "3.0.0"
+   - last_updated: "2025-12-25"
+   - source: "Based on actual deployment at thoughtmarksapp.com"
+   - primary_accent: "#3B82F6" (Blue - NOT yellow)
+   - brand_yellow: "#FEFF00" (Tagline script text ONLY)
+   - Updated all color usage rules
+   - Updated component patterns with actual colors
+   - Updated backgrounds to warm darks (#09090B, #18181B, #27272A)
+   - Updated typography to Lato
+   - Added text color specifications
+   - Added effects section (gradients, blur, glow)
+   - Critical corrections section documenting v2.0 errors
+
+2. UPDATED QUICK REFERENCE (v3.0)
+   File: thoughtmarks_brand_standards_quick_ref_v3.0.txt
+   
+   New Sections:
+   - PRIMARY ACCENT (Blue) specifications
+   - BRAND HIGHLIGHT (Yellow - tagline only) specifications
+   - BACKGROUNDS (Warm darks) specifications
+   - TEXT COLORS (Zinc palette) specifications
+   - Updated font specifications (Lato + Over the Rainbow)
+   - Critical reminders section
+   - Version history with corrections noted
+
+3. MULTI-ARTBOARD SVG BRAND STYLE GUIDE
    File: thoughtmarks_brand_style_guide.svg
    Format: SVG (opens in Illustrator, imports to Figma)
    
    What's Inside:
    Artboard 1: Cover with tagline in Over the Rainbow Regular
-   Artboard 2: Color palette with all brand colors
+   Artboard 2: Color palette with all brand colors (CORRECTED)
    Artboard 3: Typography with font samples and specs
    Artboard 4: Logo usage guidelines and do's/don'ts
    Artboard 5: Brand voice and messaging
@@ -42,39 +104,10 @@ NEW DELIVERABLES
    Resolution: 300 DPI equivalent (8.5" x 11" per artboard)
    Font: Over the Rainbow Regular embedded in SVG
    
-   How to Use:
-   - Adobe Illustrator: File > Open > select SVG
-   - Figma: Drag and drop or File > Import
-   - Edit text, colors, layouts as needed
-   - Each artboard is a separate page/section
-   - All fonts are embedded and editable
-
-2. UPDATED YAML GUIDE (v2.1)
-   File: thoughtmarks_brand_guide.yaml
-   
-   Changes:
-   - tagline font: "Over the Rainbow Regular"
-   - Added license information: "SIL Open Font License 1.1"
-   - Removed "What's the exact handwritten font?" from questions
-   - Added answered_questions section with font details
-   - Updated typography references throughout
-
-3. UPDATED QUICK REFERENCE (v2.1)
-   File: thoughtmarks_brand_standards_quick_ref_v2.1.txt
-   
-   New Sections:
-   - Tagline Font specifications with Over the Rainbow details
-   - Font License Information section
-   - Version History tracking changes
-   - File reference for OvertheRainbow-Regular.ttf
-
-4. REFERENCE PNG BRAND BOARD
-   File: thoughtmarks_brand_board_TEMP.png
-   
-   Purpose: Visual reference showing Over the Rainbow in use
-   Size: 3000x4000px @ 300 DPI
-   Format: PNG for quick preview
-   Note: SVG is the primary working file
+   Note: SVG colors should be updated to reflect:
+   - Blue (#3B82F6) for primary accent examples
+   - Yellow (#FEFF00) ONLY for tagline examples
+   - Warm dark backgrounds (#09090B, #18181B, #27272A)
 
 ═══════════════════════════════════════════════════════════════════
 
@@ -114,6 +147,7 @@ License: SIL Open Font License 1.1
 Designer: Kimberly Geswein (kimberlygeswein.com)
 Copyright: © 2010 Kimberly Geswein
 File: OvertheRainbow-Regular.ttf
+Location: /public/assets/fonts/Over_the_Rainbow/
 
 What You Can Do:
   ✓ Use in commercial projects (no restrictions)
@@ -133,16 +167,47 @@ For Your App:
   - Social: Convert text to outlines if distributing templates
 
 Usage Rules:
-  - ONLY for "bookmarks for your brain!" tagline
+  - ONLY for "bookmarks for your brain" tagline
   - ALWAYS in yellow (#FEFF00)
   - NEVER for any other text
   - NEVER in any other color
 
+Lato
+
+License: SIL Open Font License 1.1
+Designer: Łukasz Dziedzic
+Copyright: © 2010-2015 Łukasz Dziedzic
+Files: Lato-Light.ttf, Lato-Regular.ttf, Lato-Bold.ttf, Lato-Black.ttf
+Location: /public/assets/fonts/Lato/
+
+What You Can Do:
+  ✓ Use in commercial projects (no restrictions)
+  ✓ Embed in iOS app, website, documents
+  ✓ Distribute with your software/app
+  ✓ Modify and create derivatives
+  ✓ Bundle with other assets
+
+Usage Rules:
+  - Primary UI font for all interface elements
+  - Headlines, body text, labels, everything except tagline
+  - Weights: 300 (Light), 400 (Regular), 700 (Bold), 900 (Black)
+
 ═══════════════════════════════════════════════════════════════════
 
-HOW TO USE YOUR NEW BRAND GUIDE
+HOW TO USE YOUR UPDATED BRAND GUIDE
 
-Step 1: Open the SVG in Your Design Tool
+Step 1: Understand the Corrections
+  
+  CRITICAL: The previous guides (v2.0, v2.1) were WRONG about:
+  - Primary accent color (it's BLUE, not yellow)
+  - Yellow usage (tagline ONLY, not buttons)
+  - Gradients (they ARE used, for backgrounds)
+  - Typography (it's Lato, not generic sans-serif)
+  - Backgrounds (warm darks, not pure black)
+  
+  Always reference v3.0 for accurate specifications.
+
+Step 2: Open the SVG in Your Design Tool
   
   For Adobe Illustrator:
   1. Launch Illustrator
@@ -161,10 +226,10 @@ Step 1: Open the SVG in Your Design Tool
   6. Over the Rainbow font will need to be installed locally
      for full editing (Figma will prompt you)
 
-Step 2: Reference the Documentation
+Step 3: Reference the Documentation
   
   For Quick Lookups:
-  - thoughtmarks_brand_standards_quick_ref_v2.1.txt
+  - thoughtmarks_brand_standards_quick_ref_v3.0.txt
   - Has all hex codes, font names, basic rules
   
   For Technical Implementation:
@@ -175,35 +240,42 @@ Step 2: Reference the Documentation
   - thoughtmarks_messaging_framework.txt
   - Voice guidelines, target audiences, messaging
 
-Step 3: Create New Assets
+Step 4: Create New Assets
   
   The SVG artboards are templates you can:
   - Duplicate and modify for new layouts
   - Copy color swatches for consistency
   - Reference typography for new designs
   - Export as components for reuse
+  
+  Remember:
+  - Use BLUE (#3B82F6) for all interactive elements
+  - Use YELLOW (#FEFF00) ONLY for tagline script text
+  - Use warm dark backgrounds (#09090B, #18181B, #27272A)
+  - Use Lato for all UI text, Over the Rainbow for tagline only
 
 ═══════════════════════════════════════════════════════════════════
 
 FILES IN THIS DELIVERY
 
 Core Working Files:
-  ✓ thoughtmarks_brand_style_guide.svg (MAIN DELIVERABLE)
-  ✓ thoughtmarks_brand_guide.yaml (v2.1 updated)
-  ✓ thoughtmarks_brand_standards_quick_ref_v2.1.txt
-  ✓ thoughtmarks_brand_board_TEMP.png (reference)
-  ✓ This file: thoughtmarks_font_update_delivery_v2.1.txt
+  ✓ thoughtmarks_brand_guide.yaml (v3.0 - UPDATED)
+  ✓ thoughtmarks_brand_standards_quick_ref_v3.0.txt (UPDATED)
+  ✓ thoughtmarks_brand_style_guide.svg (MAIN DELIVERABLE - colors need update)
+  ✓ This file: thoughtmarks_font_update_delivery_v3.0.txt (UPDATED)
 
-Font Asset:
-  ✓ OvertheRainbow-Regular.ttf (in your uploads)
-  ✓ OFL.txt (license file in your uploads)
+Font Assets:
+  ✓ OvertheRainbow-Regular.ttf (in /public/assets/fonts/Over_the_Rainbow/)
+  ✓ Lato font family (in /public/assets/fonts/Lato/)
+  ✓ OFL.txt (license file in font directories)
 
-Previous Documentation (still valid):
-  ✓ thoughtmarks_messaging_framework.txt
-  ✓ thoughtmarks_asset_inventory.txt
+Previous Documentation (updated):
+  ✓ thoughtmarks_messaging_framework.txt (in parent directory)
+  ✓ thoughtmarks_asset_inventory.txt (in parent directory)
 
 Deprecated:
   ✗ thoughtmarks_brand_style_guide.html (don't use - bad font)
+  ✗ v2.0 and v2.1 guides (incorrect color specifications)
 
 ═══════════════════════════════════════════════════════════════════
 
@@ -211,29 +283,35 @@ NEXT STEPS
 
 Immediate Actions:
   
-  1. Install Font on Your Computer
-     - macOS: Double-click OvertheRainbow-Regular.ttf > Install
-     - Windows: Right-click font file > Install
-     - This ensures it renders in Figma/Illustrator
+  1. Update Any Existing Assets
+     - Social media templates with tagline (ensure yellow is tagline-only)
+     - Website with tagline (ensure blue is primary accent)
+     - Marketing materials (ensure correct color usage)
+     - Ensure all use Over the Rainbow for tagline, Lato for UI
+     - Ensure blue (#3B82F6) is used for all buttons/CTAs
+     - Ensure yellow (#FEFF00) is ONLY for tagline script text
   
-  2. Open SVG in Your Design Tool
-     - Verify everything renders correctly
-     - Check that Over the Rainbow displays properly
-     - Save as .ai or .fig if you want native format
+  2. Update SVG Brand Style Guide
+     - Update color swatches to show blue as primary accent
+     - Update examples to show blue buttons (not yellow)
+     - Update background colors to warm darks
+     - Ensure tagline examples use yellow with Over the Rainbow
+     - Update typography examples to show Lato
   
-  3. Update Any Existing Assets
-     - Social media templates with tagline
-     - Website with tagline
-     - Marketing materials with tagline
-     - Ensure all use Over the Rainbow, not generic fonts
+  3. Review All Brand Materials
+     - Check that buttons/CTAs use blue (#3B82F6)
+     - Check that yellow is ONLY used for tagline
+     - Check that backgrounds are warm darks (not pure black)
+     - Check that Lato is used for UI text
+     - Check that Over the Rainbow is used for tagline only
 
 Future Assets to Create:
   
   Still needed (from previous delivery):
   - SVG versions of brain.png and bookmark.png
-  - Square social templates (1080x1080px)
-  - Email signature template
-  - Presentation templates (Keynote/PowerPoint)
+  - Square social templates (1080x1080px) with correct colors
+  - Email signature template with blue accent
+  - Presentation templates (Keynote/PowerPoint) with correct colors
   - Print-ready CMYK versions
   - One-color logo versions (white, black)
 
@@ -242,16 +320,22 @@ Future Assets to Create:
 QUALITY CHECKLIST
 
 ✓ Tagline font is correctly specified (Over the Rainbow Regular)
-✓ Font is properly embedded in SVG (no fallbacks)
-✓ License is documented (SIL OFL 1.1)
-✓ All documentation files updated to v2.1
+✓ UI font is correctly specified (Lato)
+✓ Primary accent is correctly specified (Blue #3B82F6)
+✓ Yellow usage is correctly specified (Tagline script text ONLY)
+✓ Fonts are properly embedded in SVG (no fallbacks)
+✓ License is documented (SIL OFL 1.1 for both fonts)
+✓ All documentation files updated to v3.0
 ✓ SVG opens in Adobe Illustrator
 ✓ SVG imports to Figma
-✓ Colors are exact (#FEFF00 for yellow, etc.)
+✓ Colors are exact (#3B82F6 for blue, #FEFF00 for yellow)
+✓ Backgrounds are warm darks (#09090B, #18181B, #27272A)
+✓ Text colors are specified (#FAFAFA, #A1A1AA, #71717A)
 ✓ Typography hierarchy is clear
 ✓ Logo usage guidelines included
 ✓ Brand voice and messaging documented
 ✓ Professional format suitable for contractors/agencies
+✓ Critical corrections from v2.0 documented
 
 ═══════════════════════════════════════════════════════════════════
 
@@ -263,6 +347,11 @@ If Over the Rainbow Doesn't Display in Figma:
   3. Figma will prompt to use local font
   4. If still issues, convert text to outlines in Illustrator first
 
+If Lato Doesn't Display:
+  1. Install Lato font family on your computer
+  2. Restart design application
+  3. Fonts are self-hosted, so ensure files are accessible
+
 If SVG Doesn't Open in Illustrator:
   1. Make sure you have Adobe Illustrator (not just Reader)
   2. Try File > Open instead of double-clicking
@@ -272,7 +361,7 @@ If SVG Doesn't Open in Illustrator:
 If Colors Look Different:
   - Web browsers use sRGB color space
   - Illustrator/Figma may use RGB or Display P3
-  - #FEFF00 is the authoritative hex code
+  - #3B82F6 (blue) and #FEFF00 (yellow) are the authoritative hex codes
   - Slight variations are normal across color spaces
   - For iOS, use Display P3 profile
   - For web, use sRGB profile
@@ -286,20 +375,25 @@ If You Need Another Format:
 
 SUMMARY OF WHAT YOU NOW HAVE
 
-A Complete Brand System:
+A Complete Brand System (v3.0 - CORRECTED):
   
   Visual Identity:
   ✓ Multi-artboard SVG style guide (editable in Illustrator/Figma)
-  ✓ Proper tagline font with embedded file
-  ✓ Color palette with exact hex codes
+  ✓ Proper tagline font with embedded file (Over the Rainbow)
+  ✓ Proper UI font specified (Lato)
+  ✓ Color palette with CORRECT primary accent (Blue #3B82F6)
+  ✓ Color palette with CORRECT yellow usage (Tagline only #FEFF00)
   ✓ Typography specifications with font names
   ✓ Logo usage guidelines with do's/don'ts
+  ✓ Warm dark backgrounds (#09090B, #18181B, #27272A)
+  ✓ Text color specifications (#FAFAFA, #A1A1AA, #71717A)
   
   Technical Specs:
   ✓ YAML file with iOS icon construction details
   ✓ Quick reference guide for fast lookups
   ✓ Font license documentation
   ✓ File references and usage notes
+  ✓ Critical corrections from v2.0 documented
   
   Messaging & Voice:
   ✓ Messaging framework with copy patterns
@@ -307,16 +401,31 @@ A Complete Brand System:
   ✓ Target audience messaging
   ✓ What to say and what never to say
   
-  What's Different from v2.0:
-  - Actual font instead of generic fallback
-  - Professional SVG format instead of HTML
-  - Can edit in Illustrator/Figma
-  - Font license documented
-  - All docs updated to match
+  What's Different from v2.0/v2.1:
+  - CORRECTED: Primary accent is BLUE (#3B82F6), NOT yellow
+  - CORRECTED: Yellow (#FEFF00) is ONLY for tagline script text
+  - CORRECTED: Gradients ARE used (for background effects)
+  - CORRECTED: Typography is Lato (not generic sans-serif)
+  - CORRECTED: Backgrounds are warm darks (not pure black)
+  - Added: Text color specifications
+  - Added: Effects section (gradients, blur, glow)
+  - Added: Critical corrections documentation
 
 ═══════════════════════════════════════════════════════════════════
 
 VERSION NOTES
+
+v3.0 (December 2025) - COMPREHENSIVE CORRECTION
+  Changed: Complete rewrite based on actual deployment
+  Corrected: Primary accent from yellow to BLUE (#3B82F6)
+  Corrected: Yellow usage to tagline script text ONLY
+  Corrected: Gradients ARE used (for backgrounds)
+  Corrected: Typography to Lato (not generic sans-serif)
+  Corrected: Backgrounds to warm darks (not pure black)
+  Added: Text color specifications
+  Added: Effects section
+  Added: Critical corrections documentation
+  Format: Professional design-ready SVG + comprehensive YAML
 
 v2.1 (January 2025) - FONT UPDATE
   Changed: Tagline font from generic "cursive" to Over the Rainbow Regular
@@ -325,12 +434,14 @@ v2.1 (January 2025) - FONT UPDATE
   Confirmed: SIL OFL 1.1 license for commercial use
   Deprecated: HTML brand style guide (bad font rendering)
   Format: Professional design-ready SVG
+  NOTE: Still incorrectly stated yellow was primary accent
 
 v2.0 (January 2025) - INITIAL COMPREHENSIVE GUIDE
   Created: Complete brand guide package
   Documented: iOS icon construction from icon.json
   Added: Social media template specifications
   Compiled: Messaging framework and voice guidelines
+  NOTE: Incorrectly stated yellow was primary accent
 
 ═══════════════════════════════════════════════════════════════════
 
@@ -342,29 +453,44 @@ Nick@sawyerdesign.io
 sawyerdesign.io
 
 Thoughtmarks App
-thoughtmarks.app
+thoughtmarksapp.com
 App Store: thoughtmarks.app
 
 ═══════════════════════════════════════════════════════════════════
 
 FINAL THOUGHTS
 
-The HTML version had a fundamental flaw - web fonts don't embed properly
-in HTML without hosting infrastructure, so it fell back to generic fonts.
+The v2.0 and v2.1 guides had a fundamental flaw - they incorrectly
+stated that yellow (#FEFF00) was the primary accent color. After
+reviewing the actual deployment at thoughtmarksapp.com, it's clear
+that:
 
-This SVG version solves that by:
-1. Embedding the font data directly in the SVG file
-2. Opening natively in professional design tools
-3. Allowing full editing of all elements
-4. Providing a proper workflow for creating new assets
+1. BLUE (#3B82F6) is the primary interactive color
+   - Used for all buttons, CTAs, links, focus rings
+   - Professional, trustworthy, accessible
+   - High contrast on dark backgrounds
 
-The tagline "bookmarks for your brain!" now renders in the actual
-Over the Rainbow Regular font, exactly as intended for the brand.
+2. YELLOW (#FEFF00) is ONLY for tagline script text
+   - Creates memorable brand moment
+   - Never used for interactive elements
+   - Always uses Over the Rainbow Regular font
 
-If you hate THIS font too, let me know and we can try another. But
-the SVG format will make it much easier to swap fonts in the future.
+3. The warm dark backgrounds (#09090B, #18181B, #27272A) create
+   depth without harsh contrast, and work beautifully with the
+   blue accent color.
+
+4. Gradients ARE used (contrary to old guide) - but for background
+   blobs/effects, not for buttons (which are solid blue).
+
+5. Lato is the professional, readable UI font that works well
+   across all platforms.
+
+This v3.0 update corrects all previous errors and provides accurate
+specifications based on the actual deployed site. Always reference
+v3.0 for brand implementation.
 
 ---
 
-Files delivered in: /mnt/user-data/outputs/
-Version 2.1 | January 13, 2025
+Files delivered in: /public/assets/brand-guide/tm-brand/
+Version 3.0 | December 25, 2025
+Source: Actual deployment at thoughtmarksapp.com

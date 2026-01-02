@@ -1,5 +1,6 @@
 THOUGHTMARKS MESSAGING FRAMEWORK
 Voice, positioning, and copy patterns
+Version 3.0 - Based on actual deployment at thoughtmarksapp.com
 
 ═══════════════════════════════════════════════════════════════════
 
@@ -26,17 +27,47 @@ The Category We Created
 PRIMARY TAGLINES
 
 Brand Tagline
-  "bookmarks for your brain!"
+  "bookmarks for your brain"
   
-  Usage: Always in yellow handwritten font
-  Placement: App icon context, marketing materials, social cards
+  Usage: Always in yellow (#FEFF00) handwritten font (Over the Rainbow)
+  Placement: Hero sections, app icon context, marketing materials, social cards
   Tone: Playful but functional, memorable
+  Note: Lowercase, no exclamation mark in current deployment
   
-Marketing Tagline
-  "Find focus in the chaos"
+Marketing Tagline (Hero Section)
+  "Capture at the speed of life. Find at the speed of need."
   
-  Usage: Hero sections, ad copy, feature announcements
-  Tone: Direct, acknowledges reality, promises relief
+  Usage: Primary hero headline (cycling with 4 other variants)
+  Tone: Direct, benefit-focused, emphasizes speed
+  Placement: Landing page hero, ad copy, feature announcements
+
+═══════════════════════════════════════════════════════════════════
+
+HERO HEADLINES (Cycling Variants)
+
+The landing page cycles through 5 headline variants every 7 seconds:
+
+1. "Capture at the speed of life. Find at the speed of need."
+   Subhead: "Thought it and forgot it? Found it."
+
+2. "Don't watch another shower thought circle the drain."
+   Subhead: "Capture at the speed of life. Find it when you need it."
+
+3. "The notes app for people with great ideas and average memory."
+   Subhead: "Life's moving. Your notes should keep up."
+
+4. "Your brain's tired, your ideas shouldn't be."
+   Subhead: "Your ideas deserve better than your notes app."
+
+5. "Tip-of-the-tongue, solved."
+   Subhead: "For people with a million ideas and zero attention span."
+
+Usage Rules:
+  - Last line of headline uses blue accent color (#3B82F6)
+  - All other lines use white text
+  - Subheads use zinc-300 (#D4D4D8) color
+  - 7 second intervals between rotations
+  - User can manually select via progress dots
 
 ═══════════════════════════════════════════════════════════════════
 
@@ -45,17 +76,26 @@ ALTERNATIVE TAGLINES
 For Different Contexts
 
 Speed/Efficiency Focus
-  "Capture ideas at the speed of life"
+  "Capture at the speed of life"
+  "Find at the speed of need"
   "Voice in. Organized out."
   "Write or Record. Auto-organized. Transcribed. Instant recall. Keep moving."
   
 Problem/Solution Focus
   "Stop managing notes. Start catching them."
   "The notes app for people who are busy being interesting."
+  "Thought it and forgot it? Found it."
   
 Search/Recall Focus
   "Find the thing you half remember"
+  "Tip-of-the-tongue, solved."
   
+Section Headers
+  "For the life of the party who can't remember the punchline."
+  "Your ideas deserve better than your notes app."
+  "For people with a million ideas and zero attention span."
+  "Ready to never forget again?"
+
 Usage Rules:
   - Use primary taglines for brand building
   - Use alternatives for specific campaigns or features
@@ -75,6 +115,9 @@ Step 1: Capture
   no friction between idea and storage, works while driving, 
   cooking, walking, whenever inspiration strikes
   
+  Feature Copy: "Hands-free capture. Walking the dog. Driving. Cooking. 
+  The best ideas hit when your hands are full. Siri grabs it. You keep moving."
+  
 Step 2: Organize
   "Auto tags, categories, connections"
   
@@ -82,12 +125,18 @@ Step 2: Organize
   no tagging systems to maintain, connections between ideas surface naturally,
   organization happens without you thinking about it
   
+  Feature Copy: "Smart Bin. Organization without effort. AI-organized categories 
+  that learn how you think. No folders required."
+  
 Step 3: Discover
   "Search by words or meaning"
   
   Expansion: Semantic search understands what you're looking for even if
   you don't remember exact words, find "that quote from that podcast",
   search by context not just keywords, your brain delegates remembering to AI
+  
+  Feature Copy: "Search by meaning. That thing about systems and stories? Found. 
+  You do not need the exact words. Search remembers the vibe."
 
 ═══════════════════════════════════════════════════════════════════
 
@@ -98,37 +147,86 @@ Primary Benefits (In Order of Importance)
 1. Effortless Capture
    Short: "Capture brilliance on the go"
    Long: "Background Siri integrated Voice-to-Thoughtmark. Speak your 
-   ideas and they're captured, transcribed, and stored instantly. No 
-   fumbling with apps while your brilliant thought evaporates."
+   ideas naturally. Real-time transcription. Smart punctuation. Keep moving."
    
-   Benefit: Zero friction = more ideas captured
-   Pain Solved: Losing ideas to forgotten voice memos or lost napkins
+   Feature Headline: "Hands-free capture"
+   Feature Description: "Walking the dog. Driving. Cooking. The best ideas 
+   hit when your hands are full. Siri grabs it. You keep moving."
 
 2. Automatic Structure
-   Short: "No folders. No chores."
-   Long: "AI tags, links, and files your thoughtmarks automatically. 
-   The organization you'd do if you had time happens without you lifting 
-   a finger. No complex systems to maintain."
+   Short: "AI tags, links, and files your thoughtmarks"
+   Long: "No folders. No chores. AI-organized categories that learn how you 
+   think. Your notes become searchable, connected, and useful without you 
+   managing a system."
    
-   Benefit: Organization without effort
-   Pain Solved: The overhead of maintaining elaborate systems
+   Feature Headline: "Smart Bin"
+   Feature Description: "Organization without effort. AI-organized categories 
+   that learn how you think. No folders required."
 
 3. Smart Search
-   Short: "Find it fast, even if you barely remember it"
-   Long: "Search by exact words, by meaning, or by that vague memory of 
-   'something about X from last month.' Semantic search + keyword search 
-   means nothing stays buried."
+   Short: "Words, meaning, that quote from that podcast - found fast"
+   Long: "Semantic search understands context, not just keywords. Find 'that 
+   thing about systems' even if you don't remember the exact words. Your 
+   brain delegates remembering to AI."
    
-   Benefit: Perfect recall without perfect memory
-   Pain Solved: That frustration of "I know I wrote that down somewhere"
+   Feature Headline: "Search by meaning"
+   Feature Description: "That thing about systems and stories? Found. You do 
+   not need the exact words. Search remembers the vibe."
 
 4. Privacy First
    Short: "Your thoughts stay yours"
-   Long: "Lock on device. Encrypted sync optional. No mining your data 
-   for ads. Your brain's contents are private and will remain that way."
+   Long: "Lock on device. Encrypted sync optional. Your thoughts stay yours. 
+   Not training anyone. Whether we are talking naughty or IP - your thoughts 
+   stay yours. Encrypted. Private. Not training anyone."
    
-   Benefit: Mental safety and trust
-   Pain Solved: Concern about AI companies reading your private thoughts
+   Feature Headline: "Thoughts on lock"
+   Feature Description: "Whether we are talking naughty or IP - your thoughts 
+   stay yours. Encrypted. Private. Not training anyone."
+
+Additional Value Props:
+
+5. Stay in Flow
+   Feature Headline: "Stay in the flow"
+   Feature Description: "Capture without breaking focus. Your attention stays 
+   on the idea. The rest happens later."
+
+6. Connections
+   Feature Headline: "Connections you missed"
+   Feature Description: "Your note about podcasts links to your book highlights 
+   links to that random Tuesday thought. The web you weave, visualized."
+
+7. Deep Dive
+   Feature Headline: "The rabbit hole assistant"
+   Feature Description: "Noted a few things about stoicism? Here is a book, 
+   podcast, and video to go deeper. Your interests become a curriculum."
+
+═══════════════════════════════════════════════════════════════════
+
+FEATURE DESCRIPTIONS (From Actual Site)
+
+Dashboard
+  "Your command center. Recent captures, quick actions, and your thinking 
+  patterns at a glance."
+
+Voice Capture
+  "Hands-free brilliance. Speak naturally. Real-time transcription. Smart 
+  punctuation. Keep moving."
+
+Smart Bin
+  "Organization without effort. AI-organized categories that learn how you 
+  think. No folders required."
+
+Intelligence Hub
+  "AI-powered insights. Connections, recommendations, and patterns you never 
+  noticed. Your thinking, amplified."
+
+Deep Dive
+  "Your thoughts, connected. See how your ideas relate. Tags, links, and 
+  the web you weave."
+
+Your Rules
+  "Privacy first. Encryption, sync preferences, and controls that respect 
+  your data."
 
 ═══════════════════════════════════════════════════════════════════
 
@@ -138,439 +236,287 @@ Busy Professionals
   Pain Points:
     - Lose ideas between meetings
     - Can't find where they wrote something down
-    - Switching between too many apps kills momentum
-    - Important thoughts slip away during busy days
+    - Switching between too many apps
   
-  Core Message:
+  Messaging:
     "Your brain shouldn't have to remember everything. Let us do that."
+    "Capture at the speed of life. Find at the speed of need."
   
-  Supporting Points:
-    - Capture without breaking flow
-    - Search without remembering filing systems
-    - Access from anywhere (phone, watch, Siri)
-    - Works with how you actually work
-  
-  Copy Examples:
-    "That brilliant idea you had between the parking lot and the conference 
-    room? Captured before you sit down."
-    
-    "Stop losing million-dollar insights to calendar notifications."
-
-Creators & Creative Professionals
+Creators
   Pain Points:
     - Inspiration strikes at inconvenient times
     - Ideas scattered across notebooks, phones, napkins
     - Hard to see patterns in their thinking
-    - Voice memos pile up unlistened and unsearchable
   
-  Core Message:
+  Messaging:
     "Stop losing your best ideas to forgotten voice memos and random notes."
+    "The notes app for people with great ideas and average memory."
+    "Your ideas deserve better than your notes app."
   
-  Supporting Points:
-    - Capture at the speed of creativity
-    - All ideas in one searchable place
-    - Connections between thoughts surface automatically
-    - Reference material always accessible
-  
-  Copy Examples:
-    "Voice capture that doesn't end up as 47 unlistened recordings 
-    labeled 'New Recording 23.m4a'."
-    
-    "Your best ideas don't wait for you to find a notebook."
-
-The Eternally Curious
+Eternally Curious
   Pain Points:
     - Collecting interesting things but never revisiting
-    - Want to connect dots between disparate interests
-    - Need better recall for conversations and reading
-    - Lose track of "that interesting thing I heard"
+    - Want to connect dots between ideas
+    - Need better recall for conversations
   
-  Core Message:
+  Messaging:
     "Build a searchable archive of everything interesting you encounter."
+    "The rabbit hole assistant. Your interests become a curriculum."
+    "Connections you missed. The web you weave, visualized."
   
-  Supporting Points:
-    - Quotes, articles, podcast moments, random thoughts
-    - Search when you half-remember something
-    - See connections between different interests
-    - Your personal knowledge base grows automatically
-  
-  Copy Examples:
-    "That podcast quote about creativity from three months ago? 
-    Found in 3 seconds."
-    
-    "Capture the interesting. Discover the connections."
-
 Busy Parents
   Pain Points:
-    - Remembering things while hands are literally full
+    - Remembering things while hands are full
     - Mental load is overwhelming
-    - No time for complex organization systems
-    - Forget important things between interruptions
+    - No time for complex systems
   
-  Core Message:
-    "Voice-first capture when your hands are literally full. Because 
-    parenting doesn't pause for note-taking."
+  Messaging:
+    "Voice-first capture when your hands are literally full."
+    "Hands-free capture. Walking the dog. Driving. Cooking. The best ideas 
+    hit when your hands are full. Siri grabs it. You keep moving."
+
+ADHD/Neurodivergent
+  Pain Points:
+    - Executive function challenges with organization
+    - Ideas come fast, organizing is hard
+    - Need systems that work with their brain
   
-  Supporting Points:
-    - Siri capture while driving, cooking, playing
-    - Grocery lists, gift ideas, appointment details
-    - Find that thing you captured during last week's chaos
-    - Reduces mental overhead
-  
-  Copy Examples:
-    "Capture that gift idea while pushing the stroller."
-    
-    "Remember the pediatrician's instructions between diaper changes."
+  Messaging:
+    "For people with a million ideas and zero attention span."
+    "Organization without effort. AI-organized categories that learn how you 
+    think. No folders required."
+    "Your brain's tired, your ideas shouldn't be."
 
 ═══════════════════════════════════════════════════════════════════
 
-VOICE & TONE GUIDELINES
+VOICE & TONE
 
 Brand Personality
-  Smart but not pretentious
-  Fast and efficient (like the product)
-  Supportive of chaos (not prescriptive about organizing)
-  Tech-forward without being intimidating
-  Honest about problems without dwelling on them
+  - Smart but not pretentious
+  - Fast and efficient
+  - Supportive of chaos (not fighting it)
+  - Tech-forward without being intimidating
+  - Honest about the problem (busy minds need help)
 
-Vocabulary Choices
-  USE:
-    - Active verbs: capture, build, trust, remember
-    - Neurological metaphors: brain, offload, flow, connections
-    - Productivity language: focus, clarity, momentum
-    - Casual contractions: you're, we're, don't
-  
-  AVOID:
-    - Corporate speak: synergize, leverage, maximize
-    - Productivity guru jargon: rockstar, ninja, hack
-    - Medical terminology: diagnose, treat, fix
-    - Overpromising: revolutionary, life-changing, game-changing
+Tone Attributes
+  - Direct, energetic, slightly irreverent
+  - Active verbs: capture, build, remember, trust
+  - Short, punchy, scannable sentences
+  - Acknowledge the chaos: "Find focus in the chaos"
+  - Be specific about benefits: "Capture while driving" not "Be more productive"
 
-Sentence Structure
-  - Short. Punchy. Scannable.
-  - Active voice over passive
-  - One idea per sentence
-  - Questions that acknowledge pain ("Sound familiar?")
-  - Fragments are fine if they add energy
+What We Say
+  - "Capture brilliant ideas"
+  - "Stay in flow"
+  - "Your digital brain"
+  - "Voice in. Organized out."
+  - "Capture at the speed of life"
+  - "Thought it and forgot it? Found it."
+  - "Your ideas deserve better than your notes app."
+
+What We Never Say
+  - "Maximize productivity"
+  - "Synergize"
+  - "Streamline workflows"
+  - "Revolutionary transformation"
+  - "Life-changing" (unless specifically qualified)
+  - Any productivity jargon
+  - Corporate speak
+
+Writing Guidelines
+
+DO:
+  - Use active verbs: capture, build, remember, trust
+  - Acknowledge the chaos: "Find focus in the chaos"
+  - Be specific about benefits: "Capture while driving" not "Be more productive"
+  - Use brain/neural metaphors sparingly but effectively
+  - Short sentences. Punchy. Scannable.
+  - Be honest about the problem: "Your brain's tired"
+  - Use contractions for conversational tone: "don't", "can't", "you're"
+
+DON'T:
+  - Don't promise "life-changing transformation" or other bullshit
+  - Don't use productivity jargon: synergy, bandwidth, rockstar, ninja
+  - Don't talk down to users about their organizational failures
+  - Don't overcomplicate the value prop
+  - Don't use emojis in brand materials (per founder preference)
+  - Don't use exclamation marks excessively (current tagline doesn't use one)
 
 Tone Examples
 
-GOOD:
-  "Brilliant ideas don't wait for you to find a pen."
-  "Your brain is for thinking, not storing."
-  "Capture now, organize never. (AI does it for you.)"
-  "Find the thing you half remember."
+Good:
+  - "Brilliant ideas don't wait for you to find a pen"
+  - "Your brain is for thinking, not storing"
+  - "Capture now, organize never (AI does it for you)"
+  - "Voice notes that actually become useful later"
+  - "Thought it and forgot it? Found it."
+  - "For people with a million ideas and zero attention span."
 
-BAD:
-  "Revolutionize your ideation workflow with AI-powered knowledge management!"
-  "Synergize your thoughts for maximum mental bandwidth optimization."
-  "Be the best version of yourself through seamless cognitive enhancement."
-  "Hack your brain for 10x productivity gains."
-
-Why They're Bad:
-  - Jargon-heavy
-  - Overpromising
-  - Trying too hard to be impressive
-  - Corporate speak
-  - Not acknowledging the actual problem
+Bad:
+  - "Revolutionize your thought leadership pipeline!"
+  - "Synergize your ideation workflow with AI"
+  - "Be the best version of yourself through seamless capture"
+  - "Hack your brain for maximum optimization"
+  - "Transform your productivity with our revolutionary app!"
 
 ═══════════════════════════════════════════════════════════════════
 
-COPY PATTERNS
+COMPETITIVE DIFFERENTIATION
 
-Problem → Solution
-  Template: "[Pain point]. [Solution in one line]. [How it works]."
-  
-  Example:
-  "Lost that brilliant idea between the car and your desk? Voice capture 
-  means it's saved before you sit down. No fumbling with apps, no broken flow."
+We Are Not
 
-Before → After
-  Template: "Before: [frustration]. After: [relief]. [Feature that enables]."
-  
-  Example:
-  "Before: 47 unlistened voice memos. After: Transcribed, tagged, searchable. 
-  AI organization means you'll actually find it later."
+Not a Notebook (Notion, Evernote, OneNote)
+  Difference: "Those require structure upfront. We capture first, organize automatically."
+  Message: "No folders. No chores. AI-organized categories that learn how you think."
 
-Feature → Benefit
-  Template: "[What it does] means [what you get]."
-  
-  Example:
-  "Semantic search means you can find 'that thing about creativity' even 
-  if you don't remember using the word 'creativity'."
+Not a Voice Memo (Apple Voice Memos, Otter)
+  Difference: "Voice memos become black holes. We transcribe, tag, and make searchable."
+  Message: "Voice notes that actually become useful later. Search by meaning, not just keywords."
 
-Pain Acknowledgment → Empathy → Solution
-  Template: "[Pain]. We get it. [Understanding]. [Solution]."
-  
-  Example:
-  "You know you wrote it down somewhere. We get it. When you have 6 apps, 
-  3 notebooks, and a pile of sticky notes, 'somewhere' is not helpful. 
-  One place. One search. Found."
+Not a Task Manager (Todoist, Things, OmniFocus)
+  Difference: "Task managers are for known obligations. We're for fleeting inspirations."
+  Message: "Capture ideas at the speed of life. Not managing tasks - capturing thoughts."
 
-═══════════════════════════════════════════════════════════════════
+We Are
 
-FEATURE DESCRIPTIONS
+Our Category: "Cognitive capture tool"
+Our Unique Value: "Speed of capture meets AI organization. No other tool optimizes for 
+the moment of inspiration."
 
-Voice Capture
-  Bad: "Utilize voice-to-text transcription technology"
-  Good: "Talk. It's captured, transcribed, and searchable."
-  
-  Why: Active verbs, user focus, no jargon
-
-AI Organization
-  Bad: "Machine learning algorithms automatically categorize content"
-  Good: "AI tags and organizes. You just capture."
-  
-  Why: Simple language, emphasizes user ease
-
-Semantic Search
-  Bad: "Advanced NLP-powered retrieval system"
-  Good: "Find the thing you half remember"
-  
-  Why: Describes the experience, not the technology
-
-Privacy
-  Bad: "Enterprise-grade encryption protocols"
-  Good: "Your thoughts stay yours. Encrypted. Private."
-  
-  Why: User benefit, not technical spec
+Key Differentiators:
+  1. Voice-first with background Siri integration
+  2. AI organization without user effort
+  3. Semantic search (meaning, not just keywords)
+  4. Dark UI optimized for capture speed
+  5. No folder management required
+  6. Connections surface automatically
 
 ═══════════════════════════════════════════════════════════════════
 
-CALL TO ACTION PATTERNS
+CALL-TO-ACTION COPY
 
-Primary CTAs
-  "Try it free for 14 days"
-  "Start capturing"
-  "Get Thoughtmarks"
-  "Download for iOS"
+Primary CTA
+  "Join the Waitlist"
+  "Chronically Curious?"
+  "Get the App"
   
-  Rules: Direct, active, benefit-implied
+  Usage: Primary buttons, hero section, footer
+  Style: Blue button (#3B82F6), white text, bold
 
-Secondary CTAs
+Secondary CTA
   "See how it works"
-  "Watch demo"
-  "Learn more"
+  "Contact Support"
+  "Download"
   
-  Rules: Lower commitment, informational
+  Usage: Secondary buttons, navigation
+  Style: Transparent background, border, white text
 
-Weak CTAs to Avoid
-  "Get started today"
-  "Sign up now"
-  "Learn more about our solution"
-  "Join thousands of users"
-  
-  Why: Generic, no specificity, corporate feel
+Trust Signals
+  "14 days free. For people with better things to remember."
+  "Available on iOS. Apple Watch companion included."
+  "Free to try, no credit card required."
 
 ═══════════════════════════════════════════════════════════════════
 
-SOCIAL MEDIA VOICE
+SOCIAL MEDIA COPY
 
-Platform Adaptations
+Instagram Stories/Reels
+  Format: 9:16 (1080x1920px)
+  Style: Glass morphism card on dark background
+  Tagline: Yellow script "bookmarks for your brain" (bottom)
+  Wordmark: White "THOUGHTMARKS" (bottom)
+  
+  Content Types:
+    - User thoughtmark shares
+    - Feature announcements
+    - Behind-the-scenes
+    - User testimonials
 
 Twitter/X
-  Style: Punchy observations, questions, relatable moments
-  Length: Short and sharp
+  Tone: Punchy observations about creativity and memory
+  Length: Short, scannable
   Examples:
-    "The best ideas come while driving. The worst time to write them down."
-    "Your brain's reminder system: ████████ 404 ERROR ████████"
-    "Voice capture > 'I'll remember this later' (Narrator: They didn't.)"
-
-Instagram
-  Style: Visual storytelling, process shots, behind-the-scenes
-  Length: Medium captions, conversation-starting questions
-  Examples:
-    "Show us your note-taking chaos in stories. We'll wait."
-    "That moment when you remember you forgot to remember something."
-    [Image of messy desk] "Before Thoughtmarks energy"
+    - "That panic when you forget a brilliant idea? Gone."
+    - "Your brain is for thinking, not storing."
+    - "Capture at the speed of life. Find at the speed of need."
 
 LinkedIn
-  Style: Professional but still direct, productivity insights
-  Length: Longer form, thought leadership lite
-  Examples:
-    "The cost of a lost idea isn't the idea itself. It's the momentum lost 
-    trying to remember what you were thinking about."
+  Tone: Professional angle, productivity insights
+  Length: Medium, thoughtful
+  Focus: Cognitive science, productivity without jargon
 
 TikTok
-  Style: Quick demos, humorous relatability, trends
-  Length: 15-60 seconds
-  Examples:
-    [POV: Your brain trying to remember that thing] [comedic frustration]
-    "Voice memo file names that haunt you" [reading ridiculous filenames]
+  Tone: Quick demos, humorous takes on forgetting things
+  Format: Short video clips showing real usage
+  Style: Authentic, not overly produced
 
 ═══════════════════════════════════════════════════════════════════
 
-EMAIL VOICE
+EMAIL MARKETING
 
-Welcome Sequence
+Welcome Series
   Tone: Friendly guide, not corporate onboarding
-  Goal: First successful capture
+  Focus: Get first capture win quickly
+  Length: Short, 3-4 emails max
   
-  Email 1 Subject: "Welcome to your digital brain"
-  Email 2 Subject: "Try this: voice capture in 3 seconds"
-  Email 3 Subject: "Finding what you captured (it's easier than you think)"
-  
-  Pattern: Short, actionable, benefit-focused
+  Email 1: Welcome + first capture
+  Email 2: Organization features
+  Email 3: Search and discovery
+  Email 4: Advanced features (optional)
 
-Feature Announcements
-  Tone: Excited but not hyperbolic
-  Pattern: What's new → Why it matters → Try it now
+Ongoing
+  Frequency: Weekly max, respect inbox
+  Content: Tips, user stories, feature updates
+  Style: Conversational, no hard sells
   
-  Example:
-  Subject: "New: Search by meaning, not just words"
-  Opening: "Remember 'that thing about creativity from that podcast'? 
-  Now you can search exactly like that."
-
-Tips & Best Practices
-  Tone: Helpful peer, not guru
-  Pattern: Here's what we noticed → Here's what works → Why it helps
-  
-  Example:
-  Subject: "3 things people wish they'd captured earlier"
-  Opening: "Turns out, future you wants to know about: book recommendations, 
-  random gift ideas, and that solution you figured out at 2am."
+  Subject Line Examples:
+    - "That thing you forgot? Found it."
+    - "Capture at the speed of life"
+    - "Your brain's tired, your ideas shouldn't be"
 
 ═══════════════════════════════════════════════════════════════════
 
-MESSAGING DON'TS
+ERROR MESSAGES & MICROCOPY
 
-Never Say
-  "Revolutionize your life"
-  "10x your productivity"
-  "Synergize your workflows"
-  "Be your best self"
-  "Unlock your potential"
-  "Supercharge your brain"
-  "Master your mind"
+Error States
+  Tone: Helpful, not blaming
+  Style: Direct, actionable
   
-Why: Overpromising, productivity guru nonsense, not credible
+  Examples:
+    - "Connection lost. Your thoughtmark is saved locally."
+    - "Can't find that? Try searching by meaning, not just words."
+    - "Something went wrong. Your data is safe."
 
-Never Imply
-  - Users are broken and need fixing
-  - Being disorganized is a moral failing
-  - There's one right way to think
-  - Complex systems are always better
-  - Technology solves everything
+Empty States
+  Tone: Encouraging, not empty
   
-Why: Condescending, preachy, unrealistic
+  Examples:
+    - "Your first thoughtmark is waiting. Capture it now."
+    - "No thoughtmarks yet. Start capturing your ideas."
+    - "Nothing here yet. Your brilliant ideas are waiting."
 
-Never Compare
-  - IQ improvements
-  - Brain training claims
-  - Medical benefits
-  - Guaranteed outcomes
+Success States
+  Tone: Confirming, not over-celebrating
   
-Why: Legally dubious, medically inaccurate, overpromising
+  Examples:
+    - "Thoughtmark saved."
+    - "Searching..."
+    - "Found 12 matches."
 
 ═══════════════════════════════════════════════════════════════════
 
-COMPETITIVE MESSAGING
+VERSION HISTORY
 
-When Asked About Notion/Evernote
-  "Those are great for people who want to build elaborate systems. 
-  We're for people who just want to capture ideas before they vanish. 
-  Different tools for different needs."
-  
-  Don't: Trash competitors
-  Do: Clarify different use cases
-
-When Asked About Voice Memos
-  "Voice memos are great for recording. But try finding 'that thing 
-  about creativity' in 47 recordings labeled 'New Recording [number].m4a.' 
-  We transcribe, tag, and make it searchable."
-  
-  Don't: Say voice memos are useless
-  Do: Highlight what happens after capture
-
-When Asked About Productivity Apps
-  "If you're looking for a system to manage known projects and tasks, 
-  there are excellent tools for that. We're specifically for capturing 
-  fleeting ideas and inspiration. The stuff that disappears if you 
-  don't grab it immediately."
-  
-  Don't: Position as complete replacement
-  Do: Own the specific niche
+v1.0: Initial messaging framework
+v2.0: Updated with iOS icon specifications
+v3.0: Complete rewrite based on actual deployment at thoughtmarksapp.com
+      - Added cycling hero headlines
+      - Updated feature descriptions from actual site
+      - Corrected tagline (no exclamation mark)
+      - Added actual CTA copy
+      - Updated tone examples from live copy
 
 ═══════════════════════════════════════════════════════════════════
 
-HANDLING OBJECTIONS
-
-"I already have a notes app"
-  Response: "Do you actually use it when inspiration strikes? Or do you 
-  mean to write it down and forget? Voice capture happens faster than 
-  unlocking your phone."
-  
-  Strategy: Acknowledge current behavior, highlight friction point
-
-"I don't trust AI with my thoughts"
-  Response: "Fair. That's why everything locks on your device. Sync is 
-  optional and encrypted. The AI processes locally where possible. Your 
-  thoughts don't train our models or feed ad systems."
-  
-  Strategy: Validate concern, provide specific reassurance
-
-"Another app to manage?"
-  Response: "That's exactly what we're trying to solve. One place for 
-  all your random thoughts means fewer apps to check. And you don't 
-  manage anything - AI handles organization."
-  
-  Strategy: Reframe as solution to the problem they're naming
-
-"How is this different from [competitor]?"
-  Response: "We're optimized for the moment of inspiration. From idea 
-  to captured in under 3 seconds. Most tools are built for organizing 
-  what you already have. We're built for catching what's about to 
-  disappear."
-  
-  Strategy: Focus on unique value, acknowledge competitor strengths
-
-═══════════════════════════════════════════════════════════════════
-
-MESSAGING HIERARCHY
-
-Always Lead With
-  1. The problem (losing ideas, can't find notes)
-  2. The speed of capture (voice, 3 seconds)
-  3. Automatic organization (AI, no work)
-  4. Search that actually works (semantic + keyword)
-
-Then Support With
-  - Privacy (if they care)
-  - Specific use cases (meetings, driving, parenting)
-  - Platform features (Siri, Watch, iOS)
-
-Never Lead With
-  - Technical architecture
-  - AI specifics
-  - Platform limitations
-  - Pricing (unless asked)
-
-═══════════════════════════════════════════════════════════════════
-
-FINAL REMINDERS
-
-Voice Consistency
-  Every piece of copy should sound like it came from the same person
-  That person is smart, direct, slightly irreverent, and tired of bullshit
-  
-User Focus
-  "You" and "your" more than "we" and "our"
-  Benefits before features
-  Problems before solutions
-  
-Honesty
-  Acknowledge real problems
-  Don't overpromise
-  No marketing speak
-  If it sounds like a guru wrote it, rewrite it
-  
-Respect
-  Users aren't broken
-  Chaos is normal
-  Different people think differently
-  The best tool is the one that disappears
-
-═══════════════════════════════════════════════════════════════════
-
-Last updated: January 13, 2025
-Next review: As messaging evolves with product
+For comprehensive brand guidelines, see thoughtmarks_brand_guide.yaml
+For quick reference, see thoughtmarks_brand_standards_quick_ref.txt
