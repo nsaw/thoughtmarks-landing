@@ -484,6 +484,31 @@ Copyright © 2025 Thoughtmarks. All rights reserved.
 This is a private project. For questions or issues, contact the development team.
 
 ---
+sequenceDiagram
+    participant Dev as Developer
+    participant README as README.md
+    participant Repo as Repository
+    participant User as New User/Contributor
+    
+    Dev->>README: Create comprehensive documentation
+    Note over README: Quick Start section
+    Note over README: Technology Stack
+    Note over README: Project Structure
+    Note over README: Configuration details
+    Note over README: Deployment instructions
+    Note over README: Security configuration
+    Note over README: Troubleshooting guide
+    
+    Dev->>Repo: Commit README.md
+    User->>Repo: Clone repository
+    User->>README: Read documentation
+    README->>User: Understand project setup
+    README->>User: Learn tech stack
+    README->>User: Follow deployment process
+    README->>User: Configure security
+    README->>User: Troubleshoot issues
+
+---
 
 ## 📚 Additional Resources
 
